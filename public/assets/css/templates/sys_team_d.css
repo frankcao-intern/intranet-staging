@@ -1,0 +1,57 @@
+/**
+ * User: emuentes
+ * Date: May 05, 2011
+ * Time: 10:50:33 AM
+ */
+
+#tweet-cols {
+	overflow: hidden;
+	padding: 0;
+	margin-bottom: 14px;
+	background: #EAE5DC/*#F6F4F1*/;
+}
+#tweet-cols ul{ 
+	list-style-type: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	height: 416px;
+	width: 760px;
+}
+#tweet-cols ul li {
+	float: left;
+	font: 13px/1.5 Arial,Helvetica,'Liberation Sans',FreeSans,sans-serif;
+	margin-bottom: 10px;
+	line-height: 122%;
+	width: 334px;
+	margin-left: 37px;
+}
+div#tweet-cols ul div {
+	overflow: hidden;
+	width: 760px;
+	margin: 0px auto;
+	background: #EAE5DC;
+	padding:30px 0 0;
+}
+#tweet-cols ul li img { float:left; margin: 0 8px 8px 0; border:2px solid #999;}
+#tweet-cols ul li span { display:block; color: #999; font-size: 12px; }
+#tweet-cols ul li span strong{ float:left; margin-right:6px; font-weight: bold; color: #333!important; font-size: 15px;}
+#tweet-cols div.pagination span.current,
+#tweet-cols div.pagination a.activeSlide,
+#tweet-cols div.pagination a:hover { background-color: #2B2627; cursor:pointer; }
+#tweet-cols div.pagination {
+	background-color: #454545;
+	color: white;
+	height: 16px;
+	padding: 4px 4px 9px;
+}
+#tweet-cols div.pagination a { color: white; }
+#tweet-cols div.pagination a,
+#tweet-cols div.pagination span.current,
+#tweet-cols div.pagination span.ellipsis {
+    border: 1px solid #CCCCCC;
+    display: block;
+    float: left;
+    margin-right: 2px;
+    padding: 4px 7px 2px;
+}

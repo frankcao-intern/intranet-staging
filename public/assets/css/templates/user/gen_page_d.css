@@ -1,0 +1,19 @@
+.generic-page-d { clear: both; margin-top: 18px; overflow: visible; }
+.generic-page-d .two {
+    margin-top: -2px;
+    width: 426px;
+	padding-right: 0;
+}
+.generic-page-d .edit-wysiwygadv { width: auto; }
+.generic-page-d .editable-link { left: 398px; }
+.generic-page-d .image-stack ul li { float: left; }
+
+.picture-info .picture-credits { left: -102px; top: -103px; width: 190px }
+.oldie .picture-info .picture-credits { left: -13px; top: -192px; width: 14px; height: 190px; }
+
+.generic-page-d .picture-info .picture-caption { width: 100%; }
+
+.generic-page-d .article { padding-top: 0; }
+
+.ui-tabs-panel .generic-page-d .two { width: 399px; }
+.ui-tabs-panel .generic-page-d { margin-top: 0; }

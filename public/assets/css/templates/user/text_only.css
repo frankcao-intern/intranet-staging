@@ -1,0 +1,14 @@
+.text-only { width: 732px; clear: both; margin-top: 0 !important;  }
+
+.text-only .column { border-right: 1px dotted #BBBBBB; padding-right: 10px; margin-right: 10px; }
+.text-only .last { border-right: none; padding-right: 0; margin-right: 0; }
+
+.text-only .article-next { float: right; }
+
+.image-stack { margin-bottom: 24px; }
+
+input#tags { width: 529px; }
+
+aside.secondary img { border: 0px #C5BFBA; max-width: 198px; width: expression(this.scrollWidth > 198 ? "198px" : ""); }
+
+

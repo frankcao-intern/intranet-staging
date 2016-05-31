@@ -1,0 +1,15 @@
+.postcard .picture-credits {
+	top: -242px;
+	left: -241px;
+	width: 470px;
+}
+
+.postcard .column { border-right: 1px dotted #BBBBBB; padding-right: 10px; margin-right: 10px; }
+.postcard .last { border-right: none; padding-right: 0; margin-right: 0; }
+
+.postcard .article-header { margin-bottom: 12px; }
+.postcard .article { padding-top: 0; }
+
+.ui-tabs-panel .image-stack img { max-width: 732px; }
+.oldie .ui-tabs-panel .image-stack img { width: expression(this.scrollWidth > 731 ? "732px" : "auto"); }
+

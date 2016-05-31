@@ -1,0 +1,8 @@
+/**
+ * User: cravelo
+ * Date: Feb 16, 2011
+ * Time: 10:50:33 AM
+ */
+
+p.thumb { width: 139px; } /*required by safari, it affects IE8 and 7 will undo in mod.ie.css*/
+p.image { text-align: center; } /*failsafe for vertical pictures*/

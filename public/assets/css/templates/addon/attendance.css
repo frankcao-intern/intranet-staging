@@ -1,0 +1,39 @@
+.article { padding: 0; width: 760px; }
+
+.article table { margin: 0; }
+
+.article table tbody td, .article table tfoot .planned { cursor: pointer; }
+.article table td,
+.article table th { width: 7.1%; text-align: center; }
+
+.ui-tabs { position: static; }
+
+.attendance .color { display: inline-block; width: 16px; height: 16px; margin-top: 2px; }
+
+.attendance .confirmed { background-color: #9C9; border: 1px solid black; }
+.attendance .planned { background-color: #9A0000; color: white; border: 1px solid black; }
+.attendance .today { background-color: #2B2627; color: white; border: 1px solid black; }
+.attendance .ui-selected { background: #5E759E; color: white; border: 1px solid black; }
+
+.attendance p { font-size: 1.3em; }
+
+.attendance h2.c { clear: both; }
+
+#directReports { overflow: hidden; }
+#directReports li { float: left; margin-right: 12px; }
+
+#dayTypes, #actions {
+	position: absolute;
+	display: none;
+	background-color: #2B2627 !important;
+	padding: 23px 13px 7px 7px;
+	margin: 0;
+	z-index: 3;
+}
+#actions { padding-top: 7px; }
+
+#dayTypes li a,
+#actions li a { cursor: pointer; color: white; white-space: nowrap; }
+#dayTypes li a:hover,
+#actions li a:hover { text-decoration: underline; }
+

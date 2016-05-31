@@ -1,0 +1,19 @@
+.picture-info .picture-credits { top: -124px; left: -124px; width: 236px; }
+.oldie .picture-info .picture-credits { top: -238px; left: -13px; width: 14px; height: 236px; }
+.ie9 .picture-info .picture-credits { top: -129px; left: -124px; width: 236px; height: 14px; }
+
+.generic-page-a .image-stack {
+	position: relative;
+	width: auto;
+	max-width: 380px;
+	min-width: 110px;
+	float: right;
+	margin: 12px 0 0 24px;
+	clear: both;
+	z-index: 2;
+}
+.generic-page-a .image-stack img { max-width: 380px; width: expression(this.scrollWidth > 379 ? "380px" : "auto"); }
+
+.generic-page-a .article div { clear: none; overflow: inherit; }
+
+.article .editable-link { right: 395px; }

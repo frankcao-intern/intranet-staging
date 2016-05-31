@@ -1,0 +1,51 @@
+.article .image-stack ul {
+	list-style: none;
+	margin: 0;
+	padding: 0 0 0 10px;
+	overflow: visible;
+}
+
+.two-columns {}
+
+.two-columns .article {
+	-webkit-column-count: 2;
+	-webkit-column-rule: 1px dotted #BBBBBB;
+	-webkit-column-gap: 24px;
+	-moz-column-count: 2;
+	-moz-column-rule: 1px dotted #BBBBBB;
+	-moz-column-gap: 24px;
+	-ms-column-count: 2;
+	-ms-column-rule: 1px dotted #BBBBBB;
+	-ms-column-gap: 24px;
+	-o-column-count: 2;
+	-o-column-rule: 1px dotted #BBBBBB;
+	-o-column-gap: 24px;
+	column-count: 2;
+	column-rule: 1px dotted #BBBBBB;
+	column-gap: 24px;
+}
+
+.two-columns .edit-wysiwygadv { width: auto; /*position: static; Future me: This makes the edit link position incorrectly, think about why you need it*/  }
+
+.two-columns .column { border-right: 1px dotted #BBBBBB; padding-right: 10px; margin-right: 10px; }
+.two-columns .last { border-right: none; padding-right: 0; margin-right: 0; }
+
+/* Fixes for picture info because of the 2 columns */
+/*.two-columns .picture-info { position: static; }
+.two-columns .picture-info p { font-size: 1.1em; }*/
+
+/* Fixes for picture credits */
+.two-columns .picture-info .picture-credits { left: -115px; top: -116px; width: 218px; font-size: 0.7em; }
+.oldie .picture-info .picture-credits { left: -13px; top: 0; height: 230px; width: 14px; }
+/* Adjustments for picture credits on a tab */
+.ui-tabs-panel .two-columns .picture-info .picture-credits { top: 107px; }
+
+/* View Gallery link normal */
+.two-columns .view-gallery { font-size: 0.9em; }
+
+/* View Gallery link on a tab */
+.ui-tabs-panel .two-columns .view-gallery-back { top: 208px; right: auto; left: 277px; }
+.ui-tabs-panel .two-columns .view-gallery { top: 210px; right: auto; left: 282px; font-size: 0.9em; }
+
+.ui-tabs-panel .two-columns { padding-top: 0; width: 732px; }
+.ui-tabs-panel .two-columns .image-stack img { max-width: 354px; width: expression(this.scrollWidth > 353 ? "354px" : "auto"); }

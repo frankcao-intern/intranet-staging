@@ -1,0 +1,37 @@
+.image img {
+	display: inline;
+	max-height: 210px;
+	height: expression(this.scrollHeight > 210 ? "210px" : "auto");
+	/*max-width: 160px;
+	width: expression(this.scrollWidth > 160 ? "160px" : "auto");*/
+}
+
+div.col {
+	width: 187px;
+	max-width: 187px!important;
+	overflow:hidden;
+	margin-left: 0!important;
+}
+
+div.image { padding:0!important; }
+
+/*
+div.noteright {
+float:right;
+}
+*/
+.apples{ list-style-type:none; }
+
+ul.lfnotes{ padding:0; }
+ul.lfnotes li{ clear:both; padding-top:12px; margin-top:0; border-top: 1px solid #C5BFBA; overflow: hidden; }
+ul.lfnotes li:first-child { border: none; }
+
+/*.lfnote_text{ width: 561px; }*/
+.vcard { margin-bottom: 6px!important; }
+li.left .lfnote_text{ float:left; margin-right: 12px; }
+li.left .vcard { float:left; margin-right:24px!important;}
+
+/*li.right .lfnote_text{ float:right; margin-left: 12px; }*/
+li.right .vcard { float:right; margin-left:24px!important; }
+
+.picture-credits-a { top: 261px; left: -207px; position: absolute; width: 406px; }

@@ -1,0 +1,24 @@
+.article { margin-top: 0 !important; }
+
+.generic-page-d { clear: both; margin-top: 18px; overflow: visible; }
+.generic-page-d .two {
+	border-left: 1px dotted #BBBBBB;
+	float: right;
+    margin-left: 10px;
+    margin-top: -2px;
+    padding-left: 10px;
+    width: 430px;
+	padding-right: 0;
+}
+
+.ui-tabs-panel .generic-page-d .two { width: 402px; }
+.ui-tabs-panel .generic-page-d { overflow: hidden; margin-top: 0; }
+
+.generic-page-d .edit-wysiwygadv { width: auto; }
+.generic-page-d .editable-link { left: 398px; }
+
+.image-stack ul li { margin-bottom: 1px; position: relative; }
+
+.picture-credits-d { position: absolute; left: -102px; top: 90px; width: 190px }
+
+

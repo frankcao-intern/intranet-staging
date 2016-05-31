@@ -1,0 +1,128 @@
+/*
+ * Project:   Eileen Fisher (print)
+ * Date:      2010/09/28
+/* ---------------------------------------- */
+
+* { margin: 0; padding: 0; }
+
+html { font-size: 100.01%; }
+body { background: #fff; font-size: 62.5%; }
+
+body, textarea, input, select, option, button { color: #555; font-family: Calibri,Lucida Grande,Helvetica Neue,Helvetica,Arial,sans-serif; line-height: 1.5; }
+li, dt, dd, p, th, td, caption, pre { font-size: 1.5em; } /*---*/ li *, li p, li li, dt *, dd *, p *, th *, td * { font-size: 1em; }
+ul, ol, dl, p, table, pre, h1, h2, h3, h4, h5, h6 { margin-bottom: 15px; }
+
+button { display: none; }
+
+/*! layout -------- */
+
+#root { width: 100%; }
+ header { display: none; }
+ #content { }
+ #content .header-a { display: none; }
+ .article-sidebar .buttonset { display: none; }
+
+ #content > .primary { display: block; width: 75%; float: left; clear: left; padding-right: 32px; }
+ aside.secondary { display: block; width: 20%; float: left;  }
+
+ footer { display: none; }
+  footer .copyright { display: block; }
+
+ .footer-panels { display: none; }
+
+/*! headers ------- */
+
+h1, h2, h3, h4, h5, h6 { margin: 20px 0 5px; color: #000; font-family: Cambria,Georgia,serif; }
+h1 { margin-top: 0; font-size: 2.4em; }
+h2 { font-size: 2.0em; }
+ li h2 { font-size: 1.5em; }
+h3 { font-size: 1.8em; }
+ li h3 { font-size: 1.3em; }
+h4 { font-size: 1.6em; }
+h5 { font-size: 1.5em; text-transform: uppercase; }
+h6 { font-size: 1.4em; text-transform: uppercase; }
+
+/*! containers ---- */
+
+.rotator-a {}
+ .rotator-a .primary { overflow: visible !important; height: auto !important; }
+  .rotator-a .primary ul { position: static !important; width: 100% !important; }
+   .rotator-a .primary ul li { position: static !important; float: none !important; height: auto !important; }
+  .rotator-a .image, .rotator-a .caption { display: block !important;}
+ .rotator-a .secondary { display: none; }
+
+.rotator-b {}
+ .rotator-b .rotator { overflow: visible !important; }
+  .rotator-b ul { position: static !important; width: auto !important; }
+    .rotator-b ul li { float: none !important; height: auto !important; margin-bottom: 10px !important; }
+
+.rotator-c {}
+ .rotator-c .rotator { overflow: visible !important; width: auto !important; }
+  .rotator-c .rotator ul { position: static !important; width: auto !important; }
+   .rotator-c .rotator ul li { float: none !important; height: auto !important; }
+ .rotator-c .photos { display: none; }
+
+.rotator-controls, .popup-a { display: none !important; }
+
+/*! forms ---- */
+
+button { overflow: visible; padding: 0 10px; }
+
+form.search, button.close, form.add-comment, button.play { display: none; }
+
+/* tables */
+
+table { border-collapse: collapse; }
+ table th, table td { padding: 5px 10px; border: 1px solid #ccc; }
+
+/*! lists --------- */
+
+ul, ol, dd, blockquote { padding-left: 30px; }
+ ul ul, ol ol, ul ol, ol ul { margin-bottom: 0; }
+
+/*! paragraphs ---- */
+
+
+/*! links --------- */
+
+a { color: #09f; text-decoration: underline; }
+.article a:after, .related-info a:after { content: " (" attr(href) ") "; color: #555; font-size: 0.8em; font-style: italic; }
+
+/*! images -------- */
+
+img { border-width: 0; image-rendering: optimizeQuality; -ms-interpolation-mode: bicubic; }
+
+.view-gallery { display: none; }
+
+.image-stack ul { margin: 0; padding: 0; list-style-type: none; }
+.image-stack ul a:after { content: ""; }
+.image-stack ul li { display: inline-block !important; max-width: 24%; }
+.image-stack ul li img { height: auto; max-width: 100%; display: block; }
+
+/*! other --------- */
+
+abbr { border: none; }
+pre { font-family: Consolas,Monaco,Courier New,monospace; white-space: pre-wrap; }
+.header-c .toggle { display: none; }
+
+a.question-mark, .cufon canvas, ul.sort-links, #fancybox-wrap { display: none; }
+
+/*! helpers ------- */
+
+.offset { position: absolute !important; left: -10001px !important; overflow: hidden !important; }
+
+/*! specific ------ */
+
+#customize-page { display: none; }
+
+/*! equal heights ------ */
+.quadruple-a .col { height: auto !important; }
+
+/*! who's who ------ */
+ul.search-results-a { list-style: none; }
+.vcard p.image img { height: 189px; }
+.tooltip-contact { opacity: 1 !important; }
+.vcard div h2, .vcard div p, .vcard div h3 { margin: 0; }
+
+/*! comments ------ */
+#comments, #comments * { display: none; }

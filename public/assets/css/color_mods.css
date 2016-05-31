@@ -1,0 +1,32 @@
+/* file to apply color changes across fishnet
+ *
+ *
+ *
+ */
+
+/*** elements located in the screen.css ***/
+.nav { background-color: #e5e5e5;}
+.nav:hover {background-color: #404040;}
+
+.nav li a { background-color: #e5e5e5;}
+.nav li a:hover { background-color: #404040;}
+.nav > li:hover > a { background-color: #404040; }
+
+.nav li .dropdown ul li a { background-color: #404040;}
+.nav li:hover > .dropdown { background-color: #404040;}
+
+.search input {
+	  float: left;
+	  width: 141px;
+	  height: 16px;
+	  padding: 8px 5px 2px 22px;
+	  border: 1px solid #e5e5e5;
+	  border-right-width: 0;
+	  background: #e5e5e5 url('/assets/images/magnifying.png') 5px 8px no-repeat;
+	 }
+
+.search button { background-color: #404040;}
+.search button:hover { background-color: #000000;}
+
+/*** elements located in the sys_portal.css ***/
+

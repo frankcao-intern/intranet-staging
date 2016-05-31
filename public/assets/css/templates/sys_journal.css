@@ -1,0 +1,7 @@
+p.image { margin: 0; }
+
+.entry { overflow: hidden; clear: both; padding-right: 24px; }
+
+.entry img { float: left; margin-right: 20px; margin-bottom: 12px; }
+
+h2.a { line-height: 1.1; margin-bottom: 6px; }

@@ -1,0 +1,63 @@
+.kt-accordion .forms-list { list-style: none; padding-left: 0; clear: both; }
+.kt-accordion .forms-list li { margin-bottom: 2px; }
+
+.kt-accordion .forms-file,
+.kt-accordion .forms-file a,
+.kt-accordion .forms-file span { text-transform: none; font-weight: normal; font-size: 9pt; word-wrap: normal; }
+
+.kt-accordion .article { clear: both; }
+.kt-accordion .edit-page-property .editable-link { left: 324px; top: -2px; }
+
+/*Override for jQuery-UI styles on the accordion*/
+.kt-accordion .accordion {  }
+
+.kt-accordion .accordion h3.ui-state-default {
+	border: 1px solid #AAA;
+	background: #EAE5DC url(../../lib/jquery-theme/ui-bg_flat_75_eae5dc_40x100.png) 50% 50% repeat-x;
+	color: #222;
+	font-weight: normal;
+}
+.kt-accordion .accordion h3.ui-state-default a,
+.kt-accordion .accordion h3.ui-state-default a:link,
+.kt-accordion .accordion h3.ui-state-default a:visited { color: #222; text-decoration: none; }
+
+.kt-accordion .accordion h3.ui-state-hover,
+.kt-accordion .accordion h3.ui-state-hover.ui-state-focus,
+.kt-accordion .accordion h3.ui-state-active,
+.kt-accordion .accordion h3.ui-state-active.ui-state-focus {
+	border: 1px solid #2b2627;
+	background: #2b2627 url(../../lib/jquery-theme/ui-bg_flat_75_2b2627_40x100.png) 50% 50% repeat-x;
+	font-weight: normal;
+	color: #ffffff;
+}
+
+.kt-accordion .accordion h3.ui-state-hover a,
+.kt-accordion .accordion h3.ui-state-hover a:link,
+.kt-accordion .accordion h3.ui-state-hover a:visited,
+.kt-accordion .accordion h3.ui-state-active a,
+.kt-accordion .accordion h3.ui-state-active a:link,
+.kt-accordion .accordion h3.ui-state-active a:visited { color: #FFFFFF; text-decoration: none; }
+
+.kt-accordion .accordion .ui-widget-content {
+	background: #ffffff url(../../lib/jquery-theme/ui-bg_flat_75_ffffff_40x100.png) 50% 50% repeat-x;
+}
+
+.kt-accordion .accordion .ui-corner-all,
+.kt-accordion .accordion .ui-corner-top,
+.kt-accordion .accordion .ui-corner-bottom {
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+	border-radius: 0;
+}
+
+.kt-accordion .accordion h3 { font-family: Helvetica, Arial, sans-serif; }
+
+.primary .image-stack { margin-bottom: 24px; }
+
+.kt-accordion .article-header { width: 100%; overflow: hidden; }
+.kt-accordion .article-header h2 { width: auto; }
+.kt-accordion .article-header .left { width: 70%; }
+.kt-accordion .article-header .right { width: 184px; }
+.kt-accordion .article-header .right input { width: 140px; }

@@ -1,0 +1,48 @@
+/*
+ * Project:   Eileen Fisher (print)
+ * Date:      2010/09/28
+/* ---------------------------------------- */
+
+/*! layout -------- */
+
+header { display: none; }
+#content .header-a { display: none; }
+.article-sidebar .buttonset { display: none; }
+footer { display: none; }
+footer .copyright { display: block; }
+.footer-panels { display: none; }
+
+/*! links --------- */
+
+a { color: #09f; text-decoration: underline; }
+
+/*! Articles */
+.article, .related_info, .article-header { font-size: 12pt; }
+.article a:after, .related_info a:after { content: " (" attr(href) ") "; color: #555; font-size: 0.8em; font-style: italic; }
+
+/*! headers ------- */
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 20px 0 5px;
+	color: #000 !important;
+	font-family: Cambria, Georgia, serif !important;
+	font-style: normal !important;
+}
+
+/*! images -------- */
+
+img { border-width: 0; image-rendering: optimizeQuality; -ms-interpolation-mode: bicubic; }
+.view-gallery { display: none; }
+
+/*! other --------- */
+
+pre { font-family: Consolas,Monaco,Courier New,monospace; white-space: pre-wrap; }
+.header-c .toggle { display: none; }
+
+/*! specific -------- */
+
+.search-directory { display: none; }
+html .dropcap { font-family: Cambria, Georgia, serif; }
+
+/*! comments ------ */
+#comments, #comments * { display: none; }

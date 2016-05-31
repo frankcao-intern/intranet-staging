@@ -1,0 +1,10 @@
+/**
+ * User: cravelo
+ * Date: Feb 16, 2011
+ * Time: 10:50:33 AM
+ */
+
+.rotator-b ul li { display:none; }
+.rotator-b ul li.selected { display:block; }
+
+.image-stack { margin-bottom: 12px; }

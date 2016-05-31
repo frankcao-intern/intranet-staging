@@ -1,0 +1,942 @@
+/*Tipster Nav*/
+a:link,a:focus,a:active, img{border:0;outline:0;}
+.mobileOff p {
+	display:none;
+}
+
+
+#tipsterContent {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	max-width: 100%;
+	padding:0px 0px 0px 0px;
+}
+#tipsterContent a img {
+	border:0;
+}
+
+
+ .scrollBtn p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	margin: 0;
+	background: url(../images/rollover_bg.png) repeat transparent;
+	display: block;
+	border-top: solid 1px #000;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	line-height: 19px;
+	width:100%;
+}
+.scrollBtn p {
+	display:none;
+	padding: 10px 0px;
+}
+.hoverBtn p.mobilearrow {
+	/*
+	background: url(../images/mobilearrow.png) top right no-repeat;
+	padding-top:16px;
+	border-top:none;
+	*/
+}
+
+.hoverBtn p a, .hoverBtn p span {
+	color: #000;
+	text-decoration: none;
+	padding: 10px;
+	display:block;
+}
+
+.scrollBtn:hover {
+	cursor:pointer;
+}
+
+
+.topMargin {
+	margin-top: 0px;
+}
+
+
+.floatRight {
+	float: right;
+}
+
+.clrBoth {
+	clear: both;
+}
+.clrLeft {
+	clear: left;
+}
+
+
+
+/* Sidebar */
+#tipsterSideScroll {
+	width:192px;
+	float:right;
+	margin:0;
+	padding:0px 0px 20px 0px;
+	position:relative;
+	
+}
+.sideScrollHeadline {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	color: #000;
+	line-height: 20px;
+	text-align:center;
+	text-transform:uppercase;
+	display:block;
+	margin:0px 0px 5px 0px;
+	padding:2px 0px;
+
+	
+}
+#sideArrowUp, #sideArrowDown {
+	height:18px;
+	overflow:hidden;
+	background:url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowUp.png') no-repeat center top;
+	width:100%;
+	cursor:pointer;
+	position:relative;
+	z-index:30;
+}
+
+#sideArrowDown {
+	background:/*url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowDown.png')*/ no-repeat center bottom;
+	height:22px;
+	position:absolute;
+	bottom:0;
+}
+
+#sideArrowUp .more, #sideArrowDown .more {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #e31c24;
+	text-decoration:none;
+	text-transform:uppercase;
+	position:absolute;
+	right:0;
+	top:-5px;
+}
+#sideArrowDown .more {
+	top:2px;
+}
+#scrollWrapper {
+	position:relative;
+	text-align:center;
+	width:192px;
+	height:180px;
+	overflow:hidden;
+	min-height:180px;
+	border-top: solid 1px #000;
+
+}
+ul#sideScrollItems {
+	position:absolute;
+	list-style:none;
+	padding:0;
+	margin:0;
+	text-align:center;
+	width:192px;
+	min-height:400px;
+}
+
+#sideScrollItems li {
+	padding:8px 0 0;
+	position:relative;
+	overflow:hidden;
+	height: 180px;
+}
+#sideScrollItems li a {
+	border:0;
+}
+#sideScrollItems li img {
+	padding:0;
+	border:0;
+}
+#sideScrollItems li h3 {
+	padding:0 0 0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	text-transform:uppercase;
+	line-height:16px;
+	margin:0;
+}
+#sideScrollItems li h3 a {
+	color:#000;
+}
+
+#sideScrollItems li h3 p {
+	color:#000;
+}
+#sideScrollItems li h4 {
+	margin:0;
+	padding:0;
+}
+.noLink:hover {
+	cursor:default;
+}
+#sideScrollItems li h4 a {
+	padding:0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+	text-transform:uppercase;
+	margin:0;
+}
+#sideScrollItems li p {
+	text-align:center;
+	border-bottom: solid 1px #000;
+}
+
+/** Scrolling for the IT Infrastructure Team
+ * *** *** *** *** *** *** *** *** *** **
+ * *** *** *** *** *** *** *** *** *** **
+ * *** *** *** *** *** *** *** *** *** **/
+
+#infraContent {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	max-width: 100%;
+	padding:0px 0px 0px 0px;
+}
+#infraContent a img {
+	border:0;
+}
+.infraScrollBtn p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	margin: 0;
+	background: url(../images/rollover_bg.png) repeat transparent;
+	display: block;
+	border-top: solid 1px #000;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	line-height: 19px;
+	width:100%;
+}
+.infraScrollBtn p {
+	display:none;
+	padding: 10px 0px;
+}
+.infraScrollBtn:hover {
+	cursor:pointer;
+}
+/* Sidebar */
+#infraSideScroll {
+	width:192px;
+	float:right;
+	margin:0;
+	padding:0px 0px 20px 0px;
+	position:relative;
+	
+}
+#sideArrowUp, #infraSideArrowDown {
+	height:18px;
+	overflow:hidden;
+	background:url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowUp.png') no-repeat center top;
+	width:100%;
+	cursor:pointer;
+	position:relative;
+	z-index:30;
+}
+
+#infraSideArrowDown {
+	background:/*url('http://www.eileenfisher.com/ns/tipsters/images/infraSideArrowDown.png')*/ no-repeat center bottom;
+	height:22px;
+	position:absolute;
+	bottom:0;
+}
+
+#sideArrowUp .more, #infraSideArrowDown .more {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #e31c24;
+	text-decoration:none;
+	text-transform:uppercase;
+	position:absolute;
+	right:0;
+	top:-5px;
+}
+#infraSideArrowDown .more {
+	top:2px;
+}
+#infraScrollWrapper {
+	position:relative;
+	text-align:center;
+	width:192px;
+	height:180px;
+	overflow:hidden;
+	min-height:180px;
+	border-top: solid 1px #000;
+
+}
+ul#infraSideScrollItems {
+	position:absolute;
+	list-style:none;
+	padding:0;
+	margin:0;
+	text-align:center;
+	width:192px;
+	min-height:400px;
+}
+
+#infraSideScrollItems li {
+	padding:8px 0 0;
+	position:relative;
+	overflow:hidden;
+	height: 180px;
+}
+#infraSideScrollItems li a {
+	border:0;
+}
+#infraSideScrollItems li img {
+	padding:0;
+	border:0;
+}
+#infraSideScrollItems li h3 {
+	padding:0 0 0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	text-transform:uppercase;
+	line-height:16px;
+	margin:0;
+}
+#infraSideScrollItems li h3 a {
+	color:#000;
+}
+
+#infraSideScrollItems li h3 p {
+	color:#000;
+}
+#infraSideScrollItems li h4 {
+	margin:0;
+	padding:0;
+}
+#infraSideScrollItems li h4 a {
+	padding:0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+	text-transform:uppercase;
+	margin:0;
+}
+#infraSideScrollItems li p {
+	text-align:center;
+	border-bottom: solid 1px #000;
+}
+
+/** Scrolling for the IT Wholesale Business Applications Team
+ * *** *** *** *** *** *** *** *** *** **
+ * *** *** *** *** *** *** *** *** *** **
+ * *** *** *** *** *** *** *** *** *** **/
+
+#wbaContent {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	max-width: 100%;
+	padding:0px 0px 0px 0px;
+}
+#wbaContent a img {
+	border:0;
+}
+.wbaScrollBtn p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	margin: 0;
+	background: url(../images/rollover_bg.png) repeat transparent;
+	display: block;
+	border-top: solid 1px #000;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	line-height: 19px;
+	width:100%;
+}
+.wbaScrollBtn p {
+	display:none;
+	padding: 10px 0px;
+}
+.wbaScrollBtn:hover {
+	cursor:pointer;
+}
+/* Sidebar */
+#wbaSideScroll {
+	width:192px;
+	float:right;
+	margin:0;
+	padding:0px 0px 20px 0px;
+	position:relative;
+	
+}
+#sideArrowUp, #wbaSideArrowDown {
+	height:18px;
+	overflow:hidden;
+	background:url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowUp.png') no-repeat center top;
+	width:100%;
+	cursor:pointer;
+	position:relative;
+	z-index:30;
+}
+
+#wbaSideArrowDown {
+	background:/*url('http://www.eileenfisher.com/ns/tipsters/images/infraSideArrowDown.png')*/ no-repeat center bottom;
+	height:22px;
+	position:absolute;
+	bottom:0;
+}
+
+#sideArrowUp .more, #wbaSideArrowDown .more {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #e31c24;
+	text-decoration:none;
+	text-transform:uppercase;
+	position:absolute;
+	right:0;
+	top:-5px;
+}
+#wbaSideArrowDown .more {
+	top:2px;
+}
+#wbaScrollWrapper {
+	position:relative;
+	text-align:center;
+	width:192px;
+	height:180px;
+	overflow:hidden;
+	min-height:180px;
+	border-top: solid 1px #000;
+
+}
+ul#wbaSideScrollItems {
+	position:absolute;
+	list-style:none;
+	padding:0;
+	margin:0;
+	text-align:center;
+	width:192px;
+	min-height:400px;
+}
+
+#wbaSideScrollItems li {
+	padding:8px 0 0;
+	position:relative;
+	overflow:hidden;
+	height: 180px;
+}
+#wbaSideScrollItems li a {
+	border:0;
+}
+#wbaSideScrollItems li img {
+	padding:0;
+	border:0;
+}
+#wbaSideScrollItems li h3 {
+	padding:0 0 0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	text-transform:uppercase;
+	line-height:16px;
+	margin:0;
+}
+#wbaSideScrollItems li h3 a {
+	color:#000;
+}
+
+#wbaSideScrollItems li h3 p {
+	color:#000;
+}
+#wbaSideScrollItems li h4 {
+	margin:0;
+	padding:0;
+}
+#wbaSideScrollItems li h4 a {
+	padding:0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+	text-transform:uppercase;
+	margin:0;
+}
+#wbaSideScrollItems li p {
+	text-align:center;
+	border-bottom: solid 1px #000;
+}
+
+/** Scrolling for the IT Retail Sys Support Team
+ * *** *** *** *** *** *** *** *** *** **
+ * *** *** *** *** *** *** *** *** *** **
+ * *** *** *** *** *** *** *** *** *** **/
+
+#retailContent {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	max-width: 100%;
+	padding:0px 0px 0px 0px;
+}
+#retailContent a img {
+	border:0;
+}
+.retailScrollBtn p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	margin: 0;
+	background: url(../images/rollover_bg.png) repeat transparent;
+	display: block;
+	border-top: solid 1px #000;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	line-height: 19px;
+	width:100%;
+}
+.retailScrollBtn p {
+	display:none;
+	padding: 10px 0px;
+}
+.retailScrollBtn:hover {
+	cursor:pointer;
+}
+/* Sidebar */
+#retailSideScroll {
+	width:192px;
+	float:right;
+	margin:0;
+	padding:0px 0px 20px 0px;
+	position:relative;
+	
+}
+#sideArrowUp, #retailSideArrowDown {
+	height:18px;
+	overflow:hidden;
+	background:url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowUp.png') no-repeat center top;
+	width:100%;
+	cursor:pointer;
+	position:relative;
+	z-index:30;
+}
+
+#retailSideArrowDown {
+	background:/*url('http://www.eileenfisher.com/ns/tipsters/images/infraSideArrowDown.png')*/ no-repeat center bottom;
+	height:22px;
+	position:absolute;
+	bottom:0;
+}
+
+#sideArrowUp .more, #retailSideArrowDown .more {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #e31c24;
+	text-decoration:none;
+	text-transform:uppercase;
+	position:absolute;
+	right:0;
+	top:-5px;
+}
+#retailSideArrowDown .more {
+	top:2px;
+}
+#retailScrollWrapper {
+	position:relative;
+	text-align:center;
+	width:192px;
+	height:180px;
+	overflow:hidden;
+	min-height:180px;
+	border-top: solid 1px #000;
+
+}
+ul#retailSideScrollItems {
+	position:absolute;
+	list-style:none;
+	padding:0;
+	margin:0;
+	text-align:center;
+	width:192px;
+	min-height:400px;
+}
+
+#retailSideScrollItems li {
+	padding:8px 0 0;
+	position:relative;
+	overflow:hidden;
+	height: 180px;
+}
+#retailSideScrollItems li a {
+	border:0;
+}
+#retailSideScrollItems li img {
+	padding:0;
+	border:0;
+}
+#retailSideScrollItems li h3 {
+	padding:0 0 0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	text-transform:uppercase;
+	line-height:16px;
+	margin:0;
+}
+#retailSideScrollItems li h3 a {
+	color:#000;
+}
+
+#retailSideScrollItems li h3 p {
+	color:#000;
+}
+#retailSideScrollItems li h4 {
+	margin:0;
+	padding:0;
+}
+#retailSideScrollItems li h4 a {
+	padding:0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+	text-transform:uppercase;
+	margin:0;
+}
+#retailSideScrollItems li p {
+	text-align:center;
+	border-bottom: solid 1px #000;
+}
+/** Scrolling for the IT Web Technology Team
+ * *** *** *** *** *** *** *** *** *** **
+ * *** *** *** *** *** *** *** *** *** **
+ * *** *** *** *** *** *** *** *** *** **/
+
+#webContent {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	max-width: 100%;
+	padding:0px 0px 0px 0px;
+}
+#webContent a img {
+	border:0;
+}
+.webScrollBtn p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	margin: 0;
+	background: url(../images/rollover_bg.png) repeat transparent;
+	display: block;
+	border-top: solid 1px #000;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	line-height: 19px;
+	width:100%;
+}
+.webScrollBtn p {
+	display:none;
+	padding: 10px 0px;
+}
+.webScrollBtn:hover {
+	cursor:pointer;
+}
+/* Sidebar */
+#webSideScroll {
+	width:192px;
+	float:right;
+	margin:0;
+	padding:0px 0px 20px 0px;
+	position:relative;
+	
+}
+#sideArrowUp, #webSideArrowDown {
+	height:18px;
+	overflow:hidden;
+	background:url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowUp.png') no-repeat center top;
+	width:100%;
+	cursor:pointer;
+	position:relative;
+	z-index:30;
+}
+
+#webSideArrowDown {
+	background:/*url('http://www.eileenfisher.com/ns/tipsters/images/infraSideArrowDown.png')*/ no-repeat center bottom;
+	height:22px;
+	position:absolute;
+	bottom:0;
+}
+
+#sideArrowUp .more, #webSideArrowDown .more {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #e31c24;
+	text-decoration:none;
+	text-transform:uppercase;
+	position:absolute;
+	right:0;
+	top:-5px;
+}
+#webSideArrowDown .more {
+	top:2px;
+}
+#webScrollWrapper {
+	position:relative;
+	text-align:center;
+	width:192px;
+	height:180px;
+	overflow:hidden;
+	min-height:180px;
+	border-top: solid 1px #000;
+
+}
+ul#webSideScrollItems {
+	position:absolute;
+	list-style:none;
+	padding:0;
+	margin:0;
+	text-align:center;
+	width:192px;
+	min-height:400px;
+}
+
+#webSideScrollItems li {
+	padding:8px 0 0;
+	position:relative;
+	overflow:hidden;
+	height: 180px;
+}
+#webSideScrollItems li a {
+	border:0;
+}
+#webSideScrollItems li img {
+	padding:0;
+	border:0;
+}
+#webSideScrollItems li h3 {
+	padding:0 0 0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	text-transform:uppercase;
+	line-height:16px;
+	margin:0;
+}
+#webSideScrollItems li h3 a {
+	color:#000;
+}
+
+#webSideScrollItems li h3 p {
+	color:#000;
+}
+#webSideScrollItems li h4 {
+	margin:0;
+	padding:0;
+}
+#webSideScrollItems li h4 a {
+	padding:0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+	text-transform:uppercase;
+	margin:0;
+}
+#webSideScrollItems li p {
+	text-align:center;
+	border-bottom: solid 1px #000;
+}
+
+/** Scrolling for the IT PLM Team
+ * *** *** *** *** *** *** *** *** *** **
+ * *** *** *** *** *** *** *** *** *** **
+ * *** *** *** *** *** *** *** *** *** **/
+
+#plmContent {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	max-width: 100%;
+	padding:0px 0px 0px 0px;
+}
+#plmContent a img {
+	border:0;
+}
+.plmScrollBtn p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	margin: 0;
+	background: url(../images/rollover_bg.png) repeat transparent;
+	display: block;
+	border-top: solid 1px #000;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	line-height: 19px;
+	width:100%;
+}
+.plmScrollBtn p {
+	display:none;
+	padding: 10px 0px;
+}
+.plmScrollBtn:hover {
+	cursor:pointer;
+}
+/* Sidebar */
+#plmSideScroll {
+	width:192px;
+	float:right;
+	margin:0;
+	padding:0px 0px 20px 0px;
+	position:relative;
+	
+}
+#sideArrowUp, #plmSideArrowDown {
+	height:18px;
+	overflow:hidden;
+	background:url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowUp.png') no-repeat center top;
+	width:100%;
+	cursor:pointer;
+	position:relative;
+	z-index:30;
+}
+
+#plmSideArrowDown {
+	background:/*url('http://www.eileenfisher.com/ns/tipsters/images/infraSideArrowDown.png')*/ no-repeat center bottom;
+	height:22px;
+	position:absolute;
+	bottom:0;
+}
+
+#sideArrowUp .more, #plmSideArrowDown .more {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #e31c24;
+	text-decoration:none;
+	text-transform:uppercase;
+	position:absolute;
+	right:0;
+	top:-5px;
+}
+#plmSideArrowDown .more {
+	top:2px;
+}
+#plmScrollWrapper {
+	position:relative;
+	text-align:center;
+	width:192px;
+	height:180px;
+	overflow:hidden;
+	min-height:180px;
+	border-top: solid 1px #000;
+
+}
+ul#plmSideScrollItems {
+	position:absolute;
+	list-style:none;
+	padding:0;
+	margin:0;
+	text-align:center;
+	width:192px;
+	min-height:400px;
+}
+
+#plmSideScrollItems li {
+	padding:8px 0 0;
+	position:relative;
+	overflow:hidden;
+	height: 180px;
+}
+#plmSideScrollItems li a {
+	border:0;
+}
+#plmSideScrollItems li img {
+	padding:0;
+	border:0;
+}
+#plmSideScrollItems li h3 {
+	padding:0 0 0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	text-transform:uppercase;
+	line-height:16px;
+	margin:0;
+}
+#plmSideScrollItems li h3 a {
+	color:#000;
+}
+
+#plmSideScrollItems li h3 p {
+	color:#000;
+}
+#plmSideScrollItems li h4 {
+	margin:0;
+	padding:0;
+}
+#plmSideScrollItems li h4 a {
+	padding:0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+	text-transform:uppercase;
+	margin:0;
+}
+#plmSideScrollItems li p {
+	text-align:center;
+	border-bottom: solid 1px #000;
+}

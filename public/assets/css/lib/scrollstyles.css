@@ -1,0 +1,203 @@
+/*Tipster Nav*/
+a:link,a:focus,a:active, img{border:0;outline:0;}
+.mobileOff p {
+	display:none;
+}
+
+
+#tipsterContent {
+	position: relative;
+	height: 100%;
+	overflow: hidden;
+	max-width: 100%;
+	padding:0px 0px 0px 0px;
+}
+#tipsterContent a img {
+	border:0;
+}
+
+
+ .scrollBtn p {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 10;
+	margin: 0;
+	background: url(../images/rollover_bg.png) repeat transparent;
+	display: block;
+	border-top: solid 1px #000;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	line-height: 19px;
+	width:100%;
+}
+.scrollBtn p {
+	display:none;
+	padding: 10px 0px;
+}
+.hoverBtn p.mobilearrow {
+	/*
+	background: url(../images/mobilearrow.png) top right no-repeat;
+	padding-top:16px;
+	border-top:none;
+	*/
+}
+
+.hoverBtn p a, .hoverBtn p span {
+	color: #000;
+	text-decoration: none;
+	padding: 10px;
+	display:block;
+}
+
+.scrollBtn:hover {
+	cursor:pointer;
+}
+
+
+.topMargin {
+	margin-top: 0px;
+}
+
+
+.floatRight {
+	float: right;
+}
+
+.clrBoth {
+	clear: both;
+}
+.clrLeft {
+	clear: left;
+}
+
+
+
+/* Sidebar */
+#tipsterSideScroll {
+	width:192px;
+	float:right;
+	margin:0;
+	padding:0px 0px 20px 0px;
+	position:relative;
+	
+}
+.sideScrollHeadline {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	color: #000;
+	line-height: 20px;
+	text-align:center;
+	text-transform:uppercase;
+	display:block;
+	margin:0px 0px 5px 0px;
+	padding:2px 0px;
+
+	
+}
+#sideArrowUp, #sideArrowDown {
+	height:18px;
+	overflow:hidden;
+	background:url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowUp.png') no-repeat center top;
+	width:100%;
+	cursor:pointer;
+	position:relative;
+	z-index:30;
+}
+
+#sideArrowDown {
+	background:/*url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowDown.png')*/ no-repeat center bottom;
+	height:22px;
+	position:absolute;
+	bottom:0;
+}
+
+#sideArrowUp .more, #sideArrowDown .more {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 15px;
+	font-weight: 400;
+	color: #e31c24;
+	text-decoration:none;
+	text-transform:uppercase;
+	position:absolute;
+	right:0;
+	top:-5px;
+}
+#sideArrowDown .more {
+	top:2px;
+}
+#scrollWrapper {
+	position:relative;
+	text-align:center;
+	width:192px;
+	height:180px;
+	overflow:hidden;
+	min-height:180px;
+	border-top: solid 1px #000;
+
+}
+ul#sideScrollItems {
+	position:absolute;
+	list-style:none;
+	padding:0;
+	margin:0;
+	text-align:center;
+	width:192px;
+	min-height:400px;
+}
+
+#sideScrollItems li {
+	padding:8px 0 0;
+	position:relative;
+	overflow:hidden;
+	height: 180px;
+}
+#sideScrollItems li a {
+	border:0;
+}
+#sideScrollItems li img {
+	padding:0;
+	border:0;
+}
+#sideScrollItems li h3 {
+	padding:0 0 0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000;
+	text-transform:uppercase;
+	line-height:16px;
+	margin:0;
+}
+#sideScrollItems li h3 a {
+	color:#000;
+}
+
+#sideScrollItems li h3 p {
+	color:#000;
+}
+#sideScrollItems li h4 {
+	margin:0;
+	padding:0;
+}
+.noLink:hover {
+	cursor:default;
+}
+#sideScrollItems li h4 a {
+	padding:0;
+	display:block;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	font-weight: 700;
+	color: #000;
+	text-transform:uppercase;
+	margin:0;
+}
+#sideScrollItems li p {
+	text-align:center;
+	border-bottom: solid 1px #000;
+}

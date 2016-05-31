@@ -1,0 +1,382 @@
+/***
+ * This file contains the css for the edit mode things like the gallery management, etc.
+ */
+
+/*! editable content ----- */
+
+.edit_img { position: relative; }
+
+.edit_img_buttons {
+	clear: both;
+	overflow: hidden;
+	position: absolute !important;
+	top: 12px;
+	left: 12px;
+}
+
+.edit_img .edit_img_buttons .btn-manage-gallery,
+.edit_img .edit_img_buttons .btn-upload-image,
+.edit_img .edit_img_buttons .btn-upload-image .qq-uploader { float: left; margin: 0 6px 0 0; padding: 0; }
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-uploader { width: 100%; }
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-button {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.15em;
+	line-height: 1.4;
+	display: block; /* or inline-block */
+	text-align: center;
+	background: #2B2627;
+	color: #fff;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	padding: .4em 1em;
+	width: 71px;
+}
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-button-hover {
+	background: #FFFFFF;
+	color: #212121;
+}
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-button-focus { outline: 1px dotted #AAA; }
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-drop-area {
+	width: 200px;
+	background: #FF9797;
+	text-align: center;
+	margin-bottom: 6px;
+}
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-drop-area span {
+	display: block;
+	font-size: 16px;
+	padding: 30px;
+}
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-drop-area-active { background: #FF7171; }
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-list {
+	margin: 15px 35px;
+	padding: 0 0 0 9px;
+	list-style: disc;
+	background: #fff;
+}
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-list li {
+	margin: 0;
+	padding: 0;
+	line-height: 15px;
+	font-size: 12px;
+}
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-file,
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-spinner,
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-size,
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-cancel,
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-failed-text { margin-right: 7px; }
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-file { }
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-spinner {
+	display: inline-block;
+	background: url("/assets/images/loading_sm.gif");
+	width: 15px;
+	height: 15px;
+	vertical-align: text-bottom;
+}
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-size, .qq-upload-cancel { font-size: 11px; }
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-failed-text { display: none; }
+
+.edit_img .edit_img_buttons .btn-upload-image .qq-upload-fail .qq-upload-failed-text { display: inline; }
+
+/*!editable sections */
+.edit-text input, .edit-page-property input, .edit-revision-obj input { width: 75%; display: block; }
+
+.edit-text button, .edit-page-property button { font-size: 8pt !important; margin-bottom: 6px; }
+
+.edit-text { margin-bottom: 6px; }
+
+.edit-team-text input { margin-top: 6px; }
+
+.edit-text button, .edit-team-text button { margin-top: 6px; }
+
+/*editable fields*/
+.edit-trigger { display: none; }
+
+aside.article-sidebar a.editable-link { top: -13px; left: 167px; }
+aside.article-sidebar .edit-wysiwygadv { width: 200px; }
+
+.edit-textinline+input { display: block; margin-bottom: 12px; }
+
+.editable-region { display: block; margin-bottom: 12px; position: relative; }
+.editable-region .editable-link,
+.editable-region .editable-link:visited {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0; /*-32*/
+	font-family: Helvetica, Arial, sans-serif;
+	line-height: 1.3;
+	font-size: 10px;
+	color: #86827E;
+	text-decoration: none;
+}
+.editable-region .editable-link:hover,
+.editable-region .editable-link:focus,
+.editable-region .editable-link:active { color: #9A0000; }
+
+.article .editable-link, .article-sidebar .editable-link {
+	color: #86827E;
+	text-decoration: none;
+}
+.article .editable-link:hover,
+.article-sidebar .editable-link:hover,
+.article .editable-link:focus,
+.article-sidebar .editable-link:focus,
+.article .editable-link:active,
+.article-sidebar .editable-link:active { color: #9A0000; }
+
+.article-header .edit-datepicker { margin: 0; }
+
+.edit_wysiwyg button, .edit-profile-wysiwyg button, .edit-team-wysiwyg button { margin-top: 6px; }
+
+/*FIX THIS*/
+ul.sortable-list { list-style-type: none; margin: 0 0 12px; overflow: hidden; padding: 0; }
+
+ul.sortable-list li {
+	height: 20px;
+	/*width: 300px;*/
+	border: 1px solid black;
+	margin-bottom: 6px;
+	padding: 6px 6px 0 6px;
+	background-color: #EAE5DC;
+	valign: middle;
+}
+
+ul.sortable-list li.ui-selected { background-color: #2B2627; color: #FFF; }
+
+ul.sortable-list li.ui-sortable-helper { background-color: #2B2627; color: #FFF; }
+
+.sortable-list span.ui-icon-trash { position: absolute; }
+
+li span.action {
+	display: -moz-inline-stack;
+	display: inline-block;
+	overflow: hidden;
+	width: 16px;
+	height: 16px;
+	background: transparent url(../images/icons-actions.png) 0 0 no-repeat;
+	text-indent: -1000em;
+}
+
+li span.delete { background-position: 50% 0; position: absolute; }
+
+/*! jquery UI styles for the manage library dialog ------ */
+.photo-editor { width: 596px; padding-top: 31px; }
+
+.photo-editor ul { list-style: none; margin: 0; padding: 0; }
+
+.photo-editor h2 { margin-bottom: 18px; }
+
+.photo-editor .intro { margin-bottom: 35px; margin: 0; }
+
+.photo-editor .content { background-color: #FFFFFF; padding: 4px; }
+
+.photo-editor .g-thumb-handle { position: absolute; top: 0; left: 0 }
+
+.photo-editor .item {
+	display: -moz-inline-stack;
+	display: inline-block;
+	position: relative;
+	margin: 0 4px 2px 0;
+	height: 100px;
+	width: 129px;
+	border: 1px solid #EAE5DC;
+}
+
+.photo-editor .item.ui-selecting { border: 1px solid #FECA40; }
+
+.photo-editor .item.ui-selected { border: 1px solid #F39814; }
+
+.photo-editor .item .image { float: left; margin: 0; }
+
+.photo-editor .item .image a { display: block; position: relative; }
+
+.photo-editor .item .image a span { display: block; }
+
+.photo-editor .item .image a:hover span,
+.photo-editor .item .image a:focus span,
+.photo-editor .item .image a:active span { display: block; }
+
+.photo-editor .item img {
+	width: 110px;
+	max-height: 100px;
+	height: expression(this.scrollHeight > 99 ? "100px" : "auto");
+	margin: 0;
+}
+
+.photo-editor .item .tools {
+	float: left;
+	margin: 0;
+	width: 17px;
+	position: absolute;
+	left: 111px;
+	top: 0;
+	padding-left: 0;
+}
+
+.photo-editor .item .tools li { margin-bottom: 5px; padding-top: 5px; border-top: 1px solid #cbccce; }
+
+.oldie .photo-editor .item .tools li { zoom: 1; }
+
+.photo-editor .item .tools li:first-child, * html .photo-editor .item .tools li.first { border: none; }
+
+.photo-editor .item .tools button {
+	display: block;
+	overflow: hidden;
+	background: transparent url(../images/photo-editor-tools.png) 0 0 no-repeat;
+	text-indent: -1000em;
+	border: 1px solid black;
+	height: 16px;
+	width: 17px;
+	margin-bottom: 1px;
+	padding: 0;
+}
+
+.photo-editor .item .tools button:hover { border-style: outset; }
+
+.photo-editor .item .tools button.undo { background-position: 0 2px; }
+
+.photo-editor .item .tools button.redo { background-position: 0 -19px; }
+
+.photo-editor .item .tools button.refresh { background-position: 0 -41px; }
+
+.photo-editor .item .tools button.crop { background-position: 0 -62px; }
+
+.photo-editor .item .tools button.caption { background-position: 0 -83px; }
+
+.photo-editor .item .tools button.reset { background-position: 0 -100px; }
+
+/* jquery.Jcrop.css v0.9.10 - MIT License */
+
+/*
+  The outer-most container in a typical Jcrop instance
+  If you are having difficulty with formatting related to styles
+  on a parent element, place any fixes here or in a like selector
+
+  You can also style this element if you want to add a border, etc
+  A better method for styling can be seen below with .jcrop-light
+  (Add a class to the holder and style elements for that extended class)
+*/
+.jcrop-holder {
+  direction: ltr;
+  text-align: left;
+}
+
+/* These styles define the border lines */
+.jcrop-vline,.jcrop-hline{background:#FFF url(/assets/images/Jcrop.gif) top left repeat;font-size:0;position:absolute;}
+.jcrop-vline{height:100%;width:1px!important;}
+.jcrop-hline{height:1px!important;width:100%;}
+.jcrop-vline.right{right:0;}
+.jcrop-hline.bottom{bottom:0;}
+
+/* Handle style - size is set by Jcrop handleSize option (currently) */
+.jcrop-handle{background-color:#333;border:1px #eee solid;font-size:1px;}
+
+/* This style is used for invisible click targets */
+.jcrop-tracker
+{
+  height: 100%;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent; /* "turn off" link highlight */
+  -webkit-touch-callout: none;              /* disable callout, image save panel */
+  -webkit-user-select: none;                /* disable cut copy paste */
+}
+
+/* Positioning of handles and drag bars */
+.jcrop-handle.ord-n{left:50%;margin-left:-4px;margin-top:-4px;top:0;}
+.jcrop-handle.ord-s{bottom:0;left:50%;margin-bottom:-4px;margin-left:-4px;}
+.jcrop-handle.ord-e{margin-right:-4px;margin-top:-4px;right:0;top:50%;}
+.jcrop-handle.ord-w{left:0;margin-left:-4px;margin-top:-4px;top:50%;}
+.jcrop-handle.ord-nw{left:0;margin-left:-4px;margin-top:-4px;top:0;}
+.jcrop-handle.ord-ne{margin-right:-4px;margin-top:-4px;right:0;top:0;}
+.jcrop-handle.ord-se{bottom:0;margin-bottom:-4px;margin-right:-4px;right:0;}
+.jcrop-handle.ord-sw{bottom:0;left:0;margin-bottom:-4px;margin-left:-4px;}
+.jcrop-dragbar.ord-n,.jcrop-dragbar.ord-s{height:7px;width:100%;}
+.jcrop-dragbar.ord-e,.jcrop-dragbar.ord-w{height:100%;width:7px;}
+.jcrop-dragbar.ord-n{margin-top:-4px;}
+.jcrop-dragbar.ord-s{bottom:0;margin-bottom:-4px;}
+.jcrop-dragbar.ord-e{margin-right:-4px;right:0;}
+.jcrop-dragbar.ord-w{margin-left:-4px;}
+
+/* The "jcrop-light" class/extension */
+.jcrop-light .jcrop-vline,.jcrop-light .jcrop-hline
+{
+	background:#FFF;
+	filter:Alpha(opacity=70)!important;
+	opacity:.70!important;
+}
+.jcrop-light .jcrop-handle
+{
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	background-color:#000;
+	border-color:#FFF;
+	border-radius:3px;
+}
+
+/* The "jcrop-dark" class/extension */
+.jcrop-dark .jcrop-vline,.jcrop-dark .jcrop-hline
+{
+	background:#000;
+	filter:Alpha(opacity=70)!important;
+	opacity:.7!important;
+}
+.jcrop-dark .jcrop-handle
+{
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	background-color:#FFF;
+	border-color:#000;
+	border-radius:3px;
+}
+
+/* Fix for twitter bootstrap et al. */
+.jcrop-holder img,img.jcrop-preview{ max-width: none; }
+
+/*Caption dialog*/
+#captionDiag label { display: block; }
+
+#captionDiag textarea { width: 288px; }
+
+/*edit mode on generic pages*/
+#teaser { width: 139px; margin-bottom: 12px; }
+
+#editAuthor { margin-bottom: 12px; }
+
+.loading { display: none; position: absolute; z-index: 10000; }
+
+/*.desc { overflow: auto; }
+.desc div { overflow: hidden; }*/
+
+.edit-meta-oneline { overflow: hidden; }
+.edit-meta-oneline > h3, .edit-meta-oneline > label > h3 { float: left; height: 20px; line-height: 20px; }
+.edit-meta-oneline > span {
+	display: block;
+	float: left;
+	margin-left: 6px;
+	min-height: 20px;
+	line-height: 20px;
+	font-size: 1.3em;
+}
+.edit-meta-oneline .editable-link { display: none; }

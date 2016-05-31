@@ -1,0 +1,97 @@
+#treeview { margin-top: 12px; }
+#formsList { list-style: none; padding-left: 0; clear: both; width: 760px;
+	float: right; }
+#formsList li { margin-bottom: 2px; }
+
+li.forms-departments, li.forms-departments a, li.forms-departments span { text-transform: uppercase; font-weight: normal; font-size: 10pt; }
+li.forms-subfolders, li.forms-subfolders a, li.forms-subfolders span { text-transform: none; font-weight: normal; font-size: 10pt; }
+li.forms-file, li.forms-file a, li.forms-file span { text-transform: none; font-weight: normal; font-size: 9pt; word-wrap: normal; }
+
+.digest-nav {
+	width: 48.1%;
+	background-color: /*#EAE5DC;*/ #575757;
+	color: /*#1e1e1e;*/ white;
+	overflow: hidden;
+	font-weight: normal;
+	list-style-type: none;
+	margin: 24px 0 0 0;
+	padding: 0;
+	position: relative;
+	font-family: Helvetica, Arial, sans-serif;
+	height: 30px;
+}
+.digest-nav .icon img { display: block; }
+.digest-nav li { float: left; }
+.digest-nav .sort-link { border-right: 1px solid white; }
+.digest-nav .nav-link { border-left: 1px solid white; }
+
+.digest-nav .highlighter { position: absolute; border-bottom: 4px solid #9A0000; width: 209px; bottom: 0; height: 4px; }
+
+.digest-nav a, .digest-nav li span {
+	display: block;
+	padding: 6px 7px 4px 8px;
+	color: /*#1e1e1e;*/ white;
+}
+.digest-nav a:hover,
+.digest-nav a:focus,
+.digest-nav a:active { background-color: /*#2B2627; #EAE5DC;*/ #ffffff; color: /*white;*/ #1e1e1e; }
+
+.digest-nav li.disabled span { color: #BBB; }
+
+.digest-nav .current { width: 77px; line-height: 24px; padding-right: 6px; border-left: none; text-align: right; }
+.digest-nav .current span {
+	font-family: SourceSansPro, Helvetica, Arial, sans-serif;
+	font-style: italic;
+	font-weight: normal;
+	display: inline;
+	padding: 0;
+}
+.digest-nav .current em { font-style: normal; display: inline; }
+
+
+
+/*.digest-nav .highlighter { position: absolute; border-bottom: 4px solid #9A0000; width: 209px; bottom: 0; height: 4px; }*/
+
+.column { margin-left: 24px; padding-left: 24px; border-left: 1px dotted #BBBBBB; }
+.column.first { margin-left: 0; padding-left: 0; border-left: none; }
+
+.double-b { overflow: hidden; }
+.double-b .col { float: left; }
+.double-b .tree { width: 407px; }
+
+/* karen young 11/27/13
+make forms and documents header the width of the page
+old width .double-b .tree .col { width: 407px; }
+*/
+.double-b .tree .col { width: 760px; }
+
+.titled-columns { margin-top: 0; }
+/* karen young 11/27/13
+added documents header to alphabetical document list
+old width .titled-columns .col { width: 329px; float: none; display: block; margin-right: 24px; }
+*/
+.titled-columns .col {float: left; }
+.titled-columns .editable-link {
+	left: 289px;
+	color: #FFFFFF;
+	top: -26px;
+	padding-top: 13px;
+	width: 40px;
+}
+
+.primary .about {
+	padding: 18px 16px;
+	line-height: 1.4;
+	background-color: #EAE5DC;
+	width: 622px;
+	margin: 12px auto;
+}
+
+.primary .listbox { padding: 12px; }
+
+.primary .alpha-list {left: 0px; margin-top: 24px; }
+
+.search-directory form p input { display: inline; width: 355px; }
+
+
+

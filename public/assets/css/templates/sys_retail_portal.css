@@ -1,0 +1,237 @@
+/**
+ * User: emuentes
+ * Date: April 20, 2011
+ * Time: 10:16:00 AM
+ */
+
+.feed p.strong {	font-weight:bold; }
+.feed p.strong a { color: #333; }
+.feed p{ margin-top:0!important; margin-bottom:0!important; }
+.feed p.date{ margin-bottom:8px!important; }
+.feed div { padding-top:7px!important; }
+
+.header-a{ border-left: 12px solid #FFC529; }
+
+#tabs_header { 
+	background: #333;
+	color: white;
+	padding: 3px 9px;
+	overflow: hidden;
+	width: 743px; 
+}
+#tabs_header h2 { float:left; font-family:sans-serif; margin:0; font-size: 1.7em; }
+#tabs_header  p { float:right; line-height: 22px; margin: 0; }
+#tabs_header  a { color: #fff; }
+
+#tabs { width: 761px; height: 331px; margin-bottom: 24px; border:none; }
+
+.tabs-bottom { position: relative; padding: 0; } 
+.tabs-bottom .ui-tabs-panel {
+	display: block;
+	padding: 0;
+	background: #F4F1ED;
+	border-width: 0 1px 1px 0;
+	border-style: solid;
+	border-color: #AAA;
+	border-right-color:;
+	height: 300px;
+	overflow: hidden;
+	/* box sizing normalizes the width and height handling between browsers -- http://www.w3.org/TR/css3-ui/#box-sizing */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+.tabs-bottom .ui-tabs-panel span.logo{
+	/* box sizing normalizes the width and height handling between browsers -- http://www.w3.org/TR/css3-ui/#box-sizing */
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+	position: absolute;
+	background: #00f;
+	padding : 0 0 0 5px;
+	line-height:17px;
+	display:block;
+	height: 17px;
+	width: 17px;
+	color: #fff;
+	left: 260px;
+	top: 4px;
+}
+.tabs-bottom .ui-tabs-panel#tabs-1 span.logo{ background: #ebff30; color:#000; }
+.tabs-bottom .ui-tabs-panel#tabs-2 span.logo { background: #ff00ff; }
+.tabs-bottom .ui-tabs-panel#tabs-3 span.logo{ background: #a6f230; }
+.tabs-bottom .ui-tabs-panel#tabs-4 span.logo { background: #6bd6e8; }
+.tabs-bottom .ui-tabs-panel#tabs-5 span.logo { background: #ebbf30; }
+.tabs-bottom .ui-tabs-panel#tabs-6 span.logo { background: #fa427a; }
+.tabs-bottom .ui-tabs-panel#tabs-7 span.logo { background: #9440ba; }
+.tabs-bottom .ui-tabs-panel#tabs-8 span.logo { background: #40f200; }
+/*
+.tabs-bottom .ui-tabs-panel span.logo.marketing { background: #a6f230;}
+.tabs-bottom .ui-tabs-panel span.logo.buying { background: #fa427a ;}
+.tabs-bottom .ui-tabs-panel span.logo.ecommerce{ background: #ebbf30 ;}
+.tabs-bottom .ui-tabs-panel span.logo.visuals { background: #6bd6e8 ;}
+.tabs-bottom .ui-tabs-panel span.logo.operations { background: #9440ba ;}
+.tabs-bottom .ui-tabs-panel span.logo.product { background: #ff00ff ;}
+.tabs-bottom .ui-tabs-panel span.logo.memos { background: #ebff30 ;}
+.tabs-bottom .ui-tabs-panel span.logo.hr { background: #40f200 ;}
+*/
+
+.tabs-bottom .ui-tabs-panel h2{
+	float:right;
+	width:450px;
+	margin: 30px 0 0 0;
+	padding: 0 12px 0 0;
+}
+div.text{
+	position:absolute;
+	left: 297px;
+	top: 62px;
+	padding: 0 0 12px 0;
+	float: right;
+	width: 442px;
+	height: 207px;
+	overflow: auto;
+}
+div.text p{
+	margin: 0 12px 12px 0;
+}
+
+.tabs-bottom .ui-tabs-nav { position: absolute !important; left: 0; bottom: 0; right:0; padding: 3px 0 0 0; border-top:3px solid #FFF; width: 762px; } 
+.tabs-bottom .ui-tabs-selected { /*margin-top: 3px !important;*/ }
+.tabs-bottom .ui-tabs-nav li a { padding: .5em .6em; text-decoration: none; }
+.tabs-bottom .ui-tabs-nav li {
+	position: relative;
+	top:0;
+	list-style: none;
+	float: left;
+	margin: -2px 0 1px 0;
+	padding: 0;
+	border-top: none; 
+	border-width: 0 1px 0 6px;
+	border-style:solid;
+	border-color:#FFF;
+	border-bottom: none !important;
+	white-space: nowrap;
+}
+.tabs-bottom .ui-tabs-nav li.ui-tabs-selected {
+	margin-bottom: 0;
+	padding-bottom: 1px;
+}
+
+.tabs-bottom.ui-corner-all {
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+}
+.tabs-bottom .ui-widget-header {
+	border: none;
+	background: #FFF;
+	color: #222;
+	font-weight: bold;
+}
+.tabs-bottom .ui-state-default, 
+.tabs-bottom .ui-widget-content .ui-state-default, 
+.tabs-bottom .ui-widget-header .ui-state-default {
+background: #575757 url(./jquery-theme/ui-bg_flat_75_2b2627_40x100.png) 50% 50% repeat-x;
+color:#212121;
+}
+.tabs-bottom .ui-state-default a, 
+.tabs-bottom .ui-widget-content .ui-state-default a, 
+.tabs-bottom .ui-widget-header .ui-state-default a {
+color:#212121;
+}
+.tabs-bottom .ui-state-hover, 
+.tabs-bottom .ui-widget-content .ui-state-hover, 
+.tabs-bottom .ui-widget-header .ui-state-hover, 
+.tabs-bottom .ui-state-focus, 
+.tabs-bottom .ui-widget-content .ui-state-focus, 
+.tabs-bottom .ui-widget-header .ui-state-focus {
+	font-weight: normal;
+	color: #212121;
+	background: #2B2627;
+}
+
+
+/******************************
+* BEGIN jQUERY UI TAB STYLING *
+*******************************/
+
+#tabs li{
+	border-left-color: #333!important;
+	background:#EAE5DC;
+	padding-bottom: 0;
+}
+
+#tabs li#memos{ width:128px; }
+#tabs li#memos.ui-tabs-selected, #tabs li#memos:hover { border-left-color: #ebff30 !important; }
+#tabs li#product{ width:118px; }
+#tabs li#product.ui-tabs-selected ,#tabs li#product:hover { border-left-color: #ff00ff !important; }
+#tabs li#marketing{ width:72px; }
+#tabs li#marketing.ui-tabs-selected, #tabs li#marketing:hover { border-left-color: #a6f230 !important; }
+#tabs li#visuals{ width:56px; }
+#tabs li#visuals.ui-tabs-selected, #tabs li#visuals:hover { border-left-color: #6bd6e8 !important; }
+#tabs li#ecommerce{ width:87px; }
+#tabs li#ecommerce.ui-tabs-selected, #tabs li#ecommerce:hover { border-left-color: #ebbf30 !important; /*I assumed that the "web" color from the email was for ecommerce*/ }
+#tabs li#buying{ width:53px; }
+#tabs li#buying.ui-tabs-selected, #tabs li#buying:hover { border-left-color: #fa427a !important; }
+#tabs li#operations{ width:76px; }
+#tabs li#operations.ui-tabs-selected, #tabs li#operations:hover { border-left-color: #9440ba !important; }
+#tabs li#hr{ width:114px;	padding:0 1px; }
+#tabs li#hr.ui-tabs-selected, #tabs li#hr:hover{ border-left-color: #40f200 !important; }
+div.edit_img{
+	overflow: hidden;
+	width: 256px;
+	height:300px;
+	float: left;
+	margin-right: 12px;
+}
+
+.ui-corner-bottom {
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+div#secondary h2.c span{
+	height: 11px;
+	width: 11px;
+	margin-top: 2px;
+	margin-right: 8px;
+	background: #FFC529;
+	overflow: hidden;
+	display: block;
+	float: left;
+}
+div#secondary .section-a ul {
+	list-style-type: none;
+	padding: 0;
+	font-weight: bold;
+}
+div#secondary .section-a ul li { margin: 2px 0; }
+div#poll {
+	background: #EAE5DC url(./jquery-theme/ui-bg_flat_75_eae5dc_40x100.png) 50% 50% repeat-x;
+	padding: 0 12px 12px;
+	overflow:hidden;
+	border-width: 5px 0;
+	border-style:solid;
+	border-color:#FFC529;
+}
+div#poll p {
+	margin: 0;
+}
+div#poll p.strong {
+	font-weight:bold;
+	margin-top: 12px;
+}
+div#poll p a { color: #464646; }
+div#poll p a:hover { color: #9A0000; }
+div#poll ul {
+list-style-type: circle;
+margin: 0;
+padding-left: 0;
+}
+div#poll ul  li { margin-left: 15px; }
+div#poll ul p {	margin-top: 12px; }

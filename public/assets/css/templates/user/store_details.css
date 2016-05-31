@@ -1,0 +1,111 @@
+div.gallery {
+	overflow: hidden;
+	border-width: 1px 1px 6px 1px;
+	border-style: solid;
+	border-color: #BBB;
+	padding: 0 0 12px 12px;
+	height: 625px;
+	margin-top: 12px;
+}
+
+div.gallery div.primary { float: left; width: 460px; height: 612px; overflow: hidden; padding-top: 12px; padding-bottom: 12px; }
+div.gallery div.secondary { float: left; }
+
+div.gallery div.secondary { padding-left: 12px; position: relative; width: 274px; }
+
+div.gallery div.secondary ul.thumbs {
+	list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+	background-color: #EAE5DC;
+	border-left: 1px solid #BBBBBB;
+	height: 269px;
+}
+div.gallery div.secondary ul.thumbs div.page{ padding-top: 10px; }
+div.gallery div.secondary ul.thumbs li { float: left; margin-left: 12px; margin-bottom: 12px; border: 1px solid #999; text-align: center; width: 73px; height: 73px;
+overflow: hidden; }
+
+div.gallery div.secondary ul.thumbs li a:active, div.gallery div.secondary ul li a:focus { outline: none; }
+
+div.gallery div.pagination span.current,
+div.gallery div.pagination a.activeSlide,
+div.gallery div.pagination a:hover,
+div.gallery div.controls   a:hover { background-color: #2B2627; cursor:pointer; }
+
+div.gallery div.secondary div.pagination {
+	background-color: #454545;
+    color: white;
+    height: 16px;/* yes, I'm using height, shut up and go away */
+    padding: 4px 4px 9px;
+    top: 0;
+    width: 266px;
+	position:relative;
+}
+div.gallery div.secondary div.pagination a { color: white; }
+div.gallery div.secondary div.pagination a,
+div.gallery div.secondary div.pagination span.current,
+div.gallery div.secondary div.pagination span.ellipsis {
+    border: 1px solid #CCCCCC;
+    display: block;
+    float: left;
+    margin-right: 2px;
+    padding: 4px 7px 2px;
+}
+
+div.gallery ul#gallery { text-align: center; list-style-type:none; padding:0;}
+div.gallery ul#gallery li { width: 100% !important; }
+div.gallery ul#gallery img { max-width: 460px; max-height: 612px; margin: 0 auto; }
+
+div.gallery div.controls {
+	background-color: #454545;
+    color: white;
+	overflow: hidden;
+	position: relative;
+	height: 29px;/* yes, I'm using height, shut up and go away */
+}
+div.gallery div.controls a { color: white; position: absolute; text-align: center; top: 0; width: 32px; }
+div.gallery div.controls a.play,
+div.gallery div.controls a.pause{
+	left: 50%;
+	top: 4px;
+	border: 1px solid #CCCCCC;
+    padding: 4px 7px 2px;
+	margin-left: -18.5px;
+}
+div.gallery div.controls a.prev { left: 0; border-right: 1px solid #CCCCCC; line-height: 29px; }
+div.gallery div.controls a.next { right: 0; border-left: 1px solid #CCCCCC; line-height: 29px; }
+
+div.gallery div.secondary div.captions { border-left: 1px solid #CCCCCC; padding: 12px; }
+
+div.gallery div.caption {
+	/*width: 250px;*/
+	height: 286px;
+	display: none;
+}
+div.gallery div.caption.active {
+	display:block;
+}
+
+div.gallery div#loading { margin-top: 12px; }
+
+div.gallery p.image-credits strong { color: #000000; }
+
+ul.ui-autocomplete { z-index: 1000 !important; }
+
+ul.store-details { list-style: none; padding: 0; margin: 0 0 12px 0; }
+ul.store-details li {
+	display: block;
+	overflow: hidden
+}
+ul.store-details li p { margin: 0; }
+
+ul.store-details li strong { display: block; float: left; }
+ul.store-details li p { display: block; float: left; margin-left: 6px; }
+
+.edit-textinline, .edit-select { width: auto !important; }
+
+.edit-textinline .editable-link, .edit-select .editable-link { left: auto; top: 0; right: -38px; }
+
+.article { padding: 0 !important; width: 200px; }
+.article .editable-link { left: auto; right: 0; }

@@ -1,0 +1,7 @@
+p.image { margin: 0; }
+
+.entry { overflow: hidden; clear: both; padding-right: 24px; }
+.entry .image { float: left; width: 380px; margin-right: 20px; margin-bottom: 12px; }
+.entry ul { list-style-position: inside; }
+
+h3.b { margin-bottom: 6px; font-size: 1.55em; line-height: ; }

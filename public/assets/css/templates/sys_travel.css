@@ -1,0 +1,36 @@
+/**
+ * Created by: cravelo
+ * Date: 1/23/12
+ * Time: 4:15 PM
+ */
+
+.primary .about {
+	padding: 18px 16px;
+	line-height: 1.4;
+	background-color: #EAE5DC;
+	width: 622px;
+	margin: 12px auto;
+	font-size: 1.4em;
+	text-align: center;
+}
+
+.section-a { overflow: hidden; }
+.section-a .col {
+	overflow: hidden;
+	padding: 0 0 0 12px;
+	background: none;
+	width: 367px;
+}
+.section-a .col-first {
+	padding: 0 12px 0 0;
+	border-right: 1px solid #C9CACC;
+}
+
+.section-a .col .image {
+	float: left;
+	display: block;
+	width: 190px;
+	margin-right: 12px;
+}
+
+.section-a .col .place-info { padding: 0; height: auto !important; }

@@ -1,0 +1,491 @@
+/*
+ * @filename: sys_portal_test.css
+ * @author: Carlos Ravelo
+ * @description: this file has the css unique to the sys_portal template
+ *
+ */
+.section-a {border-top: 1px solid #b2b2b2;}
+
+.rotator-a { position: relative; z-index: 50; overflow: hidden; width: 760px; height: 425px; margin-bottom: 0; background-color: #ffffff; border: 1px solid transparent;}
+.js .rotator-a { display: none; }
+ .rotator-a .primary { float: left; width: 490px; height: 425px; background-color: #ffffff; }
+  .rotator-a .primary ul { list-style: none; margin: 0; padding: 0; height: 425px;}
+   .rotator-a .primary ul li { position: relative; height: 385px; width: 490px;}
+   .rotator-a .primary ul p { margin: 0; }
+  .rotator-a .primary .caption { width: 490px; border-bottom: 1px solid #fff; color: #2b2b2b; padding: 18px 0 0; height: 95px;}
+.rotator-a .primary .caption h3 { position: absolute; bottom: 26.5px;min-height: 20px; max-height: 40px; font-size: 1.2em; border-bottom: 1px solid #c9cacc; padding-top: 18px; width: 490px;}b a {position: absolute; height: 20px; padding-top: 18px;}
+   .rotator-a .primary .caption p { position: absolute; bottom: 0;margin: 0; height: 25px; padding-top: 5px;}
+   .rotator-a .primary .caption p.more-b { font-size: 0.8em; }
+   .rotator-a .primary .caption h2 { margin-bottom: 5px; }
+ .rotator-a .secondary {float: left; height:330px; width: 269px; border-left: 1px solid #fff; background-color: #ffffff;}
+  .rotator-a .secondary h2 { font-size: 1.2em; }
+  .rotator-a .items { height: 330px; margin-left: 5px; }
+  .js .rotator-a .items {min-height: 295px; margin: 0; border-bottom: 1px solid #fff; }
+   .rotator-a .items .image { margin: 0; }
+   .rotator-a .items ul { list-style: none; margin: 0; padding-left: 10px; height: 330px; width: 269px;}
+    html* .rotator-a .items ul li { position: relative; height: 330px;}
+    .rotator-a .item { border-bottom: 1px solid #fff; }
+   
+	
+    .js .rotator-a .item { margin-bottom: 0px;}
+    html.js* .rotator-a .item { zoom: 1; }
+    .js .rotator-a .item:last-child { border-bottom-width: 0; }
+    html* .rotator-a .last { border-bottom-width: 0; }
+     .js .rotator-a .item p { margin:  0; }
+     .rotator-a .item p.thumb { display: none; }
+     .js .rotator-a .item p.thumb { display: block; width: 126px; padding-left: 5px; }
+      .rotator-a .item p.thumb a, .rotator-a .item .title { display: block; height: 25px; color: #2b2b2b; line-height: 1.2; text-align: left;}
+  /*    html.js* .rotator-a .item .title { width: 126px; height: 25px;}*/
+     * html .rotator-a .item .title { padding-top: 0px; padding-bottom: 0px; }
+     .js .rotator-a  .item .main { display: none; }
+.rotator-a .item p.thumb a, .rotator-a .item .title { display: block; min-height: 20px; padding: 0px 3px 0px 0px; color: #2b2b2b; line-height: 1.25;}
+.rotator-a .item .title:hover{color: #9a0000; /*font-weight: bold; */}
+
+.rotator-controls { overflow: hidden; width: 100%; font-weight: bold; text-align: center; padding-top: 20px; margin-left: 8px;/*min-height: 103px;*/ }
+/*.rotator-controls .rotator-nav { margin-bottom: 13px; }*/
+ .rotator-controls p { overflow: hidden; width: 100%; margin-bottom: 0; position: static; }
+ .rotator-controls p.current-a { margin-bottom: 7px; padding-top: 16px; }
+ .rotator-controls p.current-b { float: left; width: 77px; margin: 0; padding-top: 0; line-height: 27px; }
+  .rotator-controls .current span { font-family: SourceSansPro, Helvetica, Arial, sans-serif; font-style: italic; font-weight: normal; }
+  html* .rotator-controls .current span { margin: 0 3px; }
+  .rotator-controls .current em { font-style: normal; }
+  .rotator-controls p.more-a { width: auto; padding-right: 15px; }
+  .js .rotator-controls p.more-a {  text-align: right; font: normal normal 1.15em SourceSansPro, Helvetica, Arial, sans-serif; padding-right: 0px;}
+
+ .rotator-nav .prev {
+	background: url(/assets/images/hp_buttons/left_scroll.png) 0 0 no-repeat;
+	float:left;
+	bottom:7px;
+	width: 132px;
+	height: 30px;
+	outline: none;
+	/*height: 24px;
+	right: 0px;
+	padding: 0 !important;
+	margin: 0;
+	*/}
+/*.rotator-nav button, .rotator-nav a {
+	 float: left;
+	 overflow: hidden;
+	 width: 69px;
+	 height: 32px;
+	 border: none;
+	 background: url(/assets/images/previous_grey.jpg)no-repeat;
+	 text-indent: -1000em;
+	 outline: none;
+}*/
+ .rotator-nav .prev:hover, .rotator-nav .prev:focus, .rotator-nav .prev:active { background: url(/assets/images/hp_buttons/left_scroll_rollover.png) 0 0 no-repeat;}
+ /*.rotator-nav .prev:hover { background-position: 0 -33px; } *//*focus and/or active were "sticking", the button would stay gray*/
+ .rotator-nav .next {
+	background: url(/assets/images/hp_buttons/right_scroll.png) 0 0 no-repeat;
+	float: right;
+	bottom:8px;
+	width: 133px;
+	height: 30px;
+	outline: none;
+	/*height: 16px;
+	right: 0px;
+	padding: 0 !important;
+	margin: 0;*/}
+ /*.rotator-nav .next:hover, .rotator-nav .next:focus, .rotator-nav .next:active { background-position: -70px -33px; }*/
+ .rotator-nav .next:hover, .rotator-nav .next:focus, .rotator-nav .next:active { background: url(/assets/images/hp_buttons/right_scroll_rollover.png) 0 0 no-repeat}
+
+.double-f {width: 760px;}
+.double-f .col { width: 100px; background-color: #ffffff; }
+.double-f .col div{ padding: 0 0px 5px; position: relative; overflow: hidden; background-color: #ffffff;}
+.double-f .col:first-child + .col, * html .columns .col-first + .col {width: 265px;}
+
+.double-b {width: 269px; height: 330px;}
+.double-b .col {  width: 128px; background-color: #ffffff; }
+.double-b .col ul{ padding: 0 4px; position: relative;  overflow: hidden; background-color: #ffffff;}
+.double-b .col:first-child + .col, * html .columns .col-first + .col {width: 128px; display: inline; right: 0px;/* margin-left: 10px;*/}
+
+.double-d { overflow: hidden; width: 265px; margin-top: -7px; }
+ .double-d .col ul, .one { float: left; width: 130px; }
+ .double-d .col ul, .two { float: right; width: 130px; }
+
+.double-h { width: 100%; /*border: 1px solid #c9cacc;*/}
+ .double-h .col { width: 379px; padding: 12px 10px; background-color: #ffffff; }
+ .double-h .col ul, .double-h .col>div { padding: 12px 12px 24px 12px; list-style: none; margin: 0; }
+ .double-h .col ul li {
+	 overflow: auto;
+	 padding-bottom: 6px;
+	 margin-bottom: 6px;
+	 border-bottom: 1px solid #9F9A96;
+ }
+ .double-h .col ul li img {
+	 float: left;
+	 margin-right: 0px;
+	 margin-bottom: 0;
+	 max-width: 100px;
+ }
+ * html .double-h .col ul li img { width: expression(this.scrollWidth > 99 ? "100px" : "auto"); }
+ .double-h .col ul li div { display: block; float: left; width: 251px; }
+ .double-h .col ul li h3 { line-height: 1em; margin-bottom: 5px; }
+ .double-h .col ul li div p { margin-bottom: 0; }
+
+
+.titled-columns { margin-top: 35px;}
+
+.triple-column-title a {
+	font-family: SourceSansPro, Helvetica, Arial, sans-serif;
+	background-color: #575757;
+	color: #FFFFFF !important;
+	font-variant: small-caps;
+	padding: 4px 8px 0 8px;
+	display: block;
+	font-size: 0.9em;
+        /*font-weight: bold;*/
+        height: 21px;
+}
+.triple-column-title a:hover { background-color: #2b2627 !important; }
+.triple-column-title p { margin-bottom: 32px; margin-top: 2px; }
+
+#sideArrowDown {
+	background:url('/assets/images/sideArrowDown.png') no-repeat center bottom;
+	height:42px;
+	position:absolute;
+	bottom:0;
+}
+
+#sideArrowUp {
+	background:url('/assets/images/sideArrowUp.png') no-repeat center top;
+	height:42px;
+	position:absolute;
+	top:0;
+}
+
+.primary div.icons { overflow: hidden; }
+.primary div.icons a { display: block; text-indent: -1000em; }
+
+.primary div.icons a.mission {
+	width: 200px;
+	height: 91px;
+	margin: 0 auto;	
+	background: transparent url(/assets/images/missionStatement.png) 0 0 no-repeat;
+
+}
+.primary div.icons a.mission:hover {background: transparent url(/assets/images/ef_badge_30_heart_red.jpg) 0 0 no-repeat;},
+.primary div.icons a.mission:focus,
+.primary div.icons a.mission:active { background-position: 0 -74px; }
+
+/*aside.secondary div.icons a.vision2020 {
+	width: 200px;
+	height: 91px;
+	margin: 0 auto;	
+	background: transparent url(/assets/images/vision2020logoblk.jpg) 0 0 no-repeat;
+}*/
+.sideArrowDown {
+	background:url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowDown.png') no-repeat bottom;
+	position:relative;
+	bottom:8px;
+	width: 200px;
+	height: 42px;
+	right: 120px;
+	padding: 0 !important;
+	margin: 0;
+	
+}
+
+.sideArrowUp {
+	background:url('http://www.eileenfisher.com/ns/tipsters/images/sideArrowUp.png') no-repeat bottom;
+	position:relative;
+	bottom:8px;
+	width: 200px;
+	height: 42px;
+	right: 120px;
+	padding: 0 !important;
+	margin: 0;
+	
+}
+/*.more-b {
+	bottom: 8px;
+	position: absolute;
+	right: 11px;
+	padding: 0 !important;
+	margin: 0;
+	font: normal normal 1.3em SourceSansProSemibold, Helvetica Arial, sans-serif;
+}*/
+p.thumb { width: 139px; } /*required by safari, it affects IE8 and 7 will undo in mod.ie.css*/
+
+/*p.image { text-align: center; }*/ /*failsafe for vertical pictures*/
+/*.columns .col { float: left;  margin-left: 0px;  background-color: #e9e3db; }*/
+.titled-columns div.col h2 a {
+	font-family: SourceSansPro, Helvetica, Arial, sans-serif;
+	background-color: #575757;
+	color: #FFFFFF !important;
+	font-style: normal;
+	padding: 4px 8px 0 8px;
+	margin: 0 !important;
+	display: block;
+	font-size: 1.1em;
+}
+
+#bulletin {
+	
+	border-left:  1px solid #b2b2b2;
+	border-bottom: 1px solid #b2b2b2;
+        height: 338px;}
+	
+#bulletin ul {
+	list-style-type: none;
+	margin: 0;
+	padding-top: 0;
+	padding-left: 2px;
+	width: 353px;
+	
+	}
+#bulletin ul li { list-style-type: none; padding-top: 7px; border-bottom: 1px solid #b2b2b2; height: 90px; /*padding-bottom: 0px;*/}
+
+
+/*Homepage Anniversary Styles-------------------*/
+#anivWrap { padding-left: 18px; border-right: 1px solid #b2b2b2; border-left: 1px solid #b2b2b2; border-bottom: 1px solid #b2b2b2; height: 338px;} 
+#anivWrap > div { max-height: 324px; overflow: hidden;  }
+.oldie #anivWrap > div { height: expression(this.scrollHeight > 323 ? "324px" : "auto"); }
+.double-a .col #anivWrap ul li div { width: 230px; padding-left: 12px; padding-top: 5px;}
+#anivWrap ul { list-style-type: none; margin: 0; padding: 0; width: 324px; }
+#anivWrap ul li { list-style-type: none; padding-top: 7px; /*padding-bottom: 0px;*/ border-bottom: 1px solid #b2b2b2; height: 90px; width: 330px;}
+
+.more-b {
+	bottom: 8px;
+	position: absolute;
+	padding: 0 !important;
+	/*padding-top: 10px;*/
+	/*left: 170px;*/
+	margin: 0;
+	font: normal normal 1.15em SourceSansPro, Helvetica Arial, sans-serif;
+	/*border-top: 1px solid black;*/
+}
+ .more-b .next {
+	background: url(/assets/images/next_grey3.jpg) no-repeat center bottom;
+	position:relative;
+	bottom:8px;
+	width: 266px;
+	outline: none;
+	height: 36px;
+	right: 0px;
+	padding: 0 !important;
+	margin: 0;}
+ /*.rotator-nav .next:hover, .rotator-nav .next:focus, .rotator-nav .next:active { background-position: -70px -33px; }*/
+
+
+
+/*highlight for rotator thumbnails*/
+.rotator-a p.thumb a.active span { /*border-TOP: 3px solid #CC0000;*/ background-color: transparent;}
+
+
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer { overflow: hidden; position: relative; }
+
+.jspPane { position: /*absolute;*/relative; width: 300px; }
+
+.jspVerticalBar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 10px;
+	background: transparent /*red*/;
+	height: 324px !important;
+}
+
+.jspHorizontalBar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: transparent /* red*/;
+}
+
+.jspVerticalBar *,
+.jspHorizontalBar * { margin: 0; padding: 0; }
+
+.jspCap { display: none; }
+
+.jspHorizontalBar .jspCap { float: left; }
+
+.jspTrack { background: #EAE5E5 !important; /*#AAA transparent;*/ position: relative; border: 1px solid black; height: 322px !important;}
+
+.jspDrag {
+	background: transparent /*#575757*/;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag { float: left; height: 58px; }
+
+.jspArrow {
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+}
+
+.jspArrow.jspDisabled { cursor: default; background: #80808d; }
+
+.jspVerticalBar .jspArrow {	height: 160px; }
+
+.jspHorizontalBar .jspArrow { width: 16px; float: left; height: 100%; }
+
+.jspVerticalBar .jspArrow:focus { outline: none; }
+
+.jspCorner { background: #eeeef4; float: left; height: 100%; }
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner { margin: 0 -3px 0 0; }
+
+
+
+#container{
+	position: relative;
+	display: inline-block;
+	border: 1px solid black;
+}
+
+#container * {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+#image {
+	z-index: 9;
+	text-align: center;
+	border: 1px solid blue;
+}
+
+#play {
+	background: url('http://cdn1.iconfinder.com/data/icons/iconslandplayer/PNG/64x64/CircleBlue/Play1Pressed.png') center center no-repeat;
+	margin: -250px 10px 0 0;
+	height: 250px;
+	position: relative;
+	z-index: 10;
+}
+
+
+aside.secondary div.icons a.vision2020 {
+	width: 200px;
+	height: 91px;
+	margin: 0 auto;	
+	background: transparent url(/assets/images/vision2020logoblk.jpg) 0 0 no-repeat;
+
+}
+aside.secondary div.icons a.vision2020:hover {background: transparent url(/assets/images/vision2020logored.jpg) 0 0 no-repeat;},
+aside.secondary div.icons a.vision2020:focus,
+aside.secondary div.icons a.vision2020:active { background-position: 0 -74px; }
+
+
+
+#ourbrand{
+	width: 146px;
+	height: 55px;
+	margin-right: 4.5px;	
+	background: url(/assets/images/hp_buttons/button-1.jpg) 0 0 no-repeat;
+	display: inline-block; /* needed for firefox*/
+}
+
+
+#ourbrand:hover{
+	background: url(/assets/images/hp_buttons/button-1-rollover.jpg) 0 0 no-repeat;
+	width: 146px;
+	height: 55px;
+	display: inline-block;
+	/*border: 1px solid #000000;*/
+	margin-right: 4px;
+}
+
+#vision2020{
+       /*border-width: 5px;
+       border-style: none;*/
+       width: 146px;
+       height: 55px;
+       margin-right: 4.5px;	
+       background: url(/assets/images/hp_buttons/button-2.jpg) 0 0 no-repeat;
+       display: inline-block; /* needed for firefox*/
+}
+#vision2020:hover{
+       background: url(/assets/images/hp_buttons/button-2-rollover.jpg) 0 0 no-repeat;
+       width: 146px;
+       height: 55px;
+	/*border: 1px solid #000000;*/
+       margin-right: 4px;
+}
+
+#cp{
+	width: 146px;
+	height: 55px;
+	margin-right: 4.5px;	
+	background: url(/assets/images/hp_buttons/button-4.jpg) 0 0 no-repeat;
+	display: inline-block; /* needed for firefox*/
+}
+#cp:hover{
+	background: url(/assets/images/hp_buttons/button-4-rollover.jpg) 0 0 no-repeat;
+	width: 146px;
+	height: 55px;
+	/*border: 1px solid #000000;*/
+	margin-right: 4px;
+}
+
+#optank{
+	width: 146px;
+	height: 55px;
+	margin-right: 4.5px;	
+	background: url(/assets/images/hp_buttons/button-5.jpg) 0 0 no-repeat;
+	display: inline-block; /* needed for firefox*/
+}
+#optank:hover{
+	background: url(/assets/images/hp_buttons/button-5-rollover.jpg) 0 0 no-repeat;
+	width: 146px;
+	height: 55px;
+	/*border: 1px solid #000000;*/
+	margin-right: 4px;
+}
+
+#ourcompany{
+	width: 146px;
+	height: 55px;	
+	background: url(/assets/images/hp_buttons/button-3.jpg) 0 0 no-repeat;
+	display: inline-block; /* needed for firefox*/
+}
+#ourcompany:hover{
+	background: url(/assets/images/hp_buttons/button-3-rollover.jpg) 0 0 no-repeat;
+	width: 146px;
+	height: 55px;
+	/*border: 1px solid #000000;*/
+}
+
+ .double-a .col ul, .double-a .col>div { padding: 12px 12px 10px 12px; list-style: none; margin: 0; }
+ 
+ 
+#calendar h2.c a:hover{
+	color: #9a1b1f !important; 
+}
+
+#efsnapshots h2.c a:hover{
+	color: #9a1b1f !important; 
+}
+
+#ads h2 a:hover{
+	color: #9a1b1f !important; 
+}
+
+#efvideos h2.c a:hover{
+	color: #9a1b1f !important; 
+}
+
+#videos {
+       border: 1px solid #eeeeee;
+}
+
+h5.more-c a:hover{color: #9a1b1f !important;}
+/*h2.c a:hover {color: #9a1b1f !important; }*/

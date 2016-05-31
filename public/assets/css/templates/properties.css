@@ -1,0 +1,25 @@
+.properties-a { margin: 0; }
+
+.perm-checkbox { margin-right: 6px; }
+
+ul.sortable-list { list-style-type: none; margin: 0 0 12px; overflow: hidden; padding: 0; }
+ul.sortable-list li {
+	height: 20px;
+	width: 300px;
+	border: 1px solid black;
+	margin-bottom: 6px;
+	padding: 6px 6px 0 6px;
+}
+ul#sections li { float: left; margin-right: 25px; }
+ul.sortable-list li.ui-selected { background-color: #2B2627; color: #FFF; }
+ul.sortable-list li.ui-selecting { background-color: #F4F1ED; }
+
+p.sections-other { float: left; padding: 0 6px 0 25px; }
+ul.sections-other { float: left; list-style-type: none; padding: 0; margin: 0; }
+ul.sections-other li { float: left; list-style-type: none; }
+
+h3.c { clear: both; }
+
+input#tags { width: 529px; }
+
+.fancy-select { float: left; }

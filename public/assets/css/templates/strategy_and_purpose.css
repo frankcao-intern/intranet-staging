@@ -1,0 +1,73 @@
+/**
+ * User: cravelo
+ * Date: Feb 16, 2011
+ * Time: 10:50:33 AM
+ */
+
+.ui-tabs-panel iframe { width: 732px; height: 412px; }
+
+.article-header { margin-bottom: 12px; }
+
+.h2{
+    height: 26px;
+    width: auto;
+}
+
+#content > .primary {
+    float: left;
+    width: 975px;
+    position: relative;
+    clear: left;
+}
+
+.header-a {
+    min-height: 24px;
+    margin-bottom: 10px;
+    padding: 25px 14px 8px;
+    background-color: #f4f1ed;
+    position: relative;
+}
+
+
+.header-a h2 {
+    margin: 0;
+    color: #505050;
+    font: 2.4em/1 SourceSansProLight, Helvetica, Arial, sans-serif;
+}
+
+.header-c {
+ /*   min-height: 10px;
+    margin-bottom: 10px;
+    padding: 10px 14px 8px;
+    background-color: #86827E;
+    position: relative;*/
+ 
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 975px;
+/*    min-width: 1004px;*/
+}
+.header-c h3 {
+   margin: 0;
+    color: #000000;
+    font: 1.5em/1 SourceSansProLight, Helvetica, Arial, sans-serif;
+ 
+    width: 100%;
+    max-width: 1220px;
+   /* min-width: 820px;*/
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+    font-size: 20pt;
+    color: #000;
+    padding-top: 0px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.caption {/*font-family: 'Trade Gothic W01 Light' !important;*/
+ font-size: 25pt; color: #000;
+  padding-left:25px;margin-top: 20px;display:block;}
+

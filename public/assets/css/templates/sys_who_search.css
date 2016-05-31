@@ -1,0 +1,27 @@
+/*
+    Document   : sys_who_search.css
+    Created on : Jun 4, 2010, 1:45:36 PM
+    Author     : cravelo
+    Description:
+        this are the styles unique to the who search results page
+*/
+
+.search-results-a .status {
+	background: #EAE5DC;
+	padding: 6px;
+	min-height: 14px;
+}
+.oldie .search-results-a .status {
+	height: expression(this.scrollHeight > 13 ? "14px" : "auto");
+}
+
+.search-results-a .status .ui-icon {
+	float: left;
+	position: relative;
+	left: 0;
+	top: -1px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+}
+
+.search-results-a .col .image { height: 210px; }

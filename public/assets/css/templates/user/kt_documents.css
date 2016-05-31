@@ -1,0 +1,27 @@
+.kt-documents .forms-list { list-style: none; padding-left: 0; clear: both; overflow: hidden; }
+.kt-documents .forms-list li { margin-bottom: 2px; }
+
+.kt-documents .forms-departments,
+.kt-documents .forms-departments a,
+.kt-documents .forms-departments span { text-transform: uppercase; font-weight: normal; font-size: 10pt; }
+
+.kt-documents .forms-subfolders,
+.kt-documents .forms-subfolders a,
+.kt-documents .forms-subfolders span { text-transform: none; font-weight: normal; font-size: 10pt; }
+
+.kt-documents .forms-file,
+.kt-documents .forms-file a,
+.kt-documents .forms-file span { text-transform: none; font-weight: normal; font-size: 9pt; word-wrap: normal; }
+
+.kt-documents .column { border-right: 1px dotted #BBBBBB; padding-right: 10px; margin-right: 10px; }
+.kt-documents .last { border-right: none; padding-right: 0; margin-right: 0; }
+
+.kt-documents .image-stack { margin-bottom: 24px; }
+
+.kt-documents .article-header { width: 100%; overflow: hidden; }
+.kt-documents .article-header h2 { width: auto; }
+.kt-documents .article-header .left { width: 70%; }
+.kt-documents .article-header .right { width: 184px; }
+.kt-documents .article-header .right input { width: 140px; }
+
+/*.kt-documents .article .editable-link { left: 324px; }*/

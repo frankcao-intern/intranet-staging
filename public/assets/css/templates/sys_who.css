@@ -1,0 +1,27 @@
+/*
+    Document   : sys_who
+    Created on : Jun 4, 2010, 1:45:36 PM
+    Author     : cravelo
+    Description:
+        this are the styles unique to the who landing page
+*/
+
+.search-directory { width: 464px; margin: 50px auto; }
+
+.search-directory form { width: 100%; overflow: hidden; }
+
+.search-directory form p label { display: block; }
+.search-directory form p input { display: inline; width: 405px; }
+.search-directory form p button { display: inline; }
+
+/*.search-directory .about { margin-bottom: 50px; padding: 18px 16px; border-top: 1px solid #fff; line-height: 1.4; }*/
+/*.oldie .search-directory .about { margin-bottom: 10px; }*/
+
+ul.ui-autocomplete { border: 1px solid #F6F4F1 !important; }
+
+html ul.js-who-departments { width: 760px !important; margin: 0; padding: 0; }
+html ul.js-who-departments li a { color: #454545; }
+.js-who-departments ul { margin-left: 0; padding-left:0; }
+.js-who-departments .column { margin-right: 10px; padding-right: 10px; }
+.js-who-departments .last.column { margin-right: 0; padding-right: 0; }
+

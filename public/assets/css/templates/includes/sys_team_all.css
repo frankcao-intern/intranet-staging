@@ -1,0 +1,64 @@
+/**
+ * Created by: cravelo
+ * Date: 8/29/11
+ * Time: 3:41 PM
+ */
+
+.team-tabs { margin: 32px 0 0 0; }
+
+.ui-tabs { padding: 0; border: none; background: none; background-color: #F6F4F1; clear: both; font-size: 1em; }
+.ui-tabs { border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0; }
+
+.ui-tabs .ui-tabs-nav { border: none; padding: 0 0 0 8px; background: none; background-color: #FFFFFF; }
+.ui-tabs .ui-tabs-nav li {
+	border: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	margin: 0;
+	padding: 10px 12px 2px 4px;
+}
+.ui-tabs .ui-tabs-nav li a { outline: none; padding: 0; }
+
+.ui-tabs .ui-tabs-nav li {
+	background: none;
+	border-right: 20px solid transparent;
+	border-bottom: 26px solid #EAE5DC !important;
+	border-top: none;
+	border-left: none;
+	height: 0;
+	padding: 0;
+	margin-left: -8px;
+}
+.ui-tabs .ui-tabs-nav li.ui-state-default a { color: #1E1E1E; margin: 8px 10px 0 10px; }
+
+.ui-tabs .ui-tabs-nav li.ui-state-active { z-index: 14; }
+
+.ui-tabs .ui-tabs-nav li.ui-state-active,
+.ui-tabs .ui-tabs-nav li.ui-state-hover {
+	background: none;
+	border-right: 20px solid transparent;
+	border-bottom: 26px solid #2B2627 !important;
+	height: 0;
+	padding: 0;
+	z-index: 15;
+}
+.ui-tabs .ui-tabs-nav li.ui-state-active a, .ui-tabs .ui-tabs-nav li.ui-state-hover a { color: #FFFFFF; margin: 8px 10px 0 10px; }
+
+.ui-tabs .ui-tabs-panel { overflow: hidden; padding: 1.2em; }
+.ui-tabs .ui-tabs-panel section.primary { width: 100% !important; }
+
+.header-a p { overflow: hidden; }
+.header-a a { float: left; }
+.header-a h1 { clear: both; }
+
+#subtitle {
+	margin-bottom: 0;
+	width: 600px;
+	float: left;
+}
+#subtitle .editable-link { top: 0; left: 572px; }
+.oldie #subtitle .editable-link { left: 564px; }
+#subtitle div { width: 580px; }
+
+.team-desc .editable-link { top: -12px; }

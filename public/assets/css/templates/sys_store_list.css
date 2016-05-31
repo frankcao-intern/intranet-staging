@@ -1,0 +1,11 @@
+.table-container { margin-bottom: 12px; }
+.table-container + .article { padding-top: 0; }
+
+/*-- dataTable fixes -- */
+.paging_full_numbers {
+	height: auto !important;
+}
+
+/*-- its also important in the CSS file that comes with it. */
+.paging_full_numbers .ui-button { color: white !important; }
+

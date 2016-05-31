@@ -1,0 +1,14 @@
+/**
+ * Created by: cravelo
+ * Date: 7/22/11
+ * Time: 11:21 AM
+ */
+
+.vevent { }
+.vevent .event-detail { margin-bottom: 12px; overflow: hidden; }
+.vevent .summary { font-size: 2.8em; }
+.vevent dl { overflow: hidden; width: 100%; margin-top: 18px; }
+.vevent dt { clear: both; margin-right: 3px; color: #58595b; font-weight: bold; }
+.vevent dd { margin-bottom: 3px; }
+.vevent dt.a, .vevent dd.a { float: left; }
+/*.vevent dd.action { margin-left: 3px; padding-left: 3px; border-left: 1px solid #575757; }*/

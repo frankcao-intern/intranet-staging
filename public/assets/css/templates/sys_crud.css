@@ -1,0 +1,22 @@
+
+#content > .primary {
+	width: 960px;
+}
+
+.header-a p.more-a {
+	margin-bottom: 0;
+	margin-top: -29px;
+}
+
+.editable-region div { min-width: 20px;	min-height: 14px; }
+
+#dataTable .ui-selected { background-color: #5E759E; color: white; border-bottom: 1px solid black; border-top: 1px solid black; }
+#dataTable .ui-selected td { background-color: #5E759E; }
+
+/*-- dataTable fixes -- */
+.paging_full_numbers {
+	height: auto !important;
+}
+
+/*!-- its also important in the CSS file that comes with it. */
+.paging_full_numbers .ui-button { color: white !important; }

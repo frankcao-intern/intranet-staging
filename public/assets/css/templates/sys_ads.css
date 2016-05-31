@@ -1,0 +1,104 @@
+.rotator-ads { z-index: 50; overflow: hidden; width: 100%; margin-bottom: 48px; background-color: #E9E3DB; }
+.rotator-ads .slider { margin: 0; padding: 0; list-style: none; background:#000; color:#fff; overflow: hidden; width: 100%; }
+.rotator-ads .slider li { width: 760px !important; clear: both; overflow: hidden; }
+.rotator-ads .slider .caption { display: block; /*width: 100%;*/ padding: 0 12px 0 0; margin-top: 138px; color: #FFF; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.rotator-ads .slider .caption p { margin-top: 12px; color:#FFF;}
+.rotator-ads .slider .caption h2 { margin-bottom: 6px; color:#FFF; font-size:2.23em /*25px*/; font-family:sans-serif; }
+.rotator-ads .slider .caption h2 a { color:#FFF; }
+.rotator-ads .slider .caption p.as-seen-in { font-size: 1em; }
+.rotator-ads .slider .caption h3.d { margin-bottom: 0; }
+.rotator-ads .slider .caption div.desc { padding-right: 35px; }
+.rotator-ads .slider .image { float: left; display: block; max-width: 355px; margin: 0 60px 0 0; padding: 1px 0 1px 1px; overflow:hidden; }
+.rotator-ads .slider .image img { max-width: 353px; height: 470px; margin: 0; }
+.rotator-ads .slider .item { display: none; }
+.rotator-ads .items-container { width: 760px; overflow: hidden; position: relative; }
+.rotator-ads .items { position: relative; left: 0; overflow: hidden; background-color: black; padding: 1px 0; list-style-type: none; margin: 1px 0; }
+.rotator-ads .item { border: none; display: block; float: left; margin: 0 0 0 1px; line-height: 0; background: #000; cursor: pointer; opacity: 0.50; filter: alpha(opacity=50); }
+.rotator-ads .item a { line-height: 0; text-align: center; margin: 0; padding: 0; height: 0; }
+.rotator-ads .item a img { display: block; }
+.rotator-ads .item .title { display: block; min-height: 36px; padding: 3px 5px 2px; color: #FFF; line-height: 1.25; text-align: center; }
+.rotator-ads .rotator-controls { width:760px; margin: 0 !important; padding: 0; background-color: #575757; color: #fff; font-weight: normal; min-height:31px; position: relative; }
+.rotator-ads .rotator-controls .rotator-nav { width: 139px; position: absolute; right: 0; top: 0; display: none; }
+.rotator-ads .rotator-controls .rotator-nav button { border-left: 1px solid #FFFFFF; }
+.rotator-ads .rotator-controls h2 { text-align: left; font-size: 1.9em; line-height: 31px; font-weight: normal; padding: 1px 12px 0 12px; }
+
+.rotator-editorials {
+	display: none;
+	position: relative;
+	z-index: 50;
+	overflow: hidden;
+	width: 758px;
+	margin-bottom: 24px;
+	background-color: #e9e3db;
+	border: 1px solid #E9E3DB;
+}
+.rotator-editorials .primary { float: left; width: 618px; background:#575757; position: relative; }
+.rotator-editorials .primary ul { list-style: none; margin: 0; padding: 0; }
+.rotator-editorials .primary ul p { margin: 0; }
+.rotator-editorials .primary .caption {
+	padding: 1px 12px 0 12px;
+	border-top: 1px solid #fff;
+	color: #2b2b2b;
+	max-height: 31px;
+	width: 594px;
+	overflow: hidden;
+}
+.rotator-editorials .primary .caption p { margin: 0; }
+.rotator-editorials .primary .caption h2 {
+	margin: 0;
+	color:#fff;
+	font-style: normal;
+	width: 552px;
+	line-height: 31px;
+	font-size: 1.6em;
+	font-weight: normal;
+}
+.rotator-editorials .primary .caption h2 a { color:#fff; font-style: normal; }
+.rotator-editorials .primary .current.current-a {
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	bottom: 1px;
+	right: 0;
+	margin-bottom: 0;
+	z-index:100;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 10px;
+	background: #575757;
+}
+.rotator-editorials .primary .current.current-a span { font-family: Times, serif; font-style: italic; font-weight: normal; }
+.rotator-editorials .primary .current.current-a em { font-style: normal; }
+.rotator-editorials .secondary { float: right; width: 139px; }
+.rotator-editorials .secondary h2 { padding-top: 9px; font-size: 1.2em; }
+.rotator-editorials .items { margin-bottom: 10px; }
+.js .rotator-editorials .items { min-height: 330px; margin: 0; border-bottom: 1px solid #fff; }
+.rotator-editorials .items .image { margin: 0; }
+.rotator-editorials .items ul { list-style: none; margin: 0; padding: 0; }
+html* .rotator-editorials .items ul li { position: relative; }
+.rotator-editorials .item { border-bottom: 1px solid #fff; }
+.js .rotator-editorials .item { margin: 0; }
+html.js* .rotator-editorials .item { zoom: 1; }
+.js .rotator-editorials .item:last-child { border-bottom-width: 0; }
+html* .rotator-editorials .last { border-bottom-width: 0; }
+.js .rotator-editorials .item p { margin: 0; }
+.rotator-editorials .item p.thumb { display: none; }
+.js .rotator-editorials .item p.thumb { display: block; }
+.rotator-editorials .item p.thumb a, .rotator-editorials .item .title {
+	display: block;
+	min-height: 40px;
+	padding: 3px 5px 2px;
+	color: #2b2b2b;
+	line-height: 1.25;
+	text-align: center;
+}
+html.js* .rotator-editorials .item .title { width: 129px; }
+* html .rotator-editorials .item .title { padding-top: 4px; padding-bottom: 3px; }
+.rotator-editorials .item p.thumb a { padding: 0; }
+.js .rotator-editorials .item .main { display: none; }
+.rotator-editorials p.thumb { width: 139px; } /*required by safari, it affects IE8 and 7 will undo in mod.ie.css*/
+.rotator-editorials p.image { text-align: center; } /*failsafe for vertical pictures*/
+.rotator-editorials .rotator-controls .rotator-nav { margin-bottom: 0; }
+
+p.select-year { float: left; width: auto; }
+p.select-year input { width: 44px; }

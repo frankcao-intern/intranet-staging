@@ -1,0 +1,10 @@
+/*.search-results-a .col .image { height: 210px; }*/
+
+.search-results .article { padding-right: 0; padding-bottom: 0; width: 760px; }
+
+ul.search-results-b { list-style: none; padding: 0 !important; }
+ul.search-results-b li { padding: 0; margin-bottom: 23px; }
+ul.search-results-b li h3 { font-size: 1.15em; margin-bottom: 0; }
+ul.search-results-b li .date { margin-bottom: 0; font-style: italic; }
+
+aside.secondary ul { font-size: 1.1em; }

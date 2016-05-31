@@ -1,0 +1,141 @@
+/**
+ * User: cravelo
+ * Date: Feb 16, 2011
+ * Time: 10:50:33 AM
+ */
+
+
+#content > .primary { float: left; width: 759px; position: relative; clear: left; }
+
+#main_image { margin: 0; padding: 0; list-style: none; overflow: hidden; min-height: 100px; }
+#main_image div { clear: both; }
+#main_image li { float: left; margin-right: 1px; line-height: 0; margin-bottom: 1px; }
+#main_image li img { max-height: 480px; }
+
+/*h2.b { margin-top: 20px; }*/
+
+.triple-c { width: 975px;/*780px;*/ }
+.triple-c .col { /*width: 325px;*/}
+.triple-c .col div { position: relative; overflow: hidden; background-color: #ffffff;}
+.triple-c .col:first-child + .col, * html .columns .col-first + .col { width: 187px; }
+.columns.triple-c {width: 975px;/*780px;*/}
+
+#services{ width: 187px; height: 30px; font-size: large; text-align: center;}
+#team{ width: 187px; height: 30px; font-size: large; text-align: center;}
+#docs{ width: 187px; height: 30px; font-size: large; text-align: center;}
+#upcoming{width: 187px; height: 30px; font-size: large; text-align: center;}
+
+.quadruple-a { width: 975px; }
+ .quadruple-a ul, ul.quadruple-a, .quadruple-a li { overflow: hidden; list-style: none; width: 975px; margin: 0; padding: 0; }
+ /*ul.quadruple-a { margin-bottom: 20px; }*/
+   .quadruple-a .col{
+    width: 190px;
+    height: 30px;
+    font-size: large;
+    text-align: center;
+    border: 2px solid #c9cacc;
+    background-color: #eae5dc;/*#1e1e1e;*/
+    padding-top: 0.5em;
+/*    margin-right: px;*/
+    }
+   .quadruple-a .col .image { margin-bottom: 11px; }
+   .quadruple-a .col div { position: relative; overflow: hidden; }
+   .columns.quadruple-a {width: 975px;/*780px;*/}
+
+#content > .secondary { padding-top: 14px; }
+
+/*img { border: 2px solid #ccc; }*/
+
+.section-a .image img{ border: 2px solid #ccc; }
+
+.buttonText {
+  font: 18px/1.5 Helvetica, Arial, sans-serif;
+  color: #fff;
+}
+
+
+#button2{
+background-color: #1e1e1e;
+color: #fff;
+border: 2px solid #ccc; 
+height: 40px;
+/* width: 125px; */
+/* margin: 50px 0 0 50px; */
+ overflow: hidden; 
+display: block;
+text-align: center;
+line-height: 38px;
+}
+
+#button2:hover {
+  background-color: #eae5dc;
+  color: #000;
+  font-weight: bold;
+}
+
+a {
+/*  color: black;*/
+  text-decoration: none;
+}
+
+
+h3.c {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 28px;
+	font-weight: 400;
+	color: #000;
+	line-height: 20px;
+	text-align:left;
+	text-transform:uppercase;
+	display:block;
+	margin:0px 0px 8px 0px;
+	padding:2px 0px;
+}
+
+/*****************************************
+ ******** Tab section of the page ******** 
+ ******** ********************************
+
+.team-tabs { margin: 0 0 0 0; }
+
+.ui-tabs { padding: 0; border: none; background: none; background-color: #F6F4F1; clear: both; font-size: 1em; }
+.ui-tabs { border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0; }
+
+.ui-tabs .ui-tabs-nav { border: none; padding: 0 0 0 8px; background: none; background-color: #FFFFFF; }
+.ui-tabs .ui-tabs-nav li {
+	border: none;
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	margin: 0;
+	padding: 10px 12px 2px 4px;
+}
+.ui-tabs .ui-tabs-nav li a { outline: none; padding: 0; }
+
+.ui-tabs .ui-tabs-nav li {
+	background: none;
+	border-right: 20px solid transparent;
+	border-bottom: 26px solid #EAE5DC !important;
+	border-top: none;
+	border-left: none;
+	height: 0;
+	padding: 0;
+	margin-left: -8px;
+}
+.ui-tabs .ui-tabs-nav li.ui-state-default a { color: #1E1E1E; margin: 8px 10px 0 10px; }
+
+.ui-tabs .ui-tabs-nav li.ui-state-active { z-index: 14; }
+
+.ui-tabs .ui-tabs-nav li.ui-state-active,
+.ui-tabs .ui-tabs-nav li.ui-state-hover {
+	background: none;
+	border-right: 20px solid transparent;
+	border-bottom: 26px solid #2B2627 !important;
+	height: 0;
+	padding: 0;
+	z-index: 15;
+}
+.ui-tabs .ui-tabs-nav li.ui-state-active a, .ui-tabs .ui-tabs-nav li.ui-state-hover a { color: #FFFFFF; margin: 8px 10px 0 10px; }
+
+.ui-tabs .ui-tabs-panel { overflow: hidden; padding: 1.2em; }
+.ui-tabs .ui-tabs-panel section.primary { width: 100% !important; }*/

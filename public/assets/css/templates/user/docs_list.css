@@ -1,0 +1,48 @@
+.docs-list-page .docs-list { padding: 12px 12px 0 12px; }
+.docs-list-page .docs-list .column { border-right: 1px dotted #BBBBBB; padding-right: 10px; margin-right: 10px; }
+.docs-list-page .docs-list .last { border-right: none; padding-right: 0; margin-right: 0; }
+
+.docs-list-page .article-header { width: 100%; overflow: hidden; }
+.docs-list-page .article-header h2 { width: auto; }
+.docs-list-page .article-header .left { width: 70%; }
+.docs-list-page .article-header .right { width: 185px; }
+.docs-list-page .article-header .right input { width: 140px; }
+
+.docs-list-page .article { padding: 0; }
+
+.image-stack { margin-bottom: 24px; width: 380px; }
+
+.list-toolbar {
+	width: 100%;
+	background-color: #575757;
+	color: white;
+	height: 26px;
+	text-align: right;
+	margin-bottom: 12px;
+	overflow: hidden;
+	list-style: none;
+	padding: 3px 4px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.list-toolbar-last { margin-bottom: 0; }
+.list-toolbar li { display: block; float: right; }
+
+.list-toolbar li form { height: 20px; line-height: 20px; }
+
+.list-toolbar .list-search input { width: 150px; }
+
+.list-toolbar .list-sorting { margin-right: 24px; padding-top: 2px; }
+.list-toolbar .list-sorting input { display: none; }
+.list-toolbar .list-sorting label {
+	cursor: pointer;
+	margin-right: 3px;
+	padding-right: 6px;
+	border-right: 1px solid white;
+	font-style: italic;
+}
+.list-toolbar .list-sorting label.last { margin-right: 0; border-right: none; }
+

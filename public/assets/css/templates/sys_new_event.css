@@ -1,0 +1,38 @@
+/**
+ * User: cravelo
+ * Date: Aug 24, 2010
+ * Time: 4:19:57 PM
+ */
+
+#newEventForm ul { list-style: none; }
+#newEventForm li { list-style: none; margin-bottom: 20px; }
+
+#recurrence {
+	border-right:1px solid #C4C3C3;
+	float:left;
+	margin-bottom:20px;
+	margin-right:20px;
+	padding-right:20px;
+}
+
+.clear { clear: both; }
+
+.input_invalid { border: 2px solid red; }
+
+#newEventForm input[type=text] { width:25%; }
+
+.js .collapsible { margin-bottom: 12px; }
+
+.event-desc { margin-bottom: 12px; }
+
+ul.sortable-list { list-style-type: none; margin: 0 0 12px; overflow: hidden; padding: 0; }
+ul.sortable-list li {
+	/*height: 20px;*/
+	width: 186px;
+	border: 1px solid black;
+	margin-bottom: 6px;
+	padding: 6px 6px 3px 6px;
+}
+ul#sections li { float: left; margin-right: 25px; }
+ul.sortable-list li.ui-selected { background-color: #2B2627; color: #FFF; }
+ul.sortable-list li.ui-selecting { background-color: #F4F1ED; }

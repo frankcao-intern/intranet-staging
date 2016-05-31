@@ -1,0 +1,13 @@
+/**
+ * Created by: cravelo
+ * Date: 3/6/12
+ * Time: 2:20 PM
+ */
+
+
+
+
+#main_image { margin: 12px 0 0 0; padding: 0; list-style: none; overflow: hidden; min-height: 100px; }
+#main_image div { clear: both; }
+#main_image li { float: left; margin-right: 1px; line-height: 0; margin-bottom: 1px; }
+#main_image li img { max-height: 480px; }

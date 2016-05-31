@@ -1,0 +1,22 @@
+.login-form {
+	width: 169px;
+	margin: 48px auto 24px;
+	overflow: hidden;
+}
+.login-form label { display: block; }
+.login-form input { width: 157px; height: 17px; padding: 8px 5px 2px; background-color: #f6f4f1; border: 1px solid #BBB; }
+.login-form button { float: right; }
+
+.primary .ui-state-error { padding: 6px; width: 492px; margin: 0 auto 12px; }
+.primary .ui-state-error p {
+	font-size: 1.5em;
+	margin: 0;
+	line-height: 1.2;
+	color: #000000;
+}
+
+.primary .ui-state-error p a { color: #1d5bb9; text-decoration: underline; }
+.primary .ui-state-error p a:visited { color: #1d5bb9; }
+.primary .ui-state-error p a:focus,
+.primary .ui-state-error p a:hover,
+.primary .ui-state-error p a:active { color: #1d5bb9; text-decoration: none; }

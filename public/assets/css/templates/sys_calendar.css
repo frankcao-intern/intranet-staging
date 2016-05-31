@@ -1,0 +1,63 @@
+
+#newsList, #newsList li, #archiveMain, #archiveMain li { list-style: none; }
+
+#calendar { font-size: 1.1em; }
+
+#calendar .fc-event { font-size: 1em; }
+
+#calendar .ui-widget-header {
+	border: 1px solid #AAA !important;
+	background: #2B2627 url(/assets/images/jquery-theme/ui-bg_flat_75_2b2627_40x100.png) 50% 50% repeat-x !important;
+	color: white !important;
+	font-weight: bold !important;
+}
+
+/* These are the styles that modify the jquery ui theme used by the full calendar now that we switched the attribute theme: from "false" to "true" in the minified js file*/
+#calendar .ui-state-highlight,
+#calendar .ui-widget-content .ui-state-highlight,
+#calendar .ui-widget-header .ui-state-highlight{ background: #363636; }
+#calendar .fc-today div { font-weight: bold; color: #fff; }
+/*#calendar td.fc-today{ background: none; }*/
+#calendar .fc-day-number { color: #666; }
+
+#calendar .fc-header {
+	font-size: 0.9em;
+}
+
+#calendar .fc-header-title {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#calendar .ui-corner-tl { -moz-border-radius-topleft: 0 !important; -webkit-border-top-left-radius: 0 !important; border-top-left-radius: 0 !important; }
+#calendar .ui-corner-tr { -moz-border-radius-topright: 0 !important; -webkit-border-top-right-radius: 0 !important; border-top-right-radius: 0 !important; }
+#calendar .ui-corner-bl { -moz-border-radius-bottomleft: 0 !important; -webkit-border-bottom-left-radius: 0 !important; border-bottom-left-radius: 0 !important; }
+#calendar .ui-corner-br { -moz-border-radius-bottomright: 0 !important; -webkit-border-bottom-right-radius: 0 !important; border-bottom-right-radius: 0 !important; }
+#calendar .ui-corner-top { -moz-border-radius-topleft: 0 !important; -webkit-border-top-left-radius: 0 !important; border-top-left-radius: 0 !important; -moz-border-radius-topright: 0 !important; -webkit-border-top-right-radius: 0 !important; border-top-right-radius: 0 !important; }
+#calendar .ui-corner-bottom { -moz-border-radius-bottomleft: 0 !important; -webkit-border-bottom-left-radius: 0 !important; border-bottom-left-radius: 0 !important; -moz-border-radius-bottomright: 0 !important; -webkit-border-bottom-right-radius: 0 !important; border-bottom-right-radius: 0 !important; }
+#calendar .ui-corner-right {  -moz-border-radius-topright: 0 !important; -webkit-border-top-right-radius: 0 !important; border-top-right-radius: 0 !important; -moz-border-radius-bottomright: 0 !important; -webkit-border-bottom-right-radius: 0 !important; border-bottom-right-radius: 0 !important; }
+#calendar .ui-corner-left { -moz-border-radius-topleft: 0 !important; -webkit-border-top-left-radius: 0 !important; border-top-left-radius: 0 !important; -moz-border-radius-bottomleft: 0 !important; -webkit-border-bottom-left-radius: 0 !important; border-bottom-left-radius: 0 !important; }
+#calendar .ui-corner-all { -moz-border-radius: 0 !important; -webkit-border-radius: 0 !important; border-radius: 0 !important; }
+
+#calendar .fc-button-agendaWeek:hover, .fc-button-agendaDay:hover, .fc-button-month:hover { background-color: #2b2627;}
+#calendar .ui-state-default:hover a{ color: #ffffff; }
+#calendar .ui-state-active:hover a{ color: #9a0000; }
+
+#addCalDiag label { display: block; margin-top: 6px; }
+#acdCalName { width: 260px; }
+
+#selectedCalendars { padding: 0; margin-left: 0; list-style: none; }
+#selectedCalendars li { list-style: none; overflow: hidden; clear: both; margin-bottom: 2px; }
+#selectedCalendars li a { line-height: 1.6em; height: 1.3em; }
+#selectedCalendars li span { display: block; width: 1.3em; height: 1.3em; float: left; margin-right: 2px; }
+
+#btnFeed { margin-bottom: 12px; margin-top: -6px; }
+
+.qtip-ef {
+	background: #EAE5DC url(/assets/images/jquery-theme/ui-bg_flat_75_eae5dc_40x100.png) 50% 50% repeat-x;
+	border: 3px solid #AAA;
+	color: #333;
+}
+
+.vevent dt, .vevent dd a { color: #333; }
+.vevent dd a:hover, .vevent dd a:active, .vevent dd a:focus { color: #9a0000; }

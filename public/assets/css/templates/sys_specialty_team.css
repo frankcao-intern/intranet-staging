@@ -1,0 +1,27 @@
+.team-tabs { position: relative; margin-top: 12px !important; margin-bottom: 37px !important; }
+.team-tabs .ui-tabs-nav { position: absolute !important; left: 0; bottom: -25px; right:0; padding: 0 0.2em 0.2em 0; }
+.team-tabs .ui-tabs-nav li {
+	margin-top: -2px !important;
+	margin-bottom: 1px !important;
+	border-top: none;
+	border-bottom-width: 1px;
+}
+.ui-tabs-selected { margin-top: -3px !important; }
+
+.team-tabs .ui-tabs-nav li.ui-state-default {
+	border-top: 26px solid #EAE5DC !important;
+	border-bottom: none !important;
+}
+
+html .team-tabs .ui-tabs-nav li.ui-state-active,
+html .team-tabs .ui-tabs-nav li.ui-state-hover {
+	border-top: 26px solid #2B2627 !important;
+	border-bottom: none !important;
+}
+
+.team-tabs .ui-tabs-nav li a { margin: -20px 10px 0 10px !important; }
+
+#usMap { float: left; }
+.state-store-list { display: none; width: 197px; height: 338px; overflow: auto; float: left; }
+
+.link-list { clear: both; margin-top: 12px; float: left; padding: 0; }

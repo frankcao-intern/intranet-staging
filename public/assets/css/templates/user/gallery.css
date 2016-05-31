@@ -1,0 +1,88 @@
+/**
+ * Created by: cravelo
+ * Date: 9/13/11
+ * Time: 11:43 AM
+ */
+
+.image-stack { width: 760px; margin-bottom: 24px; overflow: hidden; }
+
+#photos { width: 760px; overflow: visible !important; }
+#photos .item {
+	float: left;
+	margin: 6px 6px 0 0;
+	overflow: visible;
+	border: 1px solid #000000;
+}
+#photos .item img { display: block; float: left; }
+
+#photos .item .caption {
+	display: none;
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.5);
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+#photos .item .caption h3 {
+	padding: 12px;
+	margin: 0;
+	font-size: 1.3em;
+	font-family: Helvetica, Arial, sans-serif;
+}
+#photos .item .caption .credits { display: none; }
+.oldie #photos .item .caption {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);
+	zoom: 1;
+}
+
+.fancybox-title { position: relative; }
+.fancybox-title h3 {
+	font-size: 1.2em;
+	margin: 0;
+	display: block;
+	min-width: 50px;
+	min-height: 20px;
+}
+.fancybox-title p { font-size: 0.8em; margin: 0; }
+.fancybox-title .editable-region div {
+	display: inline-block;
+	background: url('/assets/images/blank.gif');
+	min-width: 50px;
+	min-height: 15px;
+}
+
+.header-a-space-bottom-b { margin-bottom: 0; }
+
+/**** Isotope Filtering ****/
+
+.isotope-item { z-index: 2; }
+
+.isotope-hidden.isotope-item { pointer-events: none; z-index: 1; }
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:    -moz-transform, opacity;
+       -o-transition-property:         top, left, opacity;
+          transition-property:         transform, opacity;
+}

@@ -1,0 +1,22 @@
+/**
+ * Created by: cravelo
+ * Date: 4/23/12
+ * Time: 9:14 AM
+ */
+
+.columns .col { background: none; width: 240px; margin-left: 20px; margin-bottom: 20px; }
+.columns .col-first { margin-left: 0; }
+.triple-a .col:first-child + .col, * html .columns .col-first + .col { width: 240px; } /*this is an override from screen.css*/
+.columns .col .caption { padding: 6px 6px 0 6px; font-size: 1.4em; color: black; }
+.columns .col h3 { padding: 0 6px 0 6px; }
+
+.priority { width: 540px; }
+.priority img { float: right; margin-left: 24px; margin-bottom: 24px; }
+.priority h3 { margin: 0; }
+/*.priority .desc { width: 300px; }*/
+.priority a { color: #1d5bb9; text-decoration: underline; }
+.priority a:visited { color: #CB5E5E; text-decoration: underline; }
+.priority a:hover,
+.priority a:focus,
+.priority a:active { text-decoration: none; }
+

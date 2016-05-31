@@ -1,0 +1,92 @@
+.gallery {
+	overflow: hidden;
+	border: 1px solid #BBB;
+	margin: 12px 0;
+}
+
+.gallery .primary { float: left; width: 436px; height: 486px; overflow:hidden; padding: 12px; }
+.gallery .primary ul { text-align: center; list-style-type:none; padding:0; margin:0; }
+.gallery .primary ul li { width: 100% !important; }
+.gallery .primary ul img { max-width: 436px; max-height: 486px; margin: 0 auto; }
+
+.gallery .secondary { border-left: 1px solid #BBBBBB; width: 273px; /*height: 486px;*/ background-color: #EAE5DC; float:right; padding: 12px; }
+
+.gallery .gallery-nav { clear: both; height: 154px; width: 100%; }
+.gallery .gallery-nav ul.thumbs {
+	list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+	background-color: #EAE5DC;
+	/*border-left: 1px solid #BBBBBB;*/
+	height: 96px
+}
+.gallery .gallery-nav ul.thumbs .page { padding-top: 9px; padding-left: 1px; width: 756px !important; }
+.gallery .gallery-nav ul.thumbs li { float: left; margin: 0 0 0 8px; border: 1px solid #999; text-align: center; width: 73px; line-height: 0; }
+.gallery .gallery-nav ul.thumbs li a:active, .gallery .gallery-nav ul li a:focus { outline: none; }
+
+.gallery .gallery-nav .pagination {
+	background-color: #575757;
+    color: white;
+    height: 16px;/* yes, I'm using height, shut up and go away */
+    padding: 4px 4px 9px;
+    top: 0;
+    /*width: 266px;*/
+	position:relative;
+}
+.gallery .gallery-nav .pagination a { color: white; line-height: 1.3; }
+.gallery .gallery-nav .pagination a,
+.gallery .gallery-nav .pagination span.current,
+.gallery .gallery-nav .pagination span.ellipsis {
+    border: 1px solid #CCCCCC;
+    display: block;
+    float: left;
+    margin-right: 2px;
+    padding: 4px 7px 2px;
+}
+.gallery .gallery-nav .pagination span.current,
+.gallery .gallery-nav .pagination a.activeSlide,
+.gallery .gallery-nav .pagination a:hover,
+.gallery .controls   a:hover { background-color: #2B2627; cursor:pointer; }
+
+.gallery .controls {
+	background-color: #575757;
+    color: white;
+	overflow: hidden;
+	position: relative;
+	height: 29px;/* yes, I'm using height, shut up and go away */
+}
+.gallery .controls a { color: white; position: absolute; text-align: center; top: 0; width: 32px; }
+.gallery .controls a.play,
+.gallery .controls a.pause{
+	left: 50%;
+	top: 4px;
+	border: 1px solid #CCCCCC;
+    padding: 4px 7px 2px;
+	margin-left: -18.5px;
+}
+.gallery .controls a.prev { left: 0; border-right: 1px solid #CCCCCC; line-height: 29px; }
+.gallery .controls a.next { right: 0; border-left: 1px solid #CCCCCC; line-height: 29px; }
+
+.gallery .caption { width: 273px; height: 486px; }
+.gallery .caption .image-title {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 1.4em;
+    line-height: 1.1;
+    margin-top: -3px;
+	margin-bottom: 4px;
+}
+.gallery .caption .image-credits strong { color: #000000; }
+
+#loading { margin-top: 12px; }
+
+ul.qq-upload-list li {
+	width: 100%!important;
+	height: 100%!important;
+}
+
+ul.ui-autocomplete { z-index: 1000 !important; }
+
+#jsp-destroy, #jsp-init{ display:none; }
+
+.breadcrumbs-a { float: right; clear: both; }

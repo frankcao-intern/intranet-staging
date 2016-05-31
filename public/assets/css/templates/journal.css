@@ -1,0 +1,7 @@
+p.image { margin: 0; }
+
+.entry { overflow: hidden; clear: both; padding-right: 24px; }
+.entry .image { float: left; width: 380px; margin-right: 20px; margin-bottom: 12px; }
+.entry ul { list-style-position: inside; }
+
+h2.a { line-height: 1.1; margin-bottom: 6px; }

@@ -1,0 +1,62 @@
+.video-rotator { position: relative; z-index: 50; overflow: hidden; width: 100%; margin-bottom: 24px; background-color: #e9e3db; }
+ .video-rotator .primary { float: left; width: 620px; }
+  .video-rotator .primary ul { list-style: none; margin: 0; padding: 0; }
+   .video-rotator .primary ul p { margin: 0; }
+  .video-rotator .primary .caption {
+	  width: 596px;
+	  padding: 8px 12px;
+	  border-top: 1px solid white;
+	  color: #2B2B2B;
+	  position: relative;
+	  height: 55px;
+  }
+   .video-rotator .primary .caption h2.a { margin-bottom: 6px; }
+   .video-rotator .primary .caption p { margin: 0; }
+   .video-rotator .primary .caption a.more-a { position: absolute; bottom: 5px; right: 12px; }
+ .video-rotator .secondary { float: right; width: 139px; border-left: 1px solid #fff; }
+  .video-rotator .secondary h2 { padding-top: 9px; font-size: 1.2em; }
+  .video-rotator .items { margin-bottom: 10px; }
+  .js .video-rotator .items { min-height: 330px; margin: 0; border-bottom: 1px solid #fff; }
+   .video-rotator .items .image { margin: 0; }
+   .video-rotator .items ul { list-style: none; margin: 0; padding: 0; }
+    html* .video-rotator .items ul li { position: relative; }
+    .video-rotator .item { border-bottom: 1px solid #fff; }
+    .js .video-rotator .item { margin: 0; }
+    html.js* .video-rotator .item { zoom: 1; }
+    .js .video-rotator .item:last-child { border-bottom-width: 0; }
+    html* .video-rotator .last { border-bottom-width: 0; }
+     .js .video-rotator .item p { margin: 0; }
+     .video-rotator .item p.thumb { display: none; }
+     .js .video-rotator .item p.thumb { display: block; }
+      .video-rotator .item p.thumb a, .video-rotator .item .title { display: block; min-height: 36px; padding: 3px 5px 2px; color: #2b2b2b; line-height: 1.25; text-align: center; }
+      html.js* .video-rotator .item .title { width: 129px; }
+      * html .video-rotator .item .title { padding-top: 4px; padding-bottom: 3px; }
+      .video-rotator .item p.thumb a { padding: 0; }
+     .js .video-rotator .item .main { display: none; }
+
+.video-rotator p.thumb a.active span.title { background-color: #9F9A96; }
+
+.video-rotator p.thumb a.active img.video-btn-play { display: block !important; }
+
+.video-rotator p.thumb a span.now-playing {
+	color: #FFFFFF;
+    display: none;
+    font-family: Helvetica,sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    left: 28px;
+    position: absolute;
+    top: 62px;
+	text-transform: lowercase;
+}
+.video-rotator p.thumb a.active span.now-playing { display: block !important; }
+
+.js .video-rotator .item p.thumb a { display: block !important; position: relative; }
+.js .video-rotator .item p.thumb a img { display: block; }
+html* .video-rotator .items ul { margin-bottom: -3px !important; }
+
+.quadruple-a .col .image { background-color: #000; }
+
+.video-rotator iframe { display: block; }
+
+.video-rotator .rotator-controls .rotator-nav { margin-bottom: 0; }

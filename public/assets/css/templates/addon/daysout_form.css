@@ -1,0 +1,39 @@
+/**
+ * Created by: cravelo
+ * Date: 2/21/12
+ * Time: 3:55 PM
+ */
+
+.days-out h2 { margin-top: 12px; }
+
+.days-out table {
+	margin-top: 12px; border: 2px solid #333; width: 100%;
+}
+.days-out table th {
+	background-color: #607DB7;
+	color: #FFF;
+	font-size: 1.3em;
+	text-align: center;
+	border: 2px solid #333;
+	padding: 3px;
+	font-weight: bold;
+}
+
+.days-out table td {
+	border: 1px solid #333;
+	padding: 6px;
+}
+
+.days-out tfoot { border: 2px solid #333; }
+.days-out .text_right {
+	background-color: #607DB7;
+	color: #FFF;
+	text-align: right;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 2px solid #333;
+}
+
+.days-out .actions { text-align: center; }
+
+.days-out table select { width: 162px; }

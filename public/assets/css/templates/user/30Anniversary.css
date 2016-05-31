@@ -1,0 +1,192 @@
+/**
+ * Created by: cravelo
+ * Date: 2/10/12
+ * Time: 2:38 PM
+ */
+
+.ui-tabs-panel iframe { width: 732px; height: 412px; }
+
+.article-header { margin-bottom: 12px; }
+
+.h2{
+    height: 26px;
+    width: auto;
+}
+
+#content > .primary {
+    float: left;
+    width: 975px;
+    position: relative;
+    clear: left;
+}
+
+.header-a {
+    min-height: 24px;
+    margin-bottom: 10px;
+    padding: 25px 14px 8px;
+    background-color: #f4f1ed;
+    position: relative;
+}
+
+.header-a h2 {
+    margin: 0;
+    color: #505050;
+    font: 2.4em/1 SourceSansProLight, Helvetica, Arial, sans-serif;
+}
+
+.header-c {
+ /*   min-height: 10px;
+    margin-bottom: 10px;
+    padding: 10px 14px 8px;
+    background-color: #86827E;
+    position: relative;*/
+ 
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 975px;
+/*    min-width: 1004px;*/
+}
+.header-c h3 {
+   margin: 0;
+    color: #000000;
+    font: 1.5em/1 SourceSansProLight, Helvetica, Arial, sans-serif;
+ 
+    width: 100%;
+    max-width: 1220px;
+   /* min-width: 820px;*/
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2px;
+    font-size: 20pt;
+    color: #000;
+    padding-top: 0px;
+    font-weight: normal;
+    text-transform: none;
+}
+
+.caption {/*font-family: 'Trade Gothic W01 Light' !important;*/
+ font-size: 25pt; color: #000;
+  padding-left:25px;margin-top: 20px;display:block;}
+
+/**
+*** The two videos css section
+***
+*/
+.double-g {width: 975px; height: 440px;}
+.double-g .col { height: 440px;  background-color: #ffffff;}
+.double-g .col ul, .double-g .col>div {  list-style: none; margin: 0; }
+.double-g .col ul li {
+	 overflow: auto;
+	 /*padding-bottom: 6px;*/
+	/* margin-bottom: 6px;*/
+	 /*border: 1px solid #9F9A96;*/
+ }
+.double-g .col ul li img {
+	 float: left;
+	 /*margin-right: 4px;*/
+	/* margin-bottom: 0;*/
+	/* max-width: 300px;*/
+         border: 1px solid #9F9A96;
+ }
+ * html .double-g .col ul li img { width: expression(this.scrollWidth > 99 ? "100px" : "auto"); }
+/*.double-g .col ul li div { display: block; float: left; width: 400px; }*/
+.double-g .col ul li h3 { line-height: 1em; margin-bottom: 5px; }
+/*.double-g .col ul li div p { float: right; }*/
+
+
+#minivideos{padding-left: 6px; height: 440px; width: 198px;}
+#mainvideos{height: 440px; width: 770px; }
+
+#people{ width:200px;height: 200px;}
+#facts{width:100px; height: 100px;}
+
+
+/** video player with playlist**/
+
+#playlist {
+   /* display: inline-block;  laylist displayed next to eachother on the same line*/
+    float: left;
+    width: 198px;
+   /* width: 207px; video playlist on same line as 2 30th icons*/
+    height: 175px;
+  /*  padding-top: 5px; only enable when thumbnail under videoarea*/
+  
+   /* margin-left: 2px;*/
+   /*margin-left: 770px; video playlist under the main video but above the 30th icons*/
+   /* margin-left: 187px; video playlist on same line as 2 30th icons*/
+ /*   display: table;*/
+    
+}
+
+#playlist li{
+   /* display: inline-block; playlist displayed next to eachother on the same line*/
+    cursor: pointer;
+ /*   padding-left: 5px;*/
+    width: 198px;
+    height:175px;
+
+}
+#playlist li:hover{
+    color: blue;
+}
+
+#playlist li img{
+    float: left;
+    width: 196px;
+    height: 145px;
+    border: 1px solid #9F9A96;
+}
+
+#playlist li p {
+    /*   margin: 0;*/
+    color: #000000;
+    font: 1.2em/1 SourceSansProLight, Helvetica, Arial, sans-serif;
+    line-height: 2.5;
+    width: 100%;
+    max-width: 200px;
+    font-size: 10pt;
+    font-weight: bold;
+    text-transform: none;
+    padding-top: 20px;
+    text-align: normal;
+}
+
+
+#videoarea{
+    float: left;
+    width: 770px;
+    height: 433px;
+/*    margin: 10px;*/
+    border: 1px solid silver;
+   background-color: black;
+}
+
+/**
+***  The two EF 30 icons
+***  
+***/
+.double-a {padding-left: 150px;height: 150px;}
+.double-a .col { height: 150px; width: 250px; background-color: #ffffff;}
+.double-a .col ul, .double-a .col>div {  list-style: none; margin: 0; }
+.double-a .col ul li {
+	 overflow: auto;
+	 /*padding-bottom: 6px;*/
+	 /*margin-bottom: 6px;
+	 border-bottom: 1px solid #9F9A96;*/
+ }
+.double-a .col ul li img {
+	 float: left;
+	/* margin-right: 4px;*/
+	 margin-bottom: 0;
+	 max-width: 100px;
+ }
+ * html .double-a .col ul li img { width: expression(this.scrollWidth > 99 ? "100px" : "auto"); }
+.double-a .col ul li div { display: block; float: left; width: 250px; }
+.double-a .col ul li h3 { line-height: 1em; margin-bottom: 5px; }
+.double-a .col ul li div p { margin-bottom: 0; }
+
+#ecommerce { padding-left: 190px;}
+
+#fishnet_tp { padding-left: 10px; padding-top: 40px; border-left: 1px solid #ccc;}

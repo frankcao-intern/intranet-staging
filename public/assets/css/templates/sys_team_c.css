@@ -1,0 +1,12 @@
+/**
+ * User: cravelo
+ * Date: Feb 16, 2011
+ * Time: 10:50:33 AM
+ */
+
+#main_image { margin: 0; padding: 0; list-style: none; overflow: hidden; min-height: 100px; }
+#main_image div { clear: both; }
+#main_image li { float: left; margin-right: 1px; line-height: 0; margin-bottom: 1px; }
+#main_image li img { max-height: 480px; }
+
+h2.b { margin-top: 20px; }

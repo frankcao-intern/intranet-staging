@@ -1,0 +1,17 @@
+/**
+ * Created by: cravelo
+ * Date: 2/21/11
+ * Time: 10:17 AM
+ */
+
+ul.sortable-list { list-style-type: none; margin: 0 0 12px; overflow: hidden; padding: 0; }
+ul.sortable-list li {
+	height: 20px;
+	width: 300px;
+	border: 1px solid black;
+	margin-bottom: 6px;
+	padding: 6px 6px 0 6px;
+}
+ul#sections li { float: left; margin-left: 25px; }
+ul.sortable-list li.ui-selected { background-color: #2B2627; color: #FFF; }
+ul.sortable-list li.ui-selecting { background-color: #F4F1ED; }

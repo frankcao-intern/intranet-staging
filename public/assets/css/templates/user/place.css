@@ -1,0 +1,15 @@
+/**
+ * Created by: cravelo
+ * Date: 1/23/12
+ * Time: 3:04 PM
+ */
+
+.image-stack { width: 380px; float: left; }
+
+.place-info { width: 365px; float: left; margin-left: 15px; }
+.place-info h2 { margin-bottom: 6px; }
+.place-info p { margin-bottom: 3px; width: 365px; }
+.place-info p > span { width: 100%; }
+.place-info .map-url, .place-info .book-url, .place-info .place-url { float: left; margin-top: 12px; }
+
+.place-info .editable-link { left: 333px; }
