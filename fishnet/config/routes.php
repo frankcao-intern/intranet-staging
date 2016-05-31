@@ -55,8 +55,8 @@ $route['staticpages/(:any)'] = "staticpages/index/$1";//About FISHNET
 //Home page
 $route['home'] = "article/index/1"; //home page
 
-$route['home_test'] ="article/index/3518"; // dev redesigned home page
-//$route['home_test'] ="article/index/5530"; // PROD redesigned home page
+//$route['home_test'] ="article/index/3518"; // dev redesigned home page
+$route['home_test'] ="article/index/5530"; // PROD redesigned home page
 
 //Articles
 $route['article/(:num)'] = "article/index/$1";//route to access pages
@@ -203,8 +203,9 @@ $route['attendance/month/(:num)'] = 'addon/attendance/month/$1';
 $route['attendance/admin'] = 'addon/attendance/admin';
 $route['attendance/(:any)'] = 'addon/attendance/index/$1';
 $route['attendance'] = 'addon/attendance';
-$route['test2'] = 'staticpages/index/test2';
 
 /* End of file routes.php */
 /* Location: ./system/application/config/routes.php */
 
+
+$route['test2'] = "views/test";
