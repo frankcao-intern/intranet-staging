@@ -1,0 +1,807 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » Default</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Addon.Controllers.html"><i class="icon-folder-open"></i> Addon/Controllers</a></li>
+<li><a href="../packages/Controllers.html"><i class="icon-folder-open"></i> Controllers</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Libraries.html"><i class="icon-folder-open"></i> Libraries</a></li>
+<li><a href="../packages/Misc.html"><i class="icon-folder-open"></i> Misc</a></li>
+<li><a href="../packages/Models.html"><i class="icon-folder-open"></i> Models</a></li>
+<li><a href="../packages/PHP-Template.html"><i class="icon-folder-open"></i> PHP-Template</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">430</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">6</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">1</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Packages</li>
+<li>
+<a href="../packages/Default.html" title="Default"><i class="icon-folder-open"></i>Default</a><ul class="nav nav-list nav-packages"></ul>
+</li>
+<li class="nav-header">
+<i class="icon-custom icon-function"></i> Functions</li>
+<li class="function  "><a href="#KTArrayToHTML" title="KTArrayToHTML :: Takes a multidimensional array and creates nested HTML lists."><span class="description">Takes a multidimensional array and creates nested HTML lists.</span><pre>KTArrayToHTML</pre></a></li>
+<li class="function  "><a href="#alphaForms" title="alphaForms :: "><span class="description">alphaForms()
+        </span><pre>alphaForms</pre></a></li>
+<li class="function  "><a href="#cmp" title="cmp :: To sort query results by displayname"><span class="description">To sort query results by displayname</span><pre>cmp</pre></a></li>
+<li class="function  "><a href="#e" title="e :: "><span class="description">e()
+        </span><pre>e</pre></a></li>
+<li class="function  "><a href="#exif_imagetype" title="exif_imagetype :: "><span class="description">exif_imagetype()
+        </span><pre>exif_imagetype</pre></a></li>
+<li class="function  "><a href="#generateTopLevel" title="generateTopLevel :: Takes a multidimensional array and creates nested HTML lists."><span class="description">Takes a multidimensional array and creates nested HTML lists.</span><pre>generateTopLevel</pre></a></li>
+<li class="function  "><a href="#get_image" title="get_image :: returns the $filename of an image with the corresponding transformations, the transformed image doesn't't exist
+yet it will create it."><span class="description">returns the $filename of an image with the corresponding transformations, the transformed image doesn't't exist
+yet it will create it.</span><pre>get_image</pre></a></li>
+<li class="function  "><a href="#get_image_html" title="get_image_html :: outputs src and width and height ready to use on &lt;img&gt;"><span class="description">outputs src and width and height ready to use on &lt;img&gt;</span><pre>get_image_html</pre></a></li>
+<li class="function  "><a href="#isAjax" title="isAjax :: Determines if the current page request was done through an AJAX call"><span class="description">Determines if the current page request was done through an AJAX call</span><pre>isAjax</pre></a></li>
+<li class="function  "><a href="#multiArrayToHTML" title="multiArrayToHTML :: Takes a multidimensional array and creates nested HTML lists."><span class="description">Takes a multidimensional array and creates nested HTML lists.</span><pre>multiArrayToHTML</pre></a></li>
+<li class="function  "><a href="#peopleSort" title="peopleSort :: To sort the results by display_name"><span class="description">To sort the results by display_name</span><pre>peopleSort</pre></a></li>
+<li class="function  "><a href="#toSlug" title="toSlug :: Converts strings to slugs (e.g. Camión Azul -&gt; camion-azul)"><span class="description">Converts strings to slugs (e.g. Camión Azul -&gt; camion-azul)</span><pre>toSlug</pre></a></li>
+<li class="function  "><a href="#truncateArticle" title="truncateArticle :: "><span class="description">truncateArticle()
+        </span><pre>truncateArticle</pre></a></li>
+<li class="function  "><a href="#val" title="val :: "><span class="description">val()
+        </span><pre>val</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#Properties" title="properties">Properties</a></li>
+<li><a href="#MY_Security" title="MY_Security">MY_Security</a></li>
+<li><a href="#phpVimeo" title="Created by: cravelo
+Date: 2/10/12
+Time: 11:45 AM">phpVimeo</a></li>
+<li><a href="#VimeoAPIException" title="">VimeoAPIException</a></li>
+<li><a href="#Template" title="PHP Template Class">Template</a></li>
+<li><a href="#Stores" title="">Stores</a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#DIR_READ_MODE" title="DIR_READ_MODE :: "><span class="description">DIR_READ_MODE</span><pre>DIR_READ_MODE</pre></a></li>
+<li class="constant  "><a href="#DIR_WRITE_MODE" title="DIR_WRITE_MODE :: "><span class="description">DIR_WRITE_MODE</span><pre>DIR_WRITE_MODE</pre></a></li>
+<li class="constant  "><a href="#EDIT_MODE" title="EDIT_MODE :: "><span class="description">EDIT_MODE</span><pre>EDIT_MODE</pre></a></li>
+<li class="constant  "><a href="#E_AD_ACCT_LOCKED" title="E_AD_ACCT_LOCKED :: "><span class="description">E_AD_ACCT_LOCKED</span><pre>E_AD_ACCT_LOCKED</pre></a></li>
+<li class="constant  "><a href="#E_AD_EMPTY" title="E_AD_EMPTY :: EXCEPTIONS"><span class="description">EXCEPTIONS</span><pre>E_AD_EMPTY</pre></a></li>
+<li class="constant  "><a href="#E_AD_LOGIN_FAILED" title="E_AD_LOGIN_FAILED :: "><span class="description">E_AD_LOGIN_FAILED</span><pre>E_AD_LOGIN_FAILED</pre></a></li>
+<li class="constant  "><a href="#E_AD_PWD_EXPIRED" title="E_AD_PWD_EXPIRED :: "><span class="description">E_AD_PWD_EXPIRED</span><pre>E_AD_PWD_EXPIRED</pre></a></li>
+<li class="constant  "><a href="#E_AD_PWD_FORCE_CHANGE" title="E_AD_PWD_FORCE_CHANGE :: "><span class="description">E_AD_PWD_FORCE_CHANGE</span><pre>E_AD_PWD_FORCE_CHANGE</pre></a></li>
+<li class="constant  "><a href="#E_AD_PWD_NEVER_SET" title="E_AD_PWD_NEVER_SET :: "><span class="description">E_AD_PWD_NEVER_SET</span><pre>E_AD_PWD_NEVER_SET</pre></a></li>
+<li class="constant  "><a href="#E_AD_PWD_WARN" title="E_AD_PWD_WARN :: "><span class="description">E_AD_PWD_WARN</span><pre>E_AD_PWD_WARN</pre></a></li>
+<li class="constant  "><a href="#E_AD_RECORD_ACCESS" title="E_AD_RECORD_ACCESS :: "><span class="description">E_AD_RECORD_ACCESS</span><pre>E_AD_RECORD_ACCESS</pre></a></li>
+<li class="constant  "><a href="#E_CAL_INVALID_EVENT_ID" title="E_CAL_INVALID_EVENT_ID :: "><span class="description">E_CAL_INVALID_EVENT_ID</span><pre>E_CAL_INVALID_EVENT_ID</pre></a></li>
+<li class="constant  "><a href="#E_CAL_NO_SECTIONS" title="E_CAL_NO_SECTIONS :: "><span class="description">E_CAL_NO_SECTIONS</span><pre>E_CAL_NO_SECTIONS</pre></a></li>
+<li class="constant  "><a href="#E_CAL_PUBLISH" title="E_CAL_PUBLISH :: "><span class="description">E_CAL_PUBLISH</span><pre>E_CAL_PUBLISH</pre></a></li>
+<li class="constant  "><a href="#FILE_READ_MODE" title="FILE_READ_MODE :: "><span class="description">FILE_READ_MODE</span><pre>FILE_READ_MODE</pre></a></li>
+<li class="constant  "><a href="#FILE_WRITE_MODE" title="FILE_WRITE_MODE :: "><span class="description">FILE_WRITE_MODE</span><pre>FILE_WRITE_MODE</pre></a></li>
+<li class="constant  "><a href="#FISHNET_VERSION" title="FISHNET_VERSION :: "><span class="description">FISHNET_VERSION</span><pre>FISHNET_VERSION</pre></a></li>
+<li class="constant  "><a href="#FOPEN_READ" title="FOPEN_READ :: "><span class="description">FOPEN_READ</span><pre>FOPEN_READ</pre></a></li>
+<li class="constant  "><a href="#FOPEN_READ_WRITE" title="FOPEN_READ_WRITE :: "><span class="description">FOPEN_READ_WRITE</span><pre>FOPEN_READ_WRITE</pre></a></li>
+<li class="constant  "><a href="#FOPEN_READ_WRITE_CREATE" title="FOPEN_READ_WRITE_CREATE :: "><span class="description">FOPEN_READ_WRITE_CREATE</span><pre>FOPEN_READ_WRITE_CREATE</pre></a></li>
+<li class="constant  "><a href="#FOPEN_READ_WRITE_CREATE_DESTRUCTIVE" title="FOPEN_READ_WRITE_CREATE_DESTRUCTIVE :: "><span class="description">FOPEN_READ_WRITE_CREATE_DESTRUCTIVE</span><pre>FOPEN_READ_WRITE_CREATE_DESTRUCTIVE</pre></a></li>
+<li class="constant  "><a href="#FOPEN_READ_WRITE_CREATE_STRICT" title="FOPEN_READ_WRITE_CREATE_STRICT :: "><span class="description">FOPEN_READ_WRITE_CREATE_STRICT</span><pre>FOPEN_READ_WRITE_CREATE_STRICT</pre></a></li>
+<li class="constant  "><a href="#FOPEN_WRITE_CREATE" title="FOPEN_WRITE_CREATE :: "><span class="description">FOPEN_WRITE_CREATE</span><pre>FOPEN_WRITE_CREATE</pre></a></li>
+<li class="constant  "><a href="#FOPEN_WRITE_CREATE_DESTRUCTIVE" title="FOPEN_WRITE_CREATE_DESTRUCTIVE :: "><span class="description">FOPEN_WRITE_CREATE_DESTRUCTIVE</span><pre>FOPEN_WRITE_CREATE_DESTRUCTIVE</pre></a></li>
+<li class="constant  "><a href="#FOPEN_WRITE_CREATE_STRICT" title="FOPEN_WRITE_CREATE_STRICT :: "><span class="description">FOPEN_WRITE_CREATE_STRICT</span><pre>FOPEN_WRITE_CREATE_STRICT</pre></a></li>
+<li class="constant  "><a href="#PERM_ALL" title="PERM_ALL :: "><span class="description">PERM_ALL</span><pre>PERM_ALL</pre></a></li>
+<li class="constant  "><a href="#PERM_DELETE" title="PERM_DELETE :: "><span class="description">PERM_DELETE</span><pre>PERM_DELETE</pre></a></li>
+<li class="constant  "><a href="#PERM_PAGE_ALL" title="PERM_PAGE_ALL :: "><span class="description">PERM_PAGE_ALL</span><pre>PERM_PAGE_ALL</pre></a></li>
+<li class="constant  "><a href="#PERM_PERM" title="PERM_PERM :: "><span class="description">PERM_PERM</span><pre>PERM_PERM</pre></a></li>
+<li class="constant  "><a href="#PERM_PROPERTIES" title="PERM_PROPERTIES :: "><span class="description">PERM_PROPERTIES</span><pre>PERM_PROPERTIES</pre></a></li>
+<li class="constant  "><a href="#PERM_PUBLISH" title="PERM_PUBLISH :: "><span class="description">PERM_PUBLISH</span><pre>PERM_PUBLISH</pre></a></li>
+<li class="constant  "><a href="#PERM_READ" title="PERM_READ :: Site Constants --------------------------------------------------------"><span class="description">Site Constants --------------------------------------------------------</span><pre>PERM_READ</pre></a></li>
+<li class="constant  "><a href="#PERM_WRITE" title="PERM_WRITE :: "><span class="description">PERM_WRITE</span><pre>PERM_WRITE</pre></a></li>
+<li class="constant  "><a href="#SID_ADS" title="SID_ADS :: "><span class="description">SID_ADS</span><pre>SID_ADS</pre></a></li>
+<li class="constant  "><a href="#SID_ADS_PLACEMENTS" title="SID_ADS_PLACEMENTS :: "><span class="description">SID_ADS_PLACEMENTS</span><pre>SID_ADS_PLACEMENTS</pre></a></li>
+<li class="constant  "><a href="#SID_CALENDAR" title="SID_CALENDAR :: Section IDs"><span class="description">Section IDs</span><pre>SID_CALENDAR</pre></a></li>
+<li class="constant  "><a href="#SID_CRUD" title="SID_CRUD :: "><span class="description">SID_CRUD</span><pre>SID_CRUD</pre></a></li>
+<li class="constant  "><a href="#SID_PHOTOS" title="SID_PHOTOS :: "><span class="description">SID_PHOTOS</span><pre>SID_PHOTOS</pre></a></li>
+<li class="constant  "><a href="#SID_PLACEMENTS" title="SID_PLACEMENTS :: "><span class="description">SID_PLACEMENTS</span><pre>SID_PLACEMENTS</pre></a></li>
+<li class="constant  "><a href="#SID_PRIORITIES" title="SID_PRIORITIES :: "><span class="description">SID_PRIORITIES</span><pre>SID_PRIORITIES</pre></a></li>
+<li class="constant  "><a href="#SID_PRIORITIES_FAQ" title="SID_PRIORITIES_FAQ :: "><span class="description">SID_PRIORITIES_FAQ</span><pre>SID_PRIORITIES_FAQ</pre></a></li>
+<li class="constant  "><a href="#SID_PRIVATE" title="SID_PRIVATE :: "><span class="description">SID_PRIVATE</span><pre>SID_PRIVATE</pre></a></li>
+<li class="constant  "><a href="#SID_RETAIL" title="SID_RETAIL :: "><span class="description">SID_RETAIL</span><pre>SID_RETAIL</pre></a></li>
+<li class="constant  "><a href="#SID_RETAIL_CALENDAR" title="SID_RETAIL_CALENDAR :: "><span class="description">SID_RETAIL_CALENDAR</span><pre>SID_RETAIL_CALENDAR</pre></a></li>
+<li class="constant  "><a href="#SID_WHOS_WHO" title="SID_WHOS_WHO :: "><span class="description">SID_WHOS_WHO</span><pre>SID_WHOS_WHO</pre></a></li>
+<li class="constant  "><a href="#STATIC_URL" title="STATIC_URL :: "><span class="description">STATIC_URL</span><pre>STATIC_URL</pre></a></li>
+<li class="constant  "><a href="#TID_POST" title="TID_POST :: "><span class="description">TID_POST</span><pre>TID_POST</pre></a></li>
+</ul>
+</div>
+<div class="span8 package-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-folder-open"></i></a><span class="divider">\</span>
+</li>
+<li class="active"><a href="../packages/Default.html">Default</a></li>
+</ul>
+<div class="package-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a name="KTArrayToHTML" id="KTArrayToHTML"></a><div class="element clickable function  KTArrayToHTML" data-toggle="collapse" data-target=".KTArrayToHTML .collapse">
+<h2>Takes a multidimensional array and creates nested HTML lists.</h2>
+<pre>KTArrayToHTML(array $mArray, string $htmlStr, bool $nodirs) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mArray</h4>
+<code>array</code><p>results from arrayFromKTResults, file structure in array form</p></div>
+<div class="subelement argument">
+<h4>$htmlStr</h4>
+<code>string</code><p>by reference: the html code where I should append the file list</p></div>
+<div class="subelement argument">
+<h4>$nodirs</h4>
+<code>bool</code><p>whether to create a file structure or just a list of all the files</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="alphaForms" id="alphaForms"></a><div class="element clickable function  alphaForms" data-toggle="collapse" data-target=".alphaForms .collapse">
+<h2>alphaForms()
+        </h2>
+<pre>alphaForms(string $a, string $b) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>string</code><p>form name a</p></div>
+<div class="subelement argument">
+<h4>$b</h4>
+<code>string</code><p>form name b</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>returns 0 is equal, -1 or 1 in < or > respectively This function is used as a callback for ucmp to alphabetize forms</div>
+</div></div>
+</div>
+<a name="cmp" id="cmp"></a><div class="element clickable function  cmp" data-toggle="collapse" data-target=".cmp .collapse">
+<h2>To sort query results by displayname</h2>
+<pre>cmp(array $a, array $b) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$b</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="e" id="e"></a><div class="element clickable function  e" data-toggle="collapse" data-target=".e .collapse">
+<h2>e()
+        </h2>
+<pre>e(mixed $a, mixed $default) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>mixed</code><p>variable to test</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code><p>default value to return if variable is not set</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>the passed default value, '' by default</div>
+</div></div>
+</div>
+<a name="exif_imagetype" id="exif_imagetype"></a><div class="element clickable function  exif_imagetype" data-toggle="collapse" data-target=".exif_imagetype .collapse">
+<h2>exif_imagetype()
+        </h2>
+<pre>exif_imagetype($f) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$f</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="generateTopLevel" id="generateTopLevel"></a><div class="element clickable function  generateTopLevel" data-toggle="collapse" data-target=".generateTopLevel .collapse">
+<h2>Takes a multidimensional array and creates nested HTML lists.</h2>
+<pre>generateTopLevel(array $mArray, \string_reference $htmlStr, bool $nodirs) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mArray</h4>
+<code>array</code><p>results from arrayFromKTResults, file structure in array form</p></div>
+<div class="subelement argument">
+<h4>$htmlStr</h4>
+<code>\string_reference</code><p>the html code where I should append the file list</p></div>
+<div class="subelement argument">
+<h4>$nodirs</h4>
+<code>bool</code><p>whether to create a file structure or just a list of all the files</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="get_image" id="get_image"></a><div class="element clickable function  get_image" data-toggle="collapse" data-target=".get_image .collapse">
+<h2>returns the $filename of an image with the corresponding transformations, the transformed image doesn't't exist
+yet it will create it.</h2>
+<pre>get_image(bool $src, bool $width, bool $zc, bool $flip, int $angle) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$src</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$width</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$zc</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$flip</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$angle</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the formed string to use</div>
+</div></div>
+</div>
+<a name="get_image_html" id="get_image_html"></a><div class="element clickable function  get_image_html" data-toggle="collapse" data-target=".get_image_html .collapse">
+<h2>outputs src and width and height ready to use on &lt;img&gt;</h2>
+<pre>get_image_html(bool $src, bool $width, bool $zc, bool $flip, int $angle, $lazy) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$src</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$width</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$zc</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$flip</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$angle</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$lazy</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the formed string to use</div>
+</div></div>
+</div>
+<a name="isAjax" id="isAjax"></a><div class="element clickable function  isAjax" data-toggle="collapse" data-target=".isAjax .collapse">
+<h2>Determines if the current page request was done through an AJAX call</h2>
+<pre>isAjax() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="multiArrayToHTML" id="multiArrayToHTML"></a><div class="element clickable function  multiArrayToHTML" data-toggle="collapse" data-target=".multiArrayToHTML .collapse">
+<h2>Takes a multidimensional array and creates nested HTML lists.</h2>
+<pre>multiArrayToHTML(array $mArray, string $htmlStr, bool $nodirs) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mArray</h4>
+<code>array</code><p>the array created by documents->arrayFromDir</p>
+</div>
+<div class="subelement argument">
+<h4>$htmlStr</h4>
+<code>string</code><p>reference to the string to store the resulting HTML</p></div>
+<div class="subelement argument">
+<h4>$nodirs</h4>
+<code>bool</code><p>whether the array is flat or multi-dimensional</p>
+</div>
+</div></div>
+</div>
+<a name="peopleSort" id="peopleSort"></a><div class="element clickable function  peopleSort" data-toggle="collapse" data-target=".peopleSort .collapse">
+<h2>To sort the results by display_name</h2>
+<pre>peopleSort(array $a, array $b) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$b</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="toSlug" id="toSlug"></a><div class="element clickable function  toSlug" data-toggle="collapse" data-target=".toSlug .collapse">
+<h2>Converts strings to slugs (e.g. Camión Azul -&gt; camion-azul)</h2>
+<pre>toSlug(string $string, string $space) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code><p>the string to convert</p></div>
+<div class="subelement argument">
+<h4>$space</h4>
+<code>string</code><p>replacement for spaces</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="truncateArticle" id="truncateArticle"></a><div class="element clickable function  truncateArticle" data-toggle="collapse" data-target=".truncateArticle .collapse">
+<h2>truncateArticle()
+        </h2>
+<pre>truncateArticle(array $article, string $index, array $params) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$article</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>the count and the key</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>the modified $article array This function is a callback to be used with array_walk, is used to truncate article text to the desired amount of words</div>
+</div></div>
+</div>
+<a name="val" id="val"></a><div class="element clickable function  val" data-toggle="collapse" data-target=".val .collapse">
+<h2>val()
+        </h2>
+<pre>val(mixed $a, mixed $default) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>mixed</code><p>variable to test</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code><p>default value to return if variable is not set</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>the passed default value, '' by default</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="MY_Security" id="MY_Security"></a><div class="element ajax clickable class" href="../classes/MY_Security.html">
+<h1>MY_Security<a href="../classes/MY_Security.html">¶</a>
+</h1>
+<p class="short_description">MY_Security</p>
+<div class="details collapse"></div>
+<a href="../classes/MY_Security.html" class="more">« More »</a>
+</div>
+<a name="Properties" id="Properties"></a><div class="element ajax clickable class" href="../classes/Properties.html">
+<h1>Properties<a href="../classes/Properties.html">¶</a>
+</h1>
+<p class="short_description">properties</p>
+<div class="details collapse"></div>
+<a href="../classes/Properties.html" class="more">« More »</a>
+</div>
+<a name="Stores" id="Stores"></a><div class="element ajax clickable class" href="../classes/Stores.html">
+<h1>Stores<a href="../classes/Stores.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Stores.html" class="more">« More »</a>
+</div>
+<a name="Template" id="Template"></a><div class="element ajax clickable class" href="../classes/Template.html">
+<h1>Template<a href="../classes/Template.html">¶</a>
+</h1>
+<p class="short_description">PHP Template Class</p>
+<div class="details collapse"></div>
+<a href="../classes/Template.html" class="more">« More »</a>
+</div>
+<a name="VimeoAPIException" id="VimeoAPIException"></a><div class="element ajax clickable class" href="../classes/VimeoAPIException.html">
+<h1>VimeoAPIException<a href="../classes/VimeoAPIException.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/VimeoAPIException.html" class="more">« More »</a>
+</div>
+<a name="phpVimeo" id="phpVimeo"></a><div class="element ajax clickable class" href="../classes/phpVimeo.html">
+<h1>phpVimeo<a href="../classes/phpVimeo.html">¶</a>
+</h1>
+<p class="short_description">Created by: cravelo
+Date: 2/10/12
+Time: 11:45 AM</p>
+<div class="details collapse"></div>
+<a href="../classes/phpVimeo.html" class="more">« More »</a>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="DIR_READ_MODE" id="DIR_READ_MODE"> </a><div class="element clickable constant  DIR_READ_MODE" data-toggle="collapse" data-target=".DIR_READ_MODE .collapse">
+<h2>DIR_READ_MODE</h2>
+<pre>DIR_READ_MODE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="DIR_WRITE_MODE" id="DIR_WRITE_MODE"> </a><div class="element clickable constant  DIR_WRITE_MODE" data-toggle="collapse" data-target=".DIR_WRITE_MODE .collapse">
+<h2>DIR_WRITE_MODE</h2>
+<pre>DIR_WRITE_MODE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="EDIT_MODE" id="EDIT_MODE"> </a><div class="element clickable constant  EDIT_MODE" data-toggle="collapse" data-target=".EDIT_MODE .collapse">
+<h2>EDIT_MODE</h2>
+<pre>EDIT_MODE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_ACCT_LOCKED" id="E_AD_ACCT_LOCKED"> </a><div class="element clickable constant  E_AD_ACCT_LOCKED" data-toggle="collapse" data-target=".E_AD_ACCT_LOCKED .collapse">
+<h2>E_AD_ACCT_LOCKED</h2>
+<pre>E_AD_ACCT_LOCKED </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_EMPTY" id="E_AD_EMPTY"> </a><div class="element clickable constant  E_AD_EMPTY" data-toggle="collapse" data-target=".E_AD_EMPTY .collapse">
+<h2>EXCEPTIONS</h2>
+<pre>E_AD_EMPTY </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_LOGIN_FAILED" id="E_AD_LOGIN_FAILED"> </a><div class="element clickable constant  E_AD_LOGIN_FAILED" data-toggle="collapse" data-target=".E_AD_LOGIN_FAILED .collapse">
+<h2>E_AD_LOGIN_FAILED</h2>
+<pre>E_AD_LOGIN_FAILED </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_PWD_EXPIRED" id="E_AD_PWD_EXPIRED"> </a><div class="element clickable constant  E_AD_PWD_EXPIRED" data-toggle="collapse" data-target=".E_AD_PWD_EXPIRED .collapse">
+<h2>E_AD_PWD_EXPIRED</h2>
+<pre>E_AD_PWD_EXPIRED </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_PWD_FORCE_CHANGE" id="E_AD_PWD_FORCE_CHANGE"> </a><div class="element clickable constant  E_AD_PWD_FORCE_CHANGE" data-toggle="collapse" data-target=".E_AD_PWD_FORCE_CHANGE .collapse">
+<h2>E_AD_PWD_FORCE_CHANGE</h2>
+<pre>E_AD_PWD_FORCE_CHANGE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_PWD_NEVER_SET" id="E_AD_PWD_NEVER_SET"> </a><div class="element clickable constant  E_AD_PWD_NEVER_SET" data-toggle="collapse" data-target=".E_AD_PWD_NEVER_SET .collapse">
+<h2>E_AD_PWD_NEVER_SET</h2>
+<pre>E_AD_PWD_NEVER_SET </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_PWD_WARN" id="E_AD_PWD_WARN"> </a><div class="element clickable constant  E_AD_PWD_WARN" data-toggle="collapse" data-target=".E_AD_PWD_WARN .collapse">
+<h2>E_AD_PWD_WARN</h2>
+<pre>E_AD_PWD_WARN </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_RECORD_ACCESS" id="E_AD_RECORD_ACCESS"> </a><div class="element clickable constant  E_AD_RECORD_ACCESS" data-toggle="collapse" data-target=".E_AD_RECORD_ACCESS .collapse">
+<h2>E_AD_RECORD_ACCESS</h2>
+<pre>E_AD_RECORD_ACCESS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_CAL_INVALID_EVENT_ID" id="E_CAL_INVALID_EVENT_ID"> </a><div class="element clickable constant  E_CAL_INVALID_EVENT_ID" data-toggle="collapse" data-target=".E_CAL_INVALID_EVENT_ID .collapse">
+<h2>E_CAL_INVALID_EVENT_ID</h2>
+<pre>E_CAL_INVALID_EVENT_ID </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_CAL_NO_SECTIONS" id="E_CAL_NO_SECTIONS"> </a><div class="element clickable constant  E_CAL_NO_SECTIONS" data-toggle="collapse" data-target=".E_CAL_NO_SECTIONS .collapse">
+<h2>E_CAL_NO_SECTIONS</h2>
+<pre>E_CAL_NO_SECTIONS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_CAL_PUBLISH" id="E_CAL_PUBLISH"> </a><div class="element clickable constant  E_CAL_PUBLISH" data-toggle="collapse" data-target=".E_CAL_PUBLISH .collapse">
+<h2>E_CAL_PUBLISH</h2>
+<pre>E_CAL_PUBLISH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FILE_READ_MODE" id="FILE_READ_MODE"> </a><div class="element clickable constant  FILE_READ_MODE" data-toggle="collapse" data-target=".FILE_READ_MODE .collapse">
+<h2>FILE_READ_MODE</h2>
+<pre>FILE_READ_MODE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FILE_WRITE_MODE" id="FILE_WRITE_MODE"> </a><div class="element clickable constant  FILE_WRITE_MODE" data-toggle="collapse" data-target=".FILE_WRITE_MODE .collapse">
+<h2>FILE_WRITE_MODE</h2>
+<pre>FILE_WRITE_MODE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FISHNET_VERSION" id="FISHNET_VERSION"> </a><div class="element clickable constant  FISHNET_VERSION" data-toggle="collapse" data-target=".FISHNET_VERSION .collapse">
+<h2>FISHNET_VERSION</h2>
+<pre>FISHNET_VERSION </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_READ" id="FOPEN_READ"> </a><div class="element clickable constant  FOPEN_READ" data-toggle="collapse" data-target=".FOPEN_READ .collapse">
+<h2>FOPEN_READ</h2>
+<pre>FOPEN_READ </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_READ_WRITE" id="FOPEN_READ_WRITE"> </a><div class="element clickable constant  FOPEN_READ_WRITE" data-toggle="collapse" data-target=".FOPEN_READ_WRITE .collapse">
+<h2>FOPEN_READ_WRITE</h2>
+<pre>FOPEN_READ_WRITE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_READ_WRITE_CREATE" id="FOPEN_READ_WRITE_CREATE"> </a><div class="element clickable constant  FOPEN_READ_WRITE_CREATE" data-toggle="collapse" data-target=".FOPEN_READ_WRITE_CREATE .collapse">
+<h2>FOPEN_READ_WRITE_CREATE</h2>
+<pre>FOPEN_READ_WRITE_CREATE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_READ_WRITE_CREATE_DESTRUCTIVE" id="FOPEN_READ_WRITE_CREATE_DESTRUCTIVE"> </a><div class="element clickable constant  FOPEN_READ_WRITE_CREATE_DESTRUCTIVE" data-toggle="collapse" data-target=".FOPEN_READ_WRITE_CREATE_DESTRUCTIVE .collapse">
+<h2>FOPEN_READ_WRITE_CREATE_DESTRUCTIVE</h2>
+<pre>FOPEN_READ_WRITE_CREATE_DESTRUCTIVE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_READ_WRITE_CREATE_STRICT" id="FOPEN_READ_WRITE_CREATE_STRICT"> </a><div class="element clickable constant  FOPEN_READ_WRITE_CREATE_STRICT" data-toggle="collapse" data-target=".FOPEN_READ_WRITE_CREATE_STRICT .collapse">
+<h2>FOPEN_READ_WRITE_CREATE_STRICT</h2>
+<pre>FOPEN_READ_WRITE_CREATE_STRICT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_WRITE_CREATE" id="FOPEN_WRITE_CREATE"> </a><div class="element clickable constant  FOPEN_WRITE_CREATE" data-toggle="collapse" data-target=".FOPEN_WRITE_CREATE .collapse">
+<h2>FOPEN_WRITE_CREATE</h2>
+<pre>FOPEN_WRITE_CREATE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_WRITE_CREATE_DESTRUCTIVE" id="FOPEN_WRITE_CREATE_DESTRUCTIVE"> </a><div class="element clickable constant  FOPEN_WRITE_CREATE_DESTRUCTIVE" data-toggle="collapse" data-target=".FOPEN_WRITE_CREATE_DESTRUCTIVE .collapse">
+<h2>FOPEN_WRITE_CREATE_DESTRUCTIVE</h2>
+<pre>FOPEN_WRITE_CREATE_DESTRUCTIVE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_WRITE_CREATE_STRICT" id="FOPEN_WRITE_CREATE_STRICT"> </a><div class="element clickable constant  FOPEN_WRITE_CREATE_STRICT" data-toggle="collapse" data-target=".FOPEN_WRITE_CREATE_STRICT .collapse">
+<h2>FOPEN_WRITE_CREATE_STRICT</h2>
+<pre>FOPEN_WRITE_CREATE_STRICT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_ALL" id="PERM_ALL"> </a><div class="element clickable constant  PERM_ALL" data-toggle="collapse" data-target=".PERM_ALL .collapse">
+<h2>PERM_ALL</h2>
+<pre>PERM_ALL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_DELETE" id="PERM_DELETE"> </a><div class="element clickable constant  PERM_DELETE" data-toggle="collapse" data-target=".PERM_DELETE .collapse">
+<h2>PERM_DELETE</h2>
+<pre>PERM_DELETE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_PAGE_ALL" id="PERM_PAGE_ALL"> </a><div class="element clickable constant  PERM_PAGE_ALL" data-toggle="collapse" data-target=".PERM_PAGE_ALL .collapse">
+<h2>PERM_PAGE_ALL</h2>
+<pre>PERM_PAGE_ALL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_PERM" id="PERM_PERM"> </a><div class="element clickable constant  PERM_PERM" data-toggle="collapse" data-target=".PERM_PERM .collapse">
+<h2>PERM_PERM</h2>
+<pre>PERM_PERM </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_PROPERTIES" id="PERM_PROPERTIES"> </a><div class="element clickable constant  PERM_PROPERTIES" data-toggle="collapse" data-target=".PERM_PROPERTIES .collapse">
+<h2>PERM_PROPERTIES</h2>
+<pre>PERM_PROPERTIES </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_PUBLISH" id="PERM_PUBLISH"> </a><div class="element clickable constant  PERM_PUBLISH" data-toggle="collapse" data-target=".PERM_PUBLISH .collapse">
+<h2>PERM_PUBLISH</h2>
+<pre>PERM_PUBLISH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_READ" id="PERM_READ"> </a><div class="element clickable constant  PERM_READ" data-toggle="collapse" data-target=".PERM_READ .collapse">
+<h2>Site Constants --------------------------------------------------------</h2>
+<pre>PERM_READ </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_WRITE" id="PERM_WRITE"> </a><div class="element clickable constant  PERM_WRITE" data-toggle="collapse" data-target=".PERM_WRITE .collapse">
+<h2>PERM_WRITE</h2>
+<pre>PERM_WRITE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_ADS" id="SID_ADS"> </a><div class="element clickable constant  SID_ADS" data-toggle="collapse" data-target=".SID_ADS .collapse">
+<h2>SID_ADS</h2>
+<pre>SID_ADS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_ADS_PLACEMENTS" id="SID_ADS_PLACEMENTS"> </a><div class="element clickable constant  SID_ADS_PLACEMENTS" data-toggle="collapse" data-target=".SID_ADS_PLACEMENTS .collapse">
+<h2>SID_ADS_PLACEMENTS</h2>
+<pre>SID_ADS_PLACEMENTS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_CALENDAR" id="SID_CALENDAR"> </a><div class="element clickable constant  SID_CALENDAR" data-toggle="collapse" data-target=".SID_CALENDAR .collapse">
+<h2>Section IDs</h2>
+<pre>SID_CALENDAR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_CRUD" id="SID_CRUD"> </a><div class="element clickable constant  SID_CRUD" data-toggle="collapse" data-target=".SID_CRUD .collapse">
+<h2>SID_CRUD</h2>
+<pre>SID_CRUD </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_PHOTOS" id="SID_PHOTOS"> </a><div class="element clickable constant  SID_PHOTOS" data-toggle="collapse" data-target=".SID_PHOTOS .collapse">
+<h2>SID_PHOTOS</h2>
+<pre>SID_PHOTOS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_PLACEMENTS" id="SID_PLACEMENTS"> </a><div class="element clickable constant  SID_PLACEMENTS" data-toggle="collapse" data-target=".SID_PLACEMENTS .collapse">
+<h2>SID_PLACEMENTS</h2>
+<pre>SID_PLACEMENTS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_PRIORITIES" id="SID_PRIORITIES"> </a><div class="element clickable constant  SID_PRIORITIES" data-toggle="collapse" data-target=".SID_PRIORITIES .collapse">
+<h2>SID_PRIORITIES</h2>
+<pre>SID_PRIORITIES </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_PRIORITIES_FAQ" id="SID_PRIORITIES_FAQ"> </a><div class="element clickable constant  SID_PRIORITIES_FAQ" data-toggle="collapse" data-target=".SID_PRIORITIES_FAQ .collapse">
+<h2>SID_PRIORITIES_FAQ</h2>
+<pre>SID_PRIORITIES_FAQ </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_PRIVATE" id="SID_PRIVATE"> </a><div class="element clickable constant  SID_PRIVATE" data-toggle="collapse" data-target=".SID_PRIVATE .collapse">
+<h2>SID_PRIVATE</h2>
+<pre>SID_PRIVATE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_RETAIL" id="SID_RETAIL"> </a><div class="element clickable constant  SID_RETAIL" data-toggle="collapse" data-target=".SID_RETAIL .collapse">
+<h2>SID_RETAIL</h2>
+<pre>SID_RETAIL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_RETAIL_CALENDAR" id="SID_RETAIL_CALENDAR"> </a><div class="element clickable constant  SID_RETAIL_CALENDAR" data-toggle="collapse" data-target=".SID_RETAIL_CALENDAR .collapse">
+<h2>SID_RETAIL_CALENDAR</h2>
+<pre>SID_RETAIL_CALENDAR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_WHOS_WHO" id="SID_WHOS_WHO"> </a><div class="element clickable constant  SID_WHOS_WHO" data-toggle="collapse" data-target=".SID_WHOS_WHO .collapse">
+<h2>SID_WHOS_WHO</h2>
+<pre>SID_WHOS_WHO </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="STATIC_URL" id="STATIC_URL"> </a><div class="element clickable constant  STATIC_URL" data-toggle="collapse" data-target=".STATIC_URL .collapse">
+<h2>STATIC_URL</h2>
+<pre>STATIC_URL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="TID_POST" id="TID_POST"> </a><div class="element clickable constant  TID_POST" data-toggle="collapse" data-target=".TID_POST .collapse">
+<h2>TID_POST</h2>
+<pre>TID_POST </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>filename</th>
+<td>topic.php</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">: cravelo</a></td>
+</tr>
+<tr>
+<th>date</th>
+<td>: 10/12/12 4:06 PM</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-11-07T14:45:18-05:00.<br></footer></div>
+</div>
+</body>
+</html>

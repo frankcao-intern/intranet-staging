@@ -1,0 +1,601 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Seasonal</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Addon.Controllers.html"><i class="icon-folder-open"></i> Addon/Controllers</a></li>
+<li><a href="../packages/Controllers.html"><i class="icon-folder-open"></i> Controllers</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Libraries.html"><i class="icon-folder-open"></i> Libraries</a></li>
+<li><a href="../packages/Misc.html"><i class="icon-folder-open"></i> Misc</a></li>
+<li><a href="../packages/Models.html"><i class="icon-folder-open"></i> Models</a></li>
+<li><a href="../packages/PHP-Template.html"><i class="icon-folder-open"></i> PHP-Template</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">430</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">6</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">1</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public inherited"><a href="#__construct" title="__construct :: the constructor checks if the user is logged in"><span class="description">the constructor checks if the user is logged in</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#__destruct" title="__destruct :: "><span class="description">__destruct()
+        </span><pre>__destruct()</pre></a></li>
+<li class="method public "><a href="#adsandplacements" title="adsandplacements :: same parameters as load, except this one doesn't actually load articles, just calculates the dates for the
+season and loads the page."><span class="description">same parameters as load, except this one doesn't actually load articles, just calculates the dates for the
+season and loads the page.</span><pre>adsandplacements()</pre></a></li>
+<li class="method public inherited"><a href="#change_page_title" title="change_page_title :: Changes the page's title"><span class="description">Changes the page's title</span><pre>change_page_title()</pre></a></li>
+<li class="method public inherited"><a href="#create" title="create :: This is the handler for the new page form (new page dialog)."><span class="description">This is the handler for the new page form (new page dialog).</span><pre>create()</pre></a></li>
+<li class="method public inherited"><a href="#delete" title="delete :: Marks a page for deletion or un-deletes it, logs this action and
+if deleting it removes the page form the search index."><span class="description">Marks a page for deletion or un-deletes it, logs this action and
+if deleting it removes the page form the search index.</span><pre>delete()</pre></a></li>
+<li class="method public inherited"><a href="#edit" title="edit :: Enables edit mode on pages."><span class="description">Enables edit mode on pages.</span><pre>edit()</pre></a></li>
+<li class="method public inherited"><a href="#getpicture" title="getpicture :: This function will retrieve the latest picture from sys_pictures"><span class="description">This function will retrieve the latest picture from sys_pictures</span><pre>getpicture()</pre></a></li>
+<li class="method public inherited"><a href="#index" title="index :: The heart of the operation :)"><span class="description">The heart of the operation :)</span><pre>index()</pre></a></li>
+<li class="method public "><a href="#load" title="load :: This function loads a page that requires season/year information"><span class="description">This function loads a page that requires season/year information</span><pre>load()</pre></a></li>
+<li class="method public inherited"><a href="#loadPage" title="loadPage :: This function will load the page_id information into the private variable $pageRecord
+only if the page has been published and if the current session user has access to see it"><span class="description">This function will load the page_id information into the private variable $pageRecord
+only if the page has been published and if the current session user has access to see it</span><pre>loadPage()</pre></a></li>
+<li class="method public inherited"><a href="#loadRevision" title="loadRevision :: "><span class="description">loadRevision()
+        </span><pre>loadRevision()</pre></a></li>
+<li class="method public inherited"><a href="#purge" title="purge :: This function permanently deletes a page and is used from the purge function in who's who"><span class="description">This function permanently deletes a page and is used from the purge function in who's who</span><pre>purge()</pre></a></li>
+<li class="method public inherited"><a href="#removeelement" title="removeelement :: removes an element from the page's revision"><span class="description">removes an element from the page's revision</span><pre>removeelement()</pre></a></li>
+<li class="method public inherited"><a href="#rss" title="rss :: This function will output an RSS 2.0 feed of a section"><span class="description">This function will output an RSS 2.0 feed of a section</span><pre>rss()</pre></a></li>
+<li class="method public inherited"><a href="#save" title="save :: This function takes an array posted to it of object name = object value and it updates that page's \
+latest revision with the new content."><span class="description">This function takes an array posted to it of object name = object value and it updates that page's \
+latest revision with the new content.</span><pre>save()</pre></a></li>
+<li class="method public inherited"><a href="#setupBreadbrumbs" title="setupBreadbrumbs :: Helper function to setup breadcrumbs on pages that request it"><span class="description">Helper function to setup breadcrumbs on pages that request it</span><pre>setupBreadbrumbs()</pre></a></li>
+<li class="method public inherited"><a href="#share" title="share :: Send an email to the specified people with a link back to an article"><span class="description">Send an email to the specified people with a link back to an article</span><pre>share()</pre></a></li>
+<li class="method public inherited"><a href="#tag" title="tag :: Loads all pages that are tagged with the specified tagname"><span class="description">Loads all pages that are tagged with the specified tagname</span><pre>tag()</pre></a></li>
+<li class="method public inherited"><a href="#update_author" title="update_author :: Updates a page's author and subscribes the author to the page"><span class="description">Updates a page's author and subscribes the author to the page</span><pre>update_author()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#getSeason" title="getSeason :: returns the season and year, either current (date = null) or related to the date param"><span class="description">returns the season and year, either current (date = null) or related to the date param</span><pre>getSeason()</pre></a></li>
+<li class="method private "><a href="#getSeasonFirstDay" title="getSeasonFirstDay :: "><span class="description">getSeasonFirstDay()
+        </span><pre>getSeasonFirstDay()</pre></a></li>
+<li class="method private "><a href="#getSeasonLastDay" title="getSeasonLastDay :: "><span class="description">getSeasonLastDay()
+        </span><pre>getSeasonLastDay()</pre></a></li>
+<li class="method private "><a href="#setupSeason" title="setupSeason :: Get the current season, past and next, add all the data to the pageRecord and return the current season in
+order to load the section"><span class="description">Get the current season, past and next, add all the data to the pageRecord and return the current season in
+order to load the section</span><pre>setupSeason()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public inherited"><a href="#%24pageRecord" title="$pageRecord :: "><span class="description">holds the requested page's record form the DB plus any other additional data to be passed on to the view</span><pre>$pageRecord</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected inherited"><a href="#%24result" title="$result :: "><span class="description">$result</span><pre>$result</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CSeasonal" id="\Seasonal"></a><div href="../classes/Seasonal.html" class="element class">
+<p class="short_description">The seasonal aggregator controller</p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="..//packages/Controllers.html">Controllers</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">cravelo</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>the constructor checks if the user is logged in</h2>
+<pre>__construct() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::__construct()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Article::__construct()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="__destruct" id="__destruct"></a><div class="element clickable method public __destruct" data-toggle="collapse" data-target=".__destruct .collapse">
+<h2>__destruct()
+        </h2>
+<pre>__destruct() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::__destruct()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Article::__destruct()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="adsandplacements" id="adsandplacements"></a><div class="element clickable method public adsandplacements" data-toggle="collapse" data-target=".adsandplacements .collapse">
+<h2>same parameters as load, except this one doesn't actually load articles, just calculates the dates for the
+season and loads the page.</h2>
+<pre>adsandplacements($section_id, null $season, null $year, null $order_by) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$section_id</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$season</h4>
+<code>null</code>
+</div>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>null</code>
+</div>
+<div class="subelement argument">
+<h4>$order_by</h4>
+<code>null</code>
+</div>
+</div></div>
+</div>
+<a name="change_page_title" id="change_page_title"></a><div class="element clickable method public change_page_title" data-toggle="collapse" data-target=".change_page_title .collapse">
+<h2>Changes the page's title</h2>
+<pre>change_page_title() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::change_page_title()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="create" id="create"></a><div class="element clickable method public create" data-toggle="collapse" data-target=".create .collapse">
+<h2>This is the handler for the new page form (new page dialog).</h2>
+<pre>create() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::create()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="delete" id="delete"></a><div class="element clickable method public delete" data-toggle="collapse" data-target=".delete .collapse">
+<h2>Marks a page for deletion or un-deletes it, logs this action and
+if deleting it removes the page form the search index.</h2>
+<pre>delete() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::delete()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="edit" id="edit"></a><div class="element clickable method public edit" data-toggle="collapse" data-target=".edit .collapse">
+<h2>Enables edit mode on pages.</h2>
+<pre>edit(int $page_id) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::edit()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="getpicture" id="getpicture"></a><div class="element clickable method public getpicture" data-toggle="collapse" data-target=".getpicture .collapse">
+<h2>This function will retrieve the latest picture from sys_pictures</h2>
+<pre>getpicture() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::getpicture()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="index" id="index"></a><div class="element clickable method public index" data-toggle="collapse" data-target=".index .collapse">
+<h2>The heart of the operation :)</h2>
+<pre>index(int $page_id, int $d_start, int $d_end, string $order_by) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>This function will first use loadPage to get the page record then it will retrieve:
+ The latest revision for the page
+ The comments if any
+And then it will load the main_template view with the template for the page included within.</p></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::index()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code><p>the requested page_id</p></div>
+<div class="subelement argument">
+<h4>$d_start</h4>
+<code>int</code><p>(optional) the start date for bucket articles</p>
+</div>
+<div class="subelement argument">
+<h4>$d_end</h4>
+<code>int</code><p>(optional) the end date for bucket articles</p>
+</div>
+<div class="subelement argument">
+<h4>$order_by</h4>
+<code>string</code><p>the column to order the results.</p></div>
+</div></div>
+</div>
+<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<h2>This function loads a page that requires season/year information</h2>
+<pre>load(int $section_id, string $season, string $year, string $order_by) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$section_id</h4>
+<code>int</code><p>the section to load</p></div>
+<div class="subelement argument">
+<h4>$season</h4>
+<code>string</code><p>the name of the season passed from the url by the user to load the articles form that season/year</p>
+</div>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>string</code><p>the year in the season/year combination</p>
+</div>
+<div class="subelement argument">
+<h4>$order_by</h4>
+<code>string</code><p>the column to order the results</p></div>
+</div></div>
+</div>
+<a name="loadPage" id="loadPage"></a><div class="element clickable method public loadPage" data-toggle="collapse" data-target=".loadPage .collapse">
+<h2>This function will load the page_id information into the private variable $pageRecord
+only if the page has been published and if the current session user has access to see it</h2>
+<pre>loadPage(int $page_id) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::loadPage()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Article::loadPage()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code><p>the paged_id to load</p></div>
+</div></div>
+</div>
+<a name="loadRevision" id="loadRevision"></a><div class="element clickable method public loadRevision" data-toggle="collapse" data-target=".loadRevision .collapse">
+<h2>loadRevision()
+        </h2>
+<pre>loadRevision(int $page_id, string $d_start, string $d_end, string $order_by) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::loadRevision()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Article::loadRevision()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code><p>the page id to load the latest revision</p></div>
+<div class="subelement argument">
+<h4>$d_start</h4>
+<code>string</code><p>a mySQL style date</p></div>
+<div class="subelement argument">
+<h4>$d_end</h4>
+<code>string</code><p>a mySQL style date</p></div>
+<div class="subelement argument">
+<h4>$order_by</h4>
+<code>string</code><p>column to order the results</p></div>
+</div></div>
+</div>
+<a name="purge" id="purge"></a><div class="element clickable method public purge" data-toggle="collapse" data-target=".purge .collapse">
+<h2>This function permanently deletes a page and is used from the purge function in who's who</h2>
+<pre>purge() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::purge()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="removeelement" id="removeelement"></a><div class="element clickable method public removeelement" data-toggle="collapse" data-target=".removeelement .collapse">
+<h2>removes an element from the page's revision</h2>
+<pre>removeelement() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::removeelement()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="rss" id="rss"></a><div class="element clickable method public rss" data-toggle="collapse" data-target=".rss .collapse">
+<h2>This function will output an RSS 2.0 feed of a section</h2>
+<pre>rss(int $section_id) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::rss()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$section_id</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="save" id="save"></a><div class="element clickable method public save" data-toggle="collapse" data-target=".save .collapse">
+<h2>This function takes an array posted to it of object name = object value and it updates that page's \
+latest revision with the new content.</h2>
+<pre>save() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::save()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="setupBreadbrumbs" id="setupBreadbrumbs"></a><div class="element clickable method public setupBreadbrumbs" data-toggle="collapse" data-target=".setupBreadbrumbs .collapse">
+<h2>Helper function to setup breadcrumbs on pages that request it</h2>
+<pre>setupBreadbrumbs($page_data) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::setupBreadbrumbs()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Article::setupBreadbrumbs()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_data</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="share" id="share"></a><div class="element clickable method public share" data-toggle="collapse" data-target=".share .collapse">
+<h2>Send an email to the specified people with a link back to an article</h2>
+<pre>share() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::share()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="tag" id="tag"></a><div class="element clickable method public tag" data-toggle="collapse" data-target=".tag .collapse">
+<h2>Loads all pages that are tagged with the specified tagname</h2>
+<pre>tag() : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::tag()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="update_author" id="update_author"></a><div class="element clickable method public update_author" data-toggle="collapse" data-target=".update_author .collapse">
+<h2>Updates a page's author and subscribes the author to the page</h2>
+<pre>update_author() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Article::update_author()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getSeason" id="getSeason"></a><div class="element clickable method private getSeason" data-toggle="collapse" data-target=".getSeason .collapse">
+<h2>returns the season and year, either current (date = null) or related to the date param</h2>
+<pre>getSeason(string $date) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$date</h4>
+<code>string</code><p>optional, if passed the returned season/year are for this date</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>season, year</div>
+</div></div>
+</div>
+<a name="getSeasonFirstDay" id="getSeasonFirstDay"></a><div class="element clickable method private getSeasonFirstDay" data-toggle="collapse" data-target=".getSeasonFirstDay .collapse">
+<h2>getSeasonFirstDay()
+        </h2>
+<pre>getSeasonFirstDay(string $season, string $year) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$season</h4>
+<code>string</code><p>name of the season</p></div>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>string</code><p>the year</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>return mySQL formatted date for the first day if the given season/year</div>
+</div></div>
+</div>
+<a name="getSeasonLastDay" id="getSeasonLastDay"></a><div class="element clickable method private getSeasonLastDay" data-toggle="collapse" data-target=".getSeasonLastDay .collapse">
+<h2>getSeasonLastDay()
+        </h2>
+<pre>getSeasonLastDay(string $season, string $year) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$season</h4>
+<code>string</code><p>name of the season</p></div>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>string</code><p>the year</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>return mySQL formatted date for the last day if the given season/year</div>
+</div></div>
+</div>
+<a name="setupSeason" id="setupSeason"></a><div class="element clickable method private setupSeason" data-toggle="collapse" data-target=".setupSeason .collapse">
+<h2>Get the current season, past and next, add all the data to the pageRecord and return the current season in
+order to load the section</h2>
+<pre>setupSeason(string $season, string $year) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$season</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24pageRecord" id="$pageRecord"> </a><div class="element clickable property public $pageRecord" data-toggle="collapse" data-target=".$pageRecord .collapse">
+<h2>holds the requested page's record form the DB plus any other additional data to be passed on to the view</h2>
+<pre>$pageRecord : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::$$pageRecord</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Article::$$pageRecord</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24result" id="$result"> </a><div class="element clickable property protected $result" data-toggle="collapse" data-target=".$result .collapse">
+<h2>$result</h2>
+<pre>$result : <a href="../classes/CResult.html">\CResult</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::$$result</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Article::$$result</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-11-07T14:45:18-05:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \phpVimeo</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Addon.Controllers.html"><i class="icon-folder-open"></i> Addon/Controllers</a></li>
+<li><a href="../packages/Controllers.html"><i class="icon-folder-open"></i> Controllers</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Libraries.html"><i class="icon-folder-open"></i> Libraries</a></li>
+<li><a href="../packages/Misc.html"><i class="icon-folder-open"></i> Misc</a></li>
+<li><a href="../packages/Models.html"><i class="icon-folder-open"></i> Models</a></li>
+<li><a href="../packages/PHP-Template.html"><i class="icon-folder-open"></i> PHP-Template</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">430</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">6</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">1</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#auth" title="auth :: Send the user to Vimeo to authorize your app."><span class="description">Send the user to Vimeo to authorize your app.</span><pre>auth()</pre></a></li>
+<li class="method public "><a href="#call" title="call :: Call a method."><span class="description">Call a method.</span><pre>call()</pre></a></li>
+<li class="method public "><a href="#enableCache" title="enableCache :: Enable the cache."><span class="description">Enable the cache.</span><pre>enableCache()</pre></a></li>
+<li class="method public "><a href="#getAccessToken" title="getAccessToken :: Get an access token. Make sure to call setToken() with the
+request token before calling this function."><span class="description">Get an access token. Make sure to call setToken() with the
+request token before calling this function.</span><pre>getAccessToken()</pre></a></li>
+<li class="method public "><a href="#getAuthorizeUrl" title="getAuthorizeUrl :: Get the URL of the authorization page."><span class="description">Get the URL of the authorization page.</span><pre>getAuthorizeUrl()</pre></a></li>
+<li class="method public "><a href="#getRequestToken" title="getRequestToken :: Get a request token."><span class="description">Get a request token.</span><pre>getRequestToken()</pre></a></li>
+<li class="method public "><a href="#getToken" title="getToken :: Get the stored auth token."><span class="description">Get the stored auth token.</span><pre>getToken()</pre></a></li>
+<li class="method public "><a href="#setToken" title="setToken :: Set the OAuth token."><span class="description">Set the OAuth token.</span><pre>setToken()</pre></a></li>
+<li class="method public "><a href="#upload" title="upload :: Upload a video in one piece."><span class="description">Upload a video in one piece.</span><pre>upload()</pre></a></li>
+<li class="method public "><a href="#uploadMulti" title="uploadMulti :: Upload a video in multiple pieces."><span class="description">Upload a video in multiple pieces.</span><pre>uploadMulti()</pre></a></li>
+<li class="method public "><a href="#url_encode_rfc3986" title="url_encode_rfc3986 :: URL encode a parameter or array of parameters."><span class="description">URL encode a parameter or array of parameters.</span><pre>url_encode_rfc3986()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#_cache" title="_cache :: Cache a response."><span class="description">Cache a response.</span><pre>_cache()</pre></a></li>
+<li class="method private "><a href="#_generateAuthHeader" title="_generateAuthHeader :: Create the authorization header for a set of params."><span class="description">Create the authorization header for a set of params.</span><pre>_generateAuthHeader()</pre></a></li>
+<li class="method private "><a href="#_generateNonce" title="_generateNonce :: Generate a nonce for the call."><span class="description">Generate a nonce for the call.</span><pre>_generateNonce()</pre></a></li>
+<li class="method private "><a href="#_generateSignature" title="_generateSignature :: Generate the OAuth signature."><span class="description">Generate the OAuth signature.</span><pre>_generateSignature()</pre></a></li>
+<li class="method private "><a href="#_getCached" title="_getCached :: Get the unserialized contents of the cached request."><span class="description">Get the unserialized contents of the cached request.</span><pre>_getCached()</pre></a></li>
+<li class="method private "><a href="#_request" title="_request :: Call an API method."><span class="description">Call an API method.</span><pre>_request()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="nav-header private">» Private</li>
+<li class="property private "><a href="#%24_cache_dir" title="$_cache_dir :: "><span class="description">$_cache_dir</span><pre>$_cache_dir</pre></a></li>
+<li class="property private "><a href="#%24_cache_enabled" title="$_cache_enabled :: "><span class="description">$_cache_enabled</span><pre>$_cache_enabled</pre></a></li>
+<li class="property private "><a href="#%24_consumer_key" title="$_consumer_key :: "><span class="description">$_consumer_key</span><pre>$_consumer_key</pre></a></li>
+<li class="property private "><a href="#%24_consumer_secret" title="$_consumer_secret :: "><span class="description">$_consumer_secret</span><pre>$_consumer_secret</pre></a></li>
+<li class="property private "><a href="#%24_token" title="$_token :: "><span class="description">$_token</span><pre>$_token</pre></a></li>
+<li class="property private "><a href="#%24_token_secret" title="$_token_secret :: "><span class="description">$_token_secret</span><pre>$_token_secret</pre></a></li>
+<li class="property private "><a href="#%24_upload_md5s" title="$_upload_md5s :: "><span class="description">$_upload_md5s</span><pre>$_upload_md5s</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-constant"></i> Constants</li>
+<li class="constant  "><a href="#API_ACCESS_TOKEN_URL" title="API_ACCESS_TOKEN_URL :: "><span class="description">API_ACCESS_TOKEN_URL</span><pre>API_ACCESS_TOKEN_URL</pre></a></li>
+<li class="constant  "><a href="#API_AUTH_URL" title="API_AUTH_URL :: "><span class="description">API_AUTH_URL</span><pre>API_AUTH_URL</pre></a></li>
+<li class="constant  "><a href="#API_REQUEST_TOKEN_URL" title="API_REQUEST_TOKEN_URL :: "><span class="description">API_REQUEST_TOKEN_URL</span><pre>API_REQUEST_TOKEN_URL</pre></a></li>
+<li class="constant  "><a href="#API_REST_URL" title="API_REST_URL :: "><span class="description">API_REST_URL</span><pre>API_REST_URL</pre></a></li>
+<li class="constant  "><a href="#CACHE_FILE" title="CACHE_FILE :: "><span class="description">CACHE_FILE</span><pre>CACHE_FILE</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CphpVimeo" id="\phpVimeo"></a><div href="../classes/phpVimeo.html" class="element class">
+<p class="short_description">Created by: cravelo
+Date: 2/10/12
+Time: 11:45 AM</p>
+<div class="details">
+<p class="long_description"></p>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>__construct()
+        </h2>
+<pre>__construct($params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="auth" id="auth"></a><div class="element clickable method public auth" data-toggle="collapse" data-target=".auth .collapse">
+<h2>Send the user to Vimeo to authorize your app.</h2>
+<pre>auth($permission, $callback_url) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>http://www.vimeo.com/api/docs/oauth</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$permission</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$callback_url</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="call" id="call"></a><div class="element clickable method public call" data-toggle="collapse" data-target=".call .collapse">
+<h2>Call a method.</h2>
+<pre>call(string $method, array $params, string $request_method, string $url, boolean $cache) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>string</code><p>The name of the method to call.</p></div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>The parameters to pass to the method.</p></div>
+<div class="subelement argument">
+<h4>$request_method</h4>
+<code>string</code><p>The HTTP request method to use.</p></div>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>The base URL to use.</p></div>
+<div class="subelement argument">
+<h4>$cache</h4>
+<code>boolean</code><p>Whether or not to cache the response.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>The response from the API method</div>
+</div></div>
+</div>
+<a name="enableCache" id="enableCache"></a><div class="element clickable method public enableCache" data-toggle="collapse" data-target=".enableCache .collapse">
+<h2>Enable the cache.</h2>
+<pre>enableCache(string $type, string $path, int $expire) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>The type of cache to use (phpVimeo::CACHE_FILE is built in)</p>
+</div>
+<div class="subelement argument">
+<h4>$path</h4>
+<code>string</code><p>The path to the cache (the directory for CACHE_FILE)</p>
+</div>
+<div class="subelement argument">
+<h4>$expire</h4>
+<code>int</code><p>The amount of time to cache responses (default 10 minutes)</p>
+</div>
+</div></div>
+</div>
+<a name="getAccessToken" id="getAccessToken"></a><div class="element clickable method public getAccessToken" data-toggle="collapse" data-target=".getAccessToken .collapse">
+<h2>Get an access token. Make sure to call setToken() with the
+request token before calling this function.</h2>
+<pre>getAccessToken(string $verifier) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$verifier</h4>
+<code>string</code><p>The OAuth verifier returned from the authorization page or the user.</p></div>
+</div></div>
+</div>
+<a name="getAuthorizeUrl" id="getAuthorizeUrl"></a><div class="element clickable method public getAuthorizeUrl" data-toggle="collapse" data-target=".getAuthorizeUrl .collapse">
+<h2>Get the URL of the authorization page.</h2>
+<pre>getAuthorizeUrl(string $token, string $permission) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$token</h4>
+<code>string</code><p>The request token.</p></div>
+<div class="subelement argument">
+<h4>$permission</h4>
+<code>string</code><p>The level of permissions to request: read, write, or delete.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The Authorization URL.</div>
+</div></div>
+</div>
+<a name="getRequestToken" id="getRequestToken"></a><div class="element clickable method public getRequestToken" data-toggle="collapse" data-target=".getRequestToken .collapse">
+<h2>Get a request token.</h2>
+<pre>getRequestToken($callback_url) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$callback_url</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="getToken" id="getToken"></a><div class="element clickable method public getToken" data-toggle="collapse" data-target=".getToken .collapse">
+<h2>Get the stored auth token.</h2>
+<pre>getToken() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>An array with the token and token secret.</div>
+</div></div>
+</div>
+<a name="setToken" id="setToken"></a><div class="element clickable method public setToken" data-toggle="collapse" data-target=".setToken .collapse">
+<h2>Set the OAuth token.</h2>
+<pre>setToken(string $token, string $token_secret, string $type, boolean $session_store) : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$token</h4>
+<code>string</code><p>The OAuth token</p></div>
+<div class="subelement argument">
+<h4>$token_secret</h4>
+<code>string</code><p>The OAuth token secret</p></div>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>The type of token, either request or access</p></div>
+<div class="subelement argument">
+<h4>$session_store</h4>
+<code>boolean</code><p>Store the token in a session variable</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>true</div>
+</div></div>
+</div>
+<a name="upload" id="upload"></a><div class="element clickable method public upload" data-toggle="collapse" data-target=".upload .collapse">
+<h2>Upload a video in one piece.</h2>
+<pre>upload(string $file_path, boolean $use_multiple_chunks, string $chunk_temp_dir, int $size, $replace_id) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file_path</h4>
+<code>string</code><p>The full path to the file</p></div>
+<div class="subelement argument">
+<h4>$use_multiple_chunks</h4>
+<code>boolean</code><p>Whether or not to split the file up into smaller chunks</p></div>
+<div class="subelement argument">
+<h4>$chunk_temp_dir</h4>
+<code>string</code><p>The directory to store the chunks in</p></div>
+<div class="subelement argument">
+<h4>$size</h4>
+<code>int</code><p>The size of each chunk in bytes (defaults to 2MB)</p>
+</div>
+<div class="subelement argument">
+<h4>$replace_id</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>The video ID</div>
+</div></div>
+</div>
+<a name="uploadMulti" id="uploadMulti"></a><div class="element clickable method public uploadMulti" data-toggle="collapse" data-target=".uploadMulti .collapse">
+<h2>Upload a video in multiple pieces.</h2>
+<pre>uploadMulti($file_name, $size) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>deprecated</th>
+<td></td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file_name</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$size</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="url_encode_rfc3986" id="url_encode_rfc3986"></a><div class="element clickable method public url_encode_rfc3986" data-toggle="collapse" data-target=".url_encode_rfc3986 .collapse">
+<h2>URL encode a parameter or array of parameters.</h2>
+<pre>url_encode_rfc3986(\array/string $input) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$input</h4>
+<code>\array/string</code><p>A parameter or set of parameters to encode.</p></div>
+</div></div>
+</div>
+<a name="_cache" id="_cache"></a><div class="element clickable method private _cache" data-toggle="collapse" data-target="._cache .collapse">
+<h2>Cache a response.</h2>
+<pre>_cache(array $params, string $response) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>The parameters for the response.</p></div>
+<div class="subelement argument">
+<h4>$response</h4>
+<code>string</code><p>The serialized response data.</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="_generateAuthHeader" id="_generateAuthHeader"></a><div class="element clickable method private _generateAuthHeader" data-toggle="collapse" data-target="._generateAuthHeader .collapse">
+<h2>Create the authorization header for a set of params.</h2>
+<pre>_generateAuthHeader(array $oauth_params) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$oauth_params</h4>
+<code>array</code><p>The OAuth parameters for the call.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The OAuth Authorization header.</div>
+</div></div>
+</div>
+<a name="_generateNonce" id="_generateNonce"></a><div class="element clickable method private _generateNonce" data-toggle="collapse" data-target="._generateNonce .collapse">
+<h2>Generate a nonce for the call.</h2>
+<pre>_generateNonce() : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The nonce</div>
+</div></div>
+</div>
+<a name="_generateSignature" id="_generateSignature"></a><div class="element clickable method private _generateSignature" data-toggle="collapse" data-target="._generateSignature .collapse">
+<h2>Generate the OAuth signature.</h2>
+<pre>_generateSignature($params, string $request_method, string $url) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$request_method</h4>
+<code>string</code><p>The request method, either POST or GET.</p></div>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>The base URL to use.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The OAuth signature.</div>
+</div></div>
+</div>
+<a name="_getCached" id="_getCached"></a><div class="element clickable method private _getCached" data-toggle="collapse" data-target="._getCached .collapse">
+<h2>Get the unserialized contents of the cached request.</h2>
+<pre>_getCached(array $params) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>The full list of api parameters for the request.</p></div>
+</div></div>
+</div>
+<a name="_request" id="_request"></a><div class="element clickable method private _request" data-toggle="collapse" data-target="._request .collapse">
+<h2>Call an API method.</h2>
+<pre>_request(string $method, array $call_params, string $request_method, string $url, boolean $cache, boolean $use_auth_header) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$method</h4>
+<code>string</code><p>The method to call.</p></div>
+<div class="subelement argument">
+<h4>$call_params</h4>
+<code>array</code><p>The parameters to pass to the method.</p></div>
+<div class="subelement argument">
+<h4>$request_method</h4>
+<code>string</code><p>The HTTP request method to use.</p></div>
+<div class="subelement argument">
+<h4>$url</h4>
+<code>string</code><p>The base URL to use.</p></div>
+<div class="subelement argument">
+<h4>$cache</h4>
+<code>boolean</code><p>Whether or not to cache the response.</p></div>
+<div class="subelement argument">
+<h4>$use_auth_header</h4>
+<code>boolean</code><p>Use the OAuth Authorization header to pass the OAuth params.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The response from the method call.</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24_cache_dir" id="$_cache_dir"> </a><div class="element clickable property private $_cache_dir" data-toggle="collapse" data-target=".$_cache_dir .collapse">
+<h2>$_cache_dir</h2>
+<pre>$_cache_dir </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_cache_enabled" id="$_cache_enabled"> </a><div class="element clickable property private $_cache_enabled" data-toggle="collapse" data-target=".$_cache_enabled .collapse">
+<h2>$_cache_enabled</h2>
+<pre>$_cache_enabled </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_consumer_key" id="$_consumer_key"> </a><div class="element clickable property private $_consumer_key" data-toggle="collapse" data-target=".$_consumer_key .collapse">
+<h2>$_consumer_key</h2>
+<pre>$_consumer_key </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_consumer_secret" id="$_consumer_secret"> </a><div class="element clickable property private $_consumer_secret" data-toggle="collapse" data-target=".$_consumer_secret .collapse">
+<h2>$_consumer_secret</h2>
+<pre>$_consumer_secret </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_token" id="$_token"> </a><div class="element clickable property private $_token" data-toggle="collapse" data-target=".$_token .collapse">
+<h2>$_token</h2>
+<pre>$_token </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_token_secret" id="$_token_secret"> </a><div class="element clickable property private $_token_secret" data-toggle="collapse" data-target=".$_token_secret .collapse">
+<h2>$_token_secret</h2>
+<pre>$_token_secret </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24_upload_md5s" id="$_upload_md5s"> </a><div class="element clickable property private $_upload_md5s" data-toggle="collapse" data-target=".$_upload_md5s .collapse">
+<h2>$_upload_md5s</h2>
+<pre>$_upload_md5s </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="API_ACCESS_TOKEN_URL" id="API_ACCESS_TOKEN_URL"> </a><div class="element clickable constant  API_ACCESS_TOKEN_URL" data-toggle="collapse" data-target=".API_ACCESS_TOKEN_URL .collapse">
+<h2>API_ACCESS_TOKEN_URL</h2>
+<pre>API_ACCESS_TOKEN_URL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="API_AUTH_URL" id="API_AUTH_URL"> </a><div class="element clickable constant  API_AUTH_URL" data-toggle="collapse" data-target=".API_AUTH_URL .collapse">
+<h2>API_AUTH_URL</h2>
+<pre>API_AUTH_URL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="API_REQUEST_TOKEN_URL" id="API_REQUEST_TOKEN_URL"> </a><div class="element clickable constant  API_REQUEST_TOKEN_URL" data-toggle="collapse" data-target=".API_REQUEST_TOKEN_URL .collapse">
+<h2>API_REQUEST_TOKEN_URL</h2>
+<pre>API_REQUEST_TOKEN_URL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="API_REST_URL" id="API_REST_URL"> </a><div class="element clickable constant  API_REST_URL" data-toggle="collapse" data-target=".API_REST_URL .collapse">
+<h2>API_REST_URL</h2>
+<pre>API_REST_URL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="CACHE_FILE" id="CACHE_FILE"> </a><div class="element clickable constant  CACHE_FILE" data-toggle="collapse" data-target=".CACHE_FILE .collapse">
+<h2>CACHE_FILE</h2>
+<pre>CACHE_FILE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-11-07T14:45:18-05:00.<br></footer></div>
+</div>
+</body>
+</html>

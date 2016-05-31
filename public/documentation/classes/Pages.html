@@ -1,0 +1,549 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Pages</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Addon.Controllers.html"><i class="icon-folder-open"></i> Addon/Controllers</a></li>
+<li><a href="../packages/Controllers.html"><i class="icon-folder-open"></i> Controllers</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Libraries.html"><i class="icon-folder-open"></i> Libraries</a></li>
+<li><a href="../packages/Misc.html"><i class="icon-folder-open"></i> Misc</a></li>
+<li><a href="../packages/Models.html"><i class="icon-folder-open"></i> Models</a></li>
+<li><a href="../packages/PHP-Template.html"><i class="icon-folder-open"></i> PHP-Template</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">430</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">6</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">1</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#deletePage" title="deletePage :: "><span class="description">deletePage()
+        </span><pre>deletePage()</pre></a></li>
+<li class="method public "><a href="#drafts" title="drafts :: this function gets a list of page_id and title for the Who's Who profile page &quot;My Drafts&quot;"><span class="description">this function gets a list of page_id and title for the Who's Who profile page "My Drafts"</span><pre>drafts()</pre></a></li>
+<li class="method public "><a href="#getByNameAndType" title="getByNameAndType :: "><span class="description">getByNameAndType()
+        </span><pre>getByNameAndType()</pre></a></li>
+<li class="method public "><a href="#getForSection" title="getForSection :: Get pages published to a section that the current user can read"><span class="description">Get pages published to a section that the current user can read</span><pre>getForSection()</pre></a></li>
+<li class="method public "><a href="#getForSection_count" title="getForSection_count :: Does the same query as getForSection but selects the count(*) without limit or ordering."><span class="description">Does the same query as getForSection but selects the count(*) without limit or ordering.</span><pre>getForSection_count()</pre></a></li>
+<li class="method public "><a href="#getForTag" title="getForTag :: Gets all page records that are tagged with $tag_id OR $tag_name"><span class="description">Gets all page records that are tagged with $tag_id OR $tag_name</span><pre>getForTag()</pre></a></li>
+<li class="method public "><a href="#getPage" title="getPage :: Get page record and attach the text"><span class="description">Get page record and attach the text</span><pre>getPage()</pre></a></li>
+<li class="method public "><a href="#getPageProperty" title="getPageProperty :: Get any property off a page given the page_id and the name of the property"><span class="description">Get any property off a page given the page_id and the name of the property</span><pre>getPageProperty()</pre></a></li>
+<li class="method public "><a href="#getPublishForEvent" title="getPublishForEvent :: Get the list of sections a user has access to publish an event to and also what sections
+the event is already published to."><span class="description">Get the list of sections a user has access to publish an event to and also what sections
+the event is already published to.</span><pre>getPublishForEvent()</pre></a></li>
+<li class="method public "><a href="#getSearchResults" title="getSearchResults :: Search Engine
+Get results by section (to show them together), relevance desc and date_created desc"><span class="description">Search Engine
+Get results by section (to show them together), relevance desc and date_created desc</span><pre>getSearchResults()</pre></a></li>
+<li class="method public "><a href="#getSearchResults_count" title="getSearchResults_count :: Search Engine
+Counts total results for a query"><span class="description">Search Engine
+Counts total results for a query</span><pre>getSearchResults_count()</pre></a></li>
+<li class="method public "><a href="#getUserPublish" title="getUserPublish :: Get the list of sections a user has access to publish a page to and also what sections the page is already published to."><span class="description">Get the list of sections a user has access to publish a page to and also what sections the page is already published to.</span><pre>getUserPublish()</pre></a></li>
+<li class="method public "><a href="#my_pages" title="my_pages :: Get a list of page_id and title that were created by the profile owner and that the visitor has read access to."><span class="description">Get a list of page_id and title that were created by the profile owner and that the visitor has read access to.</span><pre>my_pages()</pre></a></li>
+<li class="method public "><a href="#my_private" title="my_private :: This function returns a list of all private pages this user has access to read."><span class="description">This function returns a list of all private pages this user has access to read.</span><pre>my_private()</pre></a></li>
+<li class="method public "><a href="#newPage" title="newPage :: create a page"><span class="description">create a page</span><pre>newPage()</pre></a></li>
+<li class="method public "><a href="#publishEvent" title="publishEvent :: Publishes an event to the selected sections."><span class="description">Publishes an event to the selected sections.</span><pre>publishEvent()</pre></a></li>
+<li class="method public "><a href="#publishPage" title="publishPage :: Publishes a page to the selected sections."><span class="description">Publishes a page to the selected sections.</span><pre>publishPage()</pre></a></li>
+<li class="method public "><a href="#trashcan" title="trashcan :: get the deleted pages where user_id has PERM_DELETE"><span class="description">get the deleted pages where user_id has PERM_DELETE</span><pre>trashcan()</pre></a></li>
+<li class="method public "><a href="#updatePage" title="updatePage :: Updates the page record"><span class="description">Updates the page record</span><pre>updatePage()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public "><a href="#%24db" title="$db :: "><span class="description">$db</span><pre>$db</pre></a></li>
+<li class="property public "><a href="#%24session" title="$session :: "><span class="description">$session</span><pre>$session</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CPages" id="\Pages"></a><div href="../classes/Pages.html" class="element class">
+<p class="short_description">Pages model</p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="..//packages/Models.html">Models</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">cravelo</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="deletePage" id="deletePage"></a><div class="element clickable method public deletePage" data-toggle="collapse" data-target=".deletePage .collapse">
+<h2>deletePage()
+        </h2>
+<pre>deletePage(int $page_id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="drafts" id="drafts"></a><div class="element clickable method public drafts" data-toggle="collapse" data-target=".drafts .collapse">
+<h2>this function gets a list of page_id and title for the Who's Who profile page "My Drafts"</h2>
+<pre>drafts($user_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getByNameAndType" id="getByNameAndType"></a><div class="element clickable method public getByNameAndType" data-toggle="collapse" data-target=".getByNameAndType .collapse">
+<h2>getByNameAndType()
+        </h2>
+<pre>getByNameAndType(string $name, string $type) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>part of or complete page title</p></div>
+<div class="subelement argument">
+<h4>$type</h4>
+<code>string</code><p>['calendar', 'section', 'page']</p>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getForSection" id="getForSection"></a><div class="element clickable method public getForSection" data-toggle="collapse" data-target=".getForSection .collapse">
+<h2>Get pages published to a section that the current user can read</h2>
+<pre>getForSection(int $section_id, string $d_start, string $d_end, int $featured, int $limit, int $offset, int $random, int $tag_id, string $order_by) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$section_id</h4>
+<code>int</code><p>the section id</p></div>
+<div class="subelement argument">
+<h4>$d_start</h4>
+<code>string</code><p>String with mysql formatted date for the start of the range</p></div>
+<div class="subelement argument">
+<h4>$d_end</h4>
+<code>string</code><p>String with mysql formatted date for the end of the range</p></div>
+<div class="subelement argument">
+<h4>$featured</h4>
+<code>int</code><p>1 or 0</p></div>
+<div class="subelement argument">
+<h4>$limit</h4>
+<code>int</code><p>how many page records should be returned</p></div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>int</code><p>where to start getting records (for pagination)</p>
+</div>
+<div class="subelement argument">
+<h4>$random</h4>
+<code>int</code><p>1 or 0 whether to choose pages at random</p></div>
+<div class="subelement argument">
+<h4>$tag_id</h4>
+<code>int</code><p>a tag id to retrieve only pages that are tagged with it.</p></div>
+<div class="subelement argument">
+<h4>$order_by</h4>
+<code>string</code><p>the column to use to order the pages</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>of page records matching params</div>
+</div></div>
+</div>
+<a name="getForSection_count" id="getForSection_count"></a><div class="element clickable method public getForSection_count" data-toggle="collapse" data-target=".getForSection_count .collapse">
+<h2>Does the same query as getForSection but selects the count(*) without limit or ordering.</h2>
+<pre>getForSection_count(int $section_id, string $d_start, string $d_end, int $featured, int $limit, int $offset, int $random, int $tag_id, string $order_by) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$section_id</h4>
+<code>int</code><p>the section id</p></div>
+<div class="subelement argument">
+<h4>$d_start</h4>
+<code>string</code><p>String with mysql formatted date for the start of the range</p></div>
+<div class="subelement argument">
+<h4>$d_end</h4>
+<code>string</code><p>String with mysql formatted date for the end of the range</p></div>
+<div class="subelement argument">
+<h4>$featured</h4>
+<code>int</code><p>1 or 0</p></div>
+<div class="subelement argument">
+<h4>$limit</h4>
+<code>int</code><p>how many page records should be returned</p></div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>int</code><p>where to start getting records (for pagination)</p>
+</div>
+<div class="subelement argument">
+<h4>$random</h4>
+<code>int</code><p>1 or 0 whether to choose pages at random</p></div>
+<div class="subelement argument">
+<h4>$tag_id</h4>
+<code>int</code><p>a tag id to retrieve only pages that are tagged with it.</p></div>
+<div class="subelement argument">
+<h4>$order_by</h4>
+<code>string</code><p>the column to use to order the pages</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>the number of rows resulting from the query</div>
+</div></div>
+</div>
+<a name="getForTag" id="getForTag"></a><div class="element clickable method public getForTag" data-toggle="collapse" data-target=".getForTag .collapse">
+<h2>Gets all page records that are tagged with $tag_id OR $tag_name</h2>
+<pre>getForTag($tag_name, null $tag_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$tag_name</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$tag_id</h4>
+<code>null</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getPage" id="getPage"></a><div class="element clickable method public getPage" data-toggle="collapse" data-target=".getPage .collapse">
+<h2>Get page record and attach the text</h2>
+<pre>getPage(int $page_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getPageProperty" id="getPageProperty"></a><div class="element clickable method public getPageProperty" data-toggle="collapse" data-target=".getPageProperty .collapse">
+<h2>Get any property off a page given the page_id and the name of the property</h2>
+<pre>getPageProperty(int $page_id, string $prop) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code><p>the page id</p></div>
+<div class="subelement argument">
+<h4>$prop</h4>
+<code>string</code><p>the name the property</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>The value of the requested property</div>
+</div></div>
+</div>
+<a name="getPublishForEvent" id="getPublishForEvent"></a><div class="element clickable method public getPublishForEvent" data-toggle="collapse" data-target=".getPublishForEvent .collapse">
+<h2>Get the list of sections a user has access to publish an event to and also what sections
+the event is already published to.</h2>
+<pre>getPublishForEvent(int $user_id, int $event_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code><p>the user to check permissions against</p></div>
+<div class="subelement argument">
+<h4>$event_id</h4>
+<code>int</code><p>the event id to get the sections that are already published</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>with section_id, title and information of whether the event is already published and permission.</div>
+</div></div>
+</div>
+<a name="getSearchResults" id="getSearchResults"></a><div class="element clickable method public getSearchResults" data-toggle="collapse" data-target=".getSearchResults .collapse">
+<h2>Search Engine
+Get results by section (to show them together), relevance desc and date_created desc</h2>
+<pre>getSearchResults(string $query, int $offset, int $limit, int $section_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>string</code><p>the query</p></div>
+<div class="subelement argument">
+<h4>$offset</h4>
+<code>int</code><p>the limit offset for pagination</p></div>
+<div class="subelement argument">
+<h4>$limit</h4>
+<code>int</code><p>how many results to get</p></div>
+<div class="subelement argument">
+<h4>$section_id</h4>
+<code>int</code><p>if this is set it will only return results for that section</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>of page objects</div>
+</div></div>
+</div>
+<a name="getSearchResults_count" id="getSearchResults_count"></a><div class="element clickable method public getSearchResults_count" data-toggle="collapse" data-target=".getSearchResults_count .collapse">
+<h2>Search Engine
+Counts total results for a query</h2>
+<pre>getSearchResults_count(string $query, int $section_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$query</h4>
+<code>string</code><p>the query</p></div>
+<div class="subelement argument">
+<h4>$section_id</h4>
+<code>int</code><p>if this is set it will only return results for that section</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>of page objects</div>
+</div></div>
+</div>
+<a name="getUserPublish" id="getUserPublish"></a><div class="element clickable method public getUserPublish" data-toggle="collapse" data-target=".getUserPublish .collapse">
+<h2>Get the list of sections a user has access to publish a page to and also what sections the page is already published to.</h2>
+<pre>getUserPublish(int $user_id, int $page_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code><p>the user to check permissions against</p></div>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code><p>the page id to get the sections that are already published</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>with section_id, title and information of whether the page is already published and permission.</div>
+</div></div>
+</div>
+<a name="my_pages" id="my_pages"></a><div class="element clickable method public my_pages" data-toggle="collapse" data-target=".my_pages .collapse">
+<h2>Get a list of page_id and title that were created by the profile owner and that the visitor has read access to.</h2>
+<pre>my_pages(int $user_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="my_private" id="my_private"></a><div class="element clickable method public my_private" data-toggle="collapse" data-target=".my_private .collapse">
+<h2>This function returns a list of all private pages this user has access to read.</h2>
+<pre>my_private(int $user_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code><p>the user_id to get the private pages</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="newPage" id="newPage"></a><div class="element clickable method public newPage" data-toggle="collapse" data-target=".newPage .collapse">
+<h2>create a page</h2>
+<pre>newPage(array $recordArr) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$recordArr</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="publishEvent" id="publishEvent"></a><div class="element clickable method public publishEvent" data-toggle="collapse" data-target=".publishEvent .collapse">
+<h2>Publishes an event to the selected sections.</h2>
+<pre>publishEvent(array $sections, int $event_id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$sections</h4>
+<code>array</code><p>section_ids to publish this page to</p></div>
+<div class="subelement argument">
+<h4>$event_id</h4>
+<code>int</code><p>the event to publish to the sections on $sections</p>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code><a href="http://php.net/manual/en/class.exception.php">\Exception</a></code></th>
+<td></td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>return whether the publish was successful or not.</div>
+</div></div>
+</div>
+<a name="publishPage" id="publishPage"></a><div class="element clickable method public publishPage" data-toggle="collapse" data-target=".publishPage .collapse">
+<h2>Publishes a page to the selected sections.</h2>
+<pre>publishPage(int $page_id, array $sections) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code><p>the page to publish to the sections on $sections</p>
+</div>
+<div class="subelement argument">
+<h4>$sections</h4>
+<code>array</code><p>section_ids to publish this page to</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code>return whether the publish was successful or not.</div>
+</div></div>
+</div>
+<a name="trashcan" id="trashcan"></a><div class="element clickable method public trashcan" data-toggle="collapse" data-target=".trashcan .collapse">
+<h2>get the deleted pages where user_id has PERM_DELETE</h2>
+<pre>trashcan(int $user_id) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>with the returned pages</div>
+</div></div>
+</div>
+<a name="updatePage" id="updatePage"></a><div class="element clickable method public updatePage" data-toggle="collapse" data-target=".updatePage .collapse">
+<h2>Updates the page record</h2>
+<pre>updatePage(int $page_id, array $data) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24db" id="$db"> </a><div class="element clickable property public $db" data-toggle="collapse" data-target=".$db .collapse">
+<h2>$db</h2>
+<pre>$db : \CI_DB_active_record</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property</th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24session" id="$session"> </a><div class="element clickable property public $session" data-toggle="collapse" data-target=".$session .collapse">
+<h2>$session</h2>
+<pre>$session : \CI_Session</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property</th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-11-07T14:45:18-05:00.<br></footer></div>
+</div>
+</body>
+</html>

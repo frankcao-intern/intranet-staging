@@ -1,0 +1,420 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Attendance_model</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Addon.Controllers.html"><i class="icon-folder-open"></i> Addon/Controllers</a></li>
+<li><a href="../packages/Controllers.html"><i class="icon-folder-open"></i> Controllers</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Libraries.html"><i class="icon-folder-open"></i> Libraries</a></li>
+<li><a href="../packages/Misc.html"><i class="icon-folder-open"></i> Misc</a></li>
+<li><a href="../packages/Models.html"><i class="icon-folder-open"></i> Models</a></li>
+<li><a href="../packages/PHP-Template.html"><i class="icon-folder-open"></i> PHP-Template</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">430</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">6</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">1</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#changeMonthStatus" title="changeMonthStatus :: "><span class="description">changeMonthStatus()
+        </span><pre>changeMonthStatus()</pre></a></li>
+<li class="method public "><a href="#changeStatus" title="changeStatus :: "><span class="description">changeStatus()
+        </span><pre>changeStatus()</pre></a></li>
+<li class="method public "><a href="#delete" title="delete :: "><span class="description">delete()
+        </span><pre>delete()</pre></a></li>
+<li class="method public "><a href="#findNonCompliant" title="findNonCompliant :: Get TYD report on non-compliant users"><span class="description">Get TYD report on non-compliant users</span><pre>findNonCompliant()</pre></a></li>
+<li class="method public "><a href="#getDates" title="getDates :: Get YTD attendance for everyone"><span class="description">Get YTD attendance for everyone</span><pre>getDates()</pre></a></li>
+<li class="method public "><a href="#getDayTypes" title="getDayTypes :: get all day types"><span class="description">get all day types</span><pre>getDayTypes()</pre></a></li>
+<li class="method public "><a href="#getMonth" title="getMonth :: "><span class="description">getMonth()
+        </span><pre>getMonth()</pre></a></li>
+<li class="method public "><a href="#getSubmitted" title="getSubmitted :: "><span class="description">getSubmitted()
+        </span><pre>getSubmitted()</pre></a></li>
+<li class="method public "><a href="#getYear" title="getYear :: Get all records for a given year"><span class="description">Get all records for a given year</span><pre>getYear()</pre></a></li>
+<li class="method public "><a href="#insert" title="insert :: "><span class="description">insert()
+        </span><pre>insert()</pre></a></li>
+<li class="method public "><a href="#submit" title="submit :: "><span class="description">submit()
+        </span><pre>submit()</pre></a></li>
+<li class="method public "><a href="#submitMonth" title="submitMonth :: "><span class="description">submitMonth()
+        </span><pre>submitMonth()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public "><a href="#%24config" title="$config :: "><span class="description">$config</span><pre>$config</pre></a></li>
+<li class="property public "><a href="#%24db" title="$db :: "><span class="description">$db</span><pre>$db</pre></a></li>
+<li class="property public "><a href="#%24load" title="$load :: "><span class="description">$load</span><pre>$load</pre></a></li>
+<li class="property public "><a href="#%24users" title="$users :: "><span class="description">$users</span><pre>$users</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CAttendance_model" id="\Attendance_model"></a><div href="../classes/Attendance_model.html" class="element class">
+<p class="short_description">daysout</p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="..//packages/Models.html">Models</a></td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">cravelo</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="changeMonthStatus" id="changeMonthStatus"></a><div class="element clickable method public changeMonthStatus" data-toggle="collapse" data-target=".changeMonthStatus .collapse">
+<h2>changeMonthStatus()
+        </h2>
+<pre>changeMonthStatus(int $request_id, string $status) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="changeStatus" id="changeStatus"></a><div class="element clickable method public changeStatus" data-toggle="collapse" data-target=".changeStatus .collapse">
+<h2>changeStatus()
+        </h2>
+<pre>changeStatus(int $request_id, string $status) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$status</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="delete" id="delete"></a><div class="element clickable method public delete" data-toggle="collapse" data-target=".delete .collapse">
+<h2>delete()
+        </h2>
+<pre>delete(array $items, int $user_id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$items</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="findNonCompliant" id="findNonCompliant"></a><div class="element clickable method public findNonCompliant" data-toggle="collapse" data-target=".findNonCompliant .collapse">
+<h2>Get TYD report on non-compliant users</h2>
+<pre>findNonCompliant(int $year) : array | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="getDates" id="getDates"></a><div class="element clickable method public getDates" data-toggle="collapse" data-target=".getDates .collapse">
+<h2>Get YTD attendance for everyone</h2>
+<pre>getDates(int $year) : array | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="getDayTypes" id="getDayTypes"></a><div class="element clickable method public getDayTypes" data-toggle="collapse" data-target=".getDayTypes .collapse">
+<h2>get all day types</h2>
+<pre>getDayTypes() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="getMonth" id="getMonth"></a><div class="element clickable method public getMonth" data-toggle="collapse" data-target=".getMonth .collapse">
+<h2>getMonth()
+        </h2>
+<pre>getMonth(int $request_id) : array | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="getSubmitted" id="getSubmitted"></a><div class="element clickable method public getSubmitted" data-toggle="collapse" data-target=".getSubmitted .collapse">
+<h2>getSubmitted()
+        </h2>
+<pre>getSubmitted(int $request_id) : array | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="getYear" id="getYear"></a><div class="element clickable method public getYear" data-toggle="collapse" data-target=".getYear .collapse">
+<h2>Get all records for a given year</h2>
+<pre>getYear(int $year, int $user_id) : array | bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="insert" id="insert"></a><div class="element clickable method public insert" data-toggle="collapse" data-target=".insert .collapse">
+<h2>insert()
+        </h2>
+<pre>insert(array $items, int $user_id) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$items</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="submit" id="submit"></a><div class="element clickable method public submit" data-toggle="collapse" data-target=".submit .collapse">
+<h2>submit()
+        </h2>
+<pre>submit(array $dates, int $user_id) : bool | int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dates</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>int</code>
+</div>
+</div></div>
+</div>
+<a name="submitMonth" id="submitMonth"></a><div class="element clickable method public submitMonth" data-toggle="collapse" data-target=".submitMonth .collapse">
+<h2>submitMonth()
+        </h2>
+<pre>submitMonth(int $month_ts, int $user_id) : bool | int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$month_ts</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>bool</code><code>int</code>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24config" id="$config"> </a><div class="element clickable property public $config" data-toggle="collapse" data-target=".$config .collapse">
+<h2>$config</h2>
+<pre>$config : \CI_Config</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property</th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24db" id="$db"> </a><div class="element clickable property public $db" data-toggle="collapse" data-target=".$db .collapse">
+<h2>$db</h2>
+<pre>$db : \CI_DB_active_record</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property</th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24load" id="$load"> </a><div class="element clickable property public $load" data-toggle="collapse" data-target=".$load .collapse">
+<h2>$load</h2>
+<pre>$load : \CI_Loader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property</th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24users" id="$users"> </a><div class="element clickable property public $users" data-toggle="collapse" data-target=".$users .collapse">
+<h2>$users</h2>
+<pre>$users : <a href="../classes/Users.html">\Users</a></pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property</th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-11-07T14:45:18-05:00.<br></footer></div>
+</div>
+</body>
+</html>

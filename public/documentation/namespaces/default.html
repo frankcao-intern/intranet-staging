@@ -1,0 +1,1031 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » default</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Addon.Controllers.html"><i class="icon-folder-open"></i> Addon/Controllers</a></li>
+<li><a href="../packages/Controllers.html"><i class="icon-folder-open"></i> Controllers</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Libraries.html"><i class="icon-folder-open"></i> Libraries</a></li>
+<li><a href="../packages/Misc.html"><i class="icon-folder-open"></i> Misc</a></li>
+<li><a href="../packages/Models.html"><i class="icon-folder-open"></i> Models</a></li>
+<li><a href="../packages/PHP-Template.html"><i class="icon-folder-open"></i> PHP-Template</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">430</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">6</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">1</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Namespaces</li>
+<li>
+<a href="../namespaces/default.html" title="default"><i class="icon-th"></i>default</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+</ul>
+</div>
+<div class="span8 namespace-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li class="active"><a href="../namespaces/default.html">default</a></li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i class="icon-custom icon-function"></i> Functions</h3>
+<a name="KTArrayToHTML" id="KTArrayToHTML"></a><div class="element clickable function  KTArrayToHTML" data-toggle="collapse" data-target=".KTArrayToHTML .collapse">
+<h2>Takes a multidimensional array and creates nested HTML lists.</h2>
+<pre>KTArrayToHTML(array $mArray, string $htmlStr, bool $nodirs) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mArray</h4>
+<code>array</code><p>results from arrayFromKTResults, file structure in array form</p></div>
+<div class="subelement argument">
+<h4>$htmlStr</h4>
+<code>string</code><p>by reference: the html code where I should append the file list</p></div>
+<div class="subelement argument">
+<h4>$nodirs</h4>
+<code>bool</code><p>whether to create a file structure or just a list of all the files</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="alphaForms" id="alphaForms"></a><div class="element clickable function  alphaForms" data-toggle="collapse" data-target=".alphaForms .collapse">
+<h2>alphaForms()
+        </h2>
+<pre>alphaForms(string $a, string $b) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>string</code><p>form name a</p></div>
+<div class="subelement argument">
+<h4>$b</h4>
+<code>string</code><p>form name b</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>int</code>returns 0 is equal, -1 or 1 in < or > respectively This function is used as a callback for ucmp to alphabetize forms</div>
+</div></div>
+</div>
+<a name="cmp" id="cmp"></a><div class="element clickable function  cmp" data-toggle="collapse" data-target=".cmp .collapse">
+<h2>To sort query results by displayname</h2>
+<pre>cmp(array $a, array $b) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$b</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="e" id="e"></a><div class="element clickable function  e" data-toggle="collapse" data-target=".e .collapse">
+<h2>e()
+        </h2>
+<pre>e(mixed $a, mixed $default) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>mixed</code><p>variable to test</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code><p>default value to return if variable is not set</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>the passed default value, '' by default</div>
+</div></div>
+</div>
+<a name="exif_imagetype" id="exif_imagetype"></a><div class="element clickable function  exif_imagetype" data-toggle="collapse" data-target=".exif_imagetype .collapse">
+<h2>exif_imagetype()
+        </h2>
+<pre>exif_imagetype($f) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$f</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="generateTopLevel" id="generateTopLevel"></a><div class="element clickable function  generateTopLevel" data-toggle="collapse" data-target=".generateTopLevel .collapse">
+<h2>Takes a multidimensional array and creates nested HTML lists.</h2>
+<pre>generateTopLevel(array $mArray, \string_reference $htmlStr, bool $nodirs) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mArray</h4>
+<code>array</code><p>results from arrayFromKTResults, file structure in array form</p></div>
+<div class="subelement argument">
+<h4>$htmlStr</h4>
+<code>\string_reference</code><p>the html code where I should append the file list</p></div>
+<div class="subelement argument">
+<h4>$nodirs</h4>
+<code>bool</code><p>whether to create a file structure or just a list of all the files</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="get_image" id="get_image"></a><div class="element clickable function  get_image" data-toggle="collapse" data-target=".get_image .collapse">
+<h2>returns the $filename of an image with the corresponding transformations, the transformed image doesn't't exist
+yet it will create it.</h2>
+<pre>get_image(bool $src, bool $width, bool $zc, bool $flip, int $angle) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$src</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$width</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$zc</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$flip</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$angle</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the formed string to use</div>
+</div></div>
+</div>
+<a name="get_image_html" id="get_image_html"></a><div class="element clickable function  get_image_html" data-toggle="collapse" data-target=".get_image_html .collapse">
+<h2>outputs src and width and height ready to use on &lt;img&gt;</h2>
+<pre>get_image_html(bool $src, bool $width, bool $zc, bool $flip, int $angle, $lazy) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$src</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$width</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$zc</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$flip</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$angle</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$lazy</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>the formed string to use</div>
+</div></div>
+</div>
+<a name="isAjax" id="isAjax"></a><div class="element clickable function  isAjax" data-toggle="collapse" data-target=".isAjax .collapse">
+<h2>Determines if the current page request was done through an AJAX call</h2>
+<pre>isAjax() : boolean</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a name="multiArrayToHTML" id="multiArrayToHTML"></a><div class="element clickable function  multiArrayToHTML" data-toggle="collapse" data-target=".multiArrayToHTML .collapse">
+<h2>Takes a multidimensional array and creates nested HTML lists.</h2>
+<pre>multiArrayToHTML(array $mArray, string $htmlStr, bool $nodirs) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$mArray</h4>
+<code>array</code><p>the array created by documents->arrayFromDir</p>
+</div>
+<div class="subelement argument">
+<h4>$htmlStr</h4>
+<code>string</code><p>reference to the string to store the resulting HTML</p></div>
+<div class="subelement argument">
+<h4>$nodirs</h4>
+<code>bool</code><p>whether the array is flat or multi-dimensional</p>
+</div>
+</div></div>
+</div>
+<a name="peopleSort" id="peopleSort"></a><div class="element clickable function  peopleSort" data-toggle="collapse" data-target=".peopleSort .collapse">
+<h2>To sort the results by display_name</h2>
+<pre>peopleSort(array $a, array $b) : int</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$b</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>int</code></div>
+</div></div>
+</div>
+<a name="template" id="template"></a><div class="element clickable function  template" data-toggle="collapse" data-target=".template .collapse">
+<h2>Helper function to make it easier to work with template objects.</h2>
+<pre>template(string $file) : object</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$file</h4>
+<code>string</code><p>the template file to load</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>object</code></div>
+</div></div>
+</div>
+<a name="toSlug" id="toSlug"></a><div class="element clickable function  toSlug" data-toggle="collapse" data-target=".toSlug .collapse">
+<h2>Converts strings to slugs (e.g. Camión Azul -&gt; camion-azul)</h2>
+<pre>toSlug(string $string, string $space) : string</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$string</h4>
+<code>string</code><p>the string to convert</p></div>
+<div class="subelement argument">
+<h4>$space</h4>
+<code>string</code><p>replacement for spaces</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>string</code></div>
+</div></div>
+</div>
+<a name="truncateArticle" id="truncateArticle"></a><div class="element clickable function  truncateArticle" data-toggle="collapse" data-target=".truncateArticle .collapse">
+<h2>truncateArticle()
+        </h2>
+<pre>truncateArticle(array $article, string $index, array $params) : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$article</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$params</h4>
+<code>array</code><p>the count and the key</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code>the modified $article array This function is a callback to be used with array_walk, is used to truncate article text to the desired amount of words</div>
+</div></div>
+</div>
+<a name="val" id="val"></a><div class="element clickable function  val" data-toggle="collapse" data-target=".val .collapse">
+<h2>val()
+        </h2>
+<pre>val(mixed $a, mixed $default) : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$a</h4>
+<code>mixed</code><p>variable to test</p></div>
+<div class="subelement argument">
+<h4>$default</h4>
+<code>mixed</code><p>default value to return if variable is not set</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>mixed</code>the passed default value, '' by default</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-class"></i> Classes and interfaces</h3>
+<a name="Ad_search" id="Ad_search"></a><div class="element ajax clickable class" href="../classes/Ad_search.html">
+<h1>Ad_search<a href="../classes/Ad_search.html">¶</a>
+</h1>
+<p class="short_description">The active directory search engine</p>
+<div class="details collapse"></div>
+<a href="../classes/Ad_search.html" class="more">« More »</a>
+</div>
+<a name="Admin" id="Admin"></a><div class="element ajax clickable class" href="../classes/Admin.html">
+<h1>Admin<a href="../classes/Admin.html">¶</a>
+</h1>
+<p class="short_description">The admin interface controller</p>
+<div class="details collapse"></div>
+<a href="../classes/Admin.html" class="more">« More »</a>
+</div>
+<a name="Article" id="Article"></a><div class="element ajax clickable class" href="../classes/Article.html">
+<h1>Article<a href="../classes/Article.html">¶</a>
+</h1>
+<p class="short_description">The articles controller provides access to all pages on the site</p>
+<div class="details collapse"></div>
+<a href="../classes/Article.html" class="more">« More »</a>
+</div>
+<a name="Attendance" id="Attendance"></a><div class="element ajax clickable class" href="../classes/Attendance.html">
+<h1>Attendance<a href="../classes/Attendance.html">¶</a>
+</h1>
+<p class="short_description">Attendance Controller</p>
+<div class="details collapse"></div>
+<a href="../classes/Attendance.html" class="more">« More »</a>
+</div>
+<a name="Attendance_model" id="Attendance_model"></a><div class="element ajax clickable class" href="../classes/Attendance_model.html">
+<h1>Attendance_model<a href="../classes/Attendance_model.html">¶</a>
+</h1>
+<p class="short_description">daysout</p>
+<div class="details collapse"></div>
+<a href="../classes/Attendance_model.html" class="more">« More »</a>
+</div>
+<a name="Audit" id="Audit"></a><div class="element ajax clickable class" href="../classes/Audit.html">
+<h1>Audit<a href="../classes/Audit.html">¶</a>
+</h1>
+<p class="short_description">Audit model</p>
+<div class="details collapse"></div>
+<a href="../classes/Audit.html" class="more">« More »</a>
+</div>
+<a name="CResult" id="CResult"></a><div class="element ajax clickable class" href="../classes/CResult.html">
+<h1>CResult<a href="../classes/CResult.html">¶</a>
+</h1>
+<p class="short_description">This is a class to provide a consistent result JSON object for all AJAX handlers</p>
+<div class="details collapse"></div>
+<a href="../classes/CResult.html" class="more">« More »</a>
+</div>
+<a name="Calendar" id="Calendar"></a><div class="element ajax clickable class" href="../classes/Calendar.html">
+<h1>Calendar<a href="../classes/Calendar.html">¶</a>
+</h1>
+<p class="short_description">Calendar controller</p>
+<div class="details collapse"></div>
+<a href="../classes/Calendar.html" class="more">« More »</a>
+</div>
+<a name="Comments" id="Comments"></a><div class="element ajax clickable class" href="../classes/Comments.html">
+<h1>Comments<a href="../classes/Comments.html">¶</a>
+</h1>
+<p class="short_description">Comments controller</p>
+<div class="details collapse"></div>
+<a href="../classes/Comments.html" class="more">« More »</a>
+</div>
+<a name="Comments_model" id="Comments_model"></a><div class="element ajax clickable class" href="../classes/Comments_model.html">
+<h1>Comments_model<a href="../classes/Comments_model.html">¶</a>
+</h1>
+<p class="short_description">Comments model</p>
+<div class="details collapse"></div>
+<a href="../classes/Comments_model.html" class="more">« More »</a>
+</div>
+<a name="Crud" id="Crud"></a><div class="element ajax clickable class" href="../classes/Crud.html">
+<h1>Crud<a href="../classes/Crud.html">¶</a>
+</h1>
+<p class="short_description">General CRUD controller</p>
+<div class="details collapse"></div>
+<a href="../classes/Crud.html" class="more">« More »</a>
+</div>
+<a name="Crud_model" id="Crud_model"></a><div class="element ajax clickable class" href="../classes/Crud_model.html">
+<h1>Crud_model<a href="../classes/Crud_model.html">¶</a>
+</h1>
+<p class="short_description">Model for general CRUD</p>
+<div class="details collapse"></div>
+<a href="../classes/Crud_model.html" class="more">« More »</a>
+</div>
+<a name="Daysout" id="Daysout"></a><div class="element ajax clickable class" href="../classes/Daysout.html">
+<h1>Daysout<a href="../classes/Daysout.html">¶</a>
+</h1>
+<p class="short_description">Attendance Controller</p>
+<div class="details collapse"></div>
+<a href="../classes/Daysout.html" class="more">« More »</a>
+</div>
+<a name="Documents" id="Documents"></a><div class="element ajax clickable class" href="../classes/Documents.html">
+<h1>Documents<a href="../classes/Documents.html">¶</a>
+</h1>
+<p class="short_description">Documents model - Mainly for integration with KnowledgeTree</p>
+<div class="details collapse"></div>
+<a href="../classes/Documents.html" class="more">« More »</a>
+</div>
+<a name="Events" id="Events"></a><div class="element ajax clickable class" href="../classes/Events.html">
+<h1>Events<a href="../classes/Events.html">¶</a>
+</h1>
+<p class="short_description">The events model</p>
+<div class="details collapse"></div>
+<a href="../classes/Events.html" class="more">« More »</a>
+</div>
+<a name="Favorites" id="Favorites"></a><div class="element ajax clickable class" href="../classes/Favorites.html">
+<h1>Favorites<a href="../classes/Favorites.html">¶</a>
+</h1>
+<p class="short_description">The favorites model</p>
+<div class="details collapse"></div>
+<a href="../classes/Favorites.html" class="more">« More »</a>
+</div>
+<a name="Groups" id="Groups"></a><div class="element ajax clickable class" href="../classes/Groups.html">
+<h1>Groups<a href="../classes/Groups.html">¶</a>
+</h1>
+<p class="short_description">Groups model</p>
+<div class="details collapse"></div>
+<a href="../classes/Groups.html" class="more">« More »</a>
+</div>
+<a name="Images" id="Images"></a><div class="element ajax clickable class" href="../classes/Images.html">
+<h1>Images<a href="../classes/Images.html">¶</a>
+</h1>
+<p class="short_description">The images controller is the proxy for all user uploaded images on the site.</p>
+<div class="details collapse"></div>
+<a href="../classes/Images.html" class="more">« More »</a>
+</div>
+<a name="Journal" id="Journal"></a><div class="element ajax clickable class" href="../classes/Journal.html">
+<h1>Journal<a href="../classes/Journal.html">¶</a>
+</h1>
+<p class="short_description">Journal provides a blog style digest where articles are just an endless list with no clear division
+like monthly or seasonal digests</p>
+<div class="details collapse"></div>
+<a href="../classes/Journal.html" class="more">« More »</a>
+</div>
+<a name="Login" id="Login"></a><div class="element ajax clickable class" href="../classes/Login.html">
+<h1>Login<a href="../classes/Login.html">¶</a>
+</h1>
+<p class="short_description">Login controller - implements different ways to login, for now NTLM only and creates the session</p>
+<div class="details collapse"></div>
+<a href="../classes/Login.html" class="more">« More »</a>
+</div>
+<a name="MY_Controller" id="MY_Controller"></a><div class="element ajax clickable class" href="../classes/MY_Controller.html">
+<h1>MY_Controller<a href="../classes/MY_Controller.html">¶</a>
+</h1>
+<p class="short_description">This controller is an extension of the Codeigniter controller class.</p>
+<div class="details collapse"></div>
+<a href="../classes/MY_Controller.html" class="more">« More »</a>
+</div>
+<a name="MY_Security" id="MY_Security"></a><div class="element ajax clickable class" href="../classes/MY_Security.html">
+<h1>MY_Security<a href="../classes/MY_Security.html">¶</a>
+</h1>
+<p class="short_description">MY_Security</p>
+<div class="details collapse"></div>
+<a href="../classes/MY_Security.html" class="more">« More »</a>
+</div>
+<a name="MY_Session" id="MY_Session"></a><div class="element ajax clickable class" href="../classes/MY_Session.html">
+<h1>MY_Session<a href="../classes/MY_Session.html">¶</a>
+</h1>
+<p class="short_description">this class extends Codeigniter's Session class</p>
+<div class="details collapse"></div>
+<a href="../classes/MY_Session.html" class="more">« More »</a>
+</div>
+<a name="Mail_queue" id="Mail_queue"></a><div class="element ajax clickable class" href="../classes/Mail_queue.html">
+<h1>Mail_queue<a href="../classes/Mail_queue.html">¶</a>
+</h1>
+<p class="short_description">Mail queue model</p>
+<div class="details collapse"></div>
+<a href="../classes/Mail_queue.html" class="more">« More »</a>
+</div>
+<a name="Monthly" id="Monthly"></a><div class="element ajax clickable class" href="../classes/Monthly.html">
+<h1>Monthly<a href="../classes/Monthly.html">¶</a>
+</h1>
+<p class="short_description">News controller</p>
+<div class="details collapse"></div>
+<a href="../classes/Monthly.html" class="more">« More »</a>
+</div>
+<a name="Pages" id="Pages"></a><div class="element ajax clickable class" href="../classes/Pages.html">
+<h1>Pages<a href="../classes/Pages.html">¶</a>
+</h1>
+<p class="short_description">Pages model</p>
+<div class="details collapse"></div>
+<a href="../classes/Pages.html" class="more">« More »</a>
+</div>
+<a name="Permissions" id="Permissions"></a><div class="element ajax clickable class" href="../classes/Permissions.html">
+<h1>Permissions<a href="../classes/Permissions.html">¶</a>
+</h1>
+<p class="short_description">Permissions model
+Access works with constants in PHP: PERM_READ = 1, PERM_WRITE = 2, etc
+Access is the sum of all assigned permissions
+     e.g. access = 3 means read + write
+Check with: access bit_and(&) PERM_* == PERM_*</p>
+<div class="details collapse"></div>
+<a href="../classes/Permissions.html" class="more">« More »</a>
+</div>
+<a name="PhpBB" id="PhpBB"></a><div class="element ajax clickable class" href="../classes/PhpBB.html">
+<h1>PhpBB<a href="../classes/PhpBB.html">¶</a>
+</h1>
+<p class="short_description">Model for integration with phpBB</p>
+<div class="details collapse"></div>
+<a href="../classes/PhpBB.html" class="more">« More »</a>
+</div>
+<a name="Properties" id="Properties"></a><div class="element ajax clickable class" href="../classes/Properties.html">
+<h1>Properties<a href="../classes/Properties.html">¶</a>
+</h1>
+<p class="short_description">properties</p>
+<div class="details collapse"></div>
+<a href="../classes/Properties.html" class="more">« More »</a>
+</div>
+<a name="Proxy" id="Proxy"></a><div class="element ajax clickable class" href="../classes/Proxy.html">
+<h1>Proxy<a href="../classes/Proxy.html">¶</a>
+</h1>
+<p class="short_description">Serves as proxy to get XML feeds from external websites, something that JS can't do on its own.</p>
+<div class="details collapse"></div>
+<a href="../classes/Proxy.html" class="more">« More »</a>
+</div>
+<a name="Revisions" id="Revisions"></a><div class="element ajax clickable class" href="../classes/Revisions.html">
+<h1>Revisions<a href="../classes/Revisions.html">¶</a>
+</h1>
+<p class="short_description">Revisions model</p>
+<div class="details collapse"></div>
+<a href="../classes/Revisions.html" class="more">« More »</a>
+</div>
+<a name="Search" id="Search"></a><div class="element ajax clickable class" href="../classes/Search.html">
+<h1>Search<a href="../classes/Search.html">¶</a>
+</h1>
+<p class="short_description">The search controller handles the search engine</p>
+<div class="details collapse"></div>
+<a href="../classes/Search.html" class="more">« More »</a>
+</div>
+<a name="Searchindex" id="Searchindex"></a><div class="element ajax clickable class" href="../classes/Searchindex.html">
+<h1>Searchindex<a href="../classes/Searchindex.html">¶</a>
+</h1>
+<p class="short_description">Searchindex model</p>
+<div class="details collapse"></div>
+<a href="../classes/Searchindex.html" class="more">« More »</a>
+</div>
+<a name="Seasonal" id="Seasonal"></a><div class="element ajax clickable class" href="../classes/Seasonal.html">
+<h1>Seasonal<a href="../classes/Seasonal.html">¶</a>
+</h1>
+<p class="short_description">The seasonal aggregator controller</p>
+<div class="details collapse"></div>
+<a href="../classes/Seasonal.html" class="more">« More »</a>
+</div>
+<a name="Server" id="Server"></a><div class="element ajax clickable class" href="../classes/Server.html">
+<h1>Server<a href="../classes/Server.html">¶</a>
+</h1>
+<p class="short_description">The server controller contains mainly AJAX handlers</p>
+<div class="details collapse"></div>
+<a href="../classes/Server.html" class="more">« More »</a>
+</div>
+<a name="Staticpages" id="Staticpages"></a><div class="element ajax clickable class" href="../classes/Staticpages.html">
+<h1>Staticpages<a href="../classes/Staticpages.html">¶</a>
+</h1>
+<p class="short_description">The static pages controller loads the requested static page (e.g. Privacy Policy, TOS, Site Map, etc)</p>
+<div class="details collapse"></div>
+<a href="../classes/Staticpages.html" class="more">« More »</a>
+</div>
+<a name="Stores" id="Stores"></a><div class="element ajax clickable class" href="../classes/Stores.html">
+<h1>Stores<a href="../classes/Stores.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/Stores.html" class="more">« More »</a>
+</div>
+<a name="Subscriptions" id="Subscriptions"></a><div class="element ajax clickable class" href="../classes/Subscriptions.html">
+<h1>Subscriptions<a href="../classes/Subscriptions.html">¶</a>
+</h1>
+<p class="short_description">Comments subscriptions model</p>
+<div class="details collapse"></div>
+<a href="../classes/Subscriptions.html" class="more">« More »</a>
+</div>
+<a name="Taxonomy" id="Taxonomy"></a><div class="element ajax clickable class" href="../classes/Taxonomy.html">
+<h1>Taxonomy<a href="../classes/Taxonomy.html">¶</a>
+</h1>
+<p class="short_description">Tags model</p>
+<div class="details collapse"></div>
+<a href="../classes/Taxonomy.html" class="more">« More »</a>
+</div>
+<a name="Template" id="Template"></a><div class="element ajax clickable class" href="../classes/Template.html">
+<h1>Template<a href="../classes/Template.html">¶</a>
+</h1>
+<p class="short_description">PHP Template Class</p>
+<div class="details collapse"></div>
+<a href="../classes/Template.html" class="more">« More »</a>
+</div>
+<a name="Templates" id="Templates"></a><div class="element ajax clickable class" href="../classes/Templates.html">
+<h1>Templates<a href="../classes/Templates.html">¶</a>
+</h1>
+<p class="short_description">Templates model</p>
+<div class="details collapse"></div>
+<a href="../classes/Templates.html" class="more">« More »</a>
+</div>
+<a name="Users" id="Users"></a><div class="element ajax clickable class" href="../classes/Users.html">
+<h1>Users<a href="../classes/Users.html">¶</a>
+</h1>
+<p class="short_description">Users model</p>
+<div class="details collapse"></div>
+<a href="../classes/Users.html" class="more">« More »</a>
+</div>
+<a name="VimeoAPIException" id="VimeoAPIException"></a><div class="element ajax clickable class" href="../classes/VimeoAPIException.html">
+<h1>VimeoAPIException<a href="../classes/VimeoAPIException.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/VimeoAPIException.html" class="more">« More »</a>
+</div>
+<a name="Who" id="Who"></a><div class="element ajax clickable class" href="../classes/Who.html">
+<h1>Who<a href="../classes/Who.html">¶</a>
+</h1>
+<p class="short_description">The who controller is the interface to Who's Who the employee directory</p>
+<div class="details collapse"></div>
+<a href="../classes/Who.html" class="more">« More »</a>
+</div>
+<a name="image_object" id="image_object"></a><div class="element ajax clickable class" href="../classes/image_object.html">
+<h1>image_object<a href="../classes/image_object.html">¶</a>
+</h1>
+<p class="short_description">Image object is a simple class mainly to ease the construction of the JSON structure for the revisions.</p>
+<div class="details collapse"></div>
+<a href="../classes/image_object.html" class="more">« More »</a>
+</div>
+<a name="imagelib" id="imagelib"></a><div class="element ajax clickable class" href="../classes/imagelib.html">
+<h1>imagelib<a href="../classes/imagelib.html">¶</a>
+</h1>
+<p class="short_description">Image manipulation functions</p>
+<div class="details collapse"></div>
+<a href="../classes/imagelib.html" class="more">« More »</a>
+</div>
+<a name="phpVimeo" id="phpVimeo"></a><div class="element ajax clickable class" href="../classes/phpVimeo.html">
+<h1>phpVimeo<a href="../classes/phpVimeo.html">¶</a>
+</h1>
+<p class="short_description">Created by: cravelo
+Date: 2/10/12
+Time: 11:45 AM</p>
+<div class="details collapse"></div>
+<a href="../classes/phpVimeo.html" class="more">« More »</a>
+</div>
+<h3>
+<i class="icon-custom icon-constant"></i> Constants</h3>
+<a name="DIR_READ_MODE" id="DIR_READ_MODE"> </a><div class="element clickable constant  DIR_READ_MODE" data-toggle="collapse" data-target=".DIR_READ_MODE .collapse">
+<h2>DIR_READ_MODE</h2>
+<pre>DIR_READ_MODE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="DIR_WRITE_MODE" id="DIR_WRITE_MODE"> </a><div class="element clickable constant  DIR_WRITE_MODE" data-toggle="collapse" data-target=".DIR_WRITE_MODE .collapse">
+<h2>DIR_WRITE_MODE</h2>
+<pre>DIR_WRITE_MODE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="EDIT_MODE" id="EDIT_MODE"> </a><div class="element clickable constant  EDIT_MODE" data-toggle="collapse" data-target=".EDIT_MODE .collapse">
+<h2>EDIT_MODE</h2>
+<pre>EDIT_MODE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_ACCT_LOCKED" id="E_AD_ACCT_LOCKED"> </a><div class="element clickable constant  E_AD_ACCT_LOCKED" data-toggle="collapse" data-target=".E_AD_ACCT_LOCKED .collapse">
+<h2>E_AD_ACCT_LOCKED</h2>
+<pre>E_AD_ACCT_LOCKED </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_EMPTY" id="E_AD_EMPTY"> </a><div class="element clickable constant  E_AD_EMPTY" data-toggle="collapse" data-target=".E_AD_EMPTY .collapse">
+<h2>EXCEPTIONS</h2>
+<pre>E_AD_EMPTY </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_LOGIN_FAILED" id="E_AD_LOGIN_FAILED"> </a><div class="element clickable constant  E_AD_LOGIN_FAILED" data-toggle="collapse" data-target=".E_AD_LOGIN_FAILED .collapse">
+<h2>E_AD_LOGIN_FAILED</h2>
+<pre>E_AD_LOGIN_FAILED </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_PWD_EXPIRED" id="E_AD_PWD_EXPIRED"> </a><div class="element clickable constant  E_AD_PWD_EXPIRED" data-toggle="collapse" data-target=".E_AD_PWD_EXPIRED .collapse">
+<h2>E_AD_PWD_EXPIRED</h2>
+<pre>E_AD_PWD_EXPIRED </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_PWD_FORCE_CHANGE" id="E_AD_PWD_FORCE_CHANGE"> </a><div class="element clickable constant  E_AD_PWD_FORCE_CHANGE" data-toggle="collapse" data-target=".E_AD_PWD_FORCE_CHANGE .collapse">
+<h2>E_AD_PWD_FORCE_CHANGE</h2>
+<pre>E_AD_PWD_FORCE_CHANGE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_PWD_NEVER_SET" id="E_AD_PWD_NEVER_SET"> </a><div class="element clickable constant  E_AD_PWD_NEVER_SET" data-toggle="collapse" data-target=".E_AD_PWD_NEVER_SET .collapse">
+<h2>E_AD_PWD_NEVER_SET</h2>
+<pre>E_AD_PWD_NEVER_SET </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_PWD_WARN" id="E_AD_PWD_WARN"> </a><div class="element clickable constant  E_AD_PWD_WARN" data-toggle="collapse" data-target=".E_AD_PWD_WARN .collapse">
+<h2>E_AD_PWD_WARN</h2>
+<pre>E_AD_PWD_WARN </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_AD_RECORD_ACCESS" id="E_AD_RECORD_ACCESS"> </a><div class="element clickable constant  E_AD_RECORD_ACCESS" data-toggle="collapse" data-target=".E_AD_RECORD_ACCESS .collapse">
+<h2>E_AD_RECORD_ACCESS</h2>
+<pre>E_AD_RECORD_ACCESS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_CAL_INVALID_EVENT_ID" id="E_CAL_INVALID_EVENT_ID"> </a><div class="element clickable constant  E_CAL_INVALID_EVENT_ID" data-toggle="collapse" data-target=".E_CAL_INVALID_EVENT_ID .collapse">
+<h2>E_CAL_INVALID_EVENT_ID</h2>
+<pre>E_CAL_INVALID_EVENT_ID </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_CAL_NO_SECTIONS" id="E_CAL_NO_SECTIONS"> </a><div class="element clickable constant  E_CAL_NO_SECTIONS" data-toggle="collapse" data-target=".E_CAL_NO_SECTIONS .collapse">
+<h2>E_CAL_NO_SECTIONS</h2>
+<pre>E_CAL_NO_SECTIONS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="E_CAL_PUBLISH" id="E_CAL_PUBLISH"> </a><div class="element clickable constant  E_CAL_PUBLISH" data-toggle="collapse" data-target=".E_CAL_PUBLISH .collapse">
+<h2>E_CAL_PUBLISH</h2>
+<pre>E_CAL_PUBLISH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FILE_READ_MODE" id="FILE_READ_MODE"> </a><div class="element clickable constant  FILE_READ_MODE" data-toggle="collapse" data-target=".FILE_READ_MODE .collapse">
+<h2>FILE_READ_MODE</h2>
+<pre>FILE_READ_MODE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FILE_WRITE_MODE" id="FILE_WRITE_MODE"> </a><div class="element clickable constant  FILE_WRITE_MODE" data-toggle="collapse" data-target=".FILE_WRITE_MODE .collapse">
+<h2>FILE_WRITE_MODE</h2>
+<pre>FILE_WRITE_MODE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FISHNET_VERSION" id="FISHNET_VERSION"> </a><div class="element clickable constant  FISHNET_VERSION" data-toggle="collapse" data-target=".FISHNET_VERSION .collapse">
+<h2>FISHNET_VERSION</h2>
+<pre>FISHNET_VERSION </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_READ" id="FOPEN_READ"> </a><div class="element clickable constant  FOPEN_READ" data-toggle="collapse" data-target=".FOPEN_READ .collapse">
+<h2>FOPEN_READ</h2>
+<pre>FOPEN_READ </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_READ_WRITE" id="FOPEN_READ_WRITE"> </a><div class="element clickable constant  FOPEN_READ_WRITE" data-toggle="collapse" data-target=".FOPEN_READ_WRITE .collapse">
+<h2>FOPEN_READ_WRITE</h2>
+<pre>FOPEN_READ_WRITE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_READ_WRITE_CREATE" id="FOPEN_READ_WRITE_CREATE"> </a><div class="element clickable constant  FOPEN_READ_WRITE_CREATE" data-toggle="collapse" data-target=".FOPEN_READ_WRITE_CREATE .collapse">
+<h2>FOPEN_READ_WRITE_CREATE</h2>
+<pre>FOPEN_READ_WRITE_CREATE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_READ_WRITE_CREATE_DESTRUCTIVE" id="FOPEN_READ_WRITE_CREATE_DESTRUCTIVE"> </a><div class="element clickable constant  FOPEN_READ_WRITE_CREATE_DESTRUCTIVE" data-toggle="collapse" data-target=".FOPEN_READ_WRITE_CREATE_DESTRUCTIVE .collapse">
+<h2>FOPEN_READ_WRITE_CREATE_DESTRUCTIVE</h2>
+<pre>FOPEN_READ_WRITE_CREATE_DESTRUCTIVE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_READ_WRITE_CREATE_STRICT" id="FOPEN_READ_WRITE_CREATE_STRICT"> </a><div class="element clickable constant  FOPEN_READ_WRITE_CREATE_STRICT" data-toggle="collapse" data-target=".FOPEN_READ_WRITE_CREATE_STRICT .collapse">
+<h2>FOPEN_READ_WRITE_CREATE_STRICT</h2>
+<pre>FOPEN_READ_WRITE_CREATE_STRICT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_WRITE_CREATE" id="FOPEN_WRITE_CREATE"> </a><div class="element clickable constant  FOPEN_WRITE_CREATE" data-toggle="collapse" data-target=".FOPEN_WRITE_CREATE .collapse">
+<h2>FOPEN_WRITE_CREATE</h2>
+<pre>FOPEN_WRITE_CREATE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_WRITE_CREATE_DESTRUCTIVE" id="FOPEN_WRITE_CREATE_DESTRUCTIVE"> </a><div class="element clickable constant  FOPEN_WRITE_CREATE_DESTRUCTIVE" data-toggle="collapse" data-target=".FOPEN_WRITE_CREATE_DESTRUCTIVE .collapse">
+<h2>FOPEN_WRITE_CREATE_DESTRUCTIVE</h2>
+<pre>FOPEN_WRITE_CREATE_DESTRUCTIVE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="FOPEN_WRITE_CREATE_STRICT" id="FOPEN_WRITE_CREATE_STRICT"> </a><div class="element clickable constant  FOPEN_WRITE_CREATE_STRICT" data-toggle="collapse" data-target=".FOPEN_WRITE_CREATE_STRICT .collapse">
+<h2>FOPEN_WRITE_CREATE_STRICT</h2>
+<pre>FOPEN_WRITE_CREATE_STRICT </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_ALL" id="PERM_ALL"> </a><div class="element clickable constant  PERM_ALL" data-toggle="collapse" data-target=".PERM_ALL .collapse">
+<h2>PERM_ALL</h2>
+<pre>PERM_ALL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_DELETE" id="PERM_DELETE"> </a><div class="element clickable constant  PERM_DELETE" data-toggle="collapse" data-target=".PERM_DELETE .collapse">
+<h2>PERM_DELETE</h2>
+<pre>PERM_DELETE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_PAGE_ALL" id="PERM_PAGE_ALL"> </a><div class="element clickable constant  PERM_PAGE_ALL" data-toggle="collapse" data-target=".PERM_PAGE_ALL .collapse">
+<h2>PERM_PAGE_ALL</h2>
+<pre>PERM_PAGE_ALL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_PERM" id="PERM_PERM"> </a><div class="element clickable constant  PERM_PERM" data-toggle="collapse" data-target=".PERM_PERM .collapse">
+<h2>PERM_PERM</h2>
+<pre>PERM_PERM </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_PROPERTIES" id="PERM_PROPERTIES"> </a><div class="element clickable constant  PERM_PROPERTIES" data-toggle="collapse" data-target=".PERM_PROPERTIES .collapse">
+<h2>PERM_PROPERTIES</h2>
+<pre>PERM_PROPERTIES </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_PUBLISH" id="PERM_PUBLISH"> </a><div class="element clickable constant  PERM_PUBLISH" data-toggle="collapse" data-target=".PERM_PUBLISH .collapse">
+<h2>PERM_PUBLISH</h2>
+<pre>PERM_PUBLISH </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_READ" id="PERM_READ"> </a><div class="element clickable constant  PERM_READ" data-toggle="collapse" data-target=".PERM_READ .collapse">
+<h2>Site Constants --------------------------------------------------------</h2>
+<pre>PERM_READ </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="PERM_WRITE" id="PERM_WRITE"> </a><div class="element clickable constant  PERM_WRITE" data-toggle="collapse" data-target=".PERM_WRITE .collapse">
+<h2>PERM_WRITE</h2>
+<pre>PERM_WRITE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_ADS" id="SID_ADS"> </a><div class="element clickable constant  SID_ADS" data-toggle="collapse" data-target=".SID_ADS .collapse">
+<h2>SID_ADS</h2>
+<pre>SID_ADS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_ADS_PLACEMENTS" id="SID_ADS_PLACEMENTS"> </a><div class="element clickable constant  SID_ADS_PLACEMENTS" data-toggle="collapse" data-target=".SID_ADS_PLACEMENTS .collapse">
+<h2>SID_ADS_PLACEMENTS</h2>
+<pre>SID_ADS_PLACEMENTS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_CALENDAR" id="SID_CALENDAR"> </a><div class="element clickable constant  SID_CALENDAR" data-toggle="collapse" data-target=".SID_CALENDAR .collapse">
+<h2>Section IDs</h2>
+<pre>SID_CALENDAR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_CRUD" id="SID_CRUD"> </a><div class="element clickable constant  SID_CRUD" data-toggle="collapse" data-target=".SID_CRUD .collapse">
+<h2>SID_CRUD</h2>
+<pre>SID_CRUD </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_PHOTOS" id="SID_PHOTOS"> </a><div class="element clickable constant  SID_PHOTOS" data-toggle="collapse" data-target=".SID_PHOTOS .collapse">
+<h2>SID_PHOTOS</h2>
+<pre>SID_PHOTOS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_PLACEMENTS" id="SID_PLACEMENTS"> </a><div class="element clickable constant  SID_PLACEMENTS" data-toggle="collapse" data-target=".SID_PLACEMENTS .collapse">
+<h2>SID_PLACEMENTS</h2>
+<pre>SID_PLACEMENTS </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_PRIORITIES" id="SID_PRIORITIES"> </a><div class="element clickable constant  SID_PRIORITIES" data-toggle="collapse" data-target=".SID_PRIORITIES .collapse">
+<h2>SID_PRIORITIES</h2>
+<pre>SID_PRIORITIES </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_PRIORITIES_FAQ" id="SID_PRIORITIES_FAQ"> </a><div class="element clickable constant  SID_PRIORITIES_FAQ" data-toggle="collapse" data-target=".SID_PRIORITIES_FAQ .collapse">
+<h2>SID_PRIORITIES_FAQ</h2>
+<pre>SID_PRIORITIES_FAQ </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_PRIVATE" id="SID_PRIVATE"> </a><div class="element clickable constant  SID_PRIVATE" data-toggle="collapse" data-target=".SID_PRIVATE .collapse">
+<h2>SID_PRIVATE</h2>
+<pre>SID_PRIVATE </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_RETAIL" id="SID_RETAIL"> </a><div class="element clickable constant  SID_RETAIL" data-toggle="collapse" data-target=".SID_RETAIL .collapse">
+<h2>SID_RETAIL</h2>
+<pre>SID_RETAIL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_RETAIL_CALENDAR" id="SID_RETAIL_CALENDAR"> </a><div class="element clickable constant  SID_RETAIL_CALENDAR" data-toggle="collapse" data-target=".SID_RETAIL_CALENDAR .collapse">
+<h2>SID_RETAIL_CALENDAR</h2>
+<pre>SID_RETAIL_CALENDAR </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="SID_WHOS_WHO" id="SID_WHOS_WHO"> </a><div class="element clickable constant  SID_WHOS_WHO" data-toggle="collapse" data-target=".SID_WHOS_WHO .collapse">
+<h2>SID_WHOS_WHO</h2>
+<pre>SID_WHOS_WHO </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="STATIC_URL" id="STATIC_URL"> </a><div class="element clickable constant  STATIC_URL" data-toggle="collapse" data-target=".STATIC_URL .collapse">
+<h2>STATIC_URL</h2>
+<pre>STATIC_URL </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="TID_POST" id="TID_POST"> </a><div class="element clickable constant  TID_POST" data-toggle="collapse" data-target=".TID_POST .collapse">
+<h2>TID_POST</h2>
+<pre>TID_POST </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>filename</th>
+<td>topic.php</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">: cravelo</a></td>
+</tr>
+<tr>
+<th>date</th>
+<td>: 10/12/12 4:06 PM</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-11-07T14:45:17-05:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \Daysout</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Addon.Controllers.html"><i class="icon-folder-open"></i> Addon/Controllers</a></li>
+<li><a href="../packages/Controllers.html"><i class="icon-folder-open"></i> Controllers</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Libraries.html"><i class="icon-folder-open"></i> Libraries</a></li>
+<li><a href="../packages/Misc.html"><i class="icon-folder-open"></i> Misc</a></li>
+<li><a href="../packages/Models.html"><i class="icon-folder-open"></i> Models</a></li>
+<li><a href="../packages/PHP-Template.html"><i class="icon-folder-open"></i> PHP-Template</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">430</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">6</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">1</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public inherited"><a href="#__construct" title="__construct :: the constructor checks if the user is logged in"><span class="description">the constructor checks if the user is logged in</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#__destruct" title="__destruct :: "><span class="description">__destruct()
+        </span><pre>__destruct()</pre></a></li>
+<li class="method public inherited"><a href="#admin" title="admin :: "><span class="description">admin()
+        </span><pre>admin()</pre></a></li>
+<li class="method public "><a href="#daysout_submit" title="daysout_submit :: "><span class="description">daysout_submit()
+        </span><pre>daysout_submit()</pre></a></li>
+<li class="method public inherited"><a href="#delete" title="delete :: Ajax responder to delete an item from the report"><span class="description">Ajax responder to delete an item from the report</span><pre>delete()</pre></a></li>
+<li class="method public inherited"><a href="#getexceptionreport" title="getexceptionreport :: Retrieves a YTD report of people who haven't filled out their attendance"><span class="description">Retrieves a YTD report of people who haven't filled out their attendance</span><pre>getexceptionreport()</pre></a></li>
+<li class="method public inherited"><a href="#getreport" title="getreport :: Retrieves the YTD report of days taken"><span class="description">Retrieves the YTD report of days taken</span><pre>getreport()</pre></a></li>
+<li class="method public inherited"><a href="#index" title="index :: This loads the interface for the attendance report"><span class="description">This loads the interface for the attendance report</span><pre>index()</pre></a></li>
+<li class="method public "><a href="#load" title="load :: "><span class="description">load()
+        </span><pre>load()</pre></a></li>
+<li class="method public inherited"><a href="#loadPage" title="loadPage :: This function will load the page_id information into the private variable $pageRecord
+only if the page has been published and if the current session user has access to see it"><span class="description">This function will load the page_id information into the private variable $pageRecord
+only if the page has been published and if the current session user has access to see it</span><pre>loadPage()</pre></a></li>
+<li class="method public inherited"><a href="#loadRevision" title="loadRevision :: "><span class="description">loadRevision()
+        </span><pre>loadRevision()</pre></a></li>
+<li class="method public inherited"><a href="#month" title="month :: "><span class="description">month()
+        </span><pre>month()</pre></a></li>
+<li class="method public inherited"><a href="#month_submit" title="month_submit :: "><span class="description">month_submit()
+        </span><pre>month_submit()</pre></a></li>
+<li class="method public "><a href="#request" title="request :: Ajax responder for submitting days for approval"><span class="description">Ajax responder for submitting days for approval</span><pre>request()</pre></a></li>
+<li class="method public inherited"><a href="#save" title="save :: Ajax responder to create a new item in the report"><span class="description">Ajax responder to create a new item in the report</span><pre>save()</pre></a></li>
+<li class="method public inherited"><a href="#setupBreadbrumbs" title="setupBreadbrumbs :: Helper function to setup breadcrumbs on pages that request it"><span class="description">Helper function to setup breadcrumbs on pages that request it</span><pre>setupBreadbrumbs()</pre></a></li>
+<li class="method public inherited"><a href="#sign_month" title="sign_month :: Ajax responder for submitting a month for approval"><span class="description">Ajax responder for submitting a month for approval</span><pre>sign_month()</pre></a></li>
+<li class="method public inherited"><a href="#tab" title="tab :: "><span class="description">tab()
+        </span><pre>tab()</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="method protected "><a href="#_approve" title="_approve :: "><span class="description">_approve()
+        </span><pre>_approve()</pre></a></li>
+<li class="method protected inherited"><a href="#_month_approve" title="_month_approve :: "><span class="description">_month_approve()
+        </span><pre>_month_approve()</pre></a></li>
+<li class="method protected inherited"><a href="#_month_reply" title="_month_reply :: "><span class="description">_month_reply()
+        </span><pre>_month_reply()</pre></a></li>
+<li class="method protected "><a href="#_reply" title="_reply :: "><span class="description">_reply()
+        </span><pre>_reply()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public "><a href="#%24load" title="$load :: "><span class="description">$load</span><pre>$load</pre></a></li>
+<li class="property public inherited"><a href="#%24pageRecord" title="$pageRecord :: "><span class="description">holds the requested page's record form the DB plus any other additional data to be passed on to the view</span><pre>$pageRecord</pre></a></li>
+<li class="nav-header protected">» Protected</li>
+<li class="property protected inherited"><a href="#%24result" title="$result :: "><span class="description">$result</span><pre>$result</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5CDaysout" id="\Daysout"></a><div href="../classes/Daysout.html" class="element class">
+<p class="short_description">Attendance Controller</p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>package</th>
+<td><a href="..//packages/Addon.Controllers.html">Addon/Controllers</a></td>
+</tr>
+<tr>
+<th>name</th>
+<td>Daysout</td>
+</tr>
+<tr>
+<th>author</th>
+<td><a href="">cravelo</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>the constructor checks if the user is logged in</h2>
+<pre>__construct() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::__construct()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Attendance::__construct()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="__destruct" id="__destruct"></a><div class="element clickable method public __destruct" data-toggle="collapse" data-target=".__destruct .collapse">
+<h2>__destruct()
+        </h2>
+<pre>__destruct() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::__destruct()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Attendance::__destruct()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="admin" id="admin"></a><div class="element clickable method public admin" data-toggle="collapse" data-target=".admin .collapse">
+<h2>admin()
+        </h2>
+<pre>admin() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Attendance::admin()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="daysout_submit" id="daysout_submit"></a><div class="element clickable method public daysout_submit" data-toggle="collapse" data-target=".daysout_submit .collapse">
+<h2>daysout_submit()
+        </h2>
+<pre>daysout_submit() : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="delete" id="delete"></a><div class="element clickable method public delete" data-toggle="collapse" data-target=".delete .collapse">
+<h2>Ajax responder to delete an item from the report</h2>
+<pre>delete() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>var</th>
+<td></td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Attendance::delete()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="getexceptionreport" id="getexceptionreport"></a><div class="element clickable method public getexceptionreport" data-toggle="collapse" data-target=".getexceptionreport .collapse">
+<h2>Retrieves a YTD report of people who haven't filled out their attendance</h2>
+<pre>getexceptionreport() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Attendance::getexceptionreport()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="getreport" id="getreport"></a><div class="element clickable method public getreport" data-toggle="collapse" data-target=".getreport .collapse">
+<h2>Retrieves the YTD report of days taken</h2>
+<pre>getreport() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Attendance::getreport()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="index" id="index"></a><div class="element clickable method public index" data-toggle="collapse" data-target=".index .collapse">
+<h2>This loads the interface for the attendance report</h2>
+<pre>index(int $year, int $user_id, string $layout) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Attendance::index()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$year</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$user_id</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$layout</h4>
+<code>string</code>
+</div>
+</div></div>
+</div>
+<a name="load" id="load"></a><div class="element clickable method public load" data-toggle="collapse" data-target=".load .collapse">
+<h2>load()
+        </h2>
+<pre>load(int $request_id) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request_id</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="loadPage" id="loadPage"></a><div class="element clickable method public loadPage" data-toggle="collapse" data-target=".loadPage .collapse">
+<h2>This function will load the page_id information into the private variable $pageRecord
+only if the page has been published and if the current session user has access to see it</h2>
+<pre>loadPage(int $page_id) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::loadPage()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Attendance::loadPage()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code><p>the paged_id to load</p></div>
+</div></div>
+</div>
+<a name="loadRevision" id="loadRevision"></a><div class="element clickable method public loadRevision" data-toggle="collapse" data-target=".loadRevision .collapse">
+<h2>loadRevision()
+        </h2>
+<pre>loadRevision(int $page_id, string $d_start, string $d_end, string $order_by) : void</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::loadRevision()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Attendance::loadRevision()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_id</h4>
+<code>int</code><p>the page id to load the latest revision</p></div>
+<div class="subelement argument">
+<h4>$d_start</h4>
+<code>string</code><p>a mySQL style date</p></div>
+<div class="subelement argument">
+<h4>$d_end</h4>
+<code>string</code><p>a mySQL style date</p></div>
+<div class="subelement argument">
+<h4>$order_by</h4>
+<code>string</code><p>column to order the results</p></div>
+</div></div>
+</div>
+<a name="month" id="month"></a><div class="element clickable method public month" data-toggle="collapse" data-target=".month .collapse">
+<h2>month()
+        </h2>
+<pre>month(int $request_id) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Attendance::month()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$request_id</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="month_submit" id="month_submit"></a><div class="element clickable method public month_submit" data-toggle="collapse" data-target=".month_submit .collapse">
+<h2>month_submit()
+        </h2>
+<pre>month_submit() : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Attendance::month_submit()</td>
+</tr></table>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="request" id="request"></a><div class="element clickable method public request" data-toggle="collapse" data-target=".request .collapse">
+<h2>Ajax responder for submitting days for approval</h2>
+<pre>request() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>var</th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a name="save" id="save"></a><div class="element clickable method public save" data-toggle="collapse" data-target=".save .collapse">
+<h2>Ajax responder to create a new item in the report</h2>
+<pre>save() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>var</th>
+<td></td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Attendance::save()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="setupBreadbrumbs" id="setupBreadbrumbs"></a><div class="element clickable method public setupBreadbrumbs" data-toggle="collapse" data-target=".setupBreadbrumbs .collapse">
+<h2>Helper function to setup breadcrumbs on pages that request it</h2>
+<pre>setupBreadbrumbs($page_data) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::setupBreadbrumbs()</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Attendance::setupBreadbrumbs()</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page_data</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="sign_month" id="sign_month"></a><div class="element clickable method public sign_month" data-toggle="collapse" data-target=".sign_month .collapse">
+<h2>Ajax responder for submitting a month for approval</h2>
+<pre>sign_month() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>var</th>
+<td></td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Attendance::sign_month()</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="tab" id="tab"></a><div class="element clickable method public tab" data-toggle="collapse" data-target=".tab .collapse">
+<h2>tab()
+        </h2>
+<pre>tab() </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Attendance::tab()</td>
+</tr></table>
+</div></div>
+</div>
+<a name="_approve" id="_approve"></a><div class="element clickable method protected _approve" data-toggle="collapse" data-target="._approve .collapse">
+<h2>_approve()
+        </h2>
+<pre>_approve(array $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="_month_approve" id="_month_approve"></a><div class="element clickable method protected _month_approve" data-toggle="collapse" data-target="._month_approve .collapse">
+<h2>_month_approve()
+        </h2>
+<pre>_month_approve(array $data) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Attendance::_month_approve()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="_month_reply" id="_month_reply"></a><div class="element clickable method protected _month_reply" data-toggle="collapse" data-target="._month_reply .collapse">
+<h2>_month_reply()
+        </h2>
+<pre>_month_reply(array $data) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered"><tr>
+<th>inherited_from</th>
+<td>\Attendance::_month_reply()</td>
+</tr></table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<a name="_reply" id="_reply"></a><div class="element clickable method protected _reply" data-toggle="collapse" data-target="._reply .collapse">
+<h2>_reply()
+        </h2>
+<pre>_reply(array $data) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24load" id="$load"> </a><div class="element clickable property public $load" data-toggle="collapse" data-target=".$load .collapse">
+<h2>$load</h2>
+<pre>$load : \CI_Loader</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>magic</th>
+<td></td>
+</tr>
+<tr>
+<th>property</th>
+<td></td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24pageRecord" id="$pageRecord"> </a><div class="element clickable property public $pageRecord" data-toggle="collapse" data-target=".$pageRecord .collapse">
+<h2>holds the requested page's record form the DB plus any other additional data to be passed on to the view</h2>
+<pre>$pageRecord : array</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::$$pageRecord</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Attendance::$$pageRecord</td>
+</tr>
+</table>
+</div></div>
+</div>
+<a name="%24result" id="$result"> </a><div class="element clickable property protected $result" data-toggle="collapse" data-target=".$result .collapse">
+<h2>$result</h2>
+<pre>$result : <a href="../classes/CResult.html">\CResult</a></pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>inherited_from</th>
+<td>\MY_Controller::$$result</td>
+</tr>
+<tr>
+<th>inherited_from</th>
+<td>\Attendance::$$result</td>
+</tr>
+</table>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-11-07T14:45:18-05:00.<br></footer></div>
+</div>
+</body>
+</html>

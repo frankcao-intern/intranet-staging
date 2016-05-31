@@ -1,0 +1,822 @@
+<!DOCTYPE html><html xmlns:date="http://exslt.org/dates-and-times" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \imagelib</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/Addon.Controllers.html"><i class="icon-folder-open"></i> Addon/Controllers</a></li>
+<li><a href="../packages/Controllers.html"><i class="icon-folder-open"></i> Controllers</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/Libraries.html"><i class="icon-folder-open"></i> Libraries</a></li>
+<li><a href="../packages/Misc.html"><i class="icon-folder-open"></i> Misc</a></li>
+<li><a href="../packages/Models.html"><i class="icon-folder-open"></i> Models</a></li>
+<li><a href="../packages/PHP-Template.html"><i class="icon-folder-open"></i> PHP-Template</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">430</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul><li>todo 
+                <span class="label label-info">6</span>
+</li></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">1</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods</li>
+<li class="method public "><a href="#__construct" title="__construct :: Constructor"><span class="description">Constructor</span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#__destruct" title="__destruct :: "><span class="description">__destruct()
+        </span><pre>__destruct()</pre></a></li>
+<li class="method public "><a href="#auto_rotate" title="auto_rotate :: Attempt to automatically rotate the image based on exif data
+	a lot of digital cameras store orientation data of the camera
+	this will use that to automatically fix an images orientation"><span class="description">Attempt to automatically rotate the image based on exif data
+	a lot of digital cameras store orientation data of the camera
+	this will use that to automatically fix an images orientation</span><pre>auto_rotate()</pre></a></li>
+<li class="method public "><a href="#crop" title="crop :: Crop image by coordinates, $x, $y of starting point plus a height and width of selection."><span class="description">Crop image by coordinates, $x, $y of starting point plus a height and width of selection.</span><pre>crop()</pre></a></li>
+<li class="method public "><a href="#crop_all" title="crop_all :: Shortcut functions to _crop"><span class="description">Shortcut functions to _crop</span><pre>crop_all()</pre></a></li>
+<li class="method public "><a href="#crop_bottom" title="crop_bottom :: Shortcut functions to _crop"><span class="description">Shortcut functions to _crop</span><pre>crop_bottom()</pre></a></li>
+<li class="method public "><a href="#crop_h" title="crop_h :: Shortcut functions to _crop"><span class="description">Shortcut functions to _crop</span><pre>crop_h()</pre></a></li>
+<li class="method public "><a href="#crop_left" title="crop_left :: Shortcut functions to _crop"><span class="description">Shortcut functions to _crop</span><pre>crop_left()</pre></a></li>
+<li class="method public "><a href="#crop_right" title="crop_right :: Shortcut functions to _crop"><span class="description">Shortcut functions to _crop</span><pre>crop_right()</pre></a></li>
+<li class="method public "><a href="#crop_top" title="crop_top :: Shortcut functions to _crop"><span class="description">Shortcut functions to _crop</span><pre>crop_top()</pre></a></li>
+<li class="method public "><a href="#crop_v" title="crop_v :: Shortcut functions to _crop"><span class="description">Shortcut functions to _crop</span><pre>crop_v()</pre></a></li>
+<li class="method public "><a href="#flip" title="flip :: Will flip an image (mirror it)"><span class="description">Will flip an image (mirror it)</span><pre>flip()</pre></a></li>
+<li class="method public "><a href="#flip_both" title="flip_both :: Shortcut functions to flip"><span class="description">Shortcut functions to flip</span><pre>flip_both()</pre></a></li>
+<li class="method public "><a href="#flip_h" title="flip_h :: Shortcut functions to flip"><span class="description">Shortcut functions to flip</span><pre>flip_h()</pre></a></li>
+<li class="method public "><a href="#flip_v" title="flip_v :: Shortcut functions to flip"><span class="description">Shortcut functions to flip</span><pre>flip_v()</pre></a></li>
+<li class="method public "><a href="#get_info" title="get_info :: "><span class="description">get_info()
+        </span><pre>get_info()</pre></a></li>
+<li class="method public "><a href="#height" title="height :: Shortcut functions to resize an image to certain, standard sizes"><span class="description">Shortcut functions to resize an image to certain, standard sizes</span><pre>height()</pre></a></li>
+<li class="method public "><a href="#open" title="open :: Open an image from a file on disk"><span class="description">Open an image from a file on disk</span><pre>open()</pre></a></li>
+<li class="method public "><a href="#output" title="output :: Output the image to the stream (browser)"><span class="description">Output the image to the stream (browser)</span><pre>output()</pre></a></li>
+<li class="method public "><a href="#prepare" title="prepare :: Takes an image resource and a content type and prepares the resource"><span class="description">Takes an image resource and a content type and prepares the resource</span><pre>prepare()</pre></a></li>
+<li class="method public "><a href="#resize" title="resize :: Resizes an image to fit in a certain size"><span class="description">Resizes an image to fit in a certain size</span><pre>resize()</pre></a></li>
+<li class="method public "><a href="#resize_1024" title="resize_1024 :: Shortcut functions to resize an image to certain, standard sizes"><span class="description">Shortcut functions to resize an image to certain, standard sizes</span><pre>resize_1024()</pre></a></li>
+<li class="method public "><a href="#resize_1200" title="resize_1200 :: Shortcut functions to resize an image to certain, standard sizes"><span class="description">Shortcut functions to resize an image to certain, standard sizes</span><pre>resize_1200()</pre></a></li>
+<li class="method public "><a href="#resize_1600" title="resize_1600 :: Shortcut functions to resize an image to certain, standard sizes"><span class="description">Shortcut functions to resize an image to certain, standard sizes</span><pre>resize_1600()</pre></a></li>
+<li class="method public "><a href="#resize_640" title="resize_640 :: Shortcut functions to resize an image to certain, standard sizes"><span class="description">Shortcut functions to resize an image to certain, standard sizes</span><pre>resize_640()</pre></a></li>
+<li class="method public "><a href="#resize_800" title="resize_800 :: Shortcut functions to resize an image to certain, standard sizes"><span class="description">Shortcut functions to resize an image to certain, standard sizes</span><pre>resize_800()</pre></a></li>
+<li class="method public "><a href="#resource" title="resource :: Get/set image resource"><span class="description">Get/set image resource</span><pre>resource()</pre></a></li>
+<li class="method public "><a href="#rotate" title="rotate :: Rotate the active image"><span class="description">Rotate the active image</span><pre>rotate()</pre></a></li>
+<li class="method public "><a href="#rotate_180" title="rotate_180 :: Shortcut functions for rotate"><span class="description">Shortcut functions for rotate</span><pre>rotate_180()</pre></a></li>
+<li class="method public "><a href="#rotate_left" title="rotate_left :: Shortcut functions for rotate"><span class="description">Shortcut functions for rotate</span><pre>rotate_left()</pre></a></li>
+<li class="method public "><a href="#rotate_right" title="rotate_right :: Shortcut functions for rotate"><span class="description">Shortcut functions for rotate</span><pre>rotate_right()</pre></a></li>
+<li class="method public "><a href="#save" title="save :: Save the image back to the original file"><span class="description">Save the image back to the original file</span><pre>save()</pre></a></li>
+<li class="method public "><a href="#thumbnail" title="thumbnail :: Generate a thumbnail from the loaded image"><span class="description">Generate a thumbnail from the loaded image</span><pre>thumbnail()</pre></a></li>
+<li class="method public "><a href="#thumbnail_large" title="thumbnail_large :: Shortcut functions to some standard thumbnail sizes"><span class="description">Shortcut functions to some standard thumbnail sizes</span><pre>thumbnail_large()</pre></a></li>
+<li class="method public "><a href="#thumbnail_medium" title="thumbnail_medium :: Shortcut functions to some standard thumbnail sizes"><span class="description">Shortcut functions to some standard thumbnail sizes</span><pre>thumbnail_medium()</pre></a></li>
+<li class="method public "><a href="#thumbnail_small" title="thumbnail_small :: Shortcut functions to some standard thumbnail sizes"><span class="description">Shortcut functions to some standard thumbnail sizes</span><pre>thumbnail_small()</pre></a></li>
+<li class="method public "><a href="#thumbnail_xlarge" title="thumbnail_xlarge :: Shortcut functions to some standard thumbnail sizes"><span class="description">Shortcut functions to some standard thumbnail sizes</span><pre>thumbnail_xlarge()</pre></a></li>
+<li class="method public "><a href="#thumbnail_xsmall" title="thumbnail_xsmall :: Shortcut functions to some standard thumbnail sizes"><span class="description">Shortcut functions to some standard thumbnail sizes</span><pre>thumbnail_xsmall()</pre></a></li>
+<li class="method public "><a href="#width" title="width :: Shortcut functions to resize an image to certain, standard sizes"><span class="description">Shortcut functions to resize an image to certain, standard sizes</span><pre>width()</pre></a></li>
+<li class="method public "><a href="#write" title="write :: Save the image to a different location"><span class="description">Save the image to a different location</span><pre>write()</pre></a></li>
+<li class="nav-header private">» Private</li>
+<li class="method private "><a href="#_crop" title="_crop :: Crop an image by N pixels"><span class="description">Crop an image by N pixels</span><pre>_crop()</pre></a></li>
+<li class="nav-header">
+<i class="icon-custom icon-property"></i> Properties</li>
+<li class="property public "><a href="#%24contenttype" title="$contenttype :: "><span class="description">$contenttype</span><pre>$contenttype</pre></a></li>
+<li class="property public "><a href="#%24is_modified" title="$is_modified :: "><span class="description">$is_modified</span><pre>$is_modified</pre></a></li>
+<li class="property public "><a href="#%24res" title="$res :: "><span class="description">$res</span><pre>$res</pre></a></li>
+<li class="property public "><a href="#%24source" title="$source :: "><span class="description">$source</span><pre>$source</pre></a></li>
+</ul>
+</div>
+<div class="span8">
+<a name="%5Cimagelib" id="\imagelib"></a><div href="../classes/imagelib.html" class="element class">
+<p class="short_description">Image manipulation functions</p>
+<div class="details">
+<p class="long_description"></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="">Carlos Ravelo</a></td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="..//packages/Libraries.html">Libraries</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a name="__construct" id="__construct"></a><div class="element clickable method public __construct" data-toggle="collapse" data-target=".__construct .collapse">
+<h2>Constructor</h2>
+<pre>__construct(mixed $src_or_resource) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$src_or_resource</h4>
+<code>mixed</code><p>src is the path to an image. If it exists, the image will be automatically opened can also be an already created image resource</p></div>
+</div></div>
+</div>
+<a name="__destruct" id="__destruct"></a><div class="element clickable method public __destruct" data-toggle="collapse" data-target=".__destruct .collapse">
+<h2>__destruct()
+        </h2>
+<pre>__destruct() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="auto_rotate" id="auto_rotate"></a><div class="element clickable method public auto_rotate" data-toggle="collapse" data-target=".auto_rotate .collapse">
+<h2>Attempt to automatically rotate the image based on exif data
+	a lot of digital cameras store orientation data of the camera
+	this will use that to automatically fix an images orientation</h2>
+<pre>auto_rotate() : mixed</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>Note: This will only work if you have the function exif_read_data
+        which is part of PHPs exif data extension</p></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a name="crop" id="crop"></a><div class="element clickable method public crop" data-toggle="collapse" data-target=".crop .collapse">
+<h2>Crop image by coordinates, $x, $y of starting point plus a height and width of selection.</h2>
+<pre>crop(int $x, int $y, int $h, int $w) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>Should be used along with resize.</p></p>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="">Carlos Ravelo</a></td>
+</tr>
+<tr>
+<th>date</th>
+<td>06/28/2010</td>
+</tr>
+</table>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$x</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$y</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$h</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$w</h4>
+<code>int</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="crop_all" id="crop_all"></a><div class="element clickable method public crop_all" data-toggle="collapse" data-target=".crop_all .collapse">
+<h2>Shortcut functions to _crop</h2>
+<pre>crop_all(int $px) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$px</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="crop_bottom" id="crop_bottom"></a><div class="element clickable method public crop_bottom" data-toggle="collapse" data-target=".crop_bottom .collapse">
+<h2>Shortcut functions to _crop</h2>
+<pre>crop_bottom(int $px) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$px</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="crop_h" id="crop_h"></a><div class="element clickable method public crop_h" data-toggle="collapse" data-target=".crop_h .collapse">
+<h2>Shortcut functions to _crop</h2>
+<pre>crop_h(int $px) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$px</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="crop_left" id="crop_left"></a><div class="element clickable method public crop_left" data-toggle="collapse" data-target=".crop_left .collapse">
+<h2>Shortcut functions to _crop</h2>
+<pre>crop_left(int $px) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$px</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="crop_right" id="crop_right"></a><div class="element clickable method public crop_right" data-toggle="collapse" data-target=".crop_right .collapse">
+<h2>Shortcut functions to _crop</h2>
+<pre>crop_right(int $px) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$px</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="crop_top" id="crop_top"></a><div class="element clickable method public crop_top" data-toggle="collapse" data-target=".crop_top .collapse">
+<h2>Shortcut functions to _crop</h2>
+<pre>crop_top(int $px) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$px</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="crop_v" id="crop_v"></a><div class="element clickable method public crop_v" data-toggle="collapse" data-target=".crop_v .collapse">
+<h2>Shortcut functions to _crop</h2>
+<pre>crop_v(int $px) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$px</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="flip" id="flip"></a><div class="element clickable method public flip" data-toggle="collapse" data-target=".flip .collapse">
+<h2>Will flip an image (mirror it)</h2>
+<pre>flip($bFlipH, $bFlipV) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$bFlipH</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$bFlipV</h4>
+<code></code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="flip_both" id="flip_both"></a><div class="element clickable method public flip_both" data-toggle="collapse" data-target=".flip_both .collapse">
+<h2>Shortcut functions to flip</h2>
+<pre>flip_both() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="flip_h" id="flip_h"></a><div class="element clickable method public flip_h" data-toggle="collapse" data-target=".flip_h .collapse">
+<h2>Shortcut functions to flip</h2>
+<pre>flip_h() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="flip_v" id="flip_v"></a><div class="element clickable method public flip_v" data-toggle="collapse" data-target=".flip_v .collapse">
+<h2>Shortcut functions to flip</h2>
+<pre>flip_v() : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="get_info" id="get_info"></a><div class="element clickable method public get_info" data-toggle="collapse" data-target=".get_info .collapse">
+<h2>get_info()
+        </h2>
+<pre>get_info() : array</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Returns</h3>
+<div class="subelement response"><code>array</code></div>
+</div></div>
+</div>
+<a name="height" id="height"></a><div class="element clickable method public height" data-toggle="collapse" data-target=".height .collapse">
+<h2>Shortcut functions to resize an image to certain, standard sizes</h2>
+<pre>height(int $newdim, bool $square, bool $resample) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$newdim</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$resample</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="open" id="open"></a><div class="element clickable method public open" data-toggle="collapse" data-target=".open .collapse">
+<h2>Open an image from a file on disk</h2>
+<pre>open(string $src) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$src</h4>
+<code>string</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="output" id="output"></a><div class="element clickable method public output" data-toggle="collapse" data-target=".output .collapse">
+<h2>Output the image to the stream (browser)</h2>
+<pre>output(int $out) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$out</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="prepare" id="prepare"></a><div class="element clickable method public prepare" data-toggle="collapse" data-target=".prepare .collapse">
+<h2>Takes an image resource and a content type and prepares the resource</h2>
+<pre>prepare(resource $res, int $contenttype) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$res</h4>
+<code>resource</code>
+</div>
+<div class="subelement argument">
+<h4>$contenttype</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="resize" id="resize"></a><div class="element clickable method public resize" data-toggle="collapse" data-target=".resize .collapse">
+<h2>Resizes an image to fit in a certain size</h2>
+<pre>resize($newdim, bool $square, bool $zc, bool $bHeight, $resample) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$newdim</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code><p>make the new image square instead of keeping the dimensions</p></div>
+<div class="subelement argument">
+<h4>$zc</h4>
+<code>bool</code><p>zoom crop</p></div>
+<div class="subelement argument">
+<h4>$bHeight</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$resample</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="resize_1024" id="resize_1024"></a><div class="element clickable method public resize_1024" data-toggle="collapse" data-target=".resize_1024 .collapse">
+<h2>Shortcut functions to resize an image to certain, standard sizes</h2>
+<pre>resize_1024(bool $square) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="resize_1200" id="resize_1200"></a><div class="element clickable method public resize_1200" data-toggle="collapse" data-target=".resize_1200 .collapse">
+<h2>Shortcut functions to resize an image to certain, standard sizes</h2>
+<pre>resize_1200(bool $square) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="resize_1600" id="resize_1600"></a><div class="element clickable method public resize_1600" data-toggle="collapse" data-target=".resize_1600 .collapse">
+<h2>Shortcut functions to resize an image to certain, standard sizes</h2>
+<pre>resize_1600(bool $square) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="resize_640" id="resize_640"></a><div class="element clickable method public resize_640" data-toggle="collapse" data-target=".resize_640 .collapse">
+<h2>Shortcut functions to resize an image to certain, standard sizes</h2>
+<pre>resize_640(bool $square) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="resize_800" id="resize_800"></a><div class="element clickable method public resize_800" data-toggle="collapse" data-target=".resize_800 .collapse">
+<h2>Shortcut functions to resize an image to certain, standard sizes</h2>
+<pre>resize_800(bool $square) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="resource" id="resource"></a><div class="element clickable method public resource" data-toggle="collapse" data-target=".resource .collapse">
+<h2>Get/set image resource</h2>
+<pre>resource(resource $res) : resource</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$res</h4>
+<code>resource</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>resource</code></div>
+</div></div>
+</div>
+<a name="rotate" id="rotate"></a><div class="element clickable method public rotate" data-toggle="collapse" data-target=".rotate .collapse">
+<h2>Rotate the active image</h2>
+<pre>rotate(int $degrees, string $bkg) : bool</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$degrees</h4>
+<code>int</code><p>number of degrees to spin the image, if this is something like 45, it will leave gaps in the frame which will be filled in by $bkg</p>
+</div>
+<div class="subelement argument">
+<h4>$bkg</h4>
+<code>string</code><p>If image is rotated in a way that does not fill the frame, this is the color that will be used</p></div>
+<h3>Returns</h3>
+<div class="subelement response"><code>bool</code></div>
+</div></div>
+</div>
+<a name="rotate_180" id="rotate_180"></a><div class="element clickable method public rotate_180" data-toggle="collapse" data-target=".rotate_180 .collapse">
+<h2>Shortcut functions for rotate</h2>
+<pre>rotate_180() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="rotate_left" id="rotate_left"></a><div class="element clickable method public rotate_left" data-toggle="collapse" data-target=".rotate_left .collapse">
+<h2>Shortcut functions for rotate</h2>
+<pre>rotate_left() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="rotate_right" id="rotate_right"></a><div class="element clickable method public rotate_right" data-toggle="collapse" data-target=".rotate_right .collapse">
+<h2>Shortcut functions for rotate</h2>
+<pre>rotate_right() </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="save" id="save"></a><div class="element clickable method public save" data-toggle="collapse" data-target=".save .collapse">
+<h2>Save the image back to the original file</h2>
+<pre>save(null $out) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$out</h4>
+<code>null</code>
+</div>
+</div></div>
+</div>
+<a name="thumbnail" id="thumbnail"></a><div class="element clickable method public thumbnail" data-toggle="collapse" data-target=".thumbnail .collapse">
+<h2>Generate a thumbnail from the loaded image</h2>
+<pre>thumbnail($dest, $newdim, $square, $bHeight, $out, $resample) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dest</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$newdim</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$square</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$bHeight</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$out</h4>
+<code></code>
+</div>
+<div class="subelement argument">
+<h4>$resample</h4>
+<code></code>
+</div>
+</div></div>
+</div>
+<a name="thumbnail_large" id="thumbnail_large"></a><div class="element clickable method public thumbnail_large" data-toggle="collapse" data-target=".thumbnail_large .collapse">
+<h2>Shortcut functions to some standard thumbnail sizes</h2>
+<pre>thumbnail_large(string $dest, int $out, bool $square) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dest</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$out</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="thumbnail_medium" id="thumbnail_medium"></a><div class="element clickable method public thumbnail_medium" data-toggle="collapse" data-target=".thumbnail_medium .collapse">
+<h2>Shortcut functions to some standard thumbnail sizes</h2>
+<pre>thumbnail_medium(string $dest, int $out, bool $square) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dest</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$out</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="thumbnail_small" id="thumbnail_small"></a><div class="element clickable method public thumbnail_small" data-toggle="collapse" data-target=".thumbnail_small .collapse">
+<h2>Shortcut functions to some standard thumbnail sizes</h2>
+<pre>thumbnail_small(string $dest, int $out, bool $square) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dest</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$out</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="thumbnail_xlarge" id="thumbnail_xlarge"></a><div class="element clickable method public thumbnail_xlarge" data-toggle="collapse" data-target=".thumbnail_xlarge .collapse">
+<h2>Shortcut functions to some standard thumbnail sizes</h2>
+<pre>thumbnail_xlarge(string $dest, int $out, bool $square) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dest</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$out</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="thumbnail_xsmall" id="thumbnail_xsmall"></a><div class="element clickable method public thumbnail_xsmall" data-toggle="collapse" data-target=".thumbnail_xsmall .collapse">
+<h2>Shortcut functions to some standard thumbnail sizes</h2>
+<pre>thumbnail_xsmall(string $dest, int $out, bool $square) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dest</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$out</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="width" id="width"></a><div class="element clickable method public width" data-toggle="collapse" data-target=".width .collapse">
+<h2>Shortcut functions to resize an image to certain, standard sizes</h2>
+<pre>width(int $newdim, bool $square, bool $resample) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$newdim</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$square</h4>
+<code>bool</code>
+</div>
+<div class="subelement argument">
+<h4>$resample</h4>
+<code>bool</code>
+</div>
+</div></div>
+</div>
+<a name="write" id="write"></a><div class="element clickable method public write" data-toggle="collapse" data-target=".write .collapse">
+<h2>Save the image to a different location</h2>
+<pre>write(string $dest, int $out) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$dest</h4>
+<code>string</code>
+</div>
+<div class="subelement argument">
+<h4>$out</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<a name="_crop" id="_crop"></a><div class="element clickable method private _crop" data-toggle="collapse" data-target="._crop .collapse">
+<h2>Crop an image by N pixels</h2>
+<pre>_crop(int $top, int $right, int $bottom, int $left) : void</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8">
+<p class="long_description"><p>Same order as CSS property</p>
+
+<p>This will crop an image by the number of pixels you specify.
+    For example, to crop 10 pixels off the bottom and left sides
+    you would do crop(10, 0, 10)</p></p>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$top</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$right</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$bottom</h4>
+<code>int</code>
+</div>
+<div class="subelement argument">
+<h4>$left</h4>
+<code>int</code>
+</div>
+</div></div>
+</div>
+<h3>
+<i class="icon-custom icon-property"></i> Properties</h3>
+<a name="%24contenttype" id="$contenttype"> </a><div class="element clickable property public $contenttype" data-toggle="collapse" data-target=".$contenttype .collapse">
+<h2>$contenttype</h2>
+<pre>$contenttype </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24is_modified" id="$is_modified"> </a><div class="element clickable property public $is_modified" data-toggle="collapse" data-target=".$is_modified .collapse">
+<h2>$is_modified</h2>
+<pre>$is_modified </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24res" id="$res"> </a><div class="element clickable property public $res" data-toggle="collapse" data-target=".$res .collapse">
+<h2>$res</h2>
+<pre>$res : resource</pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+<a name="%24source" id="$source"> </a><div class="element clickable property public $source" data-toggle="collapse" data-target=".$source .collapse">
+<h2>$source</h2>
+<pre>$source </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="span8"><p class="long_description"></p></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a2</a> and<br>
+            generated on 2012-11-07T14:45:18-05:00.<br></footer></div>
+</div>
+</body>
+</html>
