@@ -1,0 +1,82 @@
+* { margin: 0; padding: 0; }
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 10pt;
+	color: #404040;
+	background: #FCF8E9; 
+	padding: 10px 20px 0 20px;
+}
+
+.maincont { width: 960px; margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0; }
+
+p { margin-bottom: 12px; }
+
+ul, ol { margin-top: 1em; margin-bottom: 1em; padding-left: 40px; }
+
+img { display: block; }
+
+fieldset { 
+	padding: 10px;
+	border: 1px solid #BBBBBB;
+	border-right-color: #666661;
+	border-bottom-color: #666661;
+	margin-bottom: 10px;
+    background: #C7D0BD;
+}
+.ie7 fieldset, .ie8 fieldset { margin-bottom: 20px; }
+
+fieldset.action { background: #C7D0BD; }
+	
+legend { 
+	background-color: #92897C;
+	color:#FFFFFF; 
+	font: 17px/21px Calibri, Arial, Helvetica, sans-serif; 
+	padding: 0 10px;
+	font-weight: bold;
+	border: 1px solid #e5e5c3;
+	border-right-color: #505014;
+	border-bottom-color: #505014;
+}
+.ie6 legend { margin: -10px 0 0 -18px; }
+.ie7 legend { margin: -26px 0 0 -11px; }
+.ie8 legend { margin: -23px 0 0 0; }
+
+a {
+	color: #404040;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a:hover { color: #92897C; }
+
+.redNotice { font-weight: bold; font-size: 16px; color: red; margin-bottom: 0; margin-top: 8px; }
+
+.header { overflow: hidden; }
+.header img { float: left; }
+.header div { float: left; padding-top: 8px; padding-left: 10px; }
+.header div h1, .mgr-instructions h2 { font-weight: bold; font-size: 22px; }
+.header div a { display: block; margin-top: 8px; text-transform: uppercase; }
+
+.mgr-instructions { margin-top: 8px; }
+
+#equipment label, #usage label, .vertical-checks label { display: block; margin-bottom: 2px; width: 30%; }
+#equipment input, #usage input, .vertical-checks input { margin-right: 4px; }
+
+.vertical-checks, .horiz-checks { margin-bottom: 12px; }
+.horiz-checks input { margin-right: 4px; }
+
+#hOther, #uOther { margin-bottom: 8px; }
+
+.list-section { overflow: hidden; margin-top: 2px; }
+.list-section div { float: left; margin-right: 8px; }
+.list-section .buttons {  }
+.list-section .buttons input { margin-bottom: 4px; }
+
+#helpdesk { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 1px solid #000000; }
+#helpdesk h1 { font-size: 26px; margin-bottom: 24px; }
+#helpdesk h2 { font-size: 20px; margin-bottom: 18px; margin-top: 18px; }
+
+.signature label { display: block; margin-bottom: 2px; width: 50%; }
