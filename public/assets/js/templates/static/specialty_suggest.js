@@ -1,0 +1,2 @@
+
+jQuery(function($){'use strict';$('#submit').button();$('input[title!=""],textarea[title!=""]').qtip({style:{name:'ef',tip:true,classes:{content:'qtip-ef'}},position:{corner:{tooltip:'leftMiddle',target:'rightMiddle'},adjust:{x:+10,y:0}},tip:{size:{x:20,y:8}}});});

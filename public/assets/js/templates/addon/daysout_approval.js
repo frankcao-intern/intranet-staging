@@ -1,0 +1,2 @@
+
+(function($){'use strict';var Engine={buttons:function(){$('.days-out input[type=submit]').button();$('.days-out').submit(function(){var $submit=$('input[type=submit]',this),invalid=false,requiredVal;requiredVal=$('#mgrName, #mgrPassw');requiredVal.removeClass('ui-state-error').each(function(i,obj){var $obj=$(obj);if($obj.val()===''){$obj.addClass('ui-state-error');$().message($obj.attr('name')+' is required.','error');invalid=true;return false;}});return!invalid;});}};$(document).ready(function(){Engine.buttons();});}(jQuery));

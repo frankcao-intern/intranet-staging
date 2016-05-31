@@ -1,0 +1,2 @@
+
+jQuery(function($){'use strict';coreEngine.page_properties.setup();$("#btnSaveProp").button().click(function(){var sections=[],postData;$("#sections li.ui-selected").each(function(){var id=$(this).attr("id");sections.push(id.substr(1));});postData="pid="+pageID;postData+="&data="+JSON.stringify(sections);coreEngine.ajax_post(siteRoot+"calendar/publishevent/"+(new Date()).getTime(),postData,coreEngine.genericCallBack,'json');coreEngine.page_properties.setConfirmUnload(false);return false;});});

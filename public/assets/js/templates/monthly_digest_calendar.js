@@ -1,0 +1,2 @@
+
+(function($){'use strict';var Engine={calendar:function(){var cal_id=$("#miniCalendar").text();$("#miniCalendar").empty();coreEngine.miniCalendar("miniCalendar",cal_id);}};$(document).ready(function(){Engine.calendar();});}(jQuery));

@@ -1,0 +1,2 @@
+
+(function($){'use strict';var Engine={tablesort:function(){$("table").tablesorter({sortList:[[1,0]],headers:{0:{sorter:false}}});},quickSearch:function(){$('input#tblFilter').quicksearch('table tbody tr',{});},enableFancybox:function(){$("a.fancybox").fancybox({titlePosition:'inside',type:'image','transitionIn':'elastic','transitionOut':'elastic'});}};$(document).ready(function(){Engine.tablesort();Engine.quickSearch();Engine.enableFancybox();});}(jQuery));

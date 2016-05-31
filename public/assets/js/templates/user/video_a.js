@@ -1,0 +1,2 @@
+
+jQuery(function($){var Engine={setup_player:function(){var file=$("#video .filename").text(),img=$("#video img").attr('src'),width=$("#video .width").text(),height=$("#video .height").text();$("#video").empty();jwplayer($("#video").get(0)).setup({autostart:'true',controlbar:'over',skin:coreEngine.siteRoot+"assets/flash/efglow/efglow.zip",flashplayer:coreEngine.siteRoot+"assets/flash/jwplayer.swf?"+(new Date()).getTime(),file:file,image:img,width:width,height:height});}};Engine.setup_player();});

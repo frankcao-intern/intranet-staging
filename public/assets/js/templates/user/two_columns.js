@@ -1,0 +1,3 @@
+
+require(['jquery'],function($){'use strict';if($('html').hasClass('oldie')&&(coreEngine.edit_mode===false)){require(['lib/jquery.columnizer'],function(){$(document).ready(function(){var $context,$tmp;if($("ul.ui-tabs-nav").length>0){$context=$($("ul.ui-tabs-nav li.ui-state-active a").attr('href'));}else{$context=$('.two-columns');}
+$tmp=$('.article',$context);$tmp.columnize({columns:2,lastNeverTallest:true});$(".column",$tmp).width(Math.floor($tmp.width()/2-(21-21/2)));});});}});

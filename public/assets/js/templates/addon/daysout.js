@@ -1,0 +1,3 @@
+
+(function($){"use strict";var Engine={processing:false,formSubmit:function(){$('.approve-form input[type=submit]').button().click(function(){var $form=$(this).closest('form'),data;if(Engine.processing===false){Engine.processing=true;data=$form.serialize()+'&'+this.name+'=true';coreEngine.ajax($form.prop('action'),data,Engine.submitCallback,'json');}});$('.approve-form').submit(function(){return false;});},submitCallback:function(result){if(result.isError===true){$.message(result.errorStr,'error');}else{$('<div>',{'title':"Success"}).text(result.data).dialog({close:function(){document.location='/addon/attendance';},buttons:{'OK':function(){$(this).dialog('close');}}});}
+Engine.processing=false;}};$(document).ready(function(){Engine.formSubmit();});}(jQuery));

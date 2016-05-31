@@ -1,0 +1,2 @@
+
+require(['jquery','lib/jquery.isotope'],function($){'use strict';var Engine={isotope:function(){var $photos=$('#photos');$photos.imagesLoaded(function(){$photos.isotope({itemSelector:'.item',masonry:{columnWidth:190},getSortData:{date:function($elem){return parseInt($elem.data('date'),10);}},sortBy:'date',sortAscending:false,animationEngine:'jquery'});});}};$(document).ready(function(){Engine.isotope();});});

@@ -1,0 +1,2 @@
+
+require(['jquery'],function($){'use strict';require(['templates/user/text_only']);var Engine={images:function(){var $main_image=$('#main_image'),imgs_per_row=4,total_rows=Math.ceil($main_image.find('img').length/imgs_per_row),i=0,$img;for(i;i<total_rows;i++){$img=$('img',$main_image.find('.row'+i));$img.width((760-$img.length)/$img.length).height($img.width()*471/760);}}};$(document).ready(function(){Engine.images();});});

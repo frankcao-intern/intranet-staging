@@ -1,0 +1,2 @@
+
+jQuery(function($){'use strict';var Engine={hashes:function(){if(window.location.hash){var hashstr=window.location.hash;$(hashstr).next().css('background-color','#EAE5DC').hide().fadeIn().fadeOut().fadeIn().fadeOut().fadeIn();}},title:function(){$("title").text("About fishNET");}};Engine.hashes();Engine.title();});

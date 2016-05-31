@@ -1,0 +1,2 @@
+
+require(['jquery','shared/team_pages','lib/jquery.cycle.all'],function($,teamPages){"use strict";var Engine={slider:function(){$('#tweet-cols').find('ul').cycle({fx:'scrollHorz',speed:500,timeout:0,allowPagerClickBubble:false,pager:'span.pager',next:'.pagination a.next',prev:'.pagination a.prev'});}};$(document).ready(function(){teamPages.calendar();teamPages.tabs();teamPages.hashes();Engine.slider();});});

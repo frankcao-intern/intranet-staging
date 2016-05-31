@@ -1,0 +1,2 @@
+
+require(['jquery'],function($){"use strict";$(document).ready(function(){$('a.priority-link').fancybox({type:'inline',openEffect:'elastic',closeEffect:'elastic',nextEffect:'fade',prevEffect:'fade',helpers:{title:{type:'inside'},overlay:{opacity:0.8,css:{'background-color':'#000'}}}});});});

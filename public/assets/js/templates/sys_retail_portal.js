@@ -1,0 +1,2 @@
+
+(function($){'use strict';var Engine={calendar:function(){var cal_id=$("#miniCalendar").text();$("#miniCalendar").empty();coreEngine.miniCalendar("miniCalendar",cal_id);},jqueryUI:{tabs:{init:function(){$("#tabs").tabs();$(".tabs-bottom .ui-tabs-nav, .tabs-bottom .ui-tabs-nav > *").removeClass("ui-corner-all ui-corner-top ui-corner-bottom");}}},jScroll:{init:function(element){$(element).jScrollPane();}}};$(document).ready(function(){Engine.calendar();Engine.jScroll.init('div.text');Engine.jqueryUI.tabs.init();});}(jQuery));

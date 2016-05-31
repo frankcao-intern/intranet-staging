@@ -1,0 +1,2 @@
+
+require(['jquery','shared/minicalendar','templates/user/monthly_digest'],function($){'use strict';var Engine={calendar:function(){var $miniCalendar=$("#miniCalendar"),cal_id=$miniCalendar.text();$miniCalendar.miniCalendar({cal_id:cal_id});}};$(document).ready(function(){Engine.calendar();$('.digest-nav').trigger('mouseleave');});});
