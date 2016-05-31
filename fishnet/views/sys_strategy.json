@@ -1,0 +1,33 @@
+{
+	
+	"desc":"Enter your team's description here.",
+	"subtitle":"",
+	"links":"[]",
+	"calendar":3,
+	"announcements": true,
+	"color":"black",
+	"buckets": [
+		{
+			"name": "tabs",
+			"section_id": ":id",
+			"tags": null,
+			"limit": null,
+			"featured": null,
+			"random": null,
+			"wordcount": null
+		}
+	],
+	"main_image":[],
+	"videoURL": "#"
+}
+
+
+/*{
+	"teaser":"This is the teaser",
+	"author": "empty",
+	"author_name": "Select this to disable the by line",
+	"article":"<p>Enter the article's main text here.</p>",
+	"main_image": [],
+	"related_info": "",
+	"videoURL": "#"
+}*/

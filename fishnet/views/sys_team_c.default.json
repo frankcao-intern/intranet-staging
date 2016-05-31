@@ -1,0 +1,26 @@
+{
+	"desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	"subtitle":"Lorem Ipsum",
+	"links":"[]",
+	"announcements":1,
+	"calendar":1,
+	"color": "black",
+	"buckets": [
+		{
+			"name": "tabs",
+			"section_id": 1,
+			"tags": "Team Page Tab",
+			"limit": null,
+			"featured": null,
+            "wordcount": null,
+			"random": null
+		}
+	],
+	"images":[
+		{
+			"src":"d544af5ef357e3ba696e2cd9da15d327fd56fd32.png",
+			"alt":"Dummy",
+			"credit": "The Intranet"
+		}
+	]
+}

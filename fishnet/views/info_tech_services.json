@@ -1,0 +1,17 @@
+{
+	"subtitle":"",
+	"links":"[]",
+	"announcements": true,
+	"color":"#fabc00",
+	"buckets": [
+		{
+			"name": "tabs",
+			"section_id": ":id",
+			"tags": null,
+			"limit": null,
+			"featured": null,
+			"random": null,
+			"wordcount": null
+		}
+	]
+}

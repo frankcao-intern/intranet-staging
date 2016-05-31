@@ -1,0 +1,7 @@
+{
+	"back_link_id": 1,
+	"color": "#5E759E",
+	"model_before_name":"stores",
+	"model_before_func":"getSpecialtyStores",
+	"model_before_param":null
+}

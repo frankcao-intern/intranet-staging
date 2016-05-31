@@ -1,0 +1,7 @@
+{
+	"back_link_id": 1,
+	"color": "#000000",
+	"model_before_name":"tags",
+	"model_before_func":"getPopularity",
+	"model_before_param": ":id"
+}

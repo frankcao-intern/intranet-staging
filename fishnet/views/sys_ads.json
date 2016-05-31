@@ -1,0 +1,22 @@
+{
+	"back_link_id": 1,
+	"color": "#5E759E",
+	"buckets": [{
+		"name":"ads",
+		"section_id":19,
+		"tags":"Advertising",
+		"limit":null,
+		"featured":null,
+		"wordcount":null,
+		"random":null
+	},
+	{
+		"name":"placements",
+		"section_id":20,
+		"tags":"Placement",
+		"limit":null,
+		"featured":null,
+		"wordcount":null,
+		"random":null
+	}]
+}

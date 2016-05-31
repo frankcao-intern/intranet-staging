@@ -1,0 +1,14 @@
+{
+	"teaser":"This is the teaser",
+	"author": "empty",
+	"author_name": "Select this to disable the by line",
+	"article":"<p>Enter the article's main text here.</p>",
+	"main_image":[{
+			"src":"d544af5ef357e3ba696e2cd9da15d327fd56fd32.png",
+			"alt":"Dummy image",
+			"credit": "",
+			"desc": "",
+			"date": 500270040
+	}],
+	"related_info": ""
+}

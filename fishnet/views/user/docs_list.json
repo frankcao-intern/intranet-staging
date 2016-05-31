@@ -1,0 +1,23 @@
+{
+	"columns":"3",
+	"article": "",
+	"article1": "",
+	"teaser": "",
+	"author": "empty",
+	"author_name": "Select this to disable the by line",
+	"main_image":[],
+	"related_info": "",
+	"buckets": [{
+		"name": "pages",
+		"section_id": ":id",
+		"tags": null,
+		"limit": null,
+		"featured": null,
+		"random": null,
+		"wordcount": null
+	}],
+	"model_after_name": "documents",
+	"model_after_func": "fromKT",
+	"model_after_param": [null, true],
+	"last_mod_date": "true"
+}

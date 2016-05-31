@@ -1,0 +1,28 @@
+{
+	"desc":"Enter your team's description here.",
+	"subtitle":"",
+	"links":"[]",
+	"calendar": 3,
+	"announcements": true,
+	"color":"black",
+	"buckets": [
+		{
+			"name": "news",
+			"section_id": 2,
+			"tags": null,
+			"limit": 12,
+			"featured": null,
+			"random": null,
+			"wordcount": 45
+		},
+		{
+			"name": "tabs",
+			"section_id": ":id",
+			"tags": null,
+			"limit": null,
+			"featured": null,
+			"random": null,
+            "wordcount": null
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"subtitle":"",
+	"links":"[]",
+	"calendar":163,
+	"announcements": true,
+	"color":"black",
+	"buckets": [
+		{
+			"name": "articles",
+			"section_id": 169,
+			"tags": null,
+			"limit": 5,
+			"featured": null,
+			"random": null,
+			"wordcount": 90
+		},
+		{
+			"name": "tabs",
+			"section_id": 162,
+			"tags": null,
+			"limit": null,
+			"featured": null,
+			"random": null,
+			"wordcount": null
+		}
+	],
+	"model_before_name": "stores",
+	"model_before_func": "getSpecialtyStores",
+	"model_before_param": null
+}

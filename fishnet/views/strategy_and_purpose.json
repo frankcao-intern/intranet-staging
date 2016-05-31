@@ -1,0 +1,28 @@
+{
+	"subtitle":"",
+	"links":"[]",
+	"calendar":3,
+	"announcements": true,
+	"color":"black",
+	"buckets": [
+				{
+			"name": "articles",
+			"section_id": 169,
+			"tags": null,
+			"limit": 5,
+			"featured": null,
+			"random": null,
+			"wordcount": 90
+		},
+		{
+			"name": "tabs",
+			"section_id": ":id",
+			"tags": null,
+			"limit": null,
+			"featured": null,
+			"random": null,
+			"wordcount": null
+		}
+	]
+}
+

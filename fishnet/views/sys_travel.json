@@ -1,0 +1,15 @@
+{
+	"back_link_id":1,
+	"color":"#5E759E",
+	"buckets": [
+		{
+			"name": "hotels",
+			"section_id": 7,
+			"tags": "hotel",
+			"limit": null,
+			"featured": null,
+			"random": null,
+			"wordcount": null
+		}
+	]
+}

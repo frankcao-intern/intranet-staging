@@ -1,0 +1,112 @@
+{
+    "subtitle": "WEEK OF APRIL 8, 2011",
+    "buckets": [
+        {
+            "name": "style",
+			"title": "We've Got Style",
+            "section_id": 16,
+            "tags": "null",
+            "limit": 1,
+            "featured": null,
+            "wordcount": 15,
+            "random": null
+        },
+        {
+            "name": "product",
+            "title": "Our Product",
+            "section_id": 6,
+            "tags": "null",
+            "limit": 1,
+            "featured": null,
+            "wordcount": 15,
+            "random": null
+        },
+        {
+            "name": "scoop",
+            "title": "Store Scoop Blog Feed",
+            "section_id": 17,
+            "tags": "null",
+            "limit": 5,
+            "featured": null,
+            "wordcount": 5,
+            "random": null
+        }
+    ],
+    "links": "[]",
+    "announcements": 1,
+    "calendar": 3,
+    "news": [
+        {
+            "image": {
+                "src": "d544af5ef357e3ba696e2cd9da15d327fd56fd32.png",
+                "alt": ""
+            },
+            "text": "Enim aliquet. Ac facilisis arcu scelerisque, adipiscing mus purus! Amet porta, non? Elit odio facilisis adipiscing lundium sed dis massa scelerisque proin natoque, integer porta cum! Tincidunt lorem, nec est, ridiculus urna, dapibus nec lorem vel augue! Et augue sed, etiam vut, turpis nunc amet! Odio lundium penatibus velit. Etiam! Dignissim quis ut ridiculus, tincidunt tincidunt turpis. A pellentesque habitasse, non augue odio elementum rhoncus tempor egestas in nunc nunc velit cras, vel risus elementum duis ut turpis, facilisis dapibus cursus elementum ac, arcu. A ut natoque arcu. Ultricies scelerisque nec penatibus nisi vel nisi, augue lectus scelerisque dignissim? Ultrices, phasellus in in duis adipiscing? Vel phasellus porta. Tristique mus sit sit platea montes! Platea lorem pulvinar montes elementum risus.",
+            "id": "memos",
+            "name": "memos + directives"
+        },
+        {
+            "image": {
+                "src": "d544af5ef357e3ba696e2cd9da15d327fd56fd32.png",
+                "alt": ""
+            },
+            "text": "Augue parturient adipiscing lectus natoque tincidunt elit, augue habitasse in phasellus turpis cras amet, habitasse elit tincidunt duis dignissim lundium, aliquam velit, et! Tristique aliquet dolor, penatibus a mattis tempor et enim, parturient. Odio massa lorem mattis. Porttitor tortor, lorem augue arcu lundium rhoncus sit dapibus duis? Urna risus urna quis?",
+            "id": "product",
+            "name": "product education"
+        },
+        {
+            "image": {
+                "src": "d544af5ef357e3ba696e2cd9da15d327fd56fd32.png",
+                "alt": ""
+            },
+            "text": "Ac. Lorem, magna, cras porta magna pulvinar, elementum. Urna lorem? Parturient? Vut ut eros magna, tempor magna proin, non, ac enim quis duis pulvinar. Placerat mid! Urna placerat sed. Facilisis lectus, sit eu purus? Phasellus duis nascetur adipiscing lorem, placerat scelerisque urna nisi nec adipiscing, ultrices ac, porta turpis aliquam elementum proin tincidunt, egestas! A lacus cursus arcu nec? Nec ultricies adipiscing. A hac scelerisque. Placerat in. Pulvinar in, penatibus aliquet enim tempor platea et rhoncus dis in magnis! Amet penatibus habitasse tortor! Dapibus, vel, porta rhoncus et scelerisque amet tortor magnis mattis est sed! Risus rhoncus, aliquam integer phasellus nunc porta dis purus, purus nec quis ac ultrices placerat placerat platea, lorem. Vel facilisis tincidunt, mattis elit vel.Etiam eu penatibus? Enim elementum, nec sit, adipiscing, penatibus, pid lorem, scelerisque dolor porta cum, in auctor ut phasellus, nisi turpis eros dis, dolor, a, odio montes odio sociis, pid porttitor elementum magna lorem integer. Mid odio pulvinar et pellentesque magna! Enim. Tempor dis, adipiscing, enim nunc? Pellentesque massa pulvinar ultrices urna? Nisi et sociis, lundium pid odio porttitor ut placerat dapibus lectus in vel placerat dignissim elementum vel pulvinar amet odio ac. Platea ut eu? Mattis lectus etiam enim ultricies. Turpis tristique, cursus mauris nec scelerisque, ridiculus massa, montes, mus. Et turpis scelerisque in? Aenean nunc integer adipiscing aenean rhoncus turpis in, pulvinar, aliquet mid et enim vel, placerat! Etiam velit dictumst turpis ut. Mid et vel mattis.",
+            "id": "marketing",
+            "name": "marketing"
+        },
+        {
+            "image": {
+                "src": "d544af5ef357e3ba696e2cd9da15d327fd56fd32.png",
+                "alt": ""
+            },
+            "text": "Tristique aliquet dolor, penatibus a mattis tempor et enim, parturient. Odio massa lorem mattis. Porttitor tortor, lorem augue arcu lundium rhoncus sit dapibus duis? Urna risus urna quis? Odio, tincidunt dolor nunc? Habitasse dolor nisi scelerisque! Amet porta ultrices magnis phasellus nunc et diam nisi nisi facilisis, adipiscing, dolor odio, placerat, amet sed sociis pulvinar diam phasellus facilisis placerat ac! Elit etiam pulvinar, adipiscing ridiculus turpis, urna dis est et aliquet dignissim, elementum, aenean. Scelerisque? Tincidunt rhoncus facilisis? Amet magnis! Scelerisque amet lundium aliquet tristique a nec, aliquet et porta, velit eros, odio in platea cras.",
+            "id": "visuals",
+            "name": "visuals"
+        },
+        {
+            "image": {
+                "src": "d544af5ef357e3ba696e2cd9da15d327fd56fd32.png",
+                "alt": ""
+            },
+            "text": "Elementum, adipiscing aenean aliquet, ultricies urna. Placerat odio, vel facilisis amet enim hac ultricies sed placerat, turpis nisi phasellus porta cras et natoque mauris. Augue integer et nunc, porta urna habitasse penatibus! Adipiscing. Aenean lundium diam. Amet cum dolor, nec, nec sagittis montes tortor nunc pulvinar, integer pellentesque tincidunt nisi, penatibus penatibus, scelerisque diam est, lectus ultrices pid nunc sit? Quis placerat magna dignissim, adipiscing odio et odio, odio adipiscing et hac purus cum augue ridiculus facilisis mauris? Habitasse amet! Porta et, sociis urna, amet vel proin lectus! Mattis magnis proin urna augue sed et, tincidunt turpis porttitor nunc, ac, ac mattis. Tempor pulvinar integer habitasse odio? Mid. Aliquet turpis, integer nec nisi facilisis, porta. Enim amet parturient ridiculus purus. Adipiscing, integer amet! Aliquet turpis urna purus, sed placerat, aliquam! In, placerat magna ridiculus mauris, nisi tincidunt turpis arcu! Dictumst odio, etiam dapibus et nisi nisi? Urna penatibus massa cursus amet porta, sit! Eu placerat aliquam et est cras dolor quis quis facilisis habitasse? Ut ac! Dis, dis vel, nec, in ac, tincidunt urna elementum! Sed ac. Eu in, dictumst magnis elementum est vel tincidunt nunc lacus, massa lundium velit aenean? Integer a nec parturient scelerisque, odio, egestas ultrices augue ultricies dignissim urna sit sed! Pellentesque nec tempor vel mus in, in a non ac aliquam amet nunc urna magnis in enim ac, massa augue magnis odio auctor eu. Urna velit odio? Magnis, in mus ut nunc montes etiam. Duis odio mid tempor, cras vel dapibus magnis vel dolor turpis? Pulvinar porttitor ultricies duis porttitor rhoncus! Mid mus? Urna odio egestas est, nisi non. Mid, adipiscing, pulvinar habitasse! Sit porttitor phasellus penatibus odio eros, lundium cras amet enim. Scelerisque aenean! Ultrices porta adipiscing, risus, porta ut! Natoque et non aenean, turpis lorem eros porttitor amet placerat pid elit.",
+            "id": "ecommerce",
+            "name": "e-commerce"
+        },
+        {
+            "image": {
+                "src": "d544af5ef357e3ba696e2cd9da15d327fd56fd32.png",
+                "alt": ""
+            },
+            "text": "Elementum, adipiscing aenean aliquet, ultricies urna. Placerat odio, vel facilisis amet enim hac ultricies sed placerat, turpis nisi phasellus porta cras et natoque mauris. Augue integer et nunc, porta urna habitasse penatibus! Porta et, sociis urna, amet vel proin lectus! Mattis magnis proin urna augue sed et, tincidunt turpis porttitor nunc, ac, ac mattis. Tempor pulvinar integer habitasse odio? Mid. Aliquet turpis, integer nec nisi facilisis, porta. Enim amet parturient ridiculus purus. Adipiscing, integer amet! Aliquet turpis urna purus, sed placerat, aliquam! In, placerat magna ridiculus mauris, nisi tincidunt turpis arcu! Dictumst odio, etiam dapibus et nisi nisi? Urna penatibus massa cursus amet porta, sit! Eu placerat aliquam et est cras dolor quis quis facilisis habitasse? Ut ac! Dis, dis vel, nec, in ac, tincidunt urna elementum! Sed ac. Eu in, dictumst magnis elementum est vel tincidunt nunc lacus, massa lundium velit aenean? Integer a nec parturient scelerisque, odio, egestas ultrices augue ultricies dignissim urna sit sed! Pellentesque nec tempor vel mus in, in a non ac aliquam amet nunc urna magnis in enim ac, massa augue magnis odio auctor eu. Urna velit odio? Magnis, in mus ut nunc montes etiam. Duis odio mid tempor, cras vel dapibus magnis vel dolor turpis? Pulvinar porttitor ultricies duis porttitor rhoncus! Mid mus? Urna odio egestas est, nisi non. Mid, adipiscing, pulvinar habitasse! Sit porttitor phasellus penatibus odio eros, lundium cras amet enim. Scelerisque aenean! Ultrices porta adipiscing, risus, porta ut! Natoque et non aenean, turpis lorem eros porttitor amet placerat pid elit. Dictumst sed egestas sit et porta cum integer. Dapibus dap",
+            "id": "buying",
+            "name": "buying"
+        },
+        {
+            "image": {
+                "src": "d544af5ef357e3ba696e2cd9da15d327fd56fd32.png",
+                "alt": ""
+            },
+            "text": "Elementum, adipiscing aenean aliquet, ultricies urna.",
+            "id": "operations",
+            "name": "operations"
+        },
+        {
+            "image": {
+                "src": "d544af5ef357e3ba696e2cd9da15d327fd56fd32.png",
+                "alt": ""
+            },
+            "text": "Elementum, adipiscing aenean aliquet, ultricies urna. Placerat odio, vel facilisis amet enim hac ultricies sed placerat, turpis nisi phasellus porta cras et natoque mauris. Augue integer et nunc, porta urna habitasse penatibus! Adipiscing. Aenean lundium diam. Amet cum dolor, nec, nec sagittis montes tortor nunc pulvinar, integer pellentesque tincidunt nisi, penatibus penatibus, scelerisque diam est, lectus ultrices pid nunc sit? Quis placerat magna dignissim, adipiscing odio et odio, odio adipiscing et hac purus cum augue ridiculus facilisis mauris? Habitasse amet! Porta et, sociis urna, amet vel proin lectus! Mattis magnis proin urna augue sed et, tincidunt turpis porttitor nunc, ac, ac mattis. Tempor pulvinar integer habitasse odio? Mid. Aliquet turpis, integer nec nisi facilisis, porta. Enim amet parturient ridiculus purus. Adipiscing, integer amet! Aliquet turpis urna purus, sed placerat, aliquam! In, placerat magna ridiculus mauris, nisi tincidunt turpis arcu! Dictumst odio, etiam dapibus et nisi nisi? Urna penatibus massa cursus amet porta, sit! Eu placerat aliquam et est cras dolor quis quis facilisis habitasse? Ut ac! Dis, dis vel, nec, in ac, tincidunt urna elementum! Sed ac. Eu in, dictumst magnis elementum est vel tincidunt nunc lacus, massa lundium velit aenean? Integer a nec parturient scelerisque, odio, egestas ultrices augue ultricies dignissim urna sit sed! Pellentesque nec tempor vel mus in, in a non ac aliquam amet nunc urna magnis in enim ac, massa augue magnis odio auctor eu. Urna velit odio? Magnis, in mus ut nunc montes etiam. Duis odio mid tempor, cras vel dapibus magnis vel dolor turpis? Pulvinar porttitor ultricies duis porttitor rhoncus! Mid mus? Urna odio egestas est, nisi non. Mid, adipiscing, pulvinar habitasse! Sit porttitor phasellus penatibus odio eros, lundium cras amet enim. Scelerisque aenean! Ultrices porta adipiscing, risus, porta ut! Natoque et non aenean.",
+            "id": "hr",
+            "name": "human resources"
+        }
+    ]
+}

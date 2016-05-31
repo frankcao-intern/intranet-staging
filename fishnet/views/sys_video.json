@@ -1,0 +1,25 @@
+{
+	"back_link_id": 1,
+	"color": "#5E759E",
+	"buckets": [{
+		"name": "featured",
+		"section_id": ":id",
+		"tags": null,
+		"limit": null,
+		"featured": 1,
+		"random": null,
+		"wordcount": 45
+	},
+	{
+		"name": "random",
+		"section_id": ":id",
+		"tags": null,
+		"limit": 4,
+		"featured": null,
+		"random": 4,
+		"wordcount": 15
+	}],
+	"model_before_name": "tags",
+	"model_before_func": "getPopularity",
+	"model_before_param": 13
+}

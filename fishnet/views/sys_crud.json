@@ -1,0 +1,18 @@
+{
+	"back_link_id": 1,
+	"tables": {
+		"users": {
+			"columns": "user_id, person_id, payroll_id, display_name, title, phonenumber, fax, location, hidden",
+			"table_name": "users"
+		},
+		"specialty": {
+			"columns": "id, number, name, street_address1, street_address2, city, state, zip, country, phone, fax, contact_name, link, latitude, longitude",
+			"table_name": "stores",
+			"where": ["type", "specialty"]
+		},
+		"suggested_stores": {
+			"columns": "*",
+			"table_name": "suggested_stores"
+		}
+	}
+}

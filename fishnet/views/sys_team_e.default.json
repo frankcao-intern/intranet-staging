@@ -1,0 +1,46 @@
+{
+	"desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+	"subtitle":"Lorem Ipsum",
+	"links":"[]",
+	"announcements":1,
+	"calendar":1,
+	"color":"#C1BD57",
+	"buckets": [
+		{
+			"name": "section1",
+			"section_id": 1,
+			"tags": null,
+			"limit": 1,
+			"featured": null,
+			"random": null,
+			"wordcount": 45
+		},
+		{
+			"name": "section2",
+			"section_id": 1,
+			"tags": null,
+			"limit": 1,
+			"featured": null,
+			"random": null,
+			"wordcount": 45
+		},
+		{
+			"name": "section3",
+			"section_id": 1,
+			"tags": null,
+			"limit": 1,
+			"featured": null,
+			"random": null,
+			"wordcount": 45
+		},
+		{
+			"name": "tabs",
+			"section_id": 1,
+			"tags": "Team Page Tab",
+			"limit": null,
+			"featured": null,
+			"random": null,
+            "wordcount": null
+		}
+	]
+}

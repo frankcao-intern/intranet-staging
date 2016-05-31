@@ -1,0 +1,12 @@
+{
+	"teaser":"This is the teaser",
+	"author": "empty",
+	"author_name": "Select this to disable the by line",
+	"store_number":"0",
+	"opening_date":"00-00-0000",
+	"city": "City",
+	"state":"ST",
+	"store_type": "Retail",
+	"article":"<p>Enter the article's main text here.</p>",
+	"main_image":[]
+}
