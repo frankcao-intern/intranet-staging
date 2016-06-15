@@ -1,4 +1,7 @@
 <?php
+
+# CURRENTLY WIP
+
 /**
  * @author cravelo
  */
@@ -214,7 +217,7 @@ class Pages extends CI_Model {
 		$section_id     = ($section_id == '0') ? "WHERE section_id IS NULL" : $section_id;
 		$limit = isset($limit) ? "LIMIT $offset, $limit" : '';
 
-		$search_sel = "
+		/*$search_sel = "
 			SELECT obj_id, obj_type, section_id, section_title, page_title, page_content as revision_text,
 				page_date_published,
 				(IF (title_relevance = 0, content_relevance, (title_relevance + 0.1) + content_relevance)) AS relevance
@@ -227,13 +230,35 @@ class Pages extends CI_Model {
 				$section_id
 			ORDER BY relevance DESC, page_date_published DESC
 			$limit
+		";*/
+
+
+		// code that should consider tags and permissions with the implication that searchindex is populated with tags and permissions
+
+		$this->load->model("permissions"); // not sure if needed
+		$user_id = $this->session->userdata("user_id");
+		$search_sel = "
+			SELECT obj_id, obj_type, section_id, section_title, page_title, page_content as revision_text, page_date_published, tag_name, group_id,
+				(IF (title_relevance = 0, content_relevance, (title_relevance + 0.1) + content_relevance)) AS relevance
+			FROM
+				(SELECT *,
+				(MATCH(page_title) AGAINST (? IN BOOLEAN MODE)) AS title_relevance,
+				(MATCH(page_content) AGAINST (? IN BOOLEAN MODE)) AS content_relevance,
+				(MATCH(tag_name) AGAINST (? IN BOOLEAN MODE)) AS tag_relevance
+				FROM fn_searchindex, fn_groups_users
+				HAVING (title_relevance + content_relevance + tag_relevance) > 0) relevance
+				$section_id
+			WHERE fn_groups_users.user_id=? AND fn_searchindex.group_id=fn_groups_users.group_id # should check for permissions (ask bout access)
+			GROUP BY page_title # make sure this actually works, Frank
+			ORDER BY relevance DESC, page_date_published DESC
+			$limit
 		";
 		//echo $search_sel;
 
 		/**
 		 * @var CI_DB_result $search_query
 		 */
-		$search_query = $this->db->query($search_sel, array($query, $query));
+		$search_query = $this->db->query($search_sel, array($query, $query, $query, $user_id)); # temp comment: added 2 variables to pass into SQL
 		//echo $this->db->last_query();
 
 		if ($search_query and ($search_query->num_rows() > 0)) {
