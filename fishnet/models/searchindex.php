@@ -24,7 +24,7 @@ class Searchindex extends CI_Model {
 
 		if ($this->db->affected_rows() > 0){
 			return $this->db->insert_id();
-		}else{
+		} else{
 			return false;
 		}
 	}
@@ -86,7 +86,8 @@ class Searchindex extends CI_Model {
 					$value .= $this->db->escape($row['date_published']).",";
 					$value .= $this->db->escape($row['section_id']).",";
 					$value .= $this->db->escape($row['section_title']).",";
-					$value .= $this->db->escape($row['tag_name']); // Added by Frank!
+					$value .= $this->db->escape($row['tag_name']).","; // Added by Frank!
+					$value .= $this->db->escape($row['groupd_id']); // Added by Frank!
 					$value .= ")";
 
 					$insertValues[] = $value;
