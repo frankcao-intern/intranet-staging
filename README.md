@@ -3,7 +3,13 @@
 A branch of *Eileen Fisher's* intranet site repo for intern Frank to not mess everything up!
 
 Currently working on:
-- Searchable "tags" and considering "permissions" in search_sel
+- Searchable "tags"
+- Permissions in search
+- Using SQL "REPLACE" to account for samey tag searches
 
 Progress:
-- Rough code committed here, need to test on external staging site
+- Tags are currently searchable! XD
+	- Tags have a relevance of "1"
+	- Tags are grouped by "page_id"
+		- The entry with largest "relevance" is taken, rest are dropped
+- searchindex (which contains the rebuild search index function) should now rebuild with needed info
