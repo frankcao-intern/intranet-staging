@@ -5,7 +5,6 @@ A branch of *Eileen Fisher's* intranet site repo for intern Frank to not mess ev
 Currently working on:
 - Searchable "tags"
 - Permissions in search
-- Using SQL "REPLACE" to account for samey tag searches
 
 Progress:
 - Tags are currently searchable! XD
@@ -18,3 +17,8 @@ Progress:
 
 Changes:
 - SET GLOBAL max_allowed_packet=1073741824, to allow for larger search index!
+
+Possibilities:
+- Use SQL REPLACE as well as UNION to string parse before searching
+	- Might be too performance heavy... projection of roughly 6x more working
+- Multi tag searching? This requires string parsing as well though...
