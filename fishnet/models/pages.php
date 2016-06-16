@@ -214,8 +214,7 @@ class Pages extends CI_Model {
 		$section_id     = ($section_id == '0') ? "WHERE section_id IS NULL" : $section_id;
 		$limit = isset($limit) ? "LIMIT $offset, $limit" : '';
 
-		$perm_read    = PERM_READ;
-		$visitor      = $this->session->userdata('user_id');
+		$perm_read = PERM_READ;
 
 		$search_sel = "
 			SELECT obj_id, obj_type, section_id, section_title, page_title, page_content as revision_text,
@@ -228,10 +227,9 @@ class Pages extends CI_Model {
 					(MATCH(tag_name) AGAINST (? in BOOLEAN MODE)) AS tag_relevance
 				FROM fn_searchindex
 				HAVING (title_relevance + content_relevance + content_relevance + tag_relevance) > 0) relevance
-				$section_id, fn_groups_users
-			JOIN fn_groups_users ON fn_groups_users.user_id=$visitor
-			WHERE access & $perm_read=$perm_read
-			GROUP BY page_id
+				$section_id
+			WHERE access & $perm_read=$perm_read # should filter only results where correct access is given
+			GROUP BY page_id # should group by MAX relevance and same page_id (need to squash different tagged pages into one entry)
 			ORDER BY relevance DESC, page_date_published DESC
 			$limit
 		";
@@ -262,17 +260,18 @@ class Pages extends CI_Model {
 		$section_id     = isset($section_id) ? "WHERE section_id = $section_id" : '';
 		$section_id     = ($section_id == '0') ? "WHERE section_id IS NULL" : $section_id;
 
+		$perm_read    = PERM_READ;
 		$search_sel = "
 			SELECT COUNT(*) AS results_count
 			FROM
 				(SELECT
 					(MATCH(page_title) AGAINST (? IN BOOLEAN MODE)) AS title_relevance,
 					(MATCH(page_content) AGAINST (? IN BOOLEAN MODE)) AS content_relevance,
-					(MATCH(tag_name) AGAINST (? in BOOLEAN MODE)) AS tag_relevance
-				FROM fn_searchindex, fn_groups_users
+					(MATCH(tag_name) AGAINST (? in BOOLEAN MODE)) AS tag_relevance,
+					access
+				FROM fn_searchindex
 				HAVING (title_relevance + content_relevance + tag_relevance) > 0) relevance
 				$section_id
-			JOIN fn_groups_users ON fn_groups_users.user_id=$visitor
 			WHERE access & $perm_read=$perm_read
 		";
 		//echo $search_sel;
