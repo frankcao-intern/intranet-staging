@@ -219,7 +219,7 @@ class Pages extends CI_Model {
 
 		$search_sel = "
 			SELECT obj_id, obj_type, section_id, section_title, page_title, page_content as revision_text,
-				page_date_published, tag_name, page_id,
+				page_date_published, tag_name, page_id, access,
 				(IF (title_relevance = 0, content_relevance + tag_relevance, MAX((title_relevance + 0.1) + content_relevance + tag_relevance))) AS relevance
 			FROM
 				(SELECT *,
@@ -228,7 +228,9 @@ class Pages extends CI_Model {
 					(MATCH(tag_name) AGAINST (? in BOOLEAN MODE)) AS tag_relevance
 				FROM fn_searchindex
 				HAVING (title_relevance + content_relevance + content_relevance + tag_relevance) > 0) relevance
-				$section_id
+				$section_id, fn_groups_users
+			JOIN fn_groups_users ON fn_groups_users.user_id=$visitor
+			WHERE access & $perm_read=$perm_read
 			GROUP BY page_id
 			ORDER BY relevance DESC, page_date_published DESC
 			$limit
@@ -267,9 +269,11 @@ class Pages extends CI_Model {
 					(MATCH(page_title) AGAINST (? IN BOOLEAN MODE)) AS title_relevance,
 					(MATCH(page_content) AGAINST (? IN BOOLEAN MODE)) AS content_relevance,
 					(MATCH(tag_name) AGAINST (? in BOOLEAN MODE)) AS tag_relevance
-				FROM fn_searchindex
+				FROM fn_searchindex, fn_groups_users
 				HAVING (title_relevance + content_relevance + tag_relevance) > 0) relevance
 				$section_id
+			JOIN fn_groups_users ON fn_groups_users.user_id=$visitor
+			WHERE access & $perm_read=$perm_read
 		";
 		//echo $search_sel;
 

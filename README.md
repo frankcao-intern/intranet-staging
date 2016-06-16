@@ -13,3 +13,8 @@ Progress:
 	- Tags are grouped by "page_id"
 		- The entry with largest "relevance" is taken, rest are dropped
 - searchindex (which contains the rebuild search index function) should now rebuild with needed info
+	- Rebuilds with tag_name and access now!
+- Permissions and "access" should now be considered in search!
+
+Changes:
+- SET GLOBAL max_allowed_packet=1073741824, to allow for larger search index!

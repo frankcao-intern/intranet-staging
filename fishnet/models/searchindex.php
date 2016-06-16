@@ -53,7 +53,7 @@ class Searchindex extends CI_Model {
 
 		// @date 6/9 - refactored sql to take in tag names!
 		$query = $this->db->query("
-			SELECT rev.*, fn_pages.title, fn_pages.date_published, rel.section_id, sections.title as section_title, fn_tags.tag_name, fn_pages.page_id
+			SELECT rev.*, fn_pages.title, fn_pages.date_published, rel.section_id, sections.title as section_title, fn_tags.tag_name, fn_pages.page_id, fn_permissions.access
 			FROM (SELECT * FROM (
 					SELECT r.page_id, r.revision_text
 					FROM fn_revisions r
@@ -90,19 +90,20 @@ class Searchindex extends CI_Model {
 					$value .= $this->db->escape($row['section_id']).",";
 					$value .= $this->db->escape($row['section_title']).",";
 					$value .= $this->db->escape($row['tag_name']).","; // Added by Frank!
-					$value .= $this->db->escape($row['page_id']); // Added by Frank!
+					$value .= $this->db->escape($row['page_id']).","; // Added by Frank!
+					$value .= $this->db->escape($row['access']); // Added by Frank!
 					$value .= ")";
 
 					$insertValues[] = $value;
 
 					if (($i != 0) and (($i % 50) == 0) or ($i == ($len - 1))){
 						$strInsertQuery = "INSERT INTO fn_searchindex(obj_id, obj_type, page_title, page_content,
-								page_date_published, section_id, section_title, tag_name) VALUES ";
+								page_date_published, section_id, section_title, tag_name, page_id, access) VALUES ";
 						$strInsertQuery .= implode(",", $insertValues);
 						$strInsertQuery .= " ON DUPLICATE KEY UPDATE obj_id=VALUES(obj_id), obj_type=VALUES(obj_type),
 								page_title=VALUES(page_title), page_content=VALUES(page_content),
 								page_date_published=VALUES(page_date_published), section_id=VALUES(section_id),
-								section_title=VALUES(section_title), tag_name=VALUES(tag_name), page_id=VALUES(page_id)";
+								section_title=VALUES(section_title), tag_name=VALUES(tag_name), page_id=VALUES(page_id), access=VALUES(access)";
 
 						//echo "$i of ".($len - 1)."<br><br>";
 						$this->db->query($strInsertQuery);
