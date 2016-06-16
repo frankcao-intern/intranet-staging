@@ -265,9 +265,10 @@ class Pages extends CI_Model {
 			FROM
 				(SELECT
 					(MATCH(page_title) AGAINST (? IN BOOLEAN MODE)) AS title_relevance,
-					(MATCH(page_content) AGAINST (? IN BOOLEAN MODE)) AS content_relevance
+					(MATCH(page_content) AGAINST (? IN BOOLEAN MODE)) AS content_relevance,
+					(MATCH(tag_name) AGAINST (? in BOOLEAN MODE)) AS tag_relevance
 				FROM fn_searchindex
-				HAVING (title_relevance + content_relevance) > 0) relevance
+				HAVING (title_relevance + content_relevance + tag_relevance) > 0) relevance
 				$section_id
 		";
 		//echo $search_sel;
@@ -275,7 +276,7 @@ class Pages extends CI_Model {
 		/**
 		 * @var CI_DB_result $search_query
 		 */
-		$search_query = $this->db->query($search_sel, array($query, $query));
+		$search_query = $this->db->query($search_sel, array($query, $query, $query));
 		//echo $this->db->last_query();
 
 		if ($search_query and ($search_query->num_rows() > 0)) {
