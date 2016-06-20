@@ -1,4 +1,4 @@
-# Fishnet - staging intranet branch
+# Fishnet - development intranet branch
 
 A branch of *Eileen Fisher's* intranet site repo for intern Frank to not mess everything up!
 
