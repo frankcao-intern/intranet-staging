@@ -218,7 +218,7 @@ class Pages extends CI_Model {
 
 		$search_sel = "
 			SELECT obj_id, obj_type, section_id, section_title, page_title, page_content as revision_text,
-				page_date_published, tag_name, page_id, access,
+				page_date_published, tag_name, tag_id, access,
 				(IF (title_relevance = 0, content_relevance + tag_relevance, MAX((title_relevance + 0.1) + content_relevance + tag_relevance))) AS relevance
 			FROM
 				(SELECT *,
@@ -229,7 +229,7 @@ class Pages extends CI_Model {
 				HAVING (title_relevance + content_relevance + content_relevance + tag_relevance) > 0) relevance
 				$section_id
 			WHERE access & $perm_read=$perm_read # should filter only results where correct access is given
-			GROUP BY page_id # should group by MAX relevance and same page_id (need to squash different tagged pages into one entry)
+			GROUP BY obj_id # should group by MAX relevance and same page_id (need to squash different tagged pages into one entry)
 			ORDER BY relevance DESC, page_date_published DESC
 			$limit
 		";
@@ -268,11 +268,13 @@ class Pages extends CI_Model {
 					(MATCH(page_title) AGAINST (? IN BOOLEAN MODE)) AS title_relevance,
 					(MATCH(page_content) AGAINST (? IN BOOLEAN MODE)) AS content_relevance,
 					(MATCH(tag_name) AGAINST (? in BOOLEAN MODE)) AS tag_relevance,
-					access
+					access,
+					obj_id
 				FROM fn_searchindex
 				HAVING (title_relevance + content_relevance + tag_relevance) > 0) relevance
 				$section_id
 			WHERE access & $perm_read=$perm_read
+			GROUP BY obj_id
 		";
 		//echo $search_sel;
 
