@@ -36,6 +36,5 @@ DEMO SQL:
 					(MATCH(tag_name) AGAINST ("recognition" in BOOLEAN MODE)) AS tag_relevance
 				FROM fn_searchindex
 				HAVING (title_relevance + content_relevance + content_relevance + tag_relevance) > 0) relevance
-				$section_id
 			GROUP BY obj_id
 			ORDER BY relevance DESC, page_date_published DESC
