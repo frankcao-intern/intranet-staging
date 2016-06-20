@@ -262,19 +262,19 @@ class Pages extends CI_Model {
 
 		$perm_read    = PERM_READ;
 		$search_sel = "
-			SELECT COUNT(*) AS results_count
+			SELECT COUNT(*)  AS results_count
 			FROM
-				(SELECT
+			(SELECT *, COUNT(*)
+			FROM
+				(SELECT *,
 					(MATCH(page_title) AGAINST (? IN BOOLEAN MODE)) AS title_relevance,
 					(MATCH(page_content) AGAINST (? IN BOOLEAN MODE)) AS content_relevance,
-					(MATCH(tag_name) AGAINST (? in BOOLEAN MODE)) AS tag_relevance,
-					access,
-					obj_id
+					(MATCH(tag_name) AGAINST (? in BOOLEAN MODE)) AS tag_relevance
 				FROM fn_searchindex
 				HAVING (title_relevance + content_relevance + tag_relevance) > 0) relevance
 				$section_id
+				GROUP BY obj_id) as tmp
 			WHERE access & $perm_read=$perm_read
-			GROUP BY obj_id
 		";
 		//echo $search_sel;
 
