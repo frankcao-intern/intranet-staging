@@ -4,9 +4,8 @@ A branch of *Eileen Fisher's* intranet site repo for book keeping and version co
 
 ## Frank
 Currently working on:
-- Searchable "tags"
-- Permissions in search
-- Task managaer for retail team
+- Adding filters to search engine
+- Task manager for retail team
 
 Progress:
 - Tags are currently searchable!
