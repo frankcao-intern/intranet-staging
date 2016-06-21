@@ -147,12 +147,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<label class="offset" for="query">Search:</label>
 				<input type="search" name="query" id="query" placeholder="Search fishNET" />
 				<?=form_button(array('value' => 'Go', 'type' => 'submit', 'content' => 'Go'))?>
-				<select id="ddl">
-				<option value=""></option>
-				<option value="Colours">Colours</option>
-				<option value="Shapes">Shapes</option>
-				<option value="Names">Names</option>
-				</select>
+				<label for="categories">Select category: </label>
+	           	<select name="categories" id="categories">
+	             <option value="0">Test 1</option>
+	             <option value="1">Test 2 &amp; Test</option>
+           </select>
+
 			</p>
 		<?=form_close()?>
 
