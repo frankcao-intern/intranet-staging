@@ -1,4 +1,10 @@
 /**
+Modified by MLanni
+6/14/2016
+*/
+
+
+/**
  * Created by: cravelo
  * Date: 5/16/11
  * Time: 1:10 PM
@@ -12,6 +18,9 @@
 	"use strict";
 	define(['jquery', 'lib/jquery.maskedinput-1.2.2'], function($){
 
+$( document ).ready(function() {
+  alert(coreEngine.pageID.match(/\d+/)[0]);
+});					
 		var page_properties = {
 			setConfirmUnload: function(on){
 				var unloadMessage = function(){
@@ -52,7 +61,7 @@
 				});
 
 				$('.select-c.templates').fancySelect();
-
+			
 				//if any input changes I want to know, so when the user navigates away I can alert them
 				$('input, select').change(function(){
 					page_properties.setConfirmUnload(true);
@@ -100,7 +109,7 @@
 						featured_from = Date.parse($("#featured_from").val()),
 						featured_until = Date.parse($("#featured_until").val()),
 						tags = $("#tags"),
-						settings = {},
+						settings = {}, //pubdates = {},
 						answer, getSections, postData, id;
 
 					if ($("#expiration_date").val()){
@@ -125,16 +134,67 @@
 						event.stopImmediatePropagation();
 						return false;
 					}
-
+					
+					// pageID = coreEngine.pageID.match(/\d+/)[0]
+					// sectionID = sections[i], 
+					// pubdate: pull
+					// expdate: pull
+					
+	
+					
+		
+	
 					//Sections ----------------------------------------
 					settings.sections = [];
+					var storeID;
 					getSections = function(){
 						id = $(this).attr("id");
+					
 						settings.sections.push(id.substr(1));
+						
 					};
 					$("ul#sections li.ui-selected").each(getSections);
 					$("ul.sections-other li").each(getSections);
-
+					var i;
+					var p;
+					var q;
+					var z;
+						for( i = 0;i < settings.sections.length; i++)
+						{
+								
+								// section ID = settings.sections[i]
+								$.message("Published to section: " + settings.sections[i]);
+								//$.message($("#date_published").val());
+								//alert($("ul#sections li.ui-selected").field("#date_published").text());
+								p = "#dateContainer" + settings.sections[i];
+								$.message(p);
+								// we have page ID, section ID
+								// we need published dates
+								//alert($("input[name^='date_published']").val()); ---->> this works 
+								q = "date_published" + settings.sections[i];
+								z = "show_until" + settings.sections[i];
+								// ************************************************************************************
+								//alert($("#"+q).val()); // this prints the date corressponding to the selected section
+								// ************************************************************************************
+								
+								$.ajax({
+									url: "../datePublish",
+									method: "POST",
+									data:{article:coreEngine.pageID.match(/\d+/)[0], section:settings.sections[i], pubDate:$("#"+q).val(), expDate:$("#"+z).val()},
+									dataType:"text",
+									success:function(data){
+										alert("Success data from front end passed into backend");
+									}
+						
+								});
+						}
+					// Published Dates
+					settings.dates = [];
+					getDates = function(){
+						alert($("ul#sections li.ui-selected").getDates);
+					};
+					
+					
 					//Tags -------------------------------------------
 					if (tags.length > 0){
 						tags = tags.val();
