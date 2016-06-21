@@ -19,7 +19,15 @@ Modified by MLanni
 	define(['jquery', 'lib/jquery.maskedinput-1.2.2'], function($){
 
 $( document ).ready(function() {
-  alert(coreEngine.pageID.match(/\d+/)[0]);
+//alert(coreEngine.pageID.match(/\d+/)[0]);
+  // create a PHP file for select statement
+  // pass the file page and section ID's*/
+  // wait for return of pubDate and expDate
+	$.get( "getSections", function( data ) {
+		alert( "Data Loaded: " + data );
+	});
+  
+  
 });					
 		var page_properties = {
 			setConfirmUnload: function(on){
@@ -178,7 +186,7 @@ $( document ).ready(function() {
 								// ************************************************************************************
 								
 								$.ajax({
-									url: "../datePublish",
+									url: "../exists",
 									method: "POST",
 									data:{article:coreEngine.pageID.match(/\d+/)[0], section:settings.sections[i], pubDate:$("#"+q).val(), expDate:$("#"+z).val()},
 									dataType:"text",

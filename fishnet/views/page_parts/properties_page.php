@@ -355,11 +355,9 @@ if(isPublished===0) // it's not saved as published but was just clicked and shou
 							<li id="s<?=$section['page_id']; ?>" onclick="setValues(<?=($i)?>, <?=($section['selected'])?>,<?=($id)?>)" class="<?=($section['selected'] == 1) ? 'ui-selected' : ''?>">
 								<?=$section['title']?>
 											
-											<?php echo 'Section#: '. $section['page_id']?>
+											
 											<?php $uri = $_SERVER['REQUEST_URI'];?>
 											<?php $id = substr($uri, strrpos($uri, '/') + 1);?>
-											<?php echo 'page ID: '. $id?>
-											<?php echo "selected? : " . $section['selected']?>
 											
 											
 											
@@ -376,7 +374,7 @@ if(isPublished===0) // it's not saved as published but was just clicked and shou
 						<div class="field" id="pubpageslist<?=($i)?>" style="display:none">
 						
 										<?php
-											include '../../config/database.php';
+											//include '../../config/database.php';
 
 											//echo 'Article: ' . htmlspecialchars($_GET["article"]);
 											//echo 'Section: ' . htmlspecialchars($_GET["section"]);
