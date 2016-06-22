@@ -1,6 +1,6 @@
 # Fishnet - development intranet branch
 
-A branch of *Eileen Fisher's* intranet site repo for book keeping and version control.
+A repository of *Eileen Fisher's* intranet site for book keeping and version control.
 
 ## Frank
 Currently working on:
