@@ -1,4 +1,4 @@
-# Fishnet - development intranet branch
+# Fishnet - development intranet repository
 
 A repository of *Eileen Fisher's* intranet site for book keeping and version control.
 
