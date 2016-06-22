@@ -147,12 +147,23 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<label class="offset" for="query">Search:</label>
 				<input type="search" name="query" id="query" placeholder="Search fishNET" />
 				<?=form_button(array('value' => 'Go', 'type' => 'submit', 'content' => 'Go'))?>
-				<label for="filters">Select Filter: </label>
-	           	<select name="filters" id="filters">
-	             <option value="0">Test 1</option>
-	             <option value="1">Test 2</option>
-           </select>
 
+				<input class="filter_checkbox" type="checkbox" name="filter_checkbox" value="1" onchange="valueChanged()"/>
+				
+				<label for="filters"></label>
+					           	<select name="filters" id="filters" hidden="true">
+					             <option value="0">Test 1</option>
+					             <option value="1">Test 2</option>
+				           		</select>
+				<script type="text/javascript">
+				function valueChanged()
+				{
+				    if($('.filter_checkbox').is(":checked"))   
+				        $("#filters").show();
+				    else
+				        $("#filters").hide();
+				}
+				</script>
 			</p>
 		<?=form_close()?>
 
