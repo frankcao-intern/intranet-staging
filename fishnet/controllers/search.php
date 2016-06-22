@@ -80,6 +80,11 @@ class Search extends MY_Controller {
 
 	function index(){
 		$q = $this->input->post('query');
+
+		$q2 = $this->input->post('filters');
+
+		echo $q2;
+
 		$limit = 10;
 		if ($q === false){
 			$query = $this->uri->uri_to_assoc(2);
