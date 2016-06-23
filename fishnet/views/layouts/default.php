@@ -148,6 +148,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<input type="search" name="query" id="query" placeholder="Search fishNET" />
 				<?=form_button(array('value' => 'Go', 'type' => 'submit', 'content' => 'Go'))?>
 
+
+				<!-- 
 				<input class="filter_checkbox" type="checkbox" name="filter_checkbox" value="1" onchange="valueChanged()"/>
 				
 				<label for="filters"></label>
@@ -163,7 +165,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				    else
 				        $("#filters").hide();
 				}
-				</script>
+				</script> -->
 			</p>
 		<?=form_close()?>
 
