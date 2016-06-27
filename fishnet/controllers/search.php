@@ -81,9 +81,8 @@ class Search extends MY_Controller {
 	function index(){
 		$q = $this->input->post('query');
 
-		$q2 = $this->input->post('filters');
-
-		echo $q2;
+		// $filter_val = $this->input->post('filters');	
+		// $q = $this->input->post('filters');
 
 		$limit = 10;
 		if ($q === false){
