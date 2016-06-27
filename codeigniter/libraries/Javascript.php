@@ -85,6 +85,7 @@ class CI_Javascript {
 	 */
 	function change($element = 'this', $js = '')
 	{
+		
 		return $this->js->_change($element, $js);
 	}
 
@@ -103,6 +104,7 @@ class CI_Javascript {
 	 */
 	function click($element = 'this', $js = '', $ret_false = TRUE)
 	{
+		
 		return $this->js->_click($element, $js, $ret_false);
 	}
 

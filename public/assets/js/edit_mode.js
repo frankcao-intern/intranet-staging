@@ -187,6 +187,7 @@ require(['jquery',
 								EditEngine.saveElementObj.call(elem, content);
 								break;
 							case 'value':
+								$.message("Found the value");
 								EditEngine.saveElement.call(elem, content);
 								break;
 							default: return true;
