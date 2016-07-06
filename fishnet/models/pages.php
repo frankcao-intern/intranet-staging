@@ -218,18 +218,17 @@ class Pages extends CI_Model {
 
 		$search_sel = "
 			SELECT obj_id, obj_type, section_id, section_title, page_title, page_content as revision_text,
-				page_date_published, tag_name, tag_id, access, relevance = 
-				# (IF (title_relevance = 0, content_relevance + tag_relevance, MAX((title_relevance + 0.1) + content_relevance + tag_relevance))) AS relevance
+				page_date_published, tag_name, tag_id, access,
 				CASE 
 					WHEN title_relevance = 0 AND content_relevance = 0 AND tag_relevance = 0 THEN 0.0
-					WHEN title_relevance = 0 AND content_relvance  = 0 AND tag_relevance = 1 THEN 1.1
+					WHEN title_relevance = 0 AND content_relevance  = 0 AND tag_relevance = 1 THEN 1.1 
 					WHEN title_relevance = 0 AND content_relevance = 1 AND tag_relevance = 0 THEN 1.0
-					WHEN title_relevance = 0 AND content_relvance  = 1 AND tag_relevance = 1 THEN 2.1
+					WHEN title_relevance = 0 AND content_relevance  = 1 AND tag_relevance = 1 THEN 2.1
 					WHEN title_relevance = 1 AND content_relevance = 0 AND tag_relevance = 0 THEN 1.2
-					WHEN title_relevance = 1 AND content_relvance  = 0 AND tag_relevance = 1 THEN 2.3
+					WHEN title_relevance = 1 AND content_relevance  = 0 AND tag_relevance = 1 THEN 2.3
 					WHEN title_relevance = 1 AND content_relevance = 1 AND tag_relevance = 0 THEN 2.2
-					WHEN title_relevance = 1 AND content_relvance  = 1 AND tag_relevance = 1 THEN 3.3
-				END
+					WHEN title_relevance = 1 AND content_relevance  = 1 AND tag_relevance = 1 THEN 3.3
+				END AS relevance
 			FROM
 				(SELECT *,
 					(MATCH(page_title) AGAINST (? IN BOOLEAN MODE)) AS title_relevance,
