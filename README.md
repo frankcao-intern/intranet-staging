@@ -31,9 +31,15 @@ Currently working on:
 	- Rebuilds with tag_id, tag_name, and access now!
 - Permissions and "access" should now be considered in search!
 
-#### Week 3 (WIP)
+#### Week 3
 - HTML code and logic for "advanced search" option opening up filters works
 - Backend search.php can successfully "POST" filter information from frontend default.php
+
+#### Week 4
+- Rethinking logic on weight for different values in searchindex
+	- Consider checking section_id? Need to find what section_id does for search right now.
+- Typing up test cases for tag matching and permission matching
+- Drafting initial proposal for filter features
 
 ### Important Changes:
 - SET GLOBAL max_allowed_packet=20047872 (20 MB), to allow for larger search index!
