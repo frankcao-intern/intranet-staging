@@ -24,7 +24,9 @@ header("Last-Modified: $pf_date GMT");
  * Global javascript code
  */
 include "./lib/require.js";
-include "./lib/jquery-1.8.1.js";
+include "./lib/jquery-1.10.2.js";
+//include "./lib/jquery-1.8.3.js";
+
 
 if (extension_loaded('zlib')) {
 	ob_end_flush();

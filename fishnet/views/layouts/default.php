@@ -37,7 +37,8 @@ $page_id = val($page_id, 0);
 		<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?=site_url("/article/rss/$page_id")?>" />
 	<?php endif; ?>
 
-	<link rel="stylesheet" href="<?=STATIC_URL?>css/lib/jquery-ui-1.8.23.custom.css" />
+	<!--link rel="stylesheet" href="<?=STATIC_URL?>css/lib/jquery-ui-1.9.2.custom.css" /-->
+	<link rel="stylesheet" href="<?=STATIC_URL?>css/lib/jquery-ui-1.10.4.custom.css" />
 	<link rel="stylesheet" href="<?=STATIC_URL?>css/screen.css?<?=FISHNET_VERSION?>" media="all" />
 	<link rel="stylesheet" href="<?=STATIC_URL?>css/print.css?<?=FISHNET_VERSION?>" media="print" />
 	<link rel="stylesheet" href="<?=STATIC_URL?>css/color_mods.css?<?=FISHNET_VERSION?>" media="all" />
@@ -147,25 +148,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 				<label class="offset" for="query">Search:</label>
 				<input type="search" name="query" id="query" placeholder="Search fishNET" />
 				<?=form_button(array('value' => 'Go', 'type' => 'submit', 'content' => 'Go'))?>
-
-
-				<!-- 
-				<input class="filter_checkbox" type="checkbox" name="filter_checkbox" value="1" onchange="valueChanged()"/>
-				
-				<label for="filters"></label>
-					           	<select name="filters" id="filters" hidden="true">
-					             <option value="0">Test 1</option>
-					             <option value="1">Test 2</option>
-				           		</select>
-				<script type="text/javascript">
-				function valueChanged()
-				{
-				    if($('.filter_checkbox').is(":checked"))   
-				        $("#filters").show();
-				    else
-				        $("#filters").hide();
-				}
-				</script> -->
 			</p>
 		<?=form_close()?>
 
@@ -470,8 +452,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	        'lib/jquery.easing.1.3',
 		    'lib/jquery.cookie',
 		    'lib/jquery.bgiframe',
-		   // 'lib/jquery-ui',
-		   'lib/jquery-ui-1.8.23.custom',
+		    'http://code.jquery.com/jquery-migrate-1.0.0.js',
+		    'lib/jquery-ui-1.10.4.custom',
+		   //'lib/jquery-ui-1.9.2.custom',
 		    'lib/jquery.qtip',
 		    'lib/jquery.message',
 		    'lib/jquery.lazyload',
