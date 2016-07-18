@@ -14,7 +14,7 @@
 
 		var requirements = ['jquery', 'lib/jquery.isotope'];
 
-		//if (coreEngine.canWrite === true){ requirements.push('lib/jquery.myeditable'); }
+		if (coreEngine.canWrite === true){ requirements.push('lib/jquery.myeditable'); }
 
 		if ($('html').hasClass('oldie') && (coreEngine.edit_mode === false)){
 			requirements.push('lib/jquery.columnizer');
