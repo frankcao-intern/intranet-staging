@@ -219,9 +219,9 @@ class Pages extends CI_Model {
 		$search_sel = "
 			SELECT obj_id, obj_type, section_id, section_title, page_title, page_content as revision_text,
 				page_date_published, tag_name, tag_id, access,
-				CASE 
+				CASE # case statement that weights title, content, and tag matches accordingly  
 					WHEN title_relevance = 0 AND content_relevance = 0 AND tag_relevance = 0 THEN 0.0
-					WHEN title_relevance = 0 AND content_relevance  = 0 AND tag_relevance = 1 THEN 1.1 
+					WHEN title_relevance = 0 AND content_relevance  = 0 AND tag_relevance = 1 THEN 1.1
 					WHEN title_relevance = 0 AND content_relevance = 1 AND tag_relevance = 0 THEN 1.0
 					WHEN title_relevance = 0 AND content_relevance  = 1 AND tag_relevance = 1 THEN 2.1
 					WHEN title_relevance = 1 AND content_relevance = 0 AND tag_relevance = 0 THEN 1.2
