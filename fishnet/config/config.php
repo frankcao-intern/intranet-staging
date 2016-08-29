@@ -326,9 +326,11 @@ $config['csrf_expire'] = 7210;
 | by the output class.  Do not 'echo' any values with compression enabled.
 |
 */
+
 switch(ENVIRONMENT){
 	case 'development':
 	case 'testing': {
+        error_reporting(E_ALL);
 		$config['compress_output'] = FALSE;
 		break;
 	}

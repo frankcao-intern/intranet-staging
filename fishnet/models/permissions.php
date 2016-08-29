@@ -101,7 +101,7 @@ class Permissions extends CI_Model {
 	 * @return bool
 	 */
 	function add($page_id, $data, $override = false){
-		//check user has permission to change permissions
+	    //check user has permission to change permissions
 		if (($this->session->userdata('role') == 'admin') or ($override === true)){
 			$perms = array('canPerm' => PERM_PERM);
 		}else{

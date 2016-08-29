@@ -57,34 +57,36 @@ class Pages extends CI_Model {
 		}
 	}
 
-	/**
+    /**
+     * create a page
+     *
+     * @param array $recordArr
+     * @return int
+     */
+    function newPage($recordArr) {
+        //print_r($recordArr);
+        $this->db->insert('pages', $recordArr);
+        if ($this->db->affected_rows() > 0) {
+            return $this->db->insert_id();
+        } else {
+            return false;
+        }
+    }
+
+    /**
 	 * Updates the page record
 	 * @param int $page_id
 	 * @param array $data
 	 * @return bool
 	 */
 	function updatePage($page_id, $data) {
+
+
 		if (!isset($data)) { return false; }
 		if (count($data) == 0) { return true; }
 
 		return $this->db->where('page_id', $page_id)
 				->update('pages', $data);
-	}
-
-	/**
-	 * create a page
-	 *
-	 * @param array $recordArr
-	 * @return int
-	 */
-	function newPage($recordArr) {
-		//print_r($recordArr);
-		$this->db->insert('pages', $recordArr);
-		if ($this->db->affected_rows() > 0) {
-			return $this->db->insert_id();
-		} else {
-			return false;
-		}
 	}
 
 	/**
@@ -319,7 +321,7 @@ class Pages extends CI_Model {
 		}
 	}
 
-	/**
+    /**
 	 * get the deleted pages where user_id has PERM_DELETE
 	 *
 	 * @param int $user_id
@@ -520,6 +522,7 @@ class Pages extends CI_Model {
 				WHERE fn_templates.page_type='section'
 				GROUP BY fn_pages.page_id
 				ORDER BY fn_pages.title";
+        echo $query;
 
 		$query = $this->db->query($query);
 
@@ -678,4 +681,49 @@ class Pages extends CI_Model {
 
 		return $query->result_array();
 	}
+
+	/* updated by Mosrur */
+
+    /**
+     * Get any property off a page given the page_id and the name of the property
+     *
+     * @param int    $page_id the page id
+     * @param string $section_id the page scetion id
+     * @return mixed The value of the requested property
+     */
+    function getPageSectionProperty($page_id, $section_id, $field) {
+        $query = $this->db
+            ->select(($field)? $field: '*')
+            ->where("page_id", $page_id)
+            ->where("section_id", $section_id)
+            ->from('pages_pages')
+            ->get();
+
+        $this->output->enable_profiler(TRUE);
+        if ($query->num_rows() > 0) {
+            $result = $query->row_array();
+            //pr($result);
+            return ($field)? $result[$field]: $result;
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * Updates the pages_section record
+     * @param int $page_id
+     * @param array $data
+     * @return bool
+     */
+    function updatePagesSections($page_id, $section_id, $data) {
+        pr($page_id);
+        pr($section_id);
+        pr($data);
+        //exit;
+        if (!isset($data)) { return false; }
+        if (count($data) == 0) { return true; }
+
+        return $this->db->where(array('page_id' => $page_id, 'section_id' => $section_id))
+            ->update('pages_pages', $data);
+    }
 }//class

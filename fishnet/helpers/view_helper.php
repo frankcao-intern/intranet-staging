@@ -1,9 +1,21 @@
 <?php
 /**
- * Created by: cravelo
- * Date: 3/1/12
+ * Created by: Mosrur
+ * Date: 8/24/2016+
  * Time: 3:32 PM
  */
+
+if ( ! function_exists('pr')){
+	/**
+	 * @param mixed $array variable
+	 * @return mixed print the array vairable
+	 */
+	function pr(&$arr){
+	    echo "<pre>";
+        print_r($arr);
+        echo "</pre>";
+    }
+}
 
 if ( ! function_exists('val')){
 	/**
@@ -180,5 +192,94 @@ if ( ! function_exists('get_image_html')){
 			return sprintf($result, site_url("/images/src/$filename"), $info[3], $flip, $angle);
 		}
 	}
+}
+
+if ( ! function_exists('get_image_html')){
+	/**
+	 * outputs src and width and height ready to use on <img>
+	 *
+	 * @param bool $src
+	 * @param bool $width
+	 * @param bool $zc
+	 * @param bool $flip
+	 * @param int $angle
+	 * @return string the formed string to use
+	 */
+	function get_image_html($src = false, $width = false, $zc = false, $flip = false, $angle = 0, $lazy = false){
+		$filename = get_image($src, $width, $zc, $flip, $angle);
+
+		if ($filename === false){
+			$zc = $zc ? $zc : 407;
+			$width = $width ? $width : 760;
+			$result = 'src="%s" width="%s" height="%s" data-flip="false" data-angle="0"';
+
+			return sprintf($result, site_url("/images/error/$width/$zc"), $width, $zc);
+		}else{
+			$info = getimagesize($filename);
+			$filename = basename($filename);
+			if ($lazy){
+				$result = 'src="'.STATIC_URL.'images/grey.gif" data-original="%s" %s data-flip="%s" data-angle="%s"';
+			}else{
+				$result = 'src="%s" %s data-flip="%s" data-angle="%s"';
+			}
+			$flip = (($flip === 'true') or ($flip === true)) ? 'true' : 'false';
+
+			return sprintf($result, site_url("/images/src/$filename"), $info[3], $flip, $angle);
+		}
+	}
+}
+
+if ( ! function_exists('set_alert')) {
+    function set_alert($msg, $type = 'info')
+    {
+        $ci =& get_instance();
+        $alerts = $ci->session->userdata('alerts');
+        $alerts[$type][] = $msg;
+        $ci->session->set_userdata('alerts', $alerts);
+    }
+}
+
+if ( ! function_exists('show_alert')) {
+    function show_alert()
+    {
+        $ci =& get_instance();
+        $alerts = $ci->session->userdata('alerts');
+        foreach ($alerts as $type => $msgs) {
+            echo "<div class='alert alert-$type'>";
+            foreach ($msgs as $msg) {
+                echo "<p>" . $msg . "</p>";
+            }
+            echo "</div>";
+        }
+        $ci->session->unset_userdata('alerts');
+    }
+}
+
+if ( ! function_exists('has_alert')) {
+    function has_alert()
+    {
+        $ci =& get_instance();
+        $alerts = $ci->session->userdata('alerts');
+        return !empty($alerts);
+    }
+}
+
+
+if ( ! function_exists('get_page_section_details')){
+    /**
+     * outputs page propertise section details
+     *
+     * @param bool $page_id
+     * @param bool $section_id
+     * @param bool $field
+     * @return string from page model getPageSectionProperty
+     */
+    function get_page_section_details($page_id = false, $section_id = false, $field = false){
+        $ci =& get_instance();
+        $data = $ci->pages->getPageSectionProperty($page_id, $section_id, $field);
+        //pr($data);//exit;
+
+        return $data;
+    }
 }
 
