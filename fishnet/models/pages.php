@@ -85,6 +85,9 @@ class Pages extends CI_Model {
 		if (!isset($data)) { return false; }
 		if (count($data) == 0) { return true; }
 
+        pr($page_id);
+        pr($data);
+
 		return $this->db->where('page_id', $page_id)
 				->update('pages', $data);
 	}
@@ -96,6 +99,17 @@ class Pages extends CI_Model {
 	function deletePage($page_id) {
 		//delete the page record, should cascade to permissions, revisions and comments
 		$this->db->where('page_id', $page_id)->delete('pages');
+
+		return ($this->db->affected_rows() > 0);
+	}
+
+	/**
+	 * @param int $page_id
+	 * @return bool
+	 */
+	function deletePageSections($page_id) {
+		//delete the page section record,
+        $this->db->where('page_id', $page_id)->delete('pages_pages');
 
 		return ($this->db->affected_rows() > 0);
 	}
@@ -522,7 +536,7 @@ class Pages extends CI_Model {
 				WHERE fn_templates.page_type='section'
 				GROUP BY fn_pages.page_id
 				ORDER BY fn_pages.title";
-        echo $query;
+        //echo $query;
 
 		$query = $this->db->query($query);
 
@@ -540,8 +554,11 @@ class Pages extends CI_Model {
 	 * @param int   $page_id  the page to publish to the sections on $sections
 	 * @return bool return whether the publish was successful or not.
 	 */
-	function publishPage($page_id, $sections) {
+	function publishPage($page_id, $sections, $date_published = false, $show_until = false) {
+	    /*pr($page_id);pr($sections); pr($date_published);pr($show_until);
+        exit;*/
 		if (is_numeric($page_id) and is_array($sections)) {
+
 			//update section-page-relationships
 			$this->db->where('page_id', $page_id)->delete('pages_pages');
 			if (count($sections) > 0) {
@@ -552,6 +569,12 @@ class Pages extends CI_Model {
 							'section_id' => $section_id,
 							'page_id' => $page_id
 						);
+                        if(!$date_published){
+                            $values['date_published'] = $date_published;
+                        }
+                        if(!$show_until){
+                            $values['show_until'] = $show_until;
+                        }
 					}
 				}
 
@@ -560,6 +583,7 @@ class Pages extends CI_Model {
 				return true;
 			}
 		} else {
+		    echo "unsuccess";
 			return false;
 		}
 	}
@@ -691,7 +715,7 @@ class Pages extends CI_Model {
      * @param string $section_id the page scetion id
      * @return mixed The value of the requested property
      */
-    function getPageSectionProperty($page_id, $section_id, $field) {
+    function getPageSectionProperty($page_id, $section_id, $field = false) {
         $query = $this->db
             ->select(($field)? $field: '*')
             ->where("page_id", $page_id)
@@ -716,14 +740,27 @@ class Pages extends CI_Model {
      * @return bool
      */
     function updatePagesSections($page_id, $section_id, $data) {
-        pr($page_id);
+        /*pr($page_id);
         pr($section_id);
-        pr($data);
-        //exit;
-        if (!isset($data)) { return false; }
-        if (count($data) == 0) { return true; }
+        exit;*/
 
-        return $this->db->where(array('page_id' => $page_id, 'section_id' => $section_id))
-            ->update('pages_pages', $data);
+        if (is_numeric($page_id)) {
+
+            if (!isset($section_id)) { return false; }
+            if (count($section_id) == 0) { return true; }
+            if (is_numeric($section_id)) {
+
+                if($this->db->insert('pages_pages', $data)){
+
+                    return $this->db->last_query();
+                }
+
+            }else{
+                return false;
+            }
+        } else {
+            //echo "unsuccess";
+            return false;
+        }
     }
-}//class
+}

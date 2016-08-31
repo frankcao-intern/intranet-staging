@@ -252,6 +252,7 @@ $config['sess_expire_on_close']	= TRUE;
 switch(ENVIRONMENT){
 	case 'development':
 	case 'testing': {
+        error_reporting(E_ALL);
 		$config['sess_encrypt_cookie']	= FALSE;
 		break;
 	}

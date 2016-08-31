@@ -143,15 +143,48 @@ class Tags extends CI_Model {
 	 */
 	function tagPage($page_id, $tags){
 		$this->db->where('page_id', $page_id)->delete('tag_matches');
+
 		if (count($tags) > 0){
 			$tags = array_map(function($tag){
-				return mysql_real_escape_string($tag);
+				return mysqli_real_escape_string($tag);
 			}, $tags);
 
 			$this->db->query("INSERT IGNORE INTO fn_tags(tag_name) VALUES ('".implode("'),('", $tags)."')");
 			$this->db->query("INSERT IGNORE INTO fn_tag_matches(page_id, tag_id)
 				SELECT $page_id, tag_id FROM fn_tags WHERE tag_name IN ('".implode("','", $tags)."')");
 		}
+
+		return ($this->db->_error_number() === 0);
+	}
+
+	/**
+	 * Assign tags to a page, insert new tags if they don't exist
+	 * @param $page_id
+	 * @param $tags
+	 * @return bool
+	 */
+	function updateTagPage($page_id, $tags){
+		$this->db->where('page_id', $page_id)->delete('tag_matches');
+
+		if (count($tags) > 0){
+
+		    foreach ($tags as $value){
+		        // reducing the whitespace of tags
+                $tag = trim($value);
+                if($value != null){
+
+                    $fn_tags_sql = "INSERT IGNORE INTO fn_tags(tag_name) VALUES ('". $tag ."')";
+                    //echo $fn_tags_sql;
+                    /* updating db */
+                    $this->db->query($fn_tags_sql);
+
+                    $fn_tags_matches_sql = "INSERT IGNORE INTO fn_tag_matches(page_id, tag_id)
+				                            SELECT ".$page_id.", tag_id FROM fn_tags WHERE tag_name IN ('".$tag."')";
+                    //echo $fn_tags_matches_sql;
+                    $this->db->query($fn_tags_matches_sql);
+                }
+            }
+        }
 
 		return ($this->db->_error_number() === 0);
 	}

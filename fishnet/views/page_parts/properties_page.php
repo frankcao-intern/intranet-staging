@@ -5,21 +5,19 @@
  * Time: 2:54 PM
  *
  */
+//pr($this->session->userdata);
 ?>
-<?php
-//echo $page_type;
-/*pr($page_id);
-echo $canProp;*/
-echo $p_allow_comments;
-
-?>
-<?php /** if it IS a PAGE and not a section... */?>
 
 <?php if (isset($canProp) and $canProp): ?>
 	 <!-- form for updating the general page settings -->
 	<?php echo form_open('properties/updateGeneralSettings'); ?>
 		<div class="section-a">
             <?php echo validation_errors(); ?>
+            <?php
+                if($this->session->userdata('alerts')):
+                    echo show_alert();
+                endif;
+            ?>
             <h2 class="c">General Settings</h2>
             <div class="field-group-a">
                 <ul class="settings-a">
@@ -27,7 +25,7 @@ echo $p_allow_comments;
                         <?/*=form_checkbox(
                             array('name' => "allow_comments", 'class' => 'js-gen-settings', 'checked' => $p_allow_comments))*/?><!--
                         -->
-                        <?php echo form_checkbox(array('name' => "allow_comments", 'class' => 'js-gen-settings', 'value' => $p_allow_comments));?>
+                        <?php echo form_checkbox(array('name' => "allow_comments", 'class' => 'js-gen-settings', 'value' => $p_allow_comments, 'checked' => !(boolean)($p_allow_comments)));?>
                         <label for="allow_comments">
                             <strong>Allow New Comments</strong> This allows other users to comment on this page.
                         </label>
@@ -50,11 +48,10 @@ echo $p_allow_comments;
                                 $option[] = array (
                                     $template['template_id'] => $template['template_title']
                                 );
-                                $selected = ($template['template_id'] == $template_id) ? 'selected="selected"' : '';
                             endforeach;
                             //pr($option);
 
-                            echo form_dropdown('template_id', $option, $selected);
+                            echo form_dropdown('template_id', $option, $template_id);
                             ?>
                             <!--<select name="template_id" id="template_id" class="js-gen-settings">
                                 <?php /*foreach($templates as $template):
@@ -94,7 +91,11 @@ echo $p_allow_comments;
                             'name' => 'show_until',
                             'class' => 'js-gen_settings',
                         );
-                        echo form_input($show_until_data, date("Y-m-d", strtotime($show_until)));
+
+							if( $show_until != '0000-00-00' )
+								echo form_input($show_until_data, date("Y-m-d",  strtotime($show_until))) ;
+							else
+								echo form_input($show_until_data, '') ;
                         ?>
                         <!--<input type="text" id="show_until" name="show_until" class="js-gen-settings" value="<?/*=$show_until*/?>" />-->
 					</p>
@@ -121,7 +122,7 @@ echo $p_allow_comments;
 			<ul class="settings-a">
 				<li>
 					<?php
-						echo form_checkbox(array('name' => 'published','class' => 'js-gen-settings', 'checked' => (boolean)($published)));
+						echo form_checkbox(array('name' => 'published','class' => 'js-gen-settings', 'checked' => !(boolean)($published)));
 					?>
 					<label for="published">
 						<strong>Published:</strong> Unpublished pages are saved as "My Drafts" on your "Who's Who" profile.
@@ -138,8 +139,6 @@ echo $p_allow_comments;
                         $other = array(); //pr($sections);
 					    foreach($sections as $section):
 
-
-
 						    if ($section['permPublish'] == 0):
 							    if ($section['selected'] == 1):
                                     $other[] = array('title' => $section['title'], 'id' => $section['page_id']);
@@ -148,9 +147,9 @@ echo $p_allow_comments;
 
 								/* testing view helper file function */
 								$pubdate = get_page_section_details($pageID, $section['page_id'], 'date_published');
-								pr($pubdate);
+								//pr($pubdate);
 								$expdate = get_page_section_details($pageID, $section['page_id'], 'show_until');
-								pr($expdate);
+								//pr($expdate);
 								/* eof testing view */
 
                                 $uri = $_SERVER['REQUEST_URI'];
@@ -173,8 +172,8 @@ echo $p_allow_comments;
 
                                 ?>
 						        </li>
-						        <a href="#" onclick="toggle_visibility('pubpageslist<?php echo $i; ?>')"><h3>[ + / - ] Click to expand/collaspe </h3></a>
-                                <div class="field" id="pubpageslist<?php echo $i; ?>" style='display: none;'>
+						        <!--<a href="#" onclick="toggle_visibility('pubpageslist<?php /*echo $i; */?>')"><h3>[ + / - ] Click to expand/collaspe </h3></a>-->
+                                <div class="field" id="pubpageslist<?php /*echo $i; */?>" style = "text-align: left;" >
 
                                     <p class="one">
                                         <label for="publish[<?php echo $sec_page_id; ?>][date_published]" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
@@ -216,18 +215,12 @@ echo $p_allow_comments;
 	<p>
 		<?php echo form_hidden('pageID', $pageID); ?>
 	</p>
-	<!--<p><button class="btn-save-prop" id="save">Publish page</button></p>
+	<!--<p><button class="btn-save-prop" id="save">Publish page</button></p>-->
 	<?php echo form_close(); ?>
 
-
-	<?php /*if(isset($_POST['show_until'])): */?>
-	<script>
-	    alert("Show until has a POST value");
-	</script>
-	--><?php /*endif; */?>
-
 	<?php if (isset($canProp) and $canProp): ?>
-		<div class="section-a">
+        <?php echo form_open('properties/updateTags'); ?>
+        <div class="section-a">
 			<h2 class="c">Tags</h2>
 			<div class="field-group-a">
 				<div class="field">
@@ -239,12 +232,19 @@ echo $p_allow_comments;
 				</div>
 				<p class="settings-a">
 					<label for="tags">Add Tags: </label>
-					<input id="tags" type="text" value="<?=$tags?>" />
+					<input id="tags" type="text" name="tags" value="<?=$tags?>" />
 				</p>
 			</div>
 		</div>
 
-		<p><button class="btn-save-prop">Save Tags</button></p>
+		<!--<p><button class="btn-save-prop">Save Tags</button></p>-->
+        <?php
+            echo form_button(array('name' => 'update_tags_settings', 'class' => 'button', 'type' => 'submit'), 'Save Tags');
+        ?>
+        <p>
+            <?php echo form_hidden('pageID', $pageID); ?>
+        </p>
+        <?php echo form_close(); ?>
 	<?php endif; ?>
 
 	<?php $this->load->view('page_parts/permissions_'.val($page_type, 'page')); ?>

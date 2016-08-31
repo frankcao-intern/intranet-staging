@@ -34,6 +34,7 @@ class Properties extends MY_Controller {
 
         $this->pageRecord['properties'] = true;
         $this->loadPage($page_id);
+        //pr($this->pageRecord);
 
         if ($this->pageRecord !== false){
             $this->pageRecord['pageID'] = $page_id;
@@ -65,7 +66,7 @@ class Properties extends MY_Controller {
             $this->pageRecord['tags'] = implode(", ", $this->tags->getForPage($page_id));
 
             $this->load->helper('text');
-
+            //pr($this->pageRecord);
             //load the page
             $this->pageRecord['template_name'] = 'properties';
             //pr($this->pageRecord);
@@ -84,8 +85,8 @@ class Properties extends MY_Controller {
     function updatepage(){
         $page_id = $this->input->post('pid');
         $content = json_decode($this->input->post('data'), true);
-        //echo "hello content";
-        //pr($content);exit;
+
+        echo $content;
 
         //publish page to sections -------------------------------------------------------------------------------------
         if (isset($content['sections'])){
@@ -130,13 +131,14 @@ class Properties extends MY_Controller {
 
             $this->load->model('pages');
             if (!$this->pages->updatePage($page_id, $content)){
-                $this->result->isError = true;
+                $this->result->isError = false;
                 $this->result->errorStr = "There was an error saving the page properties. Please try again later. ";
                 $this->result->errorStr .= "If the problem persists call the Helpdesk.";
             }
         }
 
         $this->result->data = "Page properties updated successfully.";
+
         $this->output
             ->set_content_type('application/json')
             ->set_output(json_encode($this->result));
@@ -152,7 +154,6 @@ class Properties extends MY_Controller {
 
 	    // the original page_id
 	    $page_id = $this->input->post('pageID');
-        //pr($this->input->post());
 
         // Post data from propery edit page
         $post_data = $this->input->post();
@@ -166,39 +167,35 @@ class Properties extends MY_Controller {
         //checks if validation is true
         if($this->form_validation->run() === true) {
             //echo 'success';
-            $this->input->post('allow_comments')? $allow_comments = '0': $allow_comments = '1';
+            $this->input->post('allow_comments') ? $allow_comments = '0' : $allow_comments = '1';
             $template_id = $this->input->post('template_id');
             $date_published = $this->input->post('date_published');
             $show_until = $this->input->post('show_until');
 
             // contstruct the data array
-            $properties_data = array (
+            $properties_data = array(
                 'allow_comments' => $allow_comments,
                 'template_id' => $template_id,
                 'date_published' => $date_published,
                 'show_until' => $show_until,
             );
-            $this->pm->updatePage($page_id, $properties_data);
-
-            // set success msg
-            set_alert(
-                'Page general settings updated successfully',
-                'success'
+            if ($this->pm->updatePage($page_id, $properties_data)) {
+                // set success msg
+                set_alert(
+                    'Page general settings updated successfully',
+                    'success'
                 );
-            // redirect user to the same page
-            $this->load($page_id);
-        } else {
-            //usset($this->session->userdata('alerts'));
-            pr($this->session->userdata);
-            //echo "failed";
-            set_alert(
-            'Sorry! Page content update was unsuccessful. Please try again or contact administrator.',
-            'danger'
-            );
+
+            } else {
+                set_alert(
+                    'Sorry! Page content update was unsuccessful. Please try again or contact administrator.',
+                    'danger'
+                );
+            }
+
+            // redirect to page properties section
+            redirect('properties/' . $page_id);
         }
-
-        // load the view
-
 
     }
 
@@ -216,50 +213,83 @@ class Properties extends MY_Controller {
 
         // Post data from propery edit page
         $post_data = $this->input->post();
-        pr($post_data);
+        //pr($post_data);
+
+        /* new test */
+        $delete_records = $this->pm->deletePageSections($page_id);
 
         /* new test with publish array */
-        foreach ( $post_data['publish'] as $key => $value ){
+        foreach ( $post_data['publish'] as $key => $value ) {
             $section_id = $key;
-            $data['date_published'] = ($value['date_published'])? date('Y-m-d', strtotime($value['date_published'])): '';
-            $data['show_until'] = ($value['show_until'])? date('Y-m-d', strtotime($value['show_until'])): '';
+            $data['page_id'] = $page_id;
+            $data['section_id'] = $section_id;
+            $data['date_published'] = ($value['date_published']) ? date('Y-m-d', strtotime($value['date_published'])) : '';
+            $data['show_until'] = ($value['show_until']) ? date('Y-m-d', strtotime($value['show_until'])) : '';
+            //pr($value);
             //pr($section_id);
-            //pr($date_pub);
-            //pr($date_exp);
-
 
             // update the database
-            if($data['date_published'] != null && $data['show_until'] != null){
+            if ($data['date_published'] != null && $data['show_until'] != null) {
 
-                // check if data already inerted or not
-                $is_available = getPageSectionProperty($page_id, $section_id);
-                pr($is_available);
+                $update = $this->pm->updatePagesSections($page_id, $section_id, $data);
+            }
+        }
 
-                if(!$is_available){
-                    // add new fields in fn_pages_pages
-                } else {
-                    // update existing data in fn_pages_pages
-                    $update = $this->pm->updatePagesSections($page_id, $section_id, $data);
-                }
-                // set success msg
+        if($update != null && $update > 0){
+            // set success msg
+            set_alert(
+                'Page section publishing settings updated successfully',
+                'success'
+            );
+        } else {
+            //usset($this->session->userdata('alerts'));
+            //pr($this->session->userdata);
+            //echo "failed";
+            set_alert(
+                'Sorry! Page content update was unsuccessful. Please try again or contact administrator.',
+                'danger'
+            );
+        }
+
+        // redirect to page properties section
+        redirect('properties/'.$page_id);
+    }
+
+    /**
+     * This function updates the page record for the tags section in the fn_tags and fn_tags_matches page.
+     *
+     * @return void
+     */
+
+    function updateTags(){
+
+	    // the original page_id
+	    $page_id = $this->input->post('pageID');
+
+        // Post data from propery edit page
+        $post_data = $this->input->post('tags');
+        $tags_arr = explode(', ', $post_data);
+        //pr($tags_arr);
+
+        // check to see the empty array of tags
+        if (isset($tags_arr)){
+            $this->load->model('tags');
+            //pr($content['tags']);
+            // calling the tags model to update tags data
+            if ($this->tags->updateTagPage($page_id, $tags_arr)){
                 set_alert(
                     'Page section publishing settings updated successfully',
                     'success'
                 );
-                // redirect user to the same page
-                $this->load($page_id);
-
             } else {
-                //usset($this->session->userdata('alerts'));
-                //pr($this->session->userdata);
-                //echo "failed";
                 set_alert(
                     'Sorry! Page content update was unsuccessful. Please try again or contact administrator.',
                     'danger'
                 );
             }
-
+            // redirect to page properties section
+            redirect('properties/'.$page_id);
         }
-        exit;
+
     }
 }
