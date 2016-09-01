@@ -1236,6 +1236,11 @@ var coreEngine = coreEngine || {};
 			//			'and "All Forms & Documents". Our "Guidelines & Resources" are located on the right side of the page. If there are questions or comments, ' +
 			//			'please provide them via the "Feedback" form, located at the bottom of the page.','info');}
 		
+		},
+
+		showAlertMessage:function(){
+			var msg = $('.alert').html();
+			$.message(msg, 'success');
 		}
 		
 	};
@@ -1273,6 +1278,7 @@ var coreEngine = coreEngine || {};
 		Engine.dialogs.whatareyouupto();
 		Engine.whosWhoNotify();
 		Engine.showLoginMessage();
+		Engine.showAlertMessage();
 
 		coreEngine.fancybox();
 		coreEngine.checkboxes();

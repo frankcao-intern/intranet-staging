@@ -213,8 +213,23 @@ class Properties extends MY_Controller {
 
         // Post data from propery edit page
         $post_data = $this->input->post();
-        //pr($post_data);
+        pr($post_data);
 
+        if($this->input->post('page_published') != null){
+            echo "value - ".$this->input->post('page_published');
+        }
+
+        if($this->input->post('page_published') || $this->input->post('page_published') != null)
+            $page_data['published'] = 1;
+        else
+            $page_data['published'] = 0;
+        //$page_data['published'] = $this->input->post('page_published') ? '1' : '0';
+        /*pr($page_data);
+        exit;
+        */
+        if ($this->pm->updatePage($page_id, $page_data)) {
+            echo "Successfully published.";
+        }
         /* new test */
         $delete_records = $this->pm->deletePageSections($page_id);
 
@@ -235,7 +250,7 @@ class Properties extends MY_Controller {
             }
         }
 
-        if($update != null && $update > 0){
+        if($update){
             // set success msg
             set_alert(
                 'Page section publishing settings updated successfully',
@@ -270,6 +285,43 @@ class Properties extends MY_Controller {
         $post_data = $this->input->post('tags');
         $tags_arr = explode(', ', $post_data);
         //pr($tags_arr);
+
+        // check to see the empty array of tags
+        if (isset($tags_arr)){
+            $this->load->model('tags');
+            //pr($content['tags']);
+            // calling the tags model to update tags data
+            if ($this->tags->updateTagPage($page_id, $tags_arr)){
+                set_alert(
+                    'Page section publishing settings updated successfully',
+                    'success'
+                );
+            } else {
+                set_alert(
+                    'Sorry! Page content update was unsuccessful. Please try again or contact administrator.',
+                    'danger'
+                );
+            }
+            // redirect to page properties section
+            redirect('properties/'.$page_id);
+        }
+
+    }
+
+    /**
+     * This function updates the page record for the page permission section in the fn_perm page.
+     *
+     * @return void
+     */
+
+    function updatePermission(){
+
+        // the original page_id
+        $page_id = $this->input->post('pageID');
+
+        // Post data from propery edit page
+        $post_data = $this->input->post();
+        pr($post_data);exit;
 
         // check to see the empty array of tags
         if (isset($tags_arr)){

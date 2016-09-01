@@ -6,7 +6,7 @@
 /*global require, coreEngine, guidely */
 /*jslint browser: true, white: true */
 
-require(['jquery', 'guidely', 'shared/hp_news_withpic', 'shared/minicalendar'], function($, guidely){
+require(['jquery', 'guidely', '../shared/hp_news_withpic', '../shared/minicalendar'], function($, guidely){
 	'use strict';
 
 	var Engine = {

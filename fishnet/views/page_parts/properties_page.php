@@ -15,7 +15,7 @@
             <?php echo validation_errors(); ?>
             <?php
                 if($this->session->userdata('alerts')):
-                    echo show_alert();
+                    show_alert();
                 endif;
             ?>
             <h2 class="c">General Settings</h2>
@@ -122,7 +122,7 @@
 			<ul class="settings-a">
 				<li>
 					<?php
-						echo form_checkbox(array('name' => 'published','class' => 'js-gen-settings', 'checked' => !(boolean)($published)));
+                    	echo form_checkbox(array('name' => 'page_published','class' => 'js-gen-settings', 'checked' => (boolean)($published)), $published);
 					?>
 					<label for="published">
 						<strong>Published:</strong> Unpublished pages are saved as "My Drafts" on your "Who's Who" profile.
@@ -135,6 +135,7 @@
 			<div class="field settings-a">
 				<h3>Select the section(s) to publish your page to:</h3>
 				<ul id="sections" class="sortable-list">
+
 					<?php
                         $other = array(); //pr($sections);
 					    foreach($sections as $section):
@@ -155,7 +156,8 @@
                                 $uri = $_SERVER['REQUEST_URI'];
 								$id = substr($uri, strrpos($uri, '/') + 1);
                     ?>
-							    <li id="s<?=$section['page_id']; ?>" onclick="setValues(<?=($i)?>, <?=($section['selected'])?>,<?=($id)?>)" class="<?=($section['selected'] == 1) ? 'ui-selected' : ''?>">
+
+							    <li id="s<?=$section['page_id']; ?>" onclick="setValues(<?=($i)?>, <?=($section['selected'])?>,<?=($id)?>)" class="<?=($section['selected'] == 1) ? 'ui-selected' : ''?>" style='width: 98%; padding-bottom: 0px; margin-bottom: 0px;'>
                                 <?php
                                     // display the section title
                                     echo $section['title'];
@@ -173,14 +175,25 @@
                                 ?>
 						        </li>
 						        <!--<a href="#" onclick="toggle_visibility('pubpageslist<?php /*echo $i; */?>')"><h3>[ + / - ] Click to expand/collaspe </h3></a>-->
-                                <div class="field" id="pubpageslist<?php /*echo $i; */?>" style = "text-align: left;" >
+                                <div class="field" id="pubpageslist<?php /*echo $i; */?>" style="border: 1px solid #D; border-top: none; padding: 10px;">
 
                                     <p class="one">
                                         <label for="publish[<?php echo $sec_page_id; ?>][date_published]" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
                                             Date Published:
                                         </label>
-                                        <input type="date" id="date_published<?php echo $sec_page_id;?>" name="publish[<?php echo $sec_page_id; ?>][date_published]" class="js-gen-settings" value="<?php echo $pubdate; ?>" />
+                                        <input type="date" id="date_published<?php echo $sec_page_id;?>"
+                                               name="publish[<?php echo $sec_page_id; ?>][date_published]"
+                                               class="js-gen-settings" value="<?php echo $pubdate; ?>" />
                                         <!--<input type="date" id="date_published<?php /*echo $sec_page_id;*/?>" name="date_published[<?php /*echo $sec_page_id; */?>]" class="js-gen-settings" value="<?php /*echo $pubdate; */?>" />-->
+
+                                        <?php
+                                        /*$sec_date_publish_data = array (
+                                            'id' => 'date_published'.$sec_page_id ,
+                                            'name' => 'publish['. $sec_page_id .'][date_published]',
+                                            'class' => 'js-gen_settings',
+                                        );
+                                        echo form_input($sec_date_publish_data, date("Y-m-d", strtotime($pubdate)));*/
+                                        ?>
                                     </p>
 
 
@@ -194,8 +207,9 @@
                                     </p>
                                 </div>
                                 <div class="clearfix">&nbsp;</div>
-                        <?php endif; ?>
-                    <?php endforeach; ?>
+
+						<?php endif; ?>
+					<?php endforeach; ?>
 				</ul>
 				<?php if (count($other) > 0): ?>
                     <p class="sections-other">This page is also published to the following sections: </p>
@@ -281,4 +295,6 @@
 		</div>
 
     <?php endif; ?>
+
+
 

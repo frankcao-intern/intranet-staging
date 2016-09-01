@@ -19,8 +19,6 @@
                         'first saving, the changes will be lost.';
                 };
 
-                var success = "Awesome, you have saved everything";
-
                 $(w).on('beforeunload', (on) ? unloadMessage : null);
             },
             split: function( val ){
@@ -157,10 +155,9 @@
                     });
                     postData = "pid=" + coreEngine.pageID;
                     postData += "&data=" + JSON.stringify(settings);
-                    alert(postData);
+                    //alert(postData);
 
                     coreEngine.ajax("properties/updatepage/" + (new Date()).getTime(), postData, function(result){
-                        alert('success from perm');
                         //save permissions
                         var permissions = [], postData;
 
@@ -175,7 +172,7 @@
 
                             postData = "pid=" + coreEngine.pageID.match(/\d+/)[0];
                             postData += "&data=" + JSON.stringify(permissions);
-                            alert(postData);
+                            //alert(postData);
                             coreEngine.ajax("/server/permupdate/" + (new Date()).getTime(), postData,
                                 coreEngine.genericCallBack, 'json');
 
@@ -184,8 +181,6 @@
 //							return false;
                         }
                     }, 'json');
-
-                    alert("after permission");
 
                     page_properties.setConfirmUnload(false);
 
@@ -216,7 +211,7 @@
 
                 //delete a permissions row -----------------------------------------------------------------------------
                 deleteClick = function(){
-                    if (w.confirm("Are you sure?")){
+                    if (w.confirm("Seriously buddy, wanna delete it?")){
                         var permissions = [],
                             $tr = $(this).closest('tr').addClass("perm-delete"), //mark for deletion
                             postData;
@@ -337,6 +332,7 @@
                     $.message(result.errorStr, 'error');
                 }else{
                     $(".perm-delete").remove();
+                    $.message('Deleted!!!', 'success');
                 }
             },
             revrevCallback: function(result){
@@ -347,7 +343,6 @@
                 }
             }
         };
-        console.log(page_properties);
 
         return page_properties;
     });

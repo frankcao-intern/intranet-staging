@@ -245,9 +245,9 @@ if ( ! function_exists('show_alert')) {
         $ci =& get_instance();
         $alerts = $ci->session->userdata('alerts');
         foreach ($alerts as $type => $msgs) {
-            echo "<div class='alert alert-$type'>";
+            echo "<div class='alert'>";
             foreach ($msgs as $msg) {
-                echo "<p>" . $msg . "</p>";
+                echo "<h5>" . $msg . "</h5>";
             }
             echo "</div>";
         }
