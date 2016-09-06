@@ -376,13 +376,13 @@ class Pages extends CI_Model {
 	 * @return array of page records matching params
 	 */
 	function getForSection($section_id = null, $d_start = null, $d_end = null, $featured = null, $limit = null,
-	                            $offset = null, $random = null, $tag_id = null, $order_by = null) {
+	                            $offset = null, $random = null, $tag_id = null, $publish_condition = null, $order_by = null) {
 		//$this->output->enable_profiler(TRUE);
 
 		$section      = (isset($section_id)) ? "AND rel.section_id=$section_id" : '';
 		$section_join = (isset($section_id)) ? "JOIN fn_pages sections ON sections.page_id=$section_id" : '';
 		$section_id   = (isset($section_id)) ? ", sections.title AS section_title, $section_id AS section_id" : '';
-		$dates        = (($d_start != null) or ($d_end != null)) ? "AND (rel.date_published IS NOT NULL OR rel.date_published<='$d_end') AND (rel.show_until IS NULL OR rel.show_until>='$d_start')" : '';
+		$dates        = (($d_start != null) or ($d_end != null)) ? "AND (rel.date_published<='$d_end' AND rel.show_until>='$d_start')" : '';
 		//$dates        = (($d_start != null) or ($d_end != null)) ? "AND fn_pages.date_published<='$d_end' AND (fn_pages.show_until IS NULL OR fn_pages.show_until>='$d_start')" : '';
 		$limit        = (isset($limit)) ? "LIMIT " . (isset($offset) ? $offset : '0') . ",$limit" : '';
 		$random       = (isset($random)) ? "RAND()," : '';
@@ -391,6 +391,10 @@ class Pages extends CI_Model {
 		//tags
 		$tags     = (isset($tag_id)) ? "AND fn_tag_matches.tag_id=$tag_id" : '';
 		$tag_join = (isset($tag_id)) ? "JOIN fn_tag_matches ON fn_tag_matches.page_id=fn_pages.page_id" : '';
+
+        // new condifiton
+        $publish_condition = (isset($publish_condition)) ? "AND rel.date_published>=now()" : '';
+
 
 		$order_by  = (isset($order_by)) ? "$order_by DESC, " : '';
 		$perm_read = PERM_READ;
@@ -422,48 +426,13 @@ class Pages extends CI_Model {
 				$section
 				$dates
 				$featured
-				$tags
+				$tags				
 			GROUP BY fn_pages.page_id
 			ORDER BY $random $order_by fn_pages.date_published DESC $limit";
 
-		/*$query_str = "SELECT fn_pages.*, fn_templates.template_name, rev.revision_text $section_id, comm.comments_count
-			FROM fn_pages
-			$section_join
-			JOIN fn_templates ON fn_pages.template_id=fn_templates.template_id
-			LEFT JOIN fn_pages_pages rel ON rel.page_id=fn_pages.page_id
-			LEFT JOIN (
-				SELECT COUNT(comment_id) as comments_count, page_id FROM fn_comments GROUP BY page_id
-			) comm ON comm.page_id=fn_pages.page_id
-			JOIN (SELECT * FROM (
-					SELECT rev.page_id, rev.revision_text, rev.date_created as rev_date_created
-					FROM fn_revisions rev
-					ORDER BY rev.date_created DESC) revs
-				GROUP BY revs.page_id) rev ON rev.page_id=fn_pages.page_id
-			JOIN (SELECT BIT_OR(p.access) as bor, p.page_id
-				FROM fn_permissions p
-				JOIN fn_groups ON p.group_id=fn_groups.group_id
-				JOIN fn_groups_users rel ON rel.group_id=fn_groups.group_id
-				WHERE rel.user_id=$user_id
-				GROUP BY p.page_id) perm ON perm.page_id = fn_pages.page_id
-			$tag_join
-			WHERE fn_pages.published=1
-				AND fn_pages.deleted=0
-				AND (perm.bor & $perm_read) = $perm_read
-				$section
-				$dates
-				$featured
-				$tags
-			GROUP BY fn_pages.page_id
-			ORDER BY $random $order_by fn_pages.date_published DESC $limit";*/
+		//pr($query_str);
 
-		pr($query_str);
-        /*
-            need to add
-        rel.date_published, rel.show_until,
-        ORDER BY $random $order_by fn_pages.date_published DESC $limit";
-
-        */
-		/**
+        /**
 		 * @var CI_DB_result $query
 		 */
 		$query = $this->db->query($query_str);

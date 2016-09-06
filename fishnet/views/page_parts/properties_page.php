@@ -14,7 +14,7 @@
 		<div class="section-a">
             <?php echo validation_errors(); ?>
             <?php
-                if($this->session->userdata('alerts')):
+                if(has_alert()):
                     show_alert();
                 endif;
             ?>
