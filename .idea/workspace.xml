@@ -21,41 +21,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pages.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fishnet/models/pages.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="395" column="10" selection-start-line="395" selection-start-column="10" selection-end-line="395" selection-end-column="10" />
-              <folding>
-                <marker date="1473272606690" expanded="true" signature="3936:4435" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473272606690" expanded="true" signature="4992:5448" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473272606690" expanded="true" signature="6362:7292" ph="SELECT obj_i... " />
-                <marker date="1473272606690" expanded="true" signature="8821:9321" ph="SELECT COUNT... access" />
-                <marker date="1473272606690" expanded="true" signature="8869:9282" ph="SELECT acces... *" />
-                <marker date="1473272606690" expanded="true" signature="8908:9233" ph="SELECT *, (M... fn_searchindex" />
-                <marker date="1473272606690" expanded="true" signature="10478:10773" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473272606690" expanded="true" signature="13298:14529" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473272606690" expanded="true" signature="13619:13704" ph="SELECT COUNT... fn_comments" />
-                <marker date="1473272606690" expanded="true" signature="13757:13948" ph="SELECT * FRO... page_id" />
-                <marker date="1473272606690" expanded="true" signature="13778:13916" ph="SELECT rev.p... fn_revisions" />
-                <marker date="1473272606690" expanded="true" signature="13995:14232" ph="SELECT BIT_O... fn_permissions" />
-                <marker date="1473272606690" expanded="true" signature="16545:17569" ph="SELECT count... fn_pages" />
-                <marker date="1473272606690" expanded="true" signature="16757:16842" ph="SELECT COUNT... fn_comments" />
-                <marker date="1473272606690" expanded="true" signature="16895:17086" ph="SELECT * FRO... page_id" />
-                <marker date="1473272606690" expanded="true" signature="16916:17054" ph="SELECT rev.p... fn_revisions" />
-                <marker date="1473272606690" expanded="true" signature="17133:17370" ph="SELECT BIT_O... fn_permissions" />
-                <marker date="1473272606690" expanded="true" signature="18278:18960" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473272606690" expanded="true" signature="18516:18559" ph="SELECT * FRO... fn_pages_pages" />
-                <marker date="1473272606690" expanded="true" signature="18636:18800" ph="SELECT page_... fn_permissions" />
-                <marker date="1473272606690" expanded="true" signature="20956:21602" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473272606690" expanded="true" signature="21190:21235" ph="SELECT * FRO... fn_pages_events" />
-                <marker date="1473272606690" expanded="true" signature="21310:21474" ph="SELECT page_... fn_permissions" />
-                <marker date="1473272606690" expanded="true" signature="22437:22490" ph="INSERT INTO fn_pages_events... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="properties_page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fishnet/views/page_parts/properties_page.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -85,8 +50,8 @@
       <file leaf-file-name="properties.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fishnet/controllers/properties.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="273" column="23" selection-start-line="273" selection-start-column="13" selection-end-line="273" selection-end-column="23" />
+            <state relative-caret-position="593">
+              <caret line="316" column="53" selection-start-line="313" selection-start-column="8" selection-end-line="316" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -95,26 +60,45 @@
       <file leaf-file-name="tags.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fishnet/models/tags.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="143" column="20" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="20" />
+            <state relative-caret-position="732">
+              <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
               <folding>
-                <marker date="1473186288632" expanded="true" signature="2340:2748" ph="SELECT fn_ta... fn_tags" />
-                <marker date="1473186288632" expanded="true" signature="2426:2558" ph="SELECT COUNT... fn_pages" />
-                <marker date="1473186288632" expanded="true" signature="3436:3520" ph="SELECT ${$pa... fn_tags" />
-                <marker date="1473186288632" expanded="true" signature="4346:4417" ph="SELECT ${$pa... fn_tags" />
+                <marker date="1473282756195" expanded="true" signature="2340:2748" ph="SELECT fn_ta... fn_tags" />
+                <marker date="1473282756195" expanded="true" signature="2426:2558" ph="SELECT COUNT... fn_pages" />
+                <marker date="1473282756195" expanded="true" signature="3436:3520" ph="SELECT ${$pa... fn_tags" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page_properties.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page_properties.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/js/shared/page_properties.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="199" column="20" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
+            <state relative-caret-position="738">
+              <caret line="334" column="20" selection-start-line="334" selection-start-column="20" selection-end-line="334" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="who.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fishnet/controllers/who.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="172" column="10" selection-start-line="172" selection-start-column="10" selection-end-line="172" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="groups.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fishnet/models/groups.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -127,16 +111,6 @@
               <folding>
                 <marker date="1473279903357" expanded="true" signature="15825:15843" ph="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="require-jquery.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/assets/js/require-jquery.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -154,18 +128,18 @@
       <file leaf-file-name="server.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fishnet/controllers/server.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="129" column="53" selection-start-line="127" selection-start-column="8" selection-end-line="129" selection-end-column="53" />
+            <state relative-caret-position="306">
+              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monthly.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fishnet/controllers/monthly.php">
+      <file leaf-file-name="permissions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fishnet/models/permissions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="32" column="106" selection-start-line="32" selection-start-column="106" selection-end-line="32" selection-end-column="106" />
+            <state relative-caret-position="-714">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -181,7 +155,6 @@
       <list>
         <option value="$PROJECT_DIR$/fishnet/config/config.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
-        <option value="$PROJECT_DIR$/fishnet/controllers/server.php" />
         <option value="$PROJECT_DIR$/fishnet/views/layouts/default.php" />
         <option value="$PROJECT_DIR$/public/assets/js/shared/hp_news_withpic.js" />
         <option value="$PROJECT_DIR$/public/assets/js/templates/sys_portal.js" />
@@ -189,7 +162,6 @@
         <option value="$PROJECT_DIR$/fishnet/views/page_parts/backups/properties_page.php" />
         <option value="$PROJECT_DIR$/fishnet/helpers/view_helper.php" />
         <option value="$PROJECT_DIR$/public/assets/css/templates/properties.css" />
-        <option value="$PROJECT_DIR$/fishnet/models/tags.php" />
         <option value="$PROJECT_DIR$/fishnet/views/page_parts/test" />
         <option value="$PROJECT_DIR$/fishnet/views/page_parts/permissions_page.php" />
         <option value="$PROJECT_DIR$/public/assets/js/templates/properties.js" />
@@ -198,6 +170,10 @@
         <option value="$PROJECT_DIR$/public/assets/js/main.js" />
         <option value="$PROJECT_DIR$/fishnet/views/page_parts/properties_page.php" />
         <option value="$PROJECT_DIR$/fishnet/controllers/properties.php" />
+        <option value="$PROJECT_DIR$/fishnet/models/tags.php" />
+        <option value="$PROJECT_DIR$/fishnet/controllers/server.php" />
+        <option value="$PROJECT_DIR$/fishnet/models/groups.php" />
+        <option value="$PROJECT_DIR$/fishnet/controllers/who.php" />
         <option value="$PROJECT_DIR$/public/assets/js/shared/page_properties.js" />
       </list>
     </option>
@@ -384,12 +360,12 @@
       <workItem from="1472484419902" duration="39125000" />
       <workItem from="1472650764682" duration="22930000" />
       <workItem from="1472736873154" duration="23698000" />
-      <workItem from="1473171064359" duration="46816000" />
+      <workItem from="1473171064359" duration="49601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134085000" />
+    <option name="totallyTimeSpent" value="136870000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -467,17 +443,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fishnet/controllers/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1472482482524" expanded="true" signature="4075:4293" ph="..." />
-            <marker date="1472482482524" expanded="true" signature="4109:4293" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fishnet/controllers/proxy.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1887">
@@ -654,26 +619,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fishnet/controllers/who.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="465" column="27" selection-start-line="465" selection-start-column="13" selection-end-line="465" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codeigniter/database/DB_active_rec.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="362">
           <caret line="1172" column="0" selection-start-line="1172" selection-start-column="0" selection-end-line="1173" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fishnet/models/groups.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -860,14 +809,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fishnet/controllers/server.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="129" column="53" selection-start-line="127" selection-start-column="8" selection-end-line="129" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -904,32 +845,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fishnet/models/tags.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="143" column="20" selection-start-line="143" selection-start-column="13" selection-end-line="143" selection-end-column="20" />
+        <state relative-caret-position="732">
+          <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
           <folding>
-            <marker date="1473186288632" expanded="true" signature="2340:2748" ph="SELECT fn_ta... fn_tags" />
-            <marker date="1473186288632" expanded="true" signature="2426:2558" ph="SELECT COUNT... fn_pages" />
-            <marker date="1473186288632" expanded="true" signature="3436:3520" ph="SELECT ${$pa... fn_tags" />
-            <marker date="1473186288632" expanded="true" signature="4346:4417" ph="SELECT ${$pa... fn_tags" />
+            <marker date="1473282756195" expanded="true" signature="2340:2748" ph="SELECT fn_ta... fn_tags" />
+            <marker date="1473282756195" expanded="true" signature="2426:2558" ph="SELECT COUNT... fn_pages" />
+            <marker date="1473282756195" expanded="true" signature="3436:3520" ph="SELECT ${$pa... fn_tags" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/models/permissions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-714">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/controllers/server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fishnet/controllers/properties.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="273" column="23" selection-start-line="273" selection-start-column="13" selection-end-line="273" selection-end-column="23" />
+        <state relative-caret-position="593">
+          <caret line="316" column="53" selection-start-line="313" selection-start-column="8" selection-end-line="316" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/shared/page_properties.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="199" column="20" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="20" />
+        <state relative-caret-position="738">
+          <caret line="334" column="20" selection-start-line="334" selection-start-column="20" selection-end-line="334" selection-end-column="20" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/controllers/who.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="172" column="10" selection-start-line="172" selection-start-column="10" selection-end-line="172" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/models/groups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

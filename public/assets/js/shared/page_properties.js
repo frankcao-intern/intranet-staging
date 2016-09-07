@@ -197,7 +197,7 @@
 
                     postData = "pid=" + coreEngine.pageID;
                     postData += "&data=" + JSON.stringify(settings);
-                    
+
                     // submitting data into controller
                     coreEngine.ajax("properties/updateTags/" + (new Date()).getTime(), postData,
                         coreEngine.genericCallBack, 'json');
@@ -332,9 +332,11 @@
                     postData = "pid=" + coreEngine.pageID.match(/\d+/)[0];
                     postData += "&data=" + JSON.stringify(permissions);
 
-                    coreEngine.ajax("/server/permupdate/" + (new Date()).getTime(), postData,
+                    // submitting data into controller
+                    coreEngine.ajax("server/permupdate/" + (new Date()).getTime(), postData,
                         coreEngine.genericCallBack, 'json');
 
+                    // return msg
                     page_properties.setConfirmUnload(false);
 
                     return false;
