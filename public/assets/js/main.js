@@ -1238,11 +1238,7 @@ var coreEngine = coreEngine || {};
 		
 		},
 
-		showAlertMessage:function(){
-			var msg = $('.alert').html();
-			$.message(msg, 'success');
-		}
-		
+
 	};
 
 	/*! * (v) hrefID jQuery extention * returns a valid #hash string from link href attribute in Internet Explorer */
@@ -1278,7 +1274,7 @@ var coreEngine = coreEngine || {};
 		Engine.dialogs.whatareyouupto();
 		Engine.whosWhoNotify();
 		Engine.showLoginMessage();
-		Engine.showAlertMessage();
+
 
 		coreEngine.fancybox();
 		coreEngine.checkboxes();

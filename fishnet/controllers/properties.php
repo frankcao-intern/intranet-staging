@@ -150,52 +150,47 @@ class Properties extends MY_Controller {
      * @return void
      */
 
+
     function updateGeneralSettings(){
 
-	    // the original page_id
-	    $page_id = $this->input->post('pageID');
+        $page_id = $this->input->post('pid');
+        $content = json_decode($this->input->post('data'), true);
 
-        // Post data from propery edit page
-        $post_data = $this->input->post();
+        // load the page model
+        $this->load->model('pages');
+        // update the page general settings
+        if (!$this->pages->updatePage($page_id, $content)){
+            $this->result->isError = true;
+            $this->result->errorStr = "There was an error saving the page properties. Please try again later. ";
+            $this->result->errorStr .= "If the problem persists call the Helpdesk.";
+        }
 
-        // form validation
-        //$this->form_validation->set_rules('allow_comments', 'Allow Comments', 'required');
-        $this->form_validation->set_rules('template_id', 'Templates ID', 'required');
-        $this->form_validation->set_rules('date_published', 'Date Published', 'required');
-        //$this->form_validation->set_rules('show_until', 'Expire date', 'required');
-
-        //checks if validation is true
-        if($this->form_validation->run() === true) {
-            //echo 'success';
-            $this->input->post('allow_comments') ? $allow_comments = '0' : $allow_comments = '1';
-            $template_id = $this->input->post('template_id');
-            $date_published = $this->input->post('date_published');
-            $show_until = $this->input->post('show_until');
-
-            // contstruct the data array
-            $properties_data = array(
-                'allow_comments' => $allow_comments,
-                'template_id' => $template_id,
-                'date_published' => $date_published,
-                'show_until' => $show_until,
+        // if data update successfull insert new entry to audit table
+        if (!$this->result->isError){
+            $audit = array();
+            $audit[] = array(
+                "page_id" => $page_id,
+                "what" => 'edited',
+                "who" => $this->session->userdata('user_id')
             );
-            if ($this->pm->updatePage($page_id, $properties_data)) {
-                // set success msg
-                set_alert(
-                    'Page general settings updated successfully',
-                    'success'
-                );
-
-            } else {
-                set_alert(
-                    'Sorry! Page content update was unsuccessful. Please try again or contact administrator.',
-                    'danger'
+            //create audit trail
+            if (array_key_exists('published', $content)){
+                $audit[] = array(
+                    "page_id" => $page_id,
+                    "what" => ($content['published'] == 1) ? 'published' : 'unpublished',
+                    "who" => $this->session->userdata('user_id')
                 );
             }
 
-            // redirect to page properties section
-            redirect('properties/' . $page_id);
+            $this->load->model('audit');
+            $this->audit->newEntry($audit);
         }
+
+        $this->result->data = "Page properties - general settings updated successfully.";
+
+        $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($this->result));
 
     }
 
@@ -278,33 +273,48 @@ class Properties extends MY_Controller {
 
     function updateTags(){
 
-	    // the original page_id
-	    $page_id = $this->input->post('pageID');
+        // page id
+        $page_id = $this->input->post('pid');
+        $content = json_decode($this->input->post('data'), true);
 
-        // Post data from propery edit page
-        $post_data = $this->input->post('tags');
-        $tags_arr = explode(', ', $post_data);
-        //pr($tags_arr);
-
-        // check to see the empty array of tags
-        if (isset($tags_arr)){
+        // update the page tags settings
+        if (isset($content['tags']) and !$this->result->isError){
+            // load the tag model
             $this->load->model('tags');
-            //pr($content['tags']);
-            // calling the tags model to update tags data
-            if ($this->tags->updateTagPage($page_id, $tags_arr)){
-                set_alert(
-                    'Page section publishing settings updated successfully',
-                    'success'
-                );
-            } else {
-                set_alert(
-                    'Sorry! Page content update was unsuccessful. Please try again or contact administrator.',
-                    'danger'
+            if (!$this->tags->tagPage($page_id, $content['tags'])){
+                $this->result->isError = true;
+                $this->result->errorStr = "There was an error saving the tags. Please try again later. If the ";
+                $this->result->errorStr .= "problem persists call the Helpdesk.";
+            }
+        }
+
+        // if data update successfull insert new entry to audit table
+        if (!$this->result->isError){
+            $audit = array();
+            $audit[] = array(
+                "page_id" => $page_id,
+                "what" => 'edited',
+                "who" => $this->session->userdata('user_id')
+            );
+            //create audit trail
+            if (array_key_exists('published', $content)){
+                $audit[] = array(
+                    "page_id" => $page_id,
+                    "what" => ($content['published'] == 1) ? 'published' : 'unpublished',
+                    "who" => $this->session->userdata('user_id')
                 );
             }
-            // redirect to page properties section
-            redirect('properties/'.$page_id);
+
+            $this->load->model('audit');
+            $this->audit->newEntry($audit);
         }
+
+        $this->result->data = "Page properties - tags updated successfully.";
+
+        // return back to the JSON file
+        $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($this->result));
 
     }
 

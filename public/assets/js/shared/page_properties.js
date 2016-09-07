@@ -11,13 +11,11 @@
  * Time: 1:15 PM
  */
 
-var page_properties;
-
 (function(w){
     "use strict";
     define(['jquery', 'lib/jquery.maskedinput-1.2.2'], function($){
 
-        page_properties = {
+       var page_properties = {
             setConfirmUnload: function(on){
                 var unloadMessage = function(){
                     return 'You have changed settings on this page. If you navigate away from this page without ' +
@@ -99,15 +97,15 @@ var page_properties;
             },
             //save properties-------------------------------------------------------------------------
             saveProps: function(){
-                var date_published = Date.parse($("#date_published").val()),
-                    show_until = Date.parse($("#show_until").val()),
-                    featured_from = Date.parse($("#featured_from").val()),
-                    featured_until = Date.parse($("#featured_until").val()),
-                    tags = $("#tags"),
-                    settings = {},
-                    answer, postData, id;
-
                 $(".btn-save-prop").button().bind('click', function(event){
+                    var date_published = Date.parse($("#date_published").val()),
+                        show_until = Date.parse($("#show_until").val()),
+                        featured_from = Date.parse($("#featured_from").val()),
+                        featured_until = Date.parse($("#featured_until").val()),
+                        tags = $("#tags"),
+                        settings = {},
+                        answer, getSections, postData, id;
+
 
                     if ($("#expiration_date").val()){
                         answer = w.confirm("You have selected an Expiration Date, this page will be deleted " +
@@ -131,7 +129,6 @@ var page_properties;
                         event.stopImmediatePropagation();
                         return false;
                     }
-
                     //general page settings -------------------------------------------------------------------------------
                     $(".js-gen-settings").each(function(){
                         if ($(this).is(":checkbox, :radio")){//if it's a checkbox or radio
@@ -140,18 +137,28 @@ var page_properties;
                             settings[this.name] = this.value || null;
                         }
                     });
+                    // making settins array as postData array
                     postData = "pid=" + coreEngine.pageID;
                     postData += "&data=" + JSON.stringify(settings);
-                    alert(postData);
 
-                    coreEngine.ajax("properties/updatepage/" + (new Date()).getTime(), postData, coreEngine.genericCallBack, 'json');
+                    // submitting data into controller
+                    coreEngine.ajax("properties/updateGeneralSettings/" + (new Date()).getTime(), postData,
+                        coreEngine.genericCallBack, 'json');
 
+                    // return msg
                     page_properties.setConfirmUnload(false);
 
                     return false;
                 });
                 $(".btn-save-sec").button().bind('click', function(event){
-                    var sections = {};
+                    var date_published = Date.parse($("#date_published").val()),
+                        show_until = Date.parse($("#show_until").val()),
+                        featured_from = Date.parse($("#featured_from").val()),
+                        featured_until = Date.parse($("#featured_until").val()),
+                        tags = $("#tags"),
+                        settings = {}, sections = {},
+                        answer, getSections, postData, id;
+
 
                     //Sections ----------------------------------------
                     $(".js-sec-settings").each(function(){
@@ -167,13 +174,16 @@ var page_properties;
 
                     coreEngine.ajax("properties/updatepage/" + (new Date()).getTime(), postData, coreEngine.genericCallBack, 'json');
 
-                    page_properties.setConfirmUnload(false);
+                    //page_properties.setConfirmUnload(false);
 
                     return false;
 
                 });
 
                 $(".btn-save-tags").button().bind('click', function(event){
+                    var tags = $("#tags"),
+                        settings = {},
+                        postData;
 
                     //Tags -------------------------------------------
                     if (tags.length > 0){
@@ -187,10 +197,12 @@ var page_properties;
 
                     postData = "pid=" + coreEngine.pageID;
                     postData += "&data=" + JSON.stringify(settings);
-                    alert(postData);
+                    
+                    // submitting data into controller
+                    coreEngine.ajax("properties/updateTags/" + (new Date()).getTime(), postData,
+                        coreEngine.genericCallBack, 'json');
 
-                    coreEngine.ajax("properties/updatepage/" + (new Date()).getTime(), postData, coreEngine.genericCallBack, 'json');
-
+                    // return msg
                     page_properties.setConfirmUnload(false);
 
                     return false;
@@ -200,7 +212,13 @@ var page_properties;
             },
             //retrieve all permissions in an object ----------------------------------------------------------------
             getPerms: function($tr){
-                var perm = {},
+                var date_published = Date.parse($("#date_published").val()),
+                    show_until = Date.parse($("#show_until").val()),
+                    featured_from = Date.parse($("#featured_from").val()),
+                    featured_until = Date.parse($("#featured_until").val()),
+                    tags = $("#tags"),
+                    settings = {},
+                    id, perm = {},
                     gid = $tr.find("th").attr("id");
 
                 perm.group_id = gid.match(/\d+/)[0];
@@ -222,7 +240,7 @@ var page_properties;
 
                 //delete a permissions row -----------------------------------------------------------------------------
                 deleteClick = function(){
-                    if (w.confirm("Seriously buddy, wanna delete it?")){
+                    if (w.confirm("Are you sure?")){
                         var permissions = [],
                             $tr = $(this).closest('tr').addClass("perm-delete"), //mark for deletion
                             postData;

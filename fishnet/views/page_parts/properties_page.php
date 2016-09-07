@@ -5,13 +5,18 @@
  * Time: 2:54 PM
  *
  */
-//pr($this->session->userdata);
+
+/**
+ * Modified by: Mosrur
+ * Date: 9/7/2016
+ * Time: 4:51 PM
+ */
+
 ?>
 
 <?php if (isset($canProp) and $canProp): ?>
 	 <!-- form for updating the general page settings -->
-	<?php //echo form_open('properties/updateGeneralSettings'); ?>
-		<div class="section-a">
+        <div class="section-a">
             <?php echo validation_errors(); ?>
             <?php
                 if(has_alert()):
@@ -22,9 +27,6 @@
             <div class="field-group-a">
                 <ul class="settings-a">
                     <li>
-                        <?/*=form_checkbox(
-                            array('name' => "allow_comments", 'class' => 'js-gen-settings', 'checked' => $p_allow_comments))*/?><!--
-                        -->
                         <?php echo form_checkbox(array('name' => "allow_comments", 'class' => 'js-gen-settings', 'value' => $p_allow_comments, 'checked' => (boolean)($p_allow_comments)));?>
                         <label for="allow_comments">
                             <strong>Allow New Comments</strong> This allows other users to comment on this page.
@@ -32,38 +34,28 @@
                     </li>
                 </ul>
 
-                <?php //if ($page_type !== 'section'): ?>
-                    <div class="field page-property">
-                        <p class="select-c templates">
-                            <label for="template_id"
-                                   title="Use this dropdown to change the page's template, please be careful when changing templates, some templates are not compatible with others.">
-                                Template:
-                            </label>
+                <div class="field page-property">
+                    <p class="select-c templates">
+                        <label for="template_id"
+                               title="Use this dropdown to change the page's template, please be careful when changing templates, some templates are not compatible with others.">
+                            Template:
+                        </label>
 
-                            <?php
+                        <?php
                             /* dropdown options */
                             $option = array ();
 
                             foreach($templates as $template):
                                 $option[] = array (
-                                    $template['template_id'] => $template['template_title']
+                                    $template['template_id'] => $template['template_title'],
                                 );
                             endforeach;
-                            //pr($option);
 
-                            echo form_dropdown('template_id', $option, $template_id);
-                            ?>
-                            <!--<select name="template_id" id="template_id" class="js-gen-settings">
-                                <?php /*foreach($templates as $template):
-                                    $selected = ($template['template_id'] == $template_id) ? 'selected="selected"' : ''; */?>
-                                    <option value="<?/*=$template['template_id']."\"$selected"*/?>">
-										<?/*=$template['template_title']*/?>
-									</option>
-								<?php /*endforeach; */?>
-							</select>-->
-						</p>
-					</div>
-				<?php //endif; ?>
+                            echo form_dropdown('template_id', $option, $template_id, 'class="js-gen-settings"');
+                        ?>
+
+                    </p>
+                </div>
 				<div class="field">
 					<p class="one">
 						<label for="date_published" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
@@ -73,12 +65,10 @@
                             $date_publish_data = array (
                               'id' => 'date_published',
                               'name' => 'date_published',
-                              'class' => 'js-gen_settings',
+                              'class' => 'js-gen-settings',
                             );
                             echo form_input($date_publish_data, date("Y-m-d", strtotime($date_published)));
                         ?>
-						<!--<input type="text" id="date_published" name="date_published" class="js-gen-settings"
-							   value="<?/*=date("Y-m-d", strtotime($date_published))*/?>" />-->
 					</p>
 					<p class="two">
 						<label for="show_until"
@@ -86,18 +76,14 @@
 							Display until:
 						</label>
                         <?php
-                        $show_until_data = array (
-                            'id' => 'show_until',
-                            'name' => 'show_until',
-                            'class' => 'js-gen_settings',
-                        );
+                            $show_until_data = array (
+                                'id' => 'show_until',
+                                'name' => 'show_until',
+                                'class' => 'js-gen-settings',
+                            );
 
-							if( $show_until != '0000-00-00' )
-								echo form_input($show_until_data, date("Y-m-d",  strtotime($show_until))) ;
-							else
-								echo form_input($show_until_data, '') ;
+                            echo form_input($show_until_data, $show_until) ;
                         ?>
-                        <!--<input type="text" id="show_until" name="show_until" class="js-gen-settings" value="<?/*=$show_until*/?>" />-->
 					</p>
                     <p>
                         <?php echo form_hidden('pageID', $pageID); ?>
@@ -106,23 +92,17 @@
             </div>
 
 		</div>
-        <?php
-            //echo form_button(array('name' => 'save_settings', 'class' => 'button', 'type' => 'submit'), 'Save general settings');
-        ?>
 		<p><button class="btn-save-prop">Save Settings</button></p>
 
-
-    <?php //echo form_close(); ?>
 <?php endif; ?>
 
-<?php //echo form_open('properties/updatePagePublishing'); ?>
+
 	<div class="section-a">
 		<h2 class="c">Publishing</h2>
 		<div class="field-group-a">
 			<ul class="settings-a">
 				<li>
 					<?php
-                    	//echo form_checkbox(array('name' => 'page_published','class' => 'js-gen-settings', 'checked' => (boolean)($published)), $published);
                     	echo form_checkbox(array('name' => 'published','class' => 'js-gen-settings', 'checked' => (boolean)($published)), $published);
 					?>
 					<label for="published">
@@ -147,12 +127,8 @@
 							    endif;
                             else:
 
-								/* testing view helper file function */
 								$pubdate = get_page_section_details($pageID, $section['page_id'], 'date_published');
-								//pr($pubdate);
 								$expdate = get_page_section_details($pageID, $section['page_id'], 'show_until');
-								//pr($expdate);
-								/* eof testing view */
 
                                 $uri = $_SERVER['REQUEST_URI'];
 								$id = substr($uri, strrpos($uri, '/') + 1);
@@ -164,10 +140,8 @@
                                     echo $section['title'];
 
                                     // definging page_id and section_page_id var
-                                    // page_id
                                     $uri = $_SERVER['REQUEST_URI'];
                                     $id = substr($uri, strrpos($uri, '/') + 1);
-                                    // section_page_id
                                     $sec_page_id = $section['page_id'];
 
                                     $i++;
@@ -175,8 +149,7 @@
 
                                 ?>
 						        </li>
-						        <!--<a href="#" onclick="toggle_visibility('pubpageslist<?php /*echo $i; */?>')"><h3>[ + / - ] Click to expand/collaspe </h3></a>-->
-                                <div class="field" id="pubpageslist<?php /*echo $i; */?>" style="border: 1px solid #D; border-top: none; padding: 10px;">
+						        <div class="field" id="pubpageslist<?php /*echo $i; */?>" style="border: 1px solid #D; border-top: none; padding: 10px;">
 
                                     <p class="one">
                                         <label for="publish[<?php echo $sec_page_id; ?>][date_published]" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
@@ -185,8 +158,6 @@
                                         <input type="date" id="date_published<?php echo $sec_page_id;?>"
 											   name="date_published_<?php echo $sec_page_id; ?>"
 											   class="js-sec-settings" value="<?php echo $pubdate; ?>" />
-                                        <!--<input type="date" id="date_published<?php /*echo $sec_page_id;*/?>" name="publish[<?php /*echo $sec_page_id; */?>][date_published]" class="js-gen-settings" value="<?php /*echo $pubdate; */?>" />-->
-                                        <!--<input type="date" id="date_published<?php /*echo $sec_page_id;*/?>" name="date_published[<?php /*echo $sec_page_id; */?>]" class="js-gen-settings" value="<?php /*echo $pubdate; */?>" />-->
 
                                         <?php
                                         /*$sec_date_publish_data = array (
@@ -207,8 +178,6 @@
                                         <input type="date" id="show_until<?php echo $section['page_id']; ?>"
 											   name="show_until_<?php echo $section['page_id']; ?>"
 											   class="js-sec-settings" value="<?php echo $expdate; ?>" />
-                                        <!--<input type="date" id="show_until<?php /*echo $section['page_id']; */?>" name="publish[<?php /*echo $section['page_id']; */?>][show_until]" class="js-gen-settings" value="<?php /*echo $expdate; */?>" />-->
-                                        <!--<input type="date" id="show_until<?php /*echo $section['page_id']; */?>" name="show_until[<?php /*echo $section['page_id']; */?>]" class="js-gen-settings" value="<?php /*echo $expdate; */?>" />-->
                                     </p>
                                 </div>
                                 <div class="clearfix">&nbsp;</div>
@@ -228,17 +197,10 @@
 		</div>
 	</div>
 
-	<?php
-		//echo form_button(array('name' => 'update_pulish_page_settings', 'class' => 'button', 'type' => 'submit'), 'Update publish page');
-	?>
-	<p>
-		<?php //echo form_hidden('pageID', $pageID); ?>
-	</p>
+
 	<p><button class="btn-save-sec" id="save">Publish page</button></p>
-	<?php //echo form_close(); ?>
 
 	<?php if (isset($canProp) and $canProp): ?>
-        <?php //echo form_open('properties/updateTags'); ?>
         <div class="section-a">
 			<h2 class="c">Tags</h2>
 			<div class="field-group-a">
@@ -257,14 +219,7 @@
 		</div>
 
 		<p><button class="btn-save-tags">Save Tags</button></p>
-        <?php
-            //echo form_button(array('name' => 'update_tags_settings', 'class' => 'button', 'type' => 'submit'), 'Save Tags');
-        ?>
-        <p>
-            <?php //echo form_hidden('pageID', $pageID); ?>
-        </p>
-        <?php //echo form_close(); ?>
-	<?php endif; ?>
+    <?php endif; ?>
 
 	<?php $this->load->view('page_parts/permissions_'.val($page_type, 'page')); ?>
 
