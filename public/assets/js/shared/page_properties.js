@@ -5,8 +5,12 @@
  * Passed JSLint on Aug 15, 2011
  */
 
-/*global define, coreEngine, qq, base64 */
-/*jslint white: true, browser: true */
+/**
+ * Modified by: mosrur
+ * Date: 9/7/16
+ * Time: 1:15 PM
+ */
+
 var page_properties;
 
 (function(w){
@@ -128,29 +132,7 @@ var page_properties;
                         return false;
                     }
 
-                    //Sections ----------------------------------------
-                    /*var sections = {};
-
-                    $(".js-sec-settings").each(function(){
-                        console.log(this.name);
-                        console.log(this.value);
-                        sections[this.name] = this.value || null;
-                    });
-                    settings.sections = sections;*/
-
-
-
-                    //Tags -------------------------------------------
-                    /*if (tags.length > 0){
-                        tags = tags.val();
-                        tags = tags.replace(/ *,/g, ",");
-                        tags = tags.replace(/, *!/g, ",");
-                        tags = tags.split(",");
-                        if ((tags[tags.length - 1] === "") || (tags[tags.length - 1] === " ")){ tags.pop(); }
-                        settings.tags = tags;
-                    }*/
-
-                    //All other settings -------------------------------------------------------------------------------
+                    //general page settings -------------------------------------------------------------------------------
                     $(".js-gen-settings").each(function(){
                         if ($(this).is(":checkbox, :radio")){//if it's a checkbox or radio
                             settings[this.name] = $(this).is(":checked");

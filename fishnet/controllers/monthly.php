@@ -30,7 +30,7 @@ class Monthly extends Article {
         //current todays date
         $d_now = date('Y-m-d');
 
-		return $this->pages->getForSection($section_id, $d_start, $d_end, null, null, null, null, null, $d_now, $order_by);
+		return $this->pages->getForSection($section_id, $d_start, $d_end, $d_now, null, null, null, null, $order_by);
 	}
 
 	/*

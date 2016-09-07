@@ -375,14 +375,14 @@ class Pages extends CI_Model {
 	 * @param string $order_by   the column to use to order the pages
 	 * @return array of page records matching params
 	 */
-	function getForSection($section_id = null, $d_start = null, $d_end = null, $featured = null, $limit = null,
-	                            $offset = null, $random = null, $tag_id = null, $publish_condition = null, $order_by = null) {
+	function getForSection($section_id = null, $d_start = null, $d_end = null, $publish_condition = null, $featured = null, $limit = null,
+	                            $offset = null, $random = null, $tag_id = null, $order_by = null) {
 		//$this->output->enable_profiler(TRUE);
 
 		$section      = (isset($section_id)) ? "AND rel.section_id=$section_id" : '';
 		$section_join = (isset($section_id)) ? "JOIN fn_pages sections ON sections.page_id=$section_id" : '';
 		$section_id   = (isset($section_id)) ? ", sections.title AS section_title, $section_id AS section_id" : '';
-		$dates        = (($d_start != null) or ($d_end != null)) ? "AND (rel.date_published<='$d_end' AND rel.show_until>='$d_start')" : '';
+		$dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published>=$publish_condition AND rel.date_published<='$d_end') AND rel.show_until>='$d_start')" : '';
 		//$dates        = (($d_start != null) or ($d_end != null)) ? "AND fn_pages.date_published<='$d_end' AND (fn_pages.show_until IS NULL OR fn_pages.show_until>='$d_start')" : '';
 		$limit        = (isset($limit)) ? "LIMIT " . (isset($offset) ? $offset : '0') . ",$limit" : '';
 		$random       = (isset($random)) ? "RAND()," : '';
@@ -393,7 +393,7 @@ class Pages extends CI_Model {
 		$tag_join = (isset($tag_id)) ? "JOIN fn_tag_matches ON fn_tag_matches.page_id=fn_pages.page_id" : '';
 
         // new condifiton
-        $publish_condition = (isset($publish_condition)) ? "AND rel.date_published>=now()" : '';
+        //$publish_condition = (isset($publish_condition)) ? "AND rel.date_published>=$publish_condition" : '';
 
 
 		$order_by  = (isset($order_by)) ? "$order_by DESC, " : '';
@@ -430,7 +430,7 @@ class Pages extends CI_Model {
 			GROUP BY fn_pages.page_id
 			ORDER BY $random $order_by fn_pages.date_published DESC $limit";
 
-		//pr($query_str);
+		pr($query_str);
 
         /**
 		 * @var CI_DB_result $query
