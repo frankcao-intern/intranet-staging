@@ -10,7 +10,7 @@
 
 <?php if (isset($canProp) and $canProp): ?>
 	 <!-- form for updating the general page settings -->
-	<?php echo form_open('properties/updateGeneralSettings'); ?>
+	<?php //echo form_open('properties/updateGeneralSettings'); ?>
 		<div class="section-a">
             <?php echo validation_errors(); ?>
             <?php
@@ -25,7 +25,7 @@
                         <?/*=form_checkbox(
                             array('name' => "allow_comments", 'class' => 'js-gen-settings', 'checked' => $p_allow_comments))*/?><!--
                         -->
-                        <?php echo form_checkbox(array('name' => "allow_comments", 'class' => 'js-gen-settings', 'value' => $p_allow_comments, 'checked' => !(boolean)($p_allow_comments)));?>
+                        <?php echo form_checkbox(array('name' => "allow_comments", 'class' => 'js-gen-settings', 'value' => $p_allow_comments, 'checked' => (boolean)($p_allow_comments)));?>
                         <label for="allow_comments">
                             <strong>Allow New Comments</strong> This allows other users to comment on this page.
                         </label>
@@ -107,22 +107,23 @@
 
 		</div>
         <?php
-            echo form_button(array('name' => 'save_settings', 'class' => 'button', 'type' => 'submit'), 'Save general settings');
+            //echo form_button(array('name' => 'save_settings', 'class' => 'button', 'type' => 'submit'), 'Save general settings');
         ?>
-		<!--<p><button class="btn-save-prop">Save Settings</button></p>-->
+		<p><button class="btn-save-prop">Save Settings</button></p>
 
 
-    <?php echo form_close(); ?>
+    <?php //echo form_close(); ?>
 <?php endif; ?>
 
-<?php echo form_open('properties/updatePagePublishing'); ?>
+<?php //echo form_open('properties/updatePagePublishing'); ?>
 	<div class="section-a">
 		<h2 class="c">Publishing</h2>
 		<div class="field-group-a">
 			<ul class="settings-a">
 				<li>
 					<?php
-                    	echo form_checkbox(array('name' => 'page_published','class' => 'js-gen-settings', 'checked' => (boolean)($published)), $published);
+                    	//echo form_checkbox(array('name' => 'page_published','class' => 'js-gen-settings', 'checked' => (boolean)($published)), $published);
+                    	echo form_checkbox(array('name' => 'published','class' => 'js-gen-settings', 'checked' => (boolean)($published)), $published);
 					?>
 					<label for="published">
 						<strong>Published:</strong> Unpublished pages are saved as "My Drafts" on your "Who's Who" profile.
@@ -182,8 +183,9 @@
                                             Date Published:
                                         </label>
                                         <input type="date" id="date_published<?php echo $sec_page_id;?>"
-                                               name="publish[<?php echo $sec_page_id; ?>][date_published]"
-                                               class="js-gen-settings" value="<?php echo $pubdate; ?>" />
+											   name="date_published_<?php echo $sec_page_id; ?>"
+											   class="js-sec-settings" value="<?php echo $pubdate; ?>" />
+                                        <!--<input type="date" id="date_published<?php /*echo $sec_page_id;*/?>" name="publish[<?php /*echo $sec_page_id; */?>][date_published]" class="js-gen-settings" value="<?php /*echo $pubdate; */?>" />-->
                                         <!--<input type="date" id="date_published<?php /*echo $sec_page_id;*/?>" name="date_published[<?php /*echo $sec_page_id; */?>]" class="js-gen-settings" value="<?php /*echo $pubdate; */?>" />-->
 
                                         <?php
@@ -202,7 +204,10 @@
                                                title='"Display until" selects the last date by which the page will be shown in dated lists (e.g. monthly, seasonal).'>
                                             Display until:
                                         </label>
-                                        <input type="date" id="show_until<?php echo $section['page_id']; ?>" name="publish[<?php echo $section['page_id']; ?>][show_until]" class="js-gen-settings" value="<?php echo $expdate; ?>" />
+                                        <input type="date" id="show_until<?php echo $section['page_id']; ?>"
+											   name="show_until_<?php echo $section['page_id']; ?>"
+											   class="js-sec-settings" value="<?php echo $expdate; ?>" />
+                                        <!--<input type="date" id="show_until<?php /*echo $section['page_id']; */?>" name="publish[<?php /*echo $section['page_id']; */?>][show_until]" class="js-gen-settings" value="<?php /*echo $expdate; */?>" />-->
                                         <!--<input type="date" id="show_until<?php /*echo $section['page_id']; */?>" name="show_until[<?php /*echo $section['page_id']; */?>]" class="js-gen-settings" value="<?php /*echo $expdate; */?>" />-->
                                     </p>
                                 </div>
@@ -224,16 +229,16 @@
 	</div>
 
 	<?php
-		echo form_button(array('name' => 'update_pulish_page_settings', 'class' => 'button', 'type' => 'submit'), 'Update publish page');
+		//echo form_button(array('name' => 'update_pulish_page_settings', 'class' => 'button', 'type' => 'submit'), 'Update publish page');
 	?>
 	<p>
-		<?php echo form_hidden('pageID', $pageID); ?>
+		<?php //echo form_hidden('pageID', $pageID); ?>
 	</p>
-	<!--<p><button class="btn-save-prop" id="save">Publish page</button></p>-->
-	<?php echo form_close(); ?>
+	<p><button class="btn-save-sec" id="save">Publish page</button></p>
+	<?php //echo form_close(); ?>
 
 	<?php if (isset($canProp) and $canProp): ?>
-        <?php echo form_open('properties/updateTags'); ?>
+        <?php //echo form_open('properties/updateTags'); ?>
         <div class="section-a">
 			<h2 class="c">Tags</h2>
 			<div class="field-group-a">
@@ -251,14 +256,14 @@
 			</div>
 		</div>
 
-		<!--<p><button class="btn-save-prop">Save Tags</button></p>-->
+		<p><button class="btn-save-tags">Save Tags</button></p>
         <?php
-            echo form_button(array('name' => 'update_tags_settings', 'class' => 'button', 'type' => 'submit'), 'Save Tags');
+            //echo form_button(array('name' => 'update_tags_settings', 'class' => 'button', 'type' => 'submit'), 'Save Tags');
         ?>
         <p>
-            <?php echo form_hidden('pageID', $pageID); ?>
+            <?php //echo form_hidden('pageID', $pageID); ?>
         </p>
-        <?php echo form_close(); ?>
+        <?php //echo form_close(); ?>
 	<?php endif; ?>
 
 	<?php $this->load->view('page_parts/permissions_'.val($page_type, 'page')); ?>

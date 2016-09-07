@@ -146,7 +146,7 @@ class Tags extends CI_Model {
 
 		if (count($tags) > 0){
 			$tags = array_map(function($tag){
-				return mysqli_real_escape_string($tag);
+				return mysql_real_escape_string($tag);
 			}, $tags);
 
 			$this->db->query("INSERT IGNORE INTO fn_tags(tag_name) VALUES ('".implode("'),('", $tags)."')");

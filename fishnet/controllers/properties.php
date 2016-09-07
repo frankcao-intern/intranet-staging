@@ -86,7 +86,7 @@ class Properties extends MY_Controller {
         $page_id = $this->input->post('pid');
         $content = json_decode($this->input->post('data'), true);
 
-        echo $content;
+        pr($content);
 
         //publish page to sections -------------------------------------------------------------------------------------
         if (isset($content['sections'])){

@@ -7,12 +7,13 @@
 
 /*global define, coreEngine, qq, base64 */
 /*jslint white: true, browser: true */
+var page_properties;
 
 (function(w){
     "use strict";
     define(['jquery', 'lib/jquery.maskedinput-1.2.2'], function($){
 
-        var page_properties = {
+        page_properties = {
             setConfirmUnload: function(on){
                 var unloadMessage = function(){
                     return 'You have changed settings on this page. If you navigate away from this page without ' +
@@ -94,14 +95,15 @@
             },
             //save properties-------------------------------------------------------------------------
             saveProps: function(){
+                var date_published = Date.parse($("#date_published").val()),
+                    show_until = Date.parse($("#show_until").val()),
+                    featured_from = Date.parse($("#featured_from").val()),
+                    featured_until = Date.parse($("#featured_until").val()),
+                    tags = $("#tags"),
+                    settings = {},
+                    answer, postData, id;
+
                 $(".btn-save-prop").button().bind('click', function(event){
-                    var date_published = Date.parse($("#date_published").val()),
-                        show_until = Date.parse($("#show_until").val()),
-                        featured_from = Date.parse($("#featured_from").val()),
-                        featured_until = Date.parse($("#featured_until").val()),
-                        tags = $("#tags"),
-                        settings = {},
-                        answer, getSections, postData, id;
 
                     if ($("#expiration_date").val()){
                         answer = w.confirm("You have selected an Expiration Date, this page will be deleted " +
@@ -127,23 +129,26 @@
                     }
 
                     //Sections ----------------------------------------
-                    settings.sections = [];
-                    getSections = function(){
-                        id = $(this).attr("id");
-                        settings.sections.push(id.substr(1));
-                    };
-                    $("ul#sections li.ui-selected").each(getSections);
-                    $("ul.sections-other li").each(getSections);
+                    /*var sections = {};
+
+                    $(".js-sec-settings").each(function(){
+                        console.log(this.name);
+                        console.log(this.value);
+                        sections[this.name] = this.value || null;
+                    });
+                    settings.sections = sections;*/
+
+
 
                     //Tags -------------------------------------------
-                    if (tags.length > 0){
+                    /*if (tags.length > 0){
                         tags = tags.val();
                         tags = tags.replace(/ *,/g, ",");
-                        tags = tags.replace(/, */g, ",");
+                        tags = tags.replace(/, *!/g, ",");
                         tags = tags.split(",");
                         if ((tags[tags.length - 1] === "") || (tags[tags.length - 1] === " ")){ tags.pop(); }
                         settings.tags = tags;
-                    }
+                    }*/
 
                     //All other settings -------------------------------------------------------------------------------
                     $(".js-gen-settings").each(function(){
@@ -155,37 +160,61 @@
                     });
                     postData = "pid=" + coreEngine.pageID;
                     postData += "&data=" + JSON.stringify(settings);
-                    //alert(postData);
+                    alert(postData);
 
-                    coreEngine.ajax("properties/updatepage/" + (new Date()).getTime(), postData, function(result){
-                        //save permissions
-                        var permissions = [], postData;
-
-                        if (result.isError){
-                            $.message(result.errorStr, 'error');
-                        }else{
-                            $.message(result.data, 'success');
-
-                            $("#propPermissions").find("tr").each(function(){
-                                permissions.push(page_properties.getPerms($(this)));
-                            });
-
-                            postData = "pid=" + coreEngine.pageID.match(/\d+/)[0];
-                            postData += "&data=" + JSON.stringify(permissions);
-                            //alert(postData);
-                            coreEngine.ajax("/server/permupdate/" + (new Date()).getTime(), postData,
-                                coreEngine.genericCallBack, 'json');
-
-                            page_properties.setConfirmUnload(false);
-
-//							return false;
-                        }
-                    }, 'json');
+                    coreEngine.ajax("properties/updatepage/" + (new Date()).getTime(), postData, coreEngine.genericCallBack, 'json');
 
                     page_properties.setConfirmUnload(false);
 
                     return false;
                 });
+                $(".btn-save-sec").button().bind('click', function(event){
+                    var sections = {};
+
+                    //Sections ----------------------------------------
+                    $(".js-sec-settings").each(function(){
+                        console.log(this.name);
+                        console.log(this.value);
+                        sections[this.name] = this.value || null;
+                    });
+                    settings.sections = sections;
+
+                    postData = "pid=" + coreEngine.pageID;
+                    postData += "&data=" + JSON.stringify(settings);
+                    alert(postData);
+
+                    coreEngine.ajax("properties/updatepage/" + (new Date()).getTime(), postData, coreEngine.genericCallBack, 'json');
+
+                    page_properties.setConfirmUnload(false);
+
+                    return false;
+
+                });
+
+                $(".btn-save-tags").button().bind('click', function(event){
+
+                    //Tags -------------------------------------------
+                    if (tags.length > 0){
+                        tags = tags.val();
+                        tags = tags.replace(/ *,/g, ",");
+                        tags = tags.replace(/, */g, ",");
+                        tags = tags.split(",");
+                        if ((tags[tags.length - 1] === "") || (tags[tags.length - 1] === " ")){ tags.pop(); }
+                        settings.tags = tags;
+                    }
+
+                    postData = "pid=" + coreEngine.pageID;
+                    postData += "&data=" + JSON.stringify(settings);
+                    alert(postData);
+
+                    coreEngine.ajax("properties/updatepage/" + (new Date()).getTime(), postData, coreEngine.genericCallBack, 'json');
+
+                    page_properties.setConfirmUnload(false);
+
+                    return false;
+
+                });
+
             },
             //retrieve all permissions in an object ----------------------------------------------------------------
             getPerms: function($tr){
@@ -251,7 +280,7 @@
 
                             postData = "pid=" + coreEngine.pageID.match(/\d+/)[0];
                             postData += "&data=" + JSON.stringify(permissions);
-                            //alert(postData);
+                            alert(postData);
                             coreEngine.ajax("server/permadd/" + (new Date()).getTime(),
                                 postData, coreEngine.genericCallBack, 'json');
 
@@ -292,6 +321,25 @@
 
                 //delete permissions ---------------------------------------------------------------------------------------
                 $(".perm-btn-delete").css("cursor", "pointer").click(deleteClick);
+
+                $(".btn-save-prem").button().bind('click', function(event){
+                    var permissions = [], postData;
+
+                    $("#propPermissions").find("tr").each(function(){
+                        permissions.push(page_properties.getPerms($(this)));
+                    });
+
+                    postData = "pid=" + coreEngine.pageID.match(/\d+/)[0];
+                    postData += "&data=" + JSON.stringify(permissions);
+
+                    coreEngine.ajax("/server/permupdate/" + (new Date()).getTime(), postData,
+                        coreEngine.genericCallBack, 'json');
+
+                    page_properties.setConfirmUnload(false);
+
+                    return false;
+
+                });
             },
             //Revisions-----------------------------------------------------------------------------------------------------
             revisions: function(){
