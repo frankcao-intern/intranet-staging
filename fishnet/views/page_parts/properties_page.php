@@ -32,7 +32,17 @@
                             <strong>Allow New Comments</strong> This allows other users to comment on this page.
                         </label>
                     </li>
+                    <li>
+                        <?php
+                        echo form_checkbox(array('name' => 'published','class' => 'js-gen-settings', 'checked' => (boolean)($published)), $published);
+                        ?>
+                        <label for="published">
+                            <strong>Published:</strong> Unpublished pages are saved as "My Drafts" on your "Who's Who" profile.
+                        </label>
+                    </li>
                 </ul>
+
+
 
                 <div class="field page-property">
                     <p class="select-c templates">
@@ -85,9 +95,6 @@
                             echo form_input($show_until_data, $show_until) ;
                         ?>
 					</p>
-                    <p>
-                        <?php echo form_hidden('pageID', $pageID); ?>
-                    </p>
 				</div>
             </div>
 
@@ -100,16 +107,7 @@
 	<div class="section-a">
 		<h2 class="c">Publishing</h2>
 		<div class="field-group-a">
-			<ul class="settings-a">
-				<li>
-					<?php
-                    	echo form_checkbox(array('name' => 'published','class' => 'js-gen-settings', 'checked' => (boolean)($published)), $published);
-					?>
-					<label for="published">
-						<strong>Published:</strong> Unpublished pages are saved as "My Drafts" on your "Who's Who" profile.
-					</label>
-				</li>
-			</ul>
+
 
 			<?php $i=0; ?>
 
@@ -155,9 +153,19 @@
                                         <label for="publish[<?php echo $sec_page_id; ?>][date_published]" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
                                             Date Published:
                                         </label>
-                                        <input type="date" id="date_published<?php echo $sec_page_id;?>"
-											   name="date_published_<?php echo $sec_page_id; ?>"
-											   class="js-sec-settings" value="<?php echo $pubdate; ?>" />
+                                        <!--<input type="date" id="date_published<?php /*echo $sec_page_id;*/?>"
+											   name="<?php /*echo $sec_page_id; */?>"
+											   class="js-date-published" value="<?php /*echo $pubdate; */?>" />-->
+
+                                        <?php
+                                        $sec_date_published_data = array (
+                                            'id' => 'date_published',
+                                            'name' => $sec_page_id,
+                                            'class' => 'js-date-published',
+                                        );
+
+                                        echo form_input($sec_date_published_data, $pubdate) ;
+                                        ?>
 
                                         <?php
                                         /*$sec_date_publish_data = array (
@@ -175,9 +183,18 @@
                                                title='"Display until" selects the last date by which the page will be shown in dated lists (e.g. monthly, seasonal).'>
                                             Display until:
                                         </label>
-                                        <input type="date" id="show_until<?php echo $section['page_id']; ?>"
-											   name="show_until_<?php echo $section['page_id']; ?>"
-											   class="js-sec-settings" value="<?php echo $expdate; ?>" />
+                                        <!--<input type="date" id="show_until<?php /*echo $section['page_id']; */?>"
+											   name="<?php /*echo $section['page_id']; */?>"
+											   class="js-show-until" value="<?php /*echo $expdate; */?>" />-->
+                                        <?php
+                                        $sec_show_until_data = array (
+                                            'id' => 'show_until',
+                                            'name' => $sec_page_id,
+                                            'class' => 'js-show-until',
+                                        );
+
+                                        echo form_input($sec_show_until_data, $expdate) ;
+                                        ?>
                                     </p>
                                 </div>
                                 <div class="clearfix">&nbsp;</div>

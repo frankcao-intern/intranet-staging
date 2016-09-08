@@ -1,6 +1,7 @@
 <?php
 /**
  * @author cravelo
+ * updated by: mosrur
  */
 
 /**
@@ -557,37 +558,20 @@ class Pages extends CI_Model {
 	 * @param int   $page_id  the page to publish to the sections on $sections
 	 * @return bool return whether the publish was successful or not.
 	 */
-	function publishPage($page_id, $sections, $date_published = false, $show_until = false) {
-	    /*pr($page_id);pr($sections); pr($date_published);pr($show_until);
-        exit;*/
-		if (is_numeric($page_id) and is_array($sections)) {
+	function publishPage($page_id, $data) {
 
-			//update section-page-relationships
+		if (is_numeric($page_id) and is_array($data)) {
+
+			//delete previous entires
 			$this->db->where('page_id', $page_id)->delete('pages_pages');
-			if (count($sections) > 0) {
-				$values = array();
-				foreach ($sections as $section_id) {
-					if (is_numeric($section_id)) {
-						$values[] = array(
-							'section_id' => $section_id,
-							'page_id' => $page_id
-						);
-                        if(!$date_published){
-                            $values['date_published'] = $date_published;
-                        }
-                        if(!$show_until){
-                            $values['show_until'] = $show_until;
-                        }
-					}
-				}
-
-				return $this->db->insert_batch('pages_pages', $values);
+			if (count($data) > 0) {
+                // inserting the new section entries into pages_pages table and return
+                return $this->db->insert_batch('pages_pages', $data);
 			}else{
 				return true;
 			}
 		} else {
-		    echo "unsuccess";
-			return false;
+		    return false;
 		}
 	}
 
@@ -709,8 +693,6 @@ class Pages extends CI_Model {
 		return $query->result_array();
 	}
 
-	/* updated by Mosrur */
-
     /**
      * Get any property off a page given the page_id and the name of the property
      *
@@ -736,34 +718,4 @@ class Pages extends CI_Model {
         }
     }
 
-    /**
-     * Updates the pages_section record
-     * @param int $page_id
-     * @param array $data
-     * @return bool
-     */
-    function updatePagesSections($page_id, $section_id, $data) {
-        /*pr($page_id);
-        pr($section_id);
-        exit;*/
-
-        if (is_numeric($page_id)) {
-
-            if (!isset($section_id)) { return false; }
-            if (count($section_id) == 0) { return true; }
-            if (is_numeric($section_id)) {
-
-                if($this->db->insert('pages_pages', $data)){
-
-                    return $this->db->last_query();
-                }
-
-            }else{
-                return false;
-            }
-        } else {
-            //echo "unsuccess";
-            return false;
-        }
-    }
 }

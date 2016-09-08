@@ -150,31 +150,41 @@
 
                     return false;
                 });
+                //Page publishing settings -------------------------------------------------------------------------------
                 $(".btn-save-sec").button().bind('click', function(event){
                     var date_published = Date.parse($("#date_published").val()),
                         show_until = Date.parse($("#show_until").val()),
                         featured_from = Date.parse($("#featured_from").val()),
                         featured_until = Date.parse($("#featured_until").val()),
                         tags = $("#tags"),
-                        settings = {}, sections = {},
-                        answer, getSections, postData, id;
+                        settings = {}, date_published = {}, show_until = {},
+                        postData;
 
 
                     //Sections ----------------------------------------
-                    $(".js-sec-settings").each(function(){
+                    $(".js-date-published").each(function(){
                         console.log(this.name);
                         console.log(this.value);
-                        sections[this.name] = this.value || null;
+                        date_published[this.name] = this.value || null;
                     });
-                    settings.sections = sections;
+                    settings.date_published = date_published;
+
+                    $(".js-show-until").each(function(){
+                        console.log(this.name);
+                        console.log(this.value);
+                        show_until[this.name] = this.value || null;
+                    });
+                    settings.show_until = show_until;
 
                     postData = "pid=" + coreEngine.pageID;
                     postData += "&data=" + JSON.stringify(settings);
-                    alert(postData);
 
-                    coreEngine.ajax("properties/updatepage/" + (new Date()).getTime(), postData, coreEngine.genericCallBack, 'json');
+                    // submitting data into controller
+                    coreEngine.ajax("properties/updatePagePublishing/" + (new Date()).getTime(), postData,
+                        coreEngine.genericCallBack, 'json');
 
-                    //page_properties.setConfirmUnload(false);
+                    // return msg
+                    page_properties.setConfirmUnload(false);
 
                     return false;
 
@@ -322,6 +332,7 @@
                 //delete permissions ---------------------------------------------------------------------------------------
                 $(".perm-btn-delete").css("cursor", "pointer").click(deleteClick);
 
+                //update permissions ---------------------------------------------------------------------------------------
                 $(".btn-save-prem").button().bind('click', function(event){
                     var permissions = [], postData;
 
