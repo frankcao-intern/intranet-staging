@@ -145,10 +145,16 @@ class Properties extends MY_Controller {
                 foreach ($content['show_until'] as $index => $su_val){
                     if($key == $index) {
                         if (!is_null($dp_val) || !is_null($su_val)){
-                            $data[$index]['page_id'] = $page_id;
-                            $data[$index]['section_id'] = $key;
-                            $data[$index]['date_published'] = $dp_val;
-                            $data[$index]['show_until'] = $su_val;
+
+                            if(strtotime($su_val) < strtotime($dp_val)) {
+                                $this->result->isError = true;
+                                $this->result->errorStr = "Show Until cannot be earlier than Date Published, please correct this and try again.";
+                            } else {
+                                $data[$index]['page_id'] = $page_id;
+                                $data[$index]['section_id'] = $key;
+                                $data[$index]['date_published'] = $dp_val;
+                                $data[$index]['show_until'] = $su_val;
+                            }
                         } else {
                             continue;
                         }
@@ -158,7 +164,7 @@ class Properties extends MY_Controller {
 
                 }
             }
-        
+
             // passing data array to page model
             if (!$this->pm->publishPage($page_id, $data)){
                 $this->result->isError = true;

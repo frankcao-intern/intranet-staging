@@ -153,9 +153,6 @@
                                         <label for="publish[<?php echo $sec_page_id; ?>][date_published]" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
                                             Date Published:
                                         </label>
-                                        <!--<input type="date" id="date_published<?php /*echo $sec_page_id;*/?>"
-											   name="<?php /*echo $sec_page_id; */?>"
-											   class="js-date-published" value="<?php /*echo $pubdate; */?>" />-->
 
                                         <?php
                                         $sec_date_published_data = array (
@@ -167,14 +164,6 @@
                                         echo form_input($sec_date_published_data, $pubdate) ;
                                         ?>
 
-                                        <?php
-                                        /*$sec_date_publish_data = array (
-                                            'id' => 'date_published'.$sec_page_id ,
-                                            'name' => 'publish['. $sec_page_id .'][date_published]',
-                                            'class' => 'js-gen_settings',
-                                        );
-                                        echo form_input($sec_date_publish_data, date("Y-m-d", strtotime($pubdate)));*/
-                                        ?>
                                     </p>
 
 
@@ -183,9 +172,7 @@
                                                title='"Display until" selects the last date by which the page will be shown in dated lists (e.g. monthly, seasonal).'>
                                             Display until:
                                         </label>
-                                        <!--<input type="date" id="show_until<?php /*echo $section['page_id']; */?>"
-											   name="<?php /*echo $section['page_id']; */?>"
-											   class="js-show-until" value="<?php /*echo $expdate; */?>" />-->
+
                                         <?php
                                         $sec_show_until_data = array (
                                             'id' => 'show_until',
