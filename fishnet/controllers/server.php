@@ -68,7 +68,7 @@ class Server extends CI_Controller {
     function permadd(){
         $page_id = $this->input->post('pid');
         $data = json_decode($this->input->post('data'));
-        pr($data);
+
         //load the pages model
         $this->load->model('permissions');
         //update title

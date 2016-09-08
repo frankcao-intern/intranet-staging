@@ -277,11 +277,15 @@
                         $first_tr;
 
                     $input.autocomplete({
-                        minLength: 2,
+                        minLength: 1,
                         source: function(request, response) {
                             coreEngine.getJSON("who/groups/q/" + request.term, "", response);
                         },
-                        select: function(event, ui){
+                        focus: function() {
+                            // prevent value inserted on focus
+                            return false;
+                        },
+                        select: function( event, ui ) {
                             var permissions = [], postData,$deleteButton;
 
                             $(this).parent().append(ui.item.value).attr("id", "gid-" + ui.item.id);
@@ -290,7 +294,7 @@
 
                             postData = "pid=" + coreEngine.pageID.match(/\d+/)[0];
                             postData += "&data=" + JSON.stringify(permissions);
-                            alert(postData);
+
                             coreEngine.ajax("server/permadd/" + (new Date()).getTime(),
                                 postData, coreEngine.genericCallBack, 'json');
 
@@ -303,6 +307,7 @@
                                 .append($deleteButton);
                             $(this).remove();
                         }
+
                     });
 
                     $("<th>", {"scope": "row"}).append($input).appendTo($tr);
