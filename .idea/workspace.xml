@@ -46,74 +46,63 @@
       <file leaf-file-name="pages.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fishnet/models/pages.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="394" column="109" selection-start-line="394" selection-start-column="109" selection-end-line="394" selection-end-column="109" />
+            <state relative-caret-position="138">
+              <caret line="378" column="106" selection-start-line="378" selection-start-column="106" selection-end-line="378" selection-end-column="106" />
               <folding>
                 <element signature="e#6#54#0#PHP" expanded="true" />
-                <marker date="1473360562121" expanded="true" signature="3958:4457" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473360562121" expanded="true" signature="5014:5470" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473360562121" expanded="true" signature="6384:7314" ph="SELECT obj_i... " />
-                <marker date="1473360562121" expanded="true" signature="8843:9343" ph="SELECT COUNT... access" />
-                <marker date="1473360562121" expanded="true" signature="8891:9304" ph="SELECT acces... *" />
-                <marker date="1473360562121" expanded="true" signature="8930:9255" ph="SELECT *, (M... fn_searchindex" />
-                <marker date="1473360562121" expanded="true" signature="10500:10795" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473360562121" expanded="true" signature="13444:14675" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473360562121" expanded="true" signature="13765:13850" ph="SELECT COUNT... fn_comments" />
-                <marker date="1473360562121" expanded="true" signature="13903:14094" ph="SELECT * FRO... page_id" />
-                <marker date="1473360562121" expanded="true" signature="13924:14062" ph="SELECT rev.p... fn_revisions" />
-                <marker date="1473360562121" expanded="true" signature="14141:14378" ph="SELECT BIT_O... fn_permissions" />
-                <marker date="1473360562121" expanded="true" signature="16691:17715" ph="SELECT count... fn_pages" />
-                <marker date="1473360562121" expanded="true" signature="16903:16988" ph="SELECT COUNT... fn_comments" />
-                <marker date="1473360562121" expanded="true" signature="17041:17232" ph="SELECT * FRO... page_id" />
-                <marker date="1473360562121" expanded="true" signature="17062:17200" ph="SELECT rev.p... fn_revisions" />
-                <marker date="1473360562121" expanded="true" signature="17279:17516" ph="SELECT BIT_O... fn_permissions" />
-                <marker date="1473360562121" expanded="true" signature="18424:19106" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473360562121" expanded="true" signature="18662:18705" ph="SELECT * FRO... fn_pages_pages" />
-                <marker date="1473360562121" expanded="true" signature="18782:18946" ph="SELECT page_... fn_permissions" />
-                <marker date="1473360562121" expanded="true" signature="20532:21178" ph="SELECT fn_pa... fn_pages" />
-                <marker date="1473360562121" expanded="true" signature="20766:20811" ph="SELECT * FRO... fn_pages_events" />
-                <marker date="1473360562121" expanded="true" signature="20886:21050" ph="SELECT page_... fn_permissions" />
-                <marker date="1473360562121" expanded="true" signature="22013:22066" ph="INSERT INTO fn_pages_events... " />
+                <marker date="1473366793214" expanded="true" signature="3958:4457" ph="SELECT fn_pa... fn_pages" />
+                <marker date="1473366793214" expanded="true" signature="5014:5470" ph="SELECT fn_pa... fn_pages" />
+                <marker date="1473366793214" expanded="true" signature="6384:7314" ph="SELECT obj_i... " />
+                <marker date="1473366793214" expanded="true" signature="8843:9343" ph="SELECT COUNT... access" />
+                <marker date="1473366793214" expanded="true" signature="8891:9304" ph="SELECT acces... *" />
+                <marker date="1473366793214" expanded="true" signature="8930:9255" ph="SELECT *, (M... fn_searchindex" />
+                <marker date="1473366793214" expanded="true" signature="10500:10795" ph="SELECT fn_pa... fn_pages" />
+                <marker date="1473366793214" expanded="true" signature="13320:14551" ph="SELECT fn_pa... fn_pages" />
+                <marker date="1473366793214" expanded="true" signature="13641:13726" ph="SELECT COUNT... fn_comments" />
+                <marker date="1473366793214" expanded="true" signature="13779:13970" ph="SELECT * FRO... page_id" />
+                <marker date="1473366793214" expanded="true" signature="13800:13938" ph="SELECT rev.p... fn_revisions" />
+                <marker date="1473366793214" expanded="true" signature="14017:14254" ph="SELECT BIT_O... fn_permissions" />
+                <marker date="1473366793214" expanded="true" signature="16567:17591" ph="SELECT count... fn_pages" />
+                <marker date="1473366793214" expanded="true" signature="16779:16864" ph="SELECT COUNT... fn_comments" />
+                <marker date="1473366793214" expanded="true" signature="16917:17108" ph="SELECT * FRO... page_id" />
+                <marker date="1473366793214" expanded="true" signature="16938:17076" ph="SELECT rev.p... fn_revisions" />
+                <marker date="1473366793214" expanded="true" signature="17155:17392" ph="SELECT BIT_O... fn_permissions" />
+                <marker date="1473366793214" expanded="true" signature="18300:18982" ph="SELECT fn_pa... fn_pages" />
+                <marker date="1473366793214" expanded="true" signature="18538:18581" ph="SELECT * FRO... fn_pages_pages" />
+                <marker date="1473366793214" expanded="true" signature="18658:18822" ph="SELECT page_... fn_permissions" />
+                <marker date="1473366793214" expanded="true" signature="20408:21054" ph="SELECT fn_pa... fn_pages" />
+                <marker date="1473366793214" expanded="true" signature="20642:20687" ph="SELECT * FRO... fn_pages_events" />
+                <marker date="1473366793214" expanded="true" signature="20762:20926" ph="SELECT page_... fn_permissions" />
+                <marker date="1473366793214" expanded="true" signature="21889:21942" ph="INSERT INTO fn_pages_events... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tags.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fishnet/models/tags.php">
+      <file leaf-file-name="journal.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fishnet/controllers/journal.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+            <state relative-caret-position="525">
+              <caret line="62" column="59" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
               <folding>
-                <marker date="1473282756195" expanded="true" signature="2340:2748" ph="SELECT fn_ta... fn_tags" />
-                <marker date="1473282756195" expanded="true" signature="2426:2558" ph="SELECT COUNT... fn_pages" />
-                <marker date="1473282756195" expanded="true" signature="3436:3520" ph="SELECT ${$pa... fn_tags" />
+                <marker date="1473369905717" expanded="true" signature="1349:1557" ph="..." />
+                <marker date="1473369905717" expanded="true" signature="1382:1557" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="who.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fishnet/controllers/who.php">
+      <file leaf-file-name="monthly.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fishnet/controllers/monthly.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2856">
-              <caret line="172" column="10" selection-start-line="172" selection-start-column="10" selection-end-line="172" selection-end-column="10" />
+            <state relative-caret-position="936">
+              <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="groups.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fishnet/models/groups.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page_properties.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="page_properties.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/js/shared/page_properties.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
@@ -162,9 +151,12 @@
         <option value="$PROJECT_DIR$/fishnet/controllers/who.php" />
         <option value="$PROJECT_DIR$/fishnet/controllers/properties.php" />
         <option value="$PROJECT_DIR$/fishnet/views/page_parts/properties_page.php" />
-        <option value="$PROJECT_DIR$/fishnet/models/pages.php" />
         <option value="$PROJECT_DIR$/public/assets/js/shared/page_properties.js" />
         <option value="$PROJECT_DIR$/fishnet/controllers/server.php" />
+        <option value="$PROJECT_DIR$/fishnet/views/monthly_digest.php" />
+        <option value="$PROJECT_DIR$/fishnet/views/journal.php" />
+        <option value="$PROJECT_DIR$/fishnet/models/pages.php" />
+        <option value="$PROJECT_DIR$/fishnet/controllers/journal.php" />
       </list>
     </option>
   </component>
@@ -333,12 +325,12 @@
       <workItem from="1472650764682" duration="22930000" />
       <workItem from="1472736873154" duration="23698000" />
       <workItem from="1473171064359" duration="50124000" />
-      <workItem from="1473345003852" duration="14772000" />
+      <workItem from="1473345003852" duration="21864000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152165000" />
+    <option name="totallyTimeSpent" value="159257000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -373,7 +365,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -416,46 +408,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/fishnet/controllers/poc_retail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-801">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fishnet/controllers/images.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fishnet/controllers/crud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-306">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fishnet/controllers/comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1428">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fishnet/controllers/calendar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-459">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fishnet/views/includes/tab_template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -562,17 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fishnet/controllers/journal.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="37" column="47" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="47" />
-          <folding>
-            <marker date="1472482482519" expanded="true" signature="1343:1551" ph="..." />
-            <marker date="1472482482519" expanded="true" signature="1376:1551" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../New directory/logs/log-2016-09-06.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
@@ -584,6 +525,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -661,6 +603,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="641">
           <caret line="83" column="43" selection-start-line="83" selection-start-column="30" selection-end-line="83" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -671,18 +614,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fishnet/controllers/monthly.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="32" column="106" selection-start-line="32" selection-start-column="106" selection-end-line="32" selection-end-column="106" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/js/require-jquery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -790,40 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fishnet/models/pages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="394" column="109" selection-start-line="394" selection-start-column="109" selection-end-line="394" selection-end-column="109" />
-          <folding>
-            <element signature="e#6#54#0#PHP" expanded="true" />
-            <marker date="1473360562121" expanded="true" signature="3958:4457" ph="SELECT fn_pa... fn_pages" />
-            <marker date="1473360562121" expanded="true" signature="5014:5470" ph="SELECT fn_pa... fn_pages" />
-            <marker date="1473360562121" expanded="true" signature="6384:7314" ph="SELECT obj_i... " />
-            <marker date="1473360562121" expanded="true" signature="8843:9343" ph="SELECT COUNT... access" />
-            <marker date="1473360562121" expanded="true" signature="8891:9304" ph="SELECT acces... *" />
-            <marker date="1473360562121" expanded="true" signature="8930:9255" ph="SELECT *, (M... fn_searchindex" />
-            <marker date="1473360562121" expanded="true" signature="10500:10795" ph="SELECT fn_pa... fn_pages" />
-            <marker date="1473360562121" expanded="true" signature="13444:14675" ph="SELECT fn_pa... fn_pages" />
-            <marker date="1473360562121" expanded="true" signature="13765:13850" ph="SELECT COUNT... fn_comments" />
-            <marker date="1473360562121" expanded="true" signature="13903:14094" ph="SELECT * FRO... page_id" />
-            <marker date="1473360562121" expanded="true" signature="13924:14062" ph="SELECT rev.p... fn_revisions" />
-            <marker date="1473360562121" expanded="true" signature="14141:14378" ph="SELECT BIT_O... fn_permissions" />
-            <marker date="1473360562121" expanded="true" signature="16691:17715" ph="SELECT count... fn_pages" />
-            <marker date="1473360562121" expanded="true" signature="16903:16988" ph="SELECT COUNT... fn_comments" />
-            <marker date="1473360562121" expanded="true" signature="17041:17232" ph="SELECT * FRO... page_id" />
-            <marker date="1473360562121" expanded="true" signature="17062:17200" ph="SELECT rev.p... fn_revisions" />
-            <marker date="1473360562121" expanded="true" signature="17279:17516" ph="SELECT BIT_O... fn_permissions" />
-            <marker date="1473360562121" expanded="true" signature="18424:19106" ph="SELECT fn_pa... fn_pages" />
-            <marker date="1473360562121" expanded="true" signature="18662:18705" ph="SELECT * FRO... fn_pages_pages" />
-            <marker date="1473360562121" expanded="true" signature="18782:18946" ph="SELECT page_... fn_permissions" />
-            <marker date="1473360562121" expanded="true" signature="20532:21178" ph="SELECT fn_pa... fn_pages" />
-            <marker date="1473360562121" expanded="true" signature="20766:20811" ph="SELECT * FRO... fn_pages_events" />
-            <marker date="1473360562121" expanded="true" signature="20886:21050" ph="SELECT page_... fn_permissions" />
-            <marker date="1473360562121" expanded="true" signature="22013:22066" ph="INSERT INTO fn_pages_events... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fishnet/controllers/server.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
@@ -839,6 +741,99 @@
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/views/monthly_digest.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/views/monthly_digest.edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/views/poc_resultsview.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/views/monthly_digest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/views/journal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/models/pages.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="378" column="106" selection-start-line="378" selection-start-column="106" selection-end-line="378" selection-end-column="106" />
+          <folding>
+            <element signature="e#6#54#0#PHP" expanded="true" />
+            <marker date="1473366793214" expanded="true" signature="3958:4457" ph="SELECT fn_pa... fn_pages" />
+            <marker date="1473366793214" expanded="true" signature="5014:5470" ph="SELECT fn_pa... fn_pages" />
+            <marker date="1473366793214" expanded="true" signature="6384:7314" ph="SELECT obj_i... " />
+            <marker date="1473366793214" expanded="true" signature="8843:9343" ph="SELECT COUNT... access" />
+            <marker date="1473366793214" expanded="true" signature="8891:9304" ph="SELECT acces... *" />
+            <marker date="1473366793214" expanded="true" signature="8930:9255" ph="SELECT *, (M... fn_searchindex" />
+            <marker date="1473366793214" expanded="true" signature="10500:10795" ph="SELECT fn_pa... fn_pages" />
+            <marker date="1473366793214" expanded="true" signature="13320:14551" ph="SELECT fn_pa... fn_pages" />
+            <marker date="1473366793214" expanded="true" signature="13641:13726" ph="SELECT COUNT... fn_comments" />
+            <marker date="1473366793214" expanded="true" signature="13779:13970" ph="SELECT * FRO... page_id" />
+            <marker date="1473366793214" expanded="true" signature="13800:13938" ph="SELECT rev.p... fn_revisions" />
+            <marker date="1473366793214" expanded="true" signature="14017:14254" ph="SELECT BIT_O... fn_permissions" />
+            <marker date="1473366793214" expanded="true" signature="16567:17591" ph="SELECT count... fn_pages" />
+            <marker date="1473366793214" expanded="true" signature="16779:16864" ph="SELECT COUNT... fn_comments" />
+            <marker date="1473366793214" expanded="true" signature="16917:17108" ph="SELECT * FRO... page_id" />
+            <marker date="1473366793214" expanded="true" signature="16938:17076" ph="SELECT rev.p... fn_revisions" />
+            <marker date="1473366793214" expanded="true" signature="17155:17392" ph="SELECT BIT_O... fn_permissions" />
+            <marker date="1473366793214" expanded="true" signature="18300:18982" ph="SELECT fn_pa... fn_pages" />
+            <marker date="1473366793214" expanded="true" signature="18538:18581" ph="SELECT * FRO... fn_pages_pages" />
+            <marker date="1473366793214" expanded="true" signature="18658:18822" ph="SELECT page_... fn_permissions" />
+            <marker date="1473366793214" expanded="true" signature="20408:21054" ph="SELECT fn_pa... fn_pages" />
+            <marker date="1473366793214" expanded="true" signature="20642:20687" ph="SELECT * FRO... fn_pages_events" />
+            <marker date="1473366793214" expanded="true" signature="20762:20926" ph="SELECT page_... fn_permissions" />
+            <marker date="1473366793214" expanded="true" signature="21889:21942" ph="INSERT INTO fn_pages_events... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/controllers/journal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="62" column="59" selection-start-line="62" selection-start-column="59" selection-end-line="62" selection-end-column="59" />
+          <folding>
+            <marker date="1473369905717" expanded="true" signature="1349:1557" ph="..." />
+            <marker date="1473369905717" expanded="true" signature="1382:1557" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fishnet/controllers/monthly.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="62" column="20" selection-start-line="62" selection-start-column="20" selection-end-line="62" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

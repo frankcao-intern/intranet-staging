@@ -383,8 +383,7 @@ class Pages extends CI_Model {
 		$section      = (isset($section_id)) ? "AND rel.section_id=$section_id" : '';
 		$section_join = (isset($section_id)) ? "JOIN fn_pages sections ON sections.page_id=$section_id" : '';
 		$section_id   = (isset($section_id)) ? ", sections.title AS section_title, $section_id AS section_id" : '';
-		//$dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published>=$publish_condition AND rel.date_published<='$d_end') AND rel.show_until>='$d_start')" : '';
-		$dates        = (($d_start != null) or ($d_end != null)) ? "AND (rel.date_published BETWEEN $d_start AND $d_end)" : '';
+		$dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published>=$publish_condition AND rel.date_published<='$d_end') AND rel.show_until>='$d_start')" : '';
 		//$dates        = (($d_start != null) or ($d_end != null)) ? "AND fn_pages.date_published<='$d_end' AND (fn_pages.show_until IS NULL OR fn_pages.show_until>='$d_start')" : '';
 		$limit        = (isset($limit)) ? "LIMIT " . (isset($offset) ? $offset : '0') . ",$limit" : '';
 		$random       = (isset($random)) ? "RAND()," : '';

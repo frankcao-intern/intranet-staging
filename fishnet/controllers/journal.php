@@ -35,7 +35,7 @@ class Journal extends Article {
 		$config['per_page'] = 5;
 
 		//load the articles
-		$articles = $this->pages->getForSection($page_id, null, null, null, $config['per_page'], $offset, null,
+		$articles = $this->pages->getForSection($page_id, null, null, null, null, $config['per_page'], $offset, null,
 				null, $sort_by);
 
 		$config['total_rows'] = $this->pages->getForSection_count($page_id, null, null, null, $config['per_page'],
