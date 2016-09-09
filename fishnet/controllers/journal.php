@@ -35,8 +35,20 @@ class Journal extends Article {
 		$config['per_page'] = 5;
 
 		//load the articles
-		$articles = $this->pages->getForSection($page_id, null, null, null, null, $config['per_page'], $offset, null,
-				null, $sort_by);
+		//$articles = $this->pages->getForSection($page_id, null, null, null, null, $config['per_page'], $offset, null, null, $sort_by);
+
+        /* Testing by Mosrur*/
+        $today = strtotime("01-".date("m-Y", time()));
+        //get one month of news
+        $d_start = date('Y-m-d', $today);
+        //this will work even for february leap years
+        $d_end = date('Y-m-d', strtotime("+1 month -1 day +23 hours +59 minutes +59 seconds", $today));
+        //current todays date
+        $d_now = date('Y-m-d');
+
+        //return $this->pages->getForSection($section_id, $d_start, $d_end, $d_now, null, null, null, null, $order_by);
+		$articles = $this->pages->getForSection($page_id, $d_start, $d_end, $d_now, null, $config['per_page'], $offset, null, null, $sort_by);
+        /* eof Testing */
 
 		$config['total_rows'] = $this->pages->getForSection_count($page_id, null, null, null, $config['per_page'],
 				$offset);
