@@ -1,6 +1,7 @@
 <?php
 /**
  * @author cravelo
+ * updated by: mosrur
  */
 
 /**
@@ -57,34 +58,36 @@ class Pages extends CI_Model {
 		}
 	}
 
-	/**
+    /**
+     * create a page
+     *
+     * @param array $recordArr
+     * @return int
+     */
+    function newPage($recordArr) {
+        //print_r($recordArr);
+        $this->db->insert('pages', $recordArr);
+        if ($this->db->affected_rows() > 0) {
+            return $this->db->insert_id();
+        } else {
+            return false;
+        }
+    }
+
+    /**
 	 * Updates the page record
 	 * @param int $page_id
 	 * @param array $data
 	 * @return bool
 	 */
 	function updatePage($page_id, $data) {
+
+
 		if (!isset($data)) { return false; }
 		if (count($data) == 0) { return true; }
 
-		return $this->db->where('page_id', $page_id)
+        return $this->db->where('page_id', $page_id)
 				->update('pages', $data);
-	}
-
-	/**
-	 * create a page
-	 *
-	 * @param array $recordArr
-	 * @return int
-	 */
-	function newPage($recordArr) {
-		//print_r($recordArr);
-		$this->db->insert('pages', $recordArr);
-		if ($this->db->affected_rows() > 0) {
-			return $this->db->insert_id();
-		} else {
-			return false;
-		}
 	}
 
 	/**
@@ -94,6 +97,17 @@ class Pages extends CI_Model {
 	function deletePage($page_id) {
 		//delete the page record, should cascade to permissions, revisions and comments
 		$this->db->where('page_id', $page_id)->delete('pages');
+
+		return ($this->db->affected_rows() > 0);
+	}
+
+	/**
+	 * @param int $page_id
+	 * @return bool
+	 */
+	function deletePageSections($page_id) {
+		//delete the page section record,
+        $this->db->where('page_id', $page_id)->delete('pages_pages');
 
 		return ($this->db->affected_rows() > 0);
 	}
@@ -219,9 +233,9 @@ class Pages extends CI_Model {
 		$search_sel = "
 			SELECT obj_id, obj_type, section_id, section_title, page_title, page_content as revision_text,
 				page_date_published, tag_name, tag_id, access,
-				CASE 
+				CASE # case statement that weights title, content, and tag matches accordingly  
 					WHEN title_relevance = 0 AND content_relevance = 0 AND tag_relevance = 0 THEN 0.0
-					WHEN title_relevance = 0 AND content_relevance  = 0 AND tag_relevance = 1 THEN 1.1 
+					WHEN title_relevance = 0 AND content_relevance  = 0 AND tag_relevance = 1 THEN 1.1
 					WHEN title_relevance = 0 AND content_relevance = 1 AND tag_relevance = 0 THEN 1.0
 					WHEN title_relevance = 0 AND content_relevance  = 1 AND tag_relevance = 1 THEN 2.1
 					WHEN title_relevance = 1 AND content_relevance = 0 AND tag_relevance = 0 THEN 1.2
@@ -319,7 +333,7 @@ class Pages extends CI_Model {
 		}
 	}
 
-	/**
+    /**
 	 * get the deleted pages where user_id has PERM_DELETE
 	 *
 	 * @param int $user_id
@@ -362,14 +376,21 @@ class Pages extends CI_Model {
 	 * @param string $order_by   the column to use to order the pages
 	 * @return array of page records matching params
 	 */
-	function getForSection($section_id = null, $d_start = null, $d_end = null, $featured = null, $limit = null,
+	function getForSection($section_id = null, $d_start = null, $d_end = null, $publish_condition = null, $featured = null, $limit = null,
 	                            $offset = null, $random = null, $tag_id = null, $order_by = null) {
 		//$this->output->enable_profiler(TRUE);
 
 		$section      = (isset($section_id)) ? "AND rel.section_id=$section_id" : '';
 		$section_join = (isset($section_id)) ? "JOIN fn_pages sections ON sections.page_id=$section_id" : '';
 		$section_id   = (isset($section_id)) ? ", sections.title AS section_title, $section_id AS section_id" : '';
-		$dates        = (($d_start != null) or ($d_end != null)) ? "AND fn_pages.date_published<='$d_end' AND (fn_pages.show_until IS NULL OR fn_pages.show_until>='$d_start')" : '';
+		if(date('Y-m') === date('Y-m', strtotime($d_start))){
+            $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
+        } else {
+            //$dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN '$d_start' AND NOW() ))" : '';
+            $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND '$d_end' ) OR (rel.show_until BETWEEN '$d_start' AND '$d_end'))" : '';
+
+        }
+		//$dates        = (($d_start != null) or ($d_end != null)) ? "AND fn_pages.date_published<='$d_end' AND (fn_pages.show_until IS NULL OR fn_pages.show_until>='$d_start')" : '';
 		$limit        = (isset($limit)) ? "LIMIT " . (isset($offset) ? $offset : '0') . ",$limit" : '';
 		$random       = (isset($random)) ? "RAND()," : '';
 		$featured     = (isset($featured)) ? "AND fn_pages.featured=$featured" : '';
@@ -378,11 +399,15 @@ class Pages extends CI_Model {
 		$tags     = (isset($tag_id)) ? "AND fn_tag_matches.tag_id=$tag_id" : '';
 		$tag_join = (isset($tag_id)) ? "JOIN fn_tag_matches ON fn_tag_matches.page_id=fn_pages.page_id" : '';
 
+        // new condifiton
+        //$publish_condition = (isset($publish_condition)) ? "AND rel.date_published>=$publish_condition" : '';
+
+
 		$order_by  = (isset($order_by)) ? "$order_by DESC, " : '';
 		$perm_read = PERM_READ;
 		$user_id   = $this->session->userdata('user_id');
 
-		$query_str = "SELECT fn_pages.*, fn_templates.template_name, rev.revision_text $section_id, comm.comments_count
+        $query_str = "SELECT fn_pages.*, rel.date_published, rel.show_until, fn_templates.template_name, rev.revision_text $section_id, comm.comments_count
 			FROM fn_pages
 			$section_join
 			JOIN fn_templates ON fn_pages.template_id=fn_templates.template_id
@@ -408,12 +433,13 @@ class Pages extends CI_Model {
 				$section
 				$dates
 				$featured
-				$tags
+				$tags				
 			GROUP BY fn_pages.page_id
 			ORDER BY $random $order_by fn_pages.date_published DESC $limit";
 
-		//echo $query_str;
-		/**
+		pr($query_str);
+
+        /**
 		 * @var CI_DB_result $query
 		 */
 		$query = $this->db->query($query_str);
@@ -520,6 +546,7 @@ class Pages extends CI_Model {
 				WHERE fn_templates.page_type='section'
 				GROUP BY fn_pages.page_id
 				ORDER BY fn_pages.title";
+        //echo $query;
 
 		$query = $this->db->query($query);
 
@@ -537,27 +564,20 @@ class Pages extends CI_Model {
 	 * @param int   $page_id  the page to publish to the sections on $sections
 	 * @return bool return whether the publish was successful or not.
 	 */
-	function publishPage($page_id, $sections) {
-		if (is_numeric($page_id) and is_array($sections)) {
-			//update section-page-relationships
-			$this->db->where('page_id', $page_id)->delete('pages_pages');
-			if (count($sections) > 0) {
-				$values = array();
-				foreach ($sections as $section_id) {
-					if (is_numeric($section_id)) {
-						$values[] = array(
-							'section_id' => $section_id,
-							'page_id' => $page_id
-						);
-					}
-				}
+	function publishPage($page_id, $data) {
 
-				return $this->db->insert_batch('pages_pages', $values);
+		if (is_numeric($page_id) and is_array($data)) {
+
+			//delete previous entires
+			$this->db->where('page_id', $page_id)->delete('pages_pages');
+			if (count($data) > 0) {
+                // inserting the new section entries into pages_pages table and return
+                return $this->db->insert_batch('pages_pages', $data);
 			}else{
 				return true;
 			}
 		} else {
-			return false;
+		    return false;
 		}
 	}
 
@@ -678,4 +698,30 @@ class Pages extends CI_Model {
 
 		return $query->result_array();
 	}
-}//class
+
+    /**
+     * Get any property off a page given the page_id and the name of the property
+     *
+     * @param int    $page_id the page id
+     * @param string $section_id the page scetion id
+     * @return mixed The value of the requested property
+     */
+    function getPageSectionProperty($page_id, $section_id, $field = false) {
+        $query = $this->db
+            ->select(($field)? $field: '*')
+            ->where("page_id", $page_id)
+            ->where("section_id", $section_id)
+            ->from('pages_pages')
+            ->get();
+
+        $this->output->enable_profiler(TRUE);
+        if ($query->num_rows() > 0) {
+            $result = $query->row_array();
+            //pr($result);
+            return ($field)? $result[$field]: $result;
+        } else {
+            return null;
+        }
+    }
+
+}

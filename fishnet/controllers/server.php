@@ -61,7 +61,31 @@ class Server extends CI_Controller {
 	}
 
 	//PERMISSIONS -------------------------------------------------------------------------------------------
-	/**
+    /**
+     * Permissions add new record
+     * @return void
+     */
+    function permadd(){
+        $page_id = $this->input->post('pid');
+        $data = json_decode($this->input->post('data'));
+
+        //load the pages model
+        $this->load->model('permissions');
+        //update title
+        if (!$this->permissions->add($page_id, $data)){
+            $this->result->isError = true;
+            $this->result->errorStr = "There was an error adding that group to the permissions table. Check that the
+				selected group is not already on the table and try again. Contact the Helpdesk at x4024 if the
+				problem persists.";
+        }
+
+        $this->result->data = "New group added successfully.";
+        $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($this->result));
+    }
+
+    /**
 	 * Permissions update, return json like every other function in this controller.
 	 * @return void
 	 */
@@ -77,32 +101,8 @@ class Server extends CI_Controller {
 			$this->result->errorStr = "There was an error while updating the permissions for this page. Please try again. If the problem persists call the Helpdesk at x4024.";
 		}
 
-		$this->result->data = "Permissions updated successfully";
+		$this->result->data = "Page properties - group permissions updated successfully";
 
-		$this->output
-            ->set_content_type('application/json')
-            ->set_output(json_encode($this->result));
-	}
-
-	/**
-	 * Permissions add new record
-	 * @return void
-	 */
-	function permadd(){
-		$page_id = $this->input->post('pid');
-		$data = json_decode($this->input->post('data'));
-
-		//load the pages model
-		$this->load->model('permissions');
-		//update title
-		if (!$this->permissions->add($page_id, $data)){
-			$this->result->isError = true;
-			$this->result->errorStr = "There was an error adding that group to the permissions table. Check that the
-				selected group is not already on the table and try again. Contact the Helpdesk at x4024 if the
-				problem persists.";
-		}
-
-		$this->result->data = "New group added successfully.";
 		$this->output
             ->set_content_type('application/json')
             ->set_output(json_encode($this->result));

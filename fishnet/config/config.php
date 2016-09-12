@@ -252,6 +252,7 @@ $config['sess_expire_on_close']	= TRUE;
 switch(ENVIRONMENT){
 	case 'development':
 	case 'testing': {
+        error_reporting(E_ALL);
 		$config['sess_encrypt_cookie']	= FALSE;
 		break;
 	}
@@ -326,9 +327,11 @@ $config['csrf_expire'] = 7210;
 | by the output class.  Do not 'echo' any values with compression enabled.
 |
 */
+
 switch(ENVIRONMENT){
 	case 'development':
 	case 'testing': {
+        error_reporting(E_ALL);
 		$config['compress_output'] = FALSE;
 		break;
 	}

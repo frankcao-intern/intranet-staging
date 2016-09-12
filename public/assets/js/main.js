@@ -1236,8 +1236,9 @@ var coreEngine = coreEngine || {};
 			//			'and "All Forms & Documents". Our "Guidelines & Resources" are located on the right side of the page. If there are questions or comments, ' +
 			//			'please provide them via the "Feedback" form, located at the bottom of the page.','info');}
 		
-		}
-		
+		},
+
+
 	};
 
 	/*! * (v) hrefID jQuery extention * returns a valid #hash string from link href attribute in Internet Explorer */
@@ -1273,6 +1274,7 @@ var coreEngine = coreEngine || {};
 		Engine.dialogs.whatareyouupto();
 		Engine.whosWhoNotify();
 		Engine.showLoginMessage();
+
 
 		coreEngine.fancybox();
 		coreEngine.checkboxes();

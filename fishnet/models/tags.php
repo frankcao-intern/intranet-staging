@@ -143,6 +143,7 @@ class Tags extends CI_Model {
 	 */
 	function tagPage($page_id, $tags){
 		$this->db->where('page_id', $page_id)->delete('tag_matches');
+
 		if (count($tags) > 0){
 			$tags = array_map(function($tag){
 				return mysql_real_escape_string($tag);
@@ -155,4 +156,5 @@ class Tags extends CI_Model {
 
 		return ($this->db->_error_number() === 0);
 	}
+
 }

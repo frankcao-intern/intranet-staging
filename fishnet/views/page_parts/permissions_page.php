@@ -81,7 +81,7 @@
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-			<p><button class="btn-save-prop">Save Permissions</button></p>
+			<p><button class="btn-save-prem">Save Permissions</button></p>
 		</form>
 	</div>
 <?php endif; ?>

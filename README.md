@@ -41,6 +41,30 @@ Currently working on:
 - Typing up test cases for tag matching and permission matching
 - Drafting initial proposal for filter features
 
+#### Week 5
+- Added weight to search function, title has 1.2, tags have 1.1, and content has 1.0
+- Began looking through work on retail team page/task management
+
+#### Week 6
+- Search engine modifications being tested
+- Writing test scripts
+
+#### Week 7
+- Research on Task Management systems
+- What is feasible in 3 weeks?
+
+#### Week 8
+- Understanding the backend of fishnet
+- Learning codeigniter
+
+#### Week 9
+- Begin tackling Views and Controllers
+
+#### Week 10	
+- Finished the Model
+- Cleaning up code, trying to comment, might not have time
+- Demo all working!
+
 ### Important Changes:
 - SET GLOBAL max_allowed_packet=20047872 (20 MB), to allow for larger search index!
 - added new tags to "default.php"

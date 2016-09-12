@@ -50,3 +50,5 @@ Temporary Items
 # Testing Directories
 # =========================
 logic_testing
+*.bak1
+*.bak

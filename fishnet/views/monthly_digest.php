@@ -6,7 +6,7 @@
 		</p>
 		<h2><?=anchor('monthly/'.$page_id, val($title, 'Untitled Page'))?></h2>
 	</div>
-
+	<?php echo "test by mosrurrrrr"; ?>
 	<?php $this->load->view('page_parts/digest_navigation') ?>
 
 	<?php foreach (val($thisMonth, array()) as $page): ?>

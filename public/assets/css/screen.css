@@ -927,7 +927,7 @@ form.status { width: 298px; }
  html* .properties-a .field input { padding-top: 5px; padding-bottom: 6px; }
  .properties-a label strong { display: block; }
 
-.field-group-a { margin-bottom: 15px; padding: 12px 10px 0; background-color: #EAE5DC;/*#f6f6f1*/; }
+.field-group-a { margin-bottom: 15px; padding: 12px 10px 0; /* background-color: #EAE5DC;#f6f6f1*/; }
 .field-group-a:after { content: "."; display: block; overflow: hidden; clear: both; height: 0; }
 html* .field-group-a { zoom: 1; }
  .field-group-a .one { float: left; width: 344px; }

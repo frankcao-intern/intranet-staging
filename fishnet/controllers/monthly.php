@@ -27,8 +27,10 @@ class Monthly extends Article {
 		$d_start = date('Y-m-d', $date);
 		//this will work even for february leap years
 		$d_end = date('Y-m-d', strtotime("+1 month -1 day +23 hours +59 minutes +59 seconds", $date));
+        //current todays date
+        $d_now = date('Y-m-d');
 
-		return $this->pages->getForSection($section_id, $d_start, $d_end, null, null, null, null, null, $order_by);
+		return $this->pages->getForSection($section_id, $d_start, $d_end, $d_now, null, null, null, null, $order_by);
 	}
 
 	/*
