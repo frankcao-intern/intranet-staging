@@ -142,26 +142,28 @@ class Properties extends MY_Controller {
 
             // itarating through both the content array
             foreach($content['date_published'] as $key => $dp_val){
-                foreach ($content['show_until'] as $index => $su_val){
-                    if($key == $index) {
-                        if (!is_null($dp_val) || !is_null($su_val)){
-
-                            if(strtotime($su_val) < strtotime($dp_val)) {
-                                $this->result->isError = true;
-                                $this->result->errorStr = "Display Until cannot be blank or earlier than Date Published, please correct this and try again.";
+                if(!is_null($dp_val)){
+                    foreach ($content['show_until'] as $index => $su_val){
+                        if($key == $index) {
+                            if(!is_null($su_val) && !is_null($dp_val)){
+                                if(strtotime($su_val) < strtotime($dp_val) ) {
+                                    $this->result->isError = true;
+                                    $this->result->errorStr = "Show Until cannot be earlier than Date Published, please correct this and try again.";
+                                } else {
+                                    $data[$index]['page_id'] = $page_id;
+                                    $data[$index]['section_id'] = $key;
+                                    $data[$index]['date_published'] = $dp_val;
+                                    $data[$index]['show_until'] = $su_val;
+                                }
                             } else {
-                                $data[$index]['page_id'] = $page_id;
-                                $data[$index]['section_id'] = $key;
-                                $data[$index]['date_published'] = $dp_val;
-                                $data[$index]['show_until'] = $su_val;
+                                $this->result->isError = true;
+                                $this->result->errorStr = "Section's dates cannot be blank, please correct this and try again.";
                             }
+
                         } else {
                             continue;
                         }
-                    } else {
-                        continue;
                     }
-
                 }
             }
 
