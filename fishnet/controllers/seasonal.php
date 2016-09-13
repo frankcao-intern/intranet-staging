@@ -28,7 +28,7 @@ class Seasonal extends Article {
 
 		$this->load->model('pages');
 		$thisSeason = $this->pages->getForSection($section_id, $current_season['first_day'],
-			$current_season['last_day'], null, null, null, null, null, $order_by);
+			$current_season['last_day'], null, null, null, null, null, $order_by, 'seasonal');
 		array_walk($thisSeason, 'truncateArticle', array('count' => 45, 'key' => 'article'));
 		$this->pageRecord['articles'] = $thisSeason;
 

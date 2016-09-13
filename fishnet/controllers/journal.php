@@ -46,11 +46,12 @@ class Journal extends Article {
         //current todays date
         $d_now = date('Y-m-d');
 
-        //return $this->pages->getForSection($section_id, $d_start, $d_end, $d_now, null, null, null, null, $order_by);
-		$articles = $this->pages->getForSection($page_id, $d_start, $d_end, $d_now, null, $config['per_page'], $offset, null, null, $sort_by);
+        //$articles = $this->pages->getForSection($page_id, $d_start, $d_end, $d_now, null, $config['per_page'], $offset, null, null, $sort_by);
         /* eof Testing */
 
-		$config['total_rows'] = $this->pages->getForSection_count($page_id, null, null, null, $config['per_page'],
+        $articles = $this->pages->getForSection($page_id, null, $d_end, null, $config['per_page'], $offset, null, null, $sort_by, 'journal');
+
+        $config['total_rows'] = $this->pages->getForSection_count($page_id, null, null, null, $config['per_page'],
 				$offset);
 		$config['num_links'] = 1;
 		$config['display_pages'] = false;

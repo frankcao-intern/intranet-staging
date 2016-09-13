@@ -376,19 +376,34 @@ class Pages extends CI_Model {
 	 * @param string $order_by   the column to use to order the pages
 	 * @return array of page records matching params
 	 */
-	function getForSection($section_id = null, $d_start = null, $d_end = null, $publish_condition = null, $featured = null, $limit = null,
-	                            $offset = null, $random = null, $tag_id = null, $order_by = null) {
+	function getForSection($section_id = null,
+                           $d_start = null,
+                           $d_end = null,
+                           $featured = null,
+                           $limit = null,
+	                       $offset = null,
+                           $random = null,
+                           $tag_id = null,
+                           $order_by = null,
+                           $section_name = null) {
 		//$this->output->enable_profiler(TRUE);
 
 		$section      = (isset($section_id)) ? "AND rel.section_id=$section_id" : '';
 		$section_join = (isset($section_id)) ? "JOIN fn_pages sections ON sections.page_id=$section_id" : '';
 		$section_id   = (isset($section_id)) ? ", sections.title AS section_title, $section_id AS section_id" : '';
-		if(date('Y-m') === date('Y-m', strtotime($d_start))){
-            $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
-        } else {
-            //$dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN '$d_start' AND NOW() ))" : '';
-            $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND '$d_end' ) OR (rel.show_until BETWEEN '$d_start' AND '$d_end'))" : '';
+        if($section_name == 'monthly'){
+            if(date('Y-m') === date('Y-m', strtotime($d_start))){
+                $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
+            } else {
+                //$dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN '$d_start' AND NOW() ))" : '';
+                $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND '$d_end' ) OR (rel.show_until BETWEEN '$d_start' AND '$d_end'))" : '';
 
+            }
+        } elseif ($section_name == 'journal'){
+            //$dates        = (($d_start != null) or ($d_end != null)) ? "AND (rel.show_until BETWEEN CURDATE() AND '$d_end' )" : '';
+            $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) OR (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
+        } else {
+            $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
         }
 		//$dates        = (($d_start != null) or ($d_end != null)) ? "AND fn_pages.date_published<='$d_end' AND (fn_pages.show_until IS NULL OR fn_pages.show_until>='$d_start')" : '';
 		$limit        = (isset($limit)) ? "LIMIT " . (isset($offset) ? $offset : '0') . ",$limit" : '';
@@ -437,7 +452,7 @@ class Pages extends CI_Model {
 			GROUP BY fn_pages.page_id
 			ORDER BY $random $order_by fn_pages.date_published DESC $limit";
 
-		pr($query_str);
+		//pr($query_str);
 
         /**
 		 * @var CI_DB_result $query

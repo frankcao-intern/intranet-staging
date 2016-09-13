@@ -148,7 +148,7 @@ class Properties extends MY_Controller {
 
                             if(strtotime($su_val) < strtotime($dp_val)) {
                                 $this->result->isError = true;
-                                $this->result->errorStr = "Show Until cannot be earlier than Date Published, please correct this and try again.";
+                                $this->result->errorStr = "Display Until cannot be blank or earlier than Date Published, please correct this and try again.";
                             } else {
                                 $data[$index]['page_id'] = $page_id;
                                 $data[$index]['section_id'] = $key;
