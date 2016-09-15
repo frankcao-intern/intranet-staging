@@ -45,7 +45,7 @@ class Article extends MY_Controller {
 		//get related tags
 		$this->load->model('tags');
 		$this->pageRecord['tags'] = $this->tags->getForPage($page_id);
-        //pr($this->pageRecord);
+        pr($this->pageRecord);
 
 		//load the page with the requested template around it
 		if (isset($this->pageRecord['params']) and isset($this->pageRecord['params']['layout'])){
@@ -584,4 +584,36 @@ class Article extends MY_Controller {
 				->set_output(json_encode($this->result));
 		}
 	}
+    /**
+     * Updates sort order for the listing
+     */
+    function sortOrder() {
+        $content = json_decode($this->input->post('data'), true);
+
+        $this->result->data = "Sorting updated successfully.";
+
+        $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($this->result));
+        //pr($content);
+        /*pr($article_id);
+        pr($array);
+        exit;
+        /*/
+        /* need to make some changes here */
+        /*
+        $newArray = array ();
+        foreach ($array as $key => $value) {
+            if ($key == $key1) {
+                $newArray[$key2] = $array[$key2];
+            } elseif ($key == $key2) {
+                $newArray[$key1] = $array[$key1];
+            } else {
+                $newArray[$key] = $value;
+            }
+        }
+        return $newArray;
+        */
+
+    }
 };

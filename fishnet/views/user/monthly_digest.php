@@ -49,8 +49,15 @@ $prev = val($prev, array());
 					<?=$news[$i]['page_views']." read"?>
 				</span>
 			</p>
-			<p><?=$news[$i]['revision_text']->article?></p>
-			<p class="more-a"><?=anchor("/article/".$news[$i]['page_id'], "Read More&nbsp;&#x25ba;")?></p>
+			<p><?php echo $news[$i]['revision_text']->article?></p>
+			<p class="more-a"><?php echo anchor("/article/".$news[$i]['page_id'], "Read More&nbsp;&#x25ba;");?></p>
+			<!-- Sorting code -->
+            <p class="more-a">
+                <?php echo anchor("/article/sortOrder/".$news[$i]['page_id']."/".$news, "Up&nbsp;&uarr;");?>
+                &nbsp | &nbsp
+                <?php echo anchor("/article/sortOrder/".$news[$i]['page_id']."/".$news, "Down&nbsp;&darr;");?>
+            </p>
+
 		</li>
 	<?php endfor; ?>
 	</ol>

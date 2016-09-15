@@ -8,6 +8,7 @@
 	</div>
 	<?php echo "test by mosrurrrrr"; ?>
 	<?php $this->load->view('page_parts/digest_navigation') ?>
+	<?php echo "testing for monthly page;" ?>
 
 	<?php foreach (val($thisMonth, array()) as $page): ?>
 		<?php //print_r($page); ?>

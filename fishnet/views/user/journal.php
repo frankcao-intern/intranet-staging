@@ -16,6 +16,7 @@
 			<?=$this->pagination->create_links()?>
 		</ul>
 
+        <div id="sortOrder">
 		<?php foreach(val($articles, array()) as $article): ?>
 			<?php
 				$articleLink = site_url("article/".$article['page_id']);
@@ -27,13 +28,24 @@
 				$angle = (int)val($revision->main_image[0]->angle, 0);
 				$img = get_image_html($src, 380, 236, $flip, $angle);
 			?>
-			<div class="section-a entry">
+			<div class="section-a entry" id="<?php echo $article['page_id']; ?>">
 				<p class="image">
 					<a href="<?=site_url($articleAnchor)?>">
 						<img <?=$img?> alt="<?=htmlentities(val($revision->main_image[0]->alt), ENT_COMPAT, 'UTF-8', false)?>" />
 					</a>
 				</p>
-				<h3 class="b"><?=anchor($articleAnchor, $article['title'])?></h3>
+				<p class="more-a">
+					<?php echo anchor("/article/sortOrder/".$article['page_id']."/".$article, "Up&nbsp;&uarr;");?>
+					&nbsp | &nbsp
+					<?php echo anchor("/article/sortOrder/".$article['page_id']."/".$article, "Down&nbsp;&darr;");?>
+				</p>
+				<p>
+					<h3 class="b" style="text-align: left;"><?=anchor($articleAnchor, $article['title'])?></h3>
+				</p>
+				<div>
+					&nbsp;
+				</div>
+
                 <p class="published">
 					<span class="date <?=(empty($order_by) or ($order_by === 'most_recent')) ? 'highlight' : ''?>">
 						<?=date("l, F d, Y", strtotime($article['date_published']))?>
@@ -51,6 +63,8 @@
 				<p class="more-a"><?=anchor($articleAnchor, "Read More&nbsp;&nbsp;&#x25ba;")?></p>
 			</div>
 		<?php endforeach; ?>
+        </div>
+        <!--<div id="after-sort"></div>-->
 		<div class="section-a entry">&nbsp;<!-- this provides separation of the listing from the pagination bar --></div>
 
 		<ul class="digest-nav">
