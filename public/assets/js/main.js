@@ -376,6 +376,13 @@ var coreEngine = coreEngine || {};
 			});
 		},
 		/**
+		 * load the page content after ajax callback without refreshing the page
+		 */
+		loadUrl: function(selector, destUrl){
+			var url = coreEngine.siteRoot + destUrl + coreEngine.pageID.match(/\d+/)[0];
+			$("+selector+").html(ajax_load).load(url);
+		},
+		/**
 		 * New page function, requests a list of templates form the server then displays the dialog to create a new page.
 		 */
 		newPage: function(){

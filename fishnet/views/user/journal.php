@@ -34,11 +34,11 @@
 						<img <?=$img?> alt="<?=htmlentities(val($revision->main_image[0]->alt), ENT_COMPAT, 'UTF-8', false)?>" />
 					</a>
 				</p>
-				<p class="more-a">
-					<?php echo anchor("/article/sortOrder/".$article['page_id']."/".$article, "Up&nbsp;&uarr;");?>
+                <!--<p class="more-a">
+					<?php /*echo anchor("/article/sortOrder/".$article['page_id']."/".$article, "Up&nbsp;&uarr;");*/?>
 					&nbsp | &nbsp
-					<?php echo anchor("/article/sortOrder/".$article['page_id']."/".$article, "Down&nbsp;&darr;");?>
-				</p>
+					<?php /*echo anchor("/article/sortOrder/".$article['page_id']."/".$article, "Down&nbsp;&darr;");*/?>
+				</p>-->
 				<p>
 					<h3 class="b" style="text-align: left;"><?=anchor($articleAnchor, $article['title'])?></h3>
 				</p>

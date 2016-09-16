@@ -45,7 +45,7 @@ class Article extends MY_Controller {
 		//get related tags
 		$this->load->model('tags');
 		$this->pageRecord['tags'] = $this->tags->getForPage($page_id);
-        pr($this->pageRecord);
+        //pr($this->pageRecord);
 
 		//load the page with the requested template around it
 		if (isset($this->pageRecord['params']) and isset($this->pageRecord['params']['layout'])){
