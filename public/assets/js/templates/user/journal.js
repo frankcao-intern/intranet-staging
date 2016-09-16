@@ -54,35 +54,22 @@ require(['jquery'], function($) {
         Engine.sorting();
 
 
-        jQuery('#someid').sortable({
-
-            axis: 'y',
-            stop: function (event, ui) {
-                var sortData = $(this).sortable('toArray');
-                $('span').text(sortData);
-                var postData = "data=" + JSON.stringify(sortData);
-                coreEngine.ajax("article/sortOrder/" , postData, coreEngine.genericCallBack, 'json');
-
-                // return msg
-                //page_properties.setConfirmUnload(false);
-
-                return false;
-
-            }
-        });
-
         jQuery('#sortOrder').sortable({
 
             axis: 'y',
+
             stop: function (event, ui) {
-                var sortData = $(this).sortable('toArray');
-                $('#after-sort').text(sortData);
-                var postData = "data=" + JSON.stringify(sortData);
+                var sortData, postData, loadUrl;
+                sortData = $(this).sortable('toArray');
+
+                // data
+                postData = "sid=" + coreEngine.pageID.match(/\d+/)[0];
+                postData += "&data=" + JSON.stringify(sortData);
+
+                // calling the ajax function to update the data
                 coreEngine.ajax("article/sortOrder/" , postData, coreEngine.genericCallBack, 'json');
 
                 // return msg
-                //page_properties.setConfirmUnload(false);
-
                 return false;
 
             }

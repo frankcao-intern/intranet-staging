@@ -450,7 +450,7 @@ class Pages extends CI_Model {
 				$featured
 				$tags				
 			GROUP BY fn_pages.page_id
-			ORDER BY $random $order_by fn_pages.date_published DESC $limit";
+			ORDER BY $random $order_by rel.sort_order ASC , rel.date_published DESC $limit";
 
 		//pr($query_str);
 
@@ -595,6 +595,46 @@ class Pages extends CI_Model {
 		    return false;
 		}
 	}
+
+	/**
+	 * Update a published page to the selected sections.
+	 *
+	 * @param array $sections section_ids to publish this page to
+	 * @param int   $page_id  the page to publish to the sections on $sections
+	 * @return bool return whether the fields updated successfuly or not.
+	 */
+	function batchupdatePublishPage($page_id, $data) {
+
+        if (is_numeric($page_id) and is_array($data)) {
+            pr($data);
+            // update the sort order fields
+            return $this->db->update('pages_pages', $data, array('page_id', 'section_id'));
+        }else {
+            return false;
+        }
+	}
+
+    /**
+     * Update a published page to the selected sections.
+     *
+     * @param array $sections section_ids to publish this page to
+     * @param int   $page_id  the page to publish to the sections on $sections
+     * @return bool return whether the fields updated successfuly or not.
+     */
+    function updatePublishPage($page_id, $section_id, $data) {
+
+        if (is_numeric($page_id) && is_numeric($section_id) && is_array($data)) {
+            //pr($data);
+            // update the sort order fields
+            $this->db->where('page_id', $page_id);
+            $this->db->where('section_id', $section_id);
+            $this->db->update('pages_pages', $data);
+            //return $this->db->update('pages_pages', $data, array('page_id', 'section_id'));
+            return true;
+        }else {
+            return false;
+        }
+    }
 
 	/**
 	 * Get the list of sections a user has access to publish an event to and also what sections

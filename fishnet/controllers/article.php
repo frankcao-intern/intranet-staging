@@ -588,32 +588,33 @@ class Article extends MY_Controller {
      * Updates sort order for the listing
      */
     function sortOrder() {
+        $this->load->model('pages', 'pm');
+        $section_id = $this->input->post('sid');
         $content = json_decode($this->input->post('data'), true);
 
-        $this->result->data = "Sorting updated successfully.";
+        foreach($content as $key => $value){
+            /*$data[] = array(
+                'section_id' => $page_id,
+                'page_id' => $value,
+                'sort_order' => $key+1,
+            );*/
+            $data['sort_order'] = $key+1;
+            $page_id = $value;
+
+            if(!$this->pm->updatePublishPage($page_id, $section_id, $data)){
+                $this->result->isError = true;
+                $this->result->errorStr = "There was an error saving the new content.";
+            }
+
+        }
+
+        if (!$this->result->isError){
+            $this->result->data = "Sorting updated successfully.";
+        }
 
         $this->output
             ->set_content_type('application/json')
             ->set_output(json_encode($this->result));
-        //pr($content);
-        /*pr($article_id);
-        pr($array);
-        exit;
-        /*/
-        /* need to make some changes here */
-        /*
-        $newArray = array ();
-        foreach ($array as $key => $value) {
-            if ($key == $key1) {
-                $newArray[$key2] = $array[$key2];
-            } elseif ($key == $key2) {
-                $newArray[$key1] = $array[$key1];
-            } else {
-                $newArray[$key] = $value;
-            }
-        }
-        return $newArray;
-        */
 
     }
 };
