@@ -15,8 +15,9 @@
             <li class="highlighter">&nbsp;</li>
 			<?=$this->pagination->create_links()?>
 		</ul>
-
-        <div id="sortOrder">
+		<?php if($order_by == null): ?>
+		<div id="sortOrder">
+		<?php endif; ?>
 		<?php foreach(val($articles, array()) as $article): ?>
 			<?php
 				$articleLink = site_url("article/".$article['page_id']);
@@ -63,7 +64,10 @@
 				<p class="more-a"><?=anchor($articleAnchor, "Read More&nbsp;&nbsp;&#x25ba;")?></p>
 			</div>
 		<?php endforeach; ?>
-        </div>
+			<?php if($order_by == null): ?>
+		</div>
+		<?php endif; ?>
+
         <!--<div id="after-sort"></div>-->
 		<div class="section-a entry">&nbsp;<!-- this provides separation of the listing from the pagination bar --></div>
 
