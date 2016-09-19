@@ -4,6 +4,9 @@
  * Date: Apr 14, 2010
  * Time: 10:12:42 AM
  * This file contains all global javascript code excluding libraries and plugins.
+ *
+ * Modified by: mosrur
+ * Date: Sept 19, 2016
  */
 
 /*global jQuery, qq, jwplayer, define */
@@ -381,6 +384,32 @@ var coreEngine = coreEngine || {};
 		loadUrl: function(selector, destUrl){
 			var url = coreEngine.siteRoot + destUrl + coreEngine.pageID.match(/\d+/)[0];
 			$("+selector+").html(ajax_load).load(url);
+		},
+		/**
+		 * article listing - manual sorting order function which take
+		 */
+		sortOrder: function(sectionName){
+			jQuery('#sortOrder').sortable({
+				axis: 'y',
+				stop: function (event, ui) {
+					var sortData, postData;
+					sortData = $(this).sortable('toArray');
+
+					// creating data array and encoding with json stringify
+					postData = "sid=" + coreEngine.pageID.match(/\d+/)[0];
+					postData += "&data=" + JSON.stringify(sortData);
+
+					// calling the ajax function to update the data
+					coreEngine.ajax("article/sortOrder/" , postData, coreEngine.genericCallBack, 'json');
+
+					// loading the content with updated data
+					coreEngine.loadUrl('#sortOrder', sectionName);
+
+					// return msg
+					return false;
+
+				}
+			});
 		},
 		/**
 		 * New page function, requests a list of templates form the server then displays the dialog to create a new page.

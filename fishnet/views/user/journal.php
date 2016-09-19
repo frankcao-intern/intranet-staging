@@ -35,17 +35,10 @@
 						<img <?=$img?> alt="<?=htmlentities(val($revision->main_image[0]->alt), ENT_COMPAT, 'UTF-8', false)?>" />
 					</a>
 				</p>
-                <!--<p class="more-a">
-					<?php /*echo anchor("/article/sortOrder/".$article['page_id']."/".$article, "Up&nbsp;&uarr;");*/?>
-					&nbsp | &nbsp
-					<?php /*echo anchor("/article/sortOrder/".$article['page_id']."/".$article, "Down&nbsp;&darr;");*/?>
-				</p>-->
+
 				<p>
 					<h3 class="b" style="text-align: left;"><?=anchor($articleAnchor, $article['title'])?></h3>
 				</p>
-				<div>
-					&nbsp;
-				</div>
 
                 <p class="published">
 					<span class="date <?=(empty($order_by) or ($order_by === 'most_recent')) ? 'highlight' : ''?>">
@@ -64,7 +57,7 @@
 				<p class="more-a"><?=anchor($articleAnchor, "Read More&nbsp;&nbsp;&#x25ba;")?></p>
 			</div>
 		<?php endforeach; ?>
-			<?php if($order_by == null): ?>
+		<?php if($order_by == null): ?>
 		</div>
 		<?php endif; ?>
 

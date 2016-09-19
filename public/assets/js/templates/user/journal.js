@@ -52,30 +52,7 @@ require(['jquery'], function($) {
     $(document).ready(function() {
         Engine.base_url = Engine.base_url();
         Engine.sorting();
+        coreEngine.sortOrder('journal');
 
-
-        jQuery('#sortOrder').sortable({
-
-            axis: 'y',
-
-            stop: function (event, ui) {
-                var sortData, postData;
-                sortData = $(this).sortable('toArray');
-
-                // creating data array and encoding with json stringify
-                postData = "sid=" + coreEngine.pageID.match(/\d+/)[0];
-                postData += "&data=" + JSON.stringify(sortData);
-
-                // calling the ajax function to update the data
-                coreEngine.ajax("article/sortOrder/" , postData, coreEngine.genericCallBack, 'json');
-
-                // loading the content with updated data
-                coreEngine.loadUrl('#sortOrder', 'journal');
-
-                // return msg
-                return false;
-
-            }
-        });
     });
 });

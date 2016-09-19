@@ -18,49 +18,56 @@ $prev = val($prev, array());
 
 	<?php $this->load->view('page_parts/digest_navigation') ?>
 
-	<ol class="digest-list">
-	<?php for ($i = 0; $i < $newsCount; $i++): ?>
-		<li class="section-a featured-a">
-			<h3 class="b"><?=anchor("/article/".$news[$i]['page_id'], $news[$i]['title'])?></h3>
-<!--            <span class="counter">--><?//=$i + 1?><!--</span>-->
+	<!-- test -->
+	<?php if($order_by == null && $show_next == null): ?>
+	<div id="sortOrder">
+	<?php endif; ?>
+		<?php foreach(val($news, array()) as $article): ?>
 			<?php
-				$src = val($news[$i]['revision_text']->main_image[0]->src, 'error');
-				$flip = val($news[$i]['revision_text']->main_image[0]->flip, false);
-				$flip = (($flip === true) or ($flip === "true"));
-				$angle = (int)val($news[$i]['revision_text']->main_image[0]->angle, 0);
-				$img = get_image_html($src, 252, 156, $flip, $angle);
-				$alt = htmlentities(val($news[$i]['revision_text']->main_image[0]->alt), ENT_COMPAT, 'UTF-8', false);
-			?>
-			<p class="image">
-				<a href="<?=site_url("article/".$news[$i]['page_id'])?>">
-					<img <?=$img?> alt="<?=$alt?>" />
-				</a>
-			</p>
-			<p class="published">
-				<span class="date <?=(empty($order_by) or ($order_by === 'most_recent')) ? 'highlight' : ''?>">
-					<?=date("l, F d, Y", strtotime($news[$i]['date_published']))?>
-				</span>
-				&nbsp;|&nbsp;
-				<span class="<?=($order_by === 'comments_count') ? 'highlight' : ''?>">
-					<?=(int)$news[$i]['comments_count']." ".(($news[$i]['comments_count'] == 1) ? "comment" : "comments")?>
-				</span>
-                &nbsp;|&nbsp;
-				<span class="<?=($order_by === 'page_views') ? 'highlight' : ''?>">
-					<?=$news[$i]['page_views']." read"?>
-				</span>
-			</p>
-			<p><?php echo $news[$i]['revision_text']->article?></p>
-			<p class="more-a"><?php echo anchor("/article/".$news[$i]['page_id'], "Read More&nbsp;&#x25ba;");?></p>
-			<!-- Sorting code -->
-            <p class="more-a">
-                <?php echo anchor("/article/sortOrder/".$news[$i]['page_id']."/".$news, "Up&nbsp;&uarr;");?>
-                &nbsp | &nbsp
-                <?php echo anchor("/article/sortOrder/".$news[$i]['page_id']."/".$news, "Down&nbsp;&darr;");?>
-            </p>
 
-		</li>
-	<?php endfor; ?>
-	</ol>
+			$articleLink = site_url("article/".$article['page_id']);
+			$articleAnchor = "article/".$article['page_id'];
+			$revision = $article['revision_text'];
+			$src = val($revision->main_image[0]->src, 'error');
+			$flip = val($revision->main_image[0]->flip, false);
+			$flip = (($flip === true) or ($flip === "true"));
+			$angle = (int)val($revision->main_image[0]->angle, 0);
+			$img = get_image_html($src, 252, 156, $flip, $angle);
+			$alt = htmlentities(val($article['revision_text']->main_image[0]->alt), ENT_COMPAT, 'UTF-8', false);
+			?>
+			<div class="section-a featured-a" id="<?php echo $article['page_id']; ?>">
+				<p class="image">
+					<a href="<?php echo site_url($articleAnchor); ?>">
+						<img <?php echo $img?> alt="<?php echo htmlentities(val($revision->main_image[0]->alt), ENT_COMPAT, 'UTF-8', false); ?>" />
+					</a>
+				</p>
+
+				<p>
+					<h3 class="b" style="text-align: left;"><?php echo anchor($articleAnchor, $article['title']); ?></h3>
+				</p>
+
+				<p class="published">
+					<span class="date <?php echo (empty($order_by) or ($order_by === 'most_recent')) ? 'highlight' : ''?>">
+						<?php echo date("l, F d, Y", strtotime($article['date_published']))?>
+					</span>
+					&nbsp;|&nbsp;
+					<span class="<?php echo ($order_by === 'comments_count') ? 'highlight' : ''?>">
+						<?php echo (int)$article['comments_count']." ".(($article['comments_count'] == 1) ? "comment" : "comments")?>
+					</span>
+					&nbsp;|&nbsp;
+					<span class="<?php echo ($order_by === 'page_views') ? 'highlight' : ''?>">
+						<?php echo $article['page_views']." read"; ?>
+					</span>
+				</p>
+				<p><?php echo val($revision->article, "..."); ?></p>
+				<p class="more-a"><?=anchor($articleAnchor, "Read More&nbsp;&nbsp;&#x25ba;")?></p>
+			</div>
+		<?php endforeach; ?>
+		<?php if($order_by == null): ?>
+	</div>
+<?php endif; ?>
+	<!-- eof test -->
+
 
 	<div class="section-a"><!-- this provides separation of the listing from the pagination bar -->
 		<?php $this->load->view('page_parts/digest_navigation') ?>

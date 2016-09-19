@@ -591,7 +591,7 @@ class Article extends MY_Controller {
         $this->load->model('pages', 'pm');
         $section_id = $this->input->post('sid');
         $content = json_decode($this->input->post('data'), true);
-
+        //pr($content);
         foreach($content as $key => $value){
             /*$data[] = array(
                 'section_id' => $page_id,
