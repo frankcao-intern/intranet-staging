@@ -65,7 +65,7 @@ $prev = val($prev, array());
 		<?php endforeach; ?>
 		<?php if($order_by == null): ?>
 	</div>
-<?php endif; ?>
+	<?php endif; ?>
 	<!-- eof test -->
 
 
