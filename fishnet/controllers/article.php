@@ -45,7 +45,7 @@ class Article extends MY_Controller {
 		//get related tags
 		$this->load->model('tags');
 		$this->pageRecord['tags'] = $this->tags->getForPage($page_id);
-        //pr($this->pageRecord);
+        pr($this->pageRecord);
 
 		//load the page with the requested template around it
 		if (isset($this->pageRecord['params']) and isset($this->pageRecord['params']['layout'])){
@@ -591,7 +591,7 @@ class Article extends MY_Controller {
         $this->load->model('pages', 'pm');
         $section_id = $this->input->post('sid');
         $content = json_decode($this->input->post('data'), true);
-        //pr($content);
+
         foreach($content as $key => $value){
             /*$data[] = array(
                 'section_id' => $page_id,

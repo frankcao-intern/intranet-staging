@@ -14,7 +14,7 @@ if (!isset($tab)): ?>
 	<div class="header-a">
 		<p><?=isset($breadcrumbs) ? $breadcrumbs['url'] : "&nbsp;"?></p>
 		<h2><?=val($back_link, '&nbsp;')?></h2>
-		<?php if (isset($edit)){ $this->load->view('page_parts/publishing_dropdown'); }?>
+		<?php //if (isset($edit)){ $this->load->view('page_parts/publishing_dropdown'); }?>
 	</div>
 	<div class="article-header">
 		<h3 class="a edit-page-property" data-key="title"><?=empty($title) ? "Untitled Page" : $title?></h3>

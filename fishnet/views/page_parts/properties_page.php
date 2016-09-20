@@ -106,7 +106,8 @@
 
 	<div class="section-a">
 		<h2 class="c">Publishing</h2>
-		<div class="field-group-a">
+		<div class="field-group-a" >
+			<div id="id="section_publishing">
 
 
 			<?php $i=0; ?>
@@ -198,6 +199,7 @@
 					</ul>
 				<?php endif; ?>
 			</div>
+		</div>
 		</div>
 	</div>
 

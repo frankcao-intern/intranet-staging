@@ -163,15 +163,11 @@
 
                     //Sections ----------------------------------------
                     $(".js-date-published").each(function(){
-                        console.log(this.name);
-                        console.log(this.value);
                         date_published[this.name] = this.value || null;
                     });
                     settings.date_published = date_published;
 
                     $(".js-show-until").each(function(){
-                        console.log(this.name);
-                        console.log(this.value);
                         show_until[this.name] = this.value || null;
                     });
                     settings.show_until = show_until;
@@ -183,8 +179,9 @@
                     coreEngine.ajax("properties/updatePagePublishing/" + (new Date()).getTime(), postData,
                         coreEngine.genericCallBack, 'json');
 
-                    // return msg
-                    page_properties.setConfirmUnload(false);
+                    // loading the content with updated data
+                    // @to-do : have to do something to refresh the page
+                    coreEngine.loadUrl('#section_publishing', 'properties/');
 
                     return false;
 
