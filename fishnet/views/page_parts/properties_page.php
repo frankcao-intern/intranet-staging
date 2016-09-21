@@ -112,15 +112,37 @@
                         <div class="field">
                             <div class="one">
                                 <p class="field">
-                                    <label for="featured_from"><abbr title='"Featured from" indicates the first date on which a page will be featured.'>Featured From: </abbr></label>
-                                    <input type="text" id="featured_from" name="featured_from" class="js-gen-settings" value="<?=$featured_from?>" />
+                                    <label for="featured_from">
+                                        <abbr title='"Featured from" indicates the first date on which a page will be featured.'>
+                                            Featured From:
+                                        </abbr>
+                                    </label>
+                                    <?php
+                                        $featured_from_data = array (
+                                            'id' => 'featured_from',
+                                            'name' => 'featured_from',
+                                            'class' => 'js-gen-settings',
+                                        );
+
+                                        echo form_input($featured_from_data, $featured_from) ;
+                                    ?>
                                 </p>
                             </div>
                             <div class="one">
-                                <p class="field">
-                                    <label for="featured_until"><abbr title='"Featured until" indicates the last date on which a page will be featured.'>Featured Until: </abbr></label>
-                                    <input type="text" id="featured_until" name="featured_until" class="js-gen-settings" value="<?=$featured_until?>" />
-                                </p>
+                                <label for="featured_until">
+                                    <abbr title='"Featured until" indicates the last date on which a page will be featured.'>
+                                        Featured Until:
+                                    </abbr>
+                                </label>
+                                <?php
+                                    $featured_until_data = array (
+                                        'id' => 'featured_until',
+                                        'name' => 'featured_until',
+                                        'class' => 'js-gen-settings',
+                                    );
+
+                                    echo form_input($featured_until_data, $featured_until) ;
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -154,9 +176,8 @@
 
 								$pubdate = get_page_section_details($pageID, $section['page_id'], 'date_published');
 								$expdate = get_page_section_details($pageID, $section['page_id'], 'show_until');
+                                $sortOrder = get_page_section_details($pageID, $section['page_id'], 'sort_order');
 
-                                $featured_from_date = get_page_section_details($pageID, $section['page_id'], 'featured_from');
-								$featured_until_expdate = get_page_section_details($pageID, $section['page_id'], 'featured_until');
 
                                 $uri = $_SERVER['REQUEST_URI'];
 								$id = substr($uri, strrpos($uri, '/') + 1);
@@ -172,14 +193,12 @@
                                     $id = substr($uri, strrpos($uri, '/') + 1);
                                     $sec_page_id = $section['page_id'];
 
-                                    $sec_featured = $section['sec_featured'];
-
                                     $i++;
 
 
                                 ?>
 						        </li>
-						        <div class="field" id="pubpageslist<?php /*echo $i; */?>" style="border: 1px solid #E5F6FE; border-top: none; padding: 10px;">
+						        <div class="field" id="pubpageslist<?php /*echo $i; */?>" style="border: 1px solid #efefef; border-top: none; padding: 10px;">
 
                                     <p class="one">
                                         <label for="publish[<?php echo $sec_page_id; ?>][date_published]" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
@@ -216,57 +235,24 @@
                                         ?>
                                     </p>
 
-                                    <?php /*if($template_id == 42 && $category == 'Videos' && $section['page_id'] == 13): */?><!--
                                     <p class="one">
-                                        <div >
-                                            <p class="one" style="margin-left: 0px;">
+                                        <label for="sort_order[<?php echo $section['page_id']; ?>][sort_order]"
+                                               title='"Display until" manual sort order for artcles in digest pages'>
+                                            Sort Order:
+                                        </label>
 
-                                                <label for="<?php /*echo $sec_page_id; */?>">
-                                                    <strong>Featured video</strong>
-                                                </label>
-                                                <?php /*echo form_checkbox(array('name' => $sec_page_id, 'class' => 'js-feature-settings', 'value' => $sec_featured, 'checked' => (boolean)($sec_featured)));*/?>
-                                            </p>
-                                            <p class="two">&nbsp;</p>
-                                        </div>
+                                        <?php
+                                        $sort_order_data = array (
+                                            'id' => 'sort_order',
+                                            'name' => $sec_page_id,
+                                            'class' => 'js-sort-order',
+                                        );
 
-                                        <div>
-                                            <p class="one">
-                                                <label for="publish[<?php /*echo $sec_page_id; */?>][featured_from]" title='"Featured from" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
-                                                    Featured from:
-                                                </label>
-
-                                                <?php
-/*                                                $sec_date_featured_from = array (
-                                                    'id' => 'featured_from',
-                                                    'name' => $sec_page_id,
-                                                    'class' => 'js-featured-from',
-                                                );
-
-                                                echo form_input($sec_date_featured_from, $featured_from_date) ;
-                                                */?>
-
-                                            </p>
-
-
-                                            <p class="one">
-                                                <label for="publish[<?php /*echo $section['page_id']; */?>][featured_until]"
-                                                       title='"Display until" selects the last date by which the page will be shown in dated lists (e.g. monthly, seasonal).'>
-                                                    Featured until:
-                                                </label>
-
-                                                <?php
-/*                                                $sec_featured_until_data = array (
-                                                    'id' => 'featured_until',
-                                                    'name' => $sec_page_id,
-                                                    'class' => 'js-featured-until',
-                                                );
-
-                                                echo form_input($sec_featured_until_data, $featured_until_expdate) ;
-                                                */?>
-                                            </p>
-                                        </div>
+                                        echo form_input($sort_order_data, $sortOrder) ;
+                                        ?>
                                     </p>
-                                    --><?php /*endif; */?>
+
+
                                 </div>
                                 <div class="clearfix">&nbsp;</div>
 

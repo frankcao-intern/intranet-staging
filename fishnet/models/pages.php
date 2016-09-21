@@ -547,7 +547,7 @@ class Pages extends CI_Model {
 		 * @var CI_DB_result $query
 		 */
 		$query = "SELECT fn_pages.page_id, fn_pages.title, (rel.page_id IS NOT NULL) as selected,  
-                    rel.featured as sec_featured, (perms.page_id IS NOT NULL) as permPublish
+                    (perms.page_id IS NOT NULL) as permPublish
 				FROM fn_pages
 				JOIN fn_templates ON fn_pages.template_id=fn_templates.template_id
 				LEFT JOIN (

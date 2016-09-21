@@ -155,35 +155,10 @@ class Properties extends MY_Controller {
                                     $data[$index]['date_published'] = $dp_val;
                                     $data[$index]['show_until'] = $su_val;
 
-                                    // section featured data
-                                    foreach ($content['sec_featured'] as $key => $val){
+                                    // sort order data iteration
+                                    foreach ($content['sort_order'] as $key => $val){
                                         if($val != null){
-                                            $data[$key]['featured'] = $val;
-                                        }
-
-                                    }
-                                    // featured article dates
-                                    foreach($content['featured_from'] as $key => $ff_val){
-                                        if(!is_null($ff_val)){
-                                            foreach ($content['featured_until'] as $index => $fu_val){
-                                                if($key == $index) {
-                                                    if(!is_null($fu_val) && !is_null($ff_val)){
-                                                        if(strtotime($fu_val) < strtotime($ff_val) ) {
-                                                            $this->result->isError = true;
-                                                            $this->result->errorStr = "Show Until cannot be earlier than Date Published, please correct this and try again.";
-                                                        } else {
-                                                            $data[$index]['featured_from'] = $ff_val;
-                                                            $data[$index]['featured_until'] = $fu_val;
-                                                        }
-                                                    } else {
-                                                        $this->result->isError = true;
-                                                        $this->result->errorStr = "Section's dates cannot be blank, please correct this and try again.";
-                                                    }
-
-                                                } else {
-                                                    continue;
-                                                }
-                                            }
+                                            $data[$key]['sort_order'] = $val;
                                         }
                                     }
                                 }
@@ -200,7 +175,7 @@ class Properties extends MY_Controller {
 
                 }
             }
-            //pr($data);
+            pr($data);
             // passing data array to page model
             if (!$this->pm->publishPage($page_id, $data)){
                 $this->result->isError = true;

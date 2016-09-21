@@ -155,13 +155,9 @@
                 });
                 //Page publishing settings -------------------------------------------------------------------------------
                 $(".btn-save-sec").button().bind('click', function(event){
-                    var date_published = Date.parse($("#date_published").val()),
-                        show_until = Date.parse($("#show_until").val()),
-                        featured_from = Date.parse($("#featured_from").val()),
-                        featured_until = Date.parse($("#featured_until").val()),
-                        tags = $("#tags"),
-                        settings = {}, date_published = {}, show_until = {},
-                        featured_from = {}, featured_until = {}, sec_featured = {},
+                    var tags = $("#tags"),
+                        settings = {},
+                        date_published = {}, show_until = {}, sort_order = {},
                         postData;
 
 
@@ -176,25 +172,11 @@
                     });
                     settings.show_until = show_until;
 
-                    // featured section settings
-                    $(".js-feature-settings").each(function(){
-                        if ($(this).is(":checkbox, :radio")){//if it's a checkbox or radio
-                            sec_featured[this.name] = $(this).is(":checked");
-                        }else{
-                            sec_featured[this.name] = this.value || null;
-                        }
+                    $(".js-sort-order").each(function(){
+                        sort_order[this.name] = this.value || null;
                     });
-                    settings.sec_featured = sec_featured;
+                    settings.sort_order = sort_order;
 
-                    $(".js-featured-from").each(function(){
-                        featured_from[this.name] = this.value || null;
-                    });
-                    settings.featured_from = featured_from;
-
-                    $(".js-featured-until").each(function(){
-                        featured_until[this.name] = this.value || null;
-                    });
-                    settings.featured_until = featured_until;
 
                     postData = "pid=" + coreEngine.pageID;
                     postData += "&data=" + JSON.stringify(settings);
