@@ -386,7 +386,6 @@ class Pages extends CI_Model {
                            $tag_id = null,
                            $order_by = null,
                            $section_name = null) {
-		//$this->output->enable_profiler(TRUE);
 
 		$section      = (isset($section_id)) ? "AND rel.section_id=$section_id" : '';
 		$section_join = (isset($section_id)) ? "JOIN fn_pages sections ON sections.page_id=$section_id" : '';
@@ -408,7 +407,9 @@ class Pages extends CI_Model {
 		//$dates        = (($d_start != null) or ($d_end != null)) ? "AND fn_pages.date_published<='$d_end' AND (fn_pages.show_until IS NULL OR fn_pages.show_until>='$d_start')" : '';
 		$limit        = (isset($limit)) ? "LIMIT " . (isset($offset) ? $offset : '0') . ",$limit" : '';
 		$random       = (isset($random)) ? "RAND()," : '';
-		$featured     = (isset($featured)) ? "AND fn_pages.featured=$featured" : '';
+		$featured     = (isset($featured)) ? "AND fn_pages.featured=$featured AND (fn_pages.featured_from <= NOW() AND fn_pages.featured_until >= NOW())" : '';
+        //AND fn_pages.featured=1 AND (fn_pages.featured_from <= NOW() AND fn_pages.featured_until >= NOW())
+        //AND fn_pages.featured=1 AND fn_pages.featured_until >= NOW()
 
 		//tags
 		$tags     = (isset($tag_id)) ? "AND fn_tag_matches.tag_id=$tag_id" : '';
@@ -422,7 +423,7 @@ class Pages extends CI_Model {
 		$perm_read = PERM_READ;
 		$user_id   = $this->session->userdata('user_id');
 
-        $query_str = "SELECT fn_pages.*, rel.date_published, rel.show_until, fn_templates.template_name, rev.revision_text $section_id, comm.comments_count
+        $query_str = "SELECT fn_pages.*, rel.*, fn_templates.template_name, rev.revision_text $section_id, comm.comments_count
 			FROM fn_pages
 			$section_join
 			JOIN fn_templates ON fn_pages.template_id=fn_templates.template_id
@@ -545,8 +546,8 @@ class Pages extends CI_Model {
 		/**
 		 * @var CI_DB_result $query
 		 */
-		$query = "SELECT fn_pages.page_id, fn_pages.title, (rel.page_id IS NOT NULL) as selected,
-					(perms.page_id IS NOT NULL) as permPublish
+		$query = "SELECT fn_pages.page_id, fn_pages.title, (rel.page_id IS NOT NULL) as selected,  
+                    rel.featured as sec_featured, (perms.page_id IS NOT NULL) as permPublish
 				FROM fn_pages
 				JOIN fn_templates ON fn_pages.template_id=fn_templates.template_id
 				LEFT JOIN (

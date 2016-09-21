@@ -134,7 +134,7 @@ class Properties extends MY_Controller {
 
         $page_id = $this->input->post('pid');
         $content = json_decode($this->input->post('data'), true);
-
+        //pr($content);
         //publish page to sections -------------------------------------------------------------------------------------
         if (isset($content['date_published']) && isset($content['show_until'])){
             // defining an empty array
@@ -154,6 +154,38 @@ class Properties extends MY_Controller {
                                     $data[$index]['section_id'] = $key;
                                     $data[$index]['date_published'] = $dp_val;
                                     $data[$index]['show_until'] = $su_val;
+
+                                    // section featured data
+                                    foreach ($content['sec_featured'] as $key => $val){
+                                        if($val != null){
+                                            $data[$key]['featured'] = $val;
+                                        }
+
+                                    }
+                                    // featured article dates
+                                    foreach($content['featured_from'] as $key => $ff_val){
+                                        if(!is_null($ff_val)){
+                                            foreach ($content['featured_until'] as $index => $fu_val){
+                                                if($key == $index) {
+                                                    if(!is_null($fu_val) && !is_null($ff_val)){
+                                                        if(strtotime($fu_val) < strtotime($ff_val) ) {
+                                                            $this->result->isError = true;
+                                                            $this->result->errorStr = "Show Until cannot be earlier than Date Published, please correct this and try again.";
+                                                        } else {
+                                                            $data[$index]['featured_from'] = $ff_val;
+                                                            $data[$index]['featured_until'] = $fu_val;
+                                                        }
+                                                    } else {
+                                                        $this->result->isError = true;
+                                                        $this->result->errorStr = "Section's dates cannot be blank, please correct this and try again.";
+                                                    }
+
+                                                } else {
+                                                    continue;
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             } else {
                                 $this->result->isError = true;
@@ -164,9 +196,11 @@ class Properties extends MY_Controller {
                             continue;
                         }
                     }
+
+
                 }
             }
-
+            //pr($data);
             // passing data array to page model
             if (!$this->pm->publishPage($page_id, $data)){
                 $this->result->isError = true;

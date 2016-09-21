@@ -32,7 +32,7 @@
                     $.mask.definitions['1'] = '[01]';
                     $.mask.definitions['3'] = '[0-3]';
 
-                    $("#expiration_date").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
+                    //$("#expiration_date").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
                     $("#date_published").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
                     $("#show_until").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
                     $("#featured_from").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
@@ -60,6 +60,9 @@
                 $('input, select').change(function(){
                     page_properties.setConfirmUnload(true);
                 });
+
+                $("#date_published").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
+                $("#show_until").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
             },
             tags: function(){
                 var extractLast = function( term ) {
@@ -158,6 +161,7 @@
                         featured_until = Date.parse($("#featured_until").val()),
                         tags = $("#tags"),
                         settings = {}, date_published = {}, show_until = {},
+                        featured_from = {}, featured_until = {}, sec_featured = {},
                         postData;
 
 
@@ -172,6 +176,26 @@
                     });
                     settings.show_until = show_until;
 
+                    // featured section settings
+                    $(".js-feature-settings").each(function(){
+                        if ($(this).is(":checkbox, :radio")){//if it's a checkbox or radio
+                            sec_featured[this.name] = $(this).is(":checked");
+                        }else{
+                            sec_featured[this.name] = this.value || null;
+                        }
+                    });
+                    settings.sec_featured = sec_featured;
+
+                    $(".js-featured-from").each(function(){
+                        featured_from[this.name] = this.value || null;
+                    });
+                    settings.featured_from = featured_from;
+
+                    $(".js-featured-until").each(function(){
+                        featured_until[this.name] = this.value || null;
+                    });
+                    settings.featured_until = featured_until;
+
                     postData = "pid=" + coreEngine.pageID;
                     postData += "&data=" + JSON.stringify(settings);
 
@@ -181,7 +205,7 @@
 
                     // loading the content with updated data
                     // @to-do : have to do something to refresh the page
-                    coreEngine.loadUrl('#section_publishing', 'properties/');
+                    //coreEngine.loadUrl('#section_publishing', 'properties/');
 
                     return false;
 

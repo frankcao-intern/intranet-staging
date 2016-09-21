@@ -42,8 +42,7 @@
                     </li>
                 </ul>
 
-
-
+				<?php if ($page_type !== 'section'): ?>
                 <div class="field page-property">
                     <p class="select-c templates">
                         <label for="template_id"
@@ -66,6 +65,8 @@
 
                     </p>
                 </div>
+				<?php endif; ?>
+
 				<div class="field">
 					<p class="one">
 						<label for="date_published" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
@@ -96,6 +97,34 @@
                         ?>
 					</p>
 				</div>
+                <?php if ($page_type !== 'section' && $category == 'Videos' ): ?>
+                    <div class="field-group-a" style="border: 1px solid #b3c7e1;">
+                        <h3 class="c">Featured Article - video</h3>
+                        <ul class="settings-a">
+                            <li>
+                                <?=form_checkbox(array('name' => "featured", 'class' => 'js-gen-settings', 'checked' => (boolean)($featured)))?>
+                                <label for="featured">
+                                    <strong>Featured:</strong>
+                                    Certain sections of the site organize information into featured and non-featured.
+                                </label>
+                            </li>
+                        </ul>
+                        <div class="field">
+                            <div class="one">
+                                <p class="field">
+                                    <label for="featured_from"><abbr title='"Featured from" indicates the first date on which a page will be featured.'>Featured From: </abbr></label>
+                                    <input type="text" id="featured_from" name="featured_from" class="js-gen-settings" value="<?=$featured_from?>" />
+                                </p>
+                            </div>
+                            <div class="one">
+                                <p class="field">
+                                    <label for="featured_until"><abbr title='"Featured until" indicates the last date on which a page will be featured.'>Featured Until: </abbr></label>
+                                    <input type="text" id="featured_until" name="featured_until" class="js-gen-settings" value="<?=$featured_until?>" />
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endif; ?>
             </div>
 
 		</div>
@@ -103,21 +132,18 @@
 
 <?php endif; ?>
 
-
+<!-- Publishing -->
 	<div class="section-a">
 		<h2 class="c">Publishing</h2>
 		<div class="field-group-a" >
 			<div id="id="section_publishing">
-
-
 			<?php $i=0; ?>
-
 			<div class="field settings-a">
 				<h3>Select the section(s) to publish your page to:</h3>
-				<ul id="sections" class="sortable-list">
 
+				<ul id="sections" class="sortable-list">
 					<?php
-                        $other = array(); //pr($sections);
+                        $other = array();
 					    foreach($sections as $section):
 
 						    if ($section['permPublish'] == 0):
@@ -128,6 +154,9 @@
 
 								$pubdate = get_page_section_details($pageID, $section['page_id'], 'date_published');
 								$expdate = get_page_section_details($pageID, $section['page_id'], 'show_until');
+
+                                $featured_from_date = get_page_section_details($pageID, $section['page_id'], 'featured_from');
+								$featured_until_expdate = get_page_section_details($pageID, $section['page_id'], 'featured_until');
 
                                 $uri = $_SERVER['REQUEST_URI'];
 								$id = substr($uri, strrpos($uri, '/') + 1);
@@ -143,12 +172,14 @@
                                     $id = substr($uri, strrpos($uri, '/') + 1);
                                     $sec_page_id = $section['page_id'];
 
+                                    $sec_featured = $section['sec_featured'];
+
                                     $i++;
 
 
                                 ?>
 						        </li>
-						        <div class="field" id="pubpageslist<?php /*echo $i; */?>" style="border: 1px solid #D; border-top: none; padding: 10px;">
+						        <div class="field" id="pubpageslist<?php /*echo $i; */?>" style="border: 1px solid #E5F6FE; border-top: none; padding: 10px;">
 
                                     <p class="one">
                                         <label for="publish[<?php echo $sec_page_id; ?>][date_published]" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
@@ -184,6 +215,58 @@
                                         echo form_input($sec_show_until_data, $expdate) ;
                                         ?>
                                     </p>
+
+                                    <?php /*if($template_id == 42 && $category == 'Videos' && $section['page_id'] == 13): */?><!--
+                                    <p class="one">
+                                        <div >
+                                            <p class="one" style="margin-left: 0px;">
+
+                                                <label for="<?php /*echo $sec_page_id; */?>">
+                                                    <strong>Featured video</strong>
+                                                </label>
+                                                <?php /*echo form_checkbox(array('name' => $sec_page_id, 'class' => 'js-feature-settings', 'value' => $sec_featured, 'checked' => (boolean)($sec_featured)));*/?>
+                                            </p>
+                                            <p class="two">&nbsp;</p>
+                                        </div>
+
+                                        <div>
+                                            <p class="one">
+                                                <label for="publish[<?php /*echo $sec_page_id; */?>][featured_from]" title='"Featured from" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
+                                                    Featured from:
+                                                </label>
+
+                                                <?php
+/*                                                $sec_date_featured_from = array (
+                                                    'id' => 'featured_from',
+                                                    'name' => $sec_page_id,
+                                                    'class' => 'js-featured-from',
+                                                );
+
+                                                echo form_input($sec_date_featured_from, $featured_from_date) ;
+                                                */?>
+
+                                            </p>
+
+
+                                            <p class="one">
+                                                <label for="publish[<?php /*echo $section['page_id']; */?>][featured_until]"
+                                                       title='"Display until" selects the last date by which the page will be shown in dated lists (e.g. monthly, seasonal).'>
+                                                    Featured until:
+                                                </label>
+
+                                                <?php
+/*                                                $sec_featured_until_data = array (
+                                                    'id' => 'featured_until',
+                                                    'name' => $sec_page_id,
+                                                    'class' => 'js-featured-until',
+                                                );
+
+                                                echo form_input($sec_featured_until_data, $featured_until_expdate) ;
+                                                */?>
+                                            </p>
+                                        </div>
+                                    </p>
+                                    --><?php /*endif; */?>
                                 </div>
                                 <div class="clearfix">&nbsp;</div>
 
@@ -203,9 +286,10 @@
 		</div>
 	</div>
 
+    <p><button class="btn-save-sec" id="save">Publish page</button></p>
+<!-- EoF publishing-->
 
-	<p><button class="btn-save-sec" id="save">Publish page</button></p>
-
+<!-- Tags -->
 	<?php if (isset($canProp) and $canProp): ?>
         <div class="section-a">
 			<h2 class="c">Tags</h2>
@@ -226,9 +310,13 @@
 
 		<p><button class="btn-save-tags">Save Tags</button></p>
     <?php endif; ?>
+<!-- Eof Tags -->
 
+<!-- Group permission -->
 	<?php $this->load->view('page_parts/permissions_'.val($page_type, 'page')); ?>
+<!-- Eof group permission -->
 
+<!-- Revision -->
 	<?php if (isset($canProp) and $canProp): ?>
 		<div class="section-a">
 			<h2 class="c">Revisions</h2>
@@ -261,6 +349,7 @@
 		</div>
 
     <?php endif; ?>
+<!-- Eof revision -->
 
 
 

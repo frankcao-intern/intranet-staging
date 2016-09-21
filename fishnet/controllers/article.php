@@ -45,7 +45,7 @@ class Article extends MY_Controller {
 		//get related tags
 		$this->load->model('tags');
 		$this->pageRecord['tags'] = $this->tags->getForPage($page_id);
-        pr($this->pageRecord);
+        //pr($this->pageRecord);
 
 		//load the page with the requested template around it
 		if (isset($this->pageRecord['params']) and isset($this->pageRecord['params']['layout'])){
@@ -65,35 +65,10 @@ class Article extends MY_Controller {
 	 */
 	function edit($page_id){
 
-
-	/**	if ($this->pageRecord['edit']=false){
-			$this->db->query("LOCK TABLES ".$this->db->protect_identifiers("templates", TRUE)." READ, "
-				.$this->db->protect_identifiers("pages", TRUE)." READ");
-		}
-		elseif($this->pageRecord['edit']=true){
-			$this->db->query("LOCK TABLES ".$this->db->protect_identifiers("templates", TRUE)." WRITE, "
-				                 .$this->db->protect_identifiers("pages", TRUE)." WRITE");
-		}
-*/
-
-		//$this->db->query("LOCK TABLES ".$this->db->protect_identifiers("revisions", TRUE)." WRITE");
 		$this->pageRecord['edit'] = true;
-	//	$this->db->query("LOCK TABLES fn_revisions WRITE, fn_pages WRITE, fn_templates WRITE, fn_pages_pages WRITE");
-
 		$this->load->model("pages");
-		//	$this->db->query("LOCK TABLES fn_revisions WRITE");
-		//	$this->db->query("INSERT INTO fn_revisions");
-		//	$this->db->query("UNLOCK TABLES");
-
 		$this->pageRecord['user_sections'] = $this->pages->getUserPublish($this->session->userdata('user_id'), $page_id);
-
-	//	$this->db->query("UNLOCK TABLES");
-
 		$this->index($page_id);
-
-	//	$this->db->query("UNLOCK TABLES");
-
-
 	}
 
 	/**
