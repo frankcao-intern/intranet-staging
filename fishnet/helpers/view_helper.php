@@ -283,3 +283,21 @@ if ( ! function_exists('get_page_section_details')){
     }
 }
 
+if ( ! function_exists('get_page_review_details')){
+    /**
+     * outputs page propertise section details
+     *
+     * @param bool $page_id
+     * @param bool $sender_id
+     * @param bool $field
+     * @return string from page model getPageSectionProperty
+     */
+    function get_page_review_details($page_id, $sender_id, $field = false){
+        $ci =& get_instance();
+        $data = $ci->pages->checkPagesReview($page_id, $sender_id, $field);
+        //pr($data);//exit;
+
+        return $data;
+    }
+}
+

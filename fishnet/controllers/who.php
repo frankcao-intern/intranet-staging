@@ -122,7 +122,8 @@ class Who extends MY_Controller {
 				//load my private pages
 				$page_data['my_private'] = $this->pages->my_private($user_id);
 				//load pages user has write perms
-				$page_data['edit_pages'] = $this->pages->edit_pages($user_id);
+				// edit_pages function does not exists in the pages model
+                //$page_data['edit_pages'] = $this->pages->edit_pages($user_id);
 				//load the drafts
 				$page_data['drafts'] = $this->pages->drafts($user_id);
 				//load the trash can

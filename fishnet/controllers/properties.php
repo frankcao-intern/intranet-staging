@@ -175,7 +175,7 @@ class Properties extends MY_Controller {
 
                 }
             }
-            pr($data);
+            //pr($data);
             // passing data array to page model
             if (!$this->pm->publishPage($page_id, $data)){
                 $this->result->isError = true;

@@ -341,4 +341,22 @@ class Users extends CI_Model {
 
 		return array();
 	}
+
+	/**
+	 * Returns details of a user
+	 * @param $person_id
+	 * @return array
+	 */
+	function getUserDetails($user_id){
+		/**
+		 * @var CI_DB_result $query
+		 */
+		$query = $this->db->select('*')->where('user_id', $user_id)->get('users');
+
+		if ($query and ($query->num_rows() > 0)){
+			return $query->result_array();
+		}
+
+		return array();
+	}
 }

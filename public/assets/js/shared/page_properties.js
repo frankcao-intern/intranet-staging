@@ -98,6 +98,7 @@
                         }
                     });
             },
+
             //save properties-------------------------------------------------------------------------
             saveProps: function(){
                 $(".btn-save-prop").button().bind('click', function(event){
@@ -221,7 +222,82 @@
                     return false;
 
                 });
+                // page review section -----------------------------------------
+                $("#btnReview").click(function(){
+                    $("#reviewPageDiag").dialog('open');
+                });
 
+                $("#reviewPageDiag").dialog({
+                    bgiframe: true,
+                    autoOpen: false,
+                    resizable: false,
+                    width: 252,
+                    modal: false,
+                    open: function(){
+                        $("ul", this).empty();
+                        $("textarea, input", this).val('');
+                    },
+                    buttons: {
+                        "Send": function() {
+                            var $lis = $("ul li", this),
+                                emails = [],
+                                postData;
+
+                            $lis.each(function () {
+                                //emails.push($(this).data('email'));
+                                emails.push($(this).data('email'));
+
+                            });
+
+                            if (emails.length === 0) {
+                                $.message("You must select at least one recipient.", 'error');
+                            } else {
+                                postData = "emails=" + JSON.stringify(emails);
+                                postData += "&msg=" + $("#reviewPageDiag").find("textarea").val();
+                                postData += "&pid=" + coreEngine.pageID;
+                                //alert(postData);
+                                coreEngine.ajax('article/review', postData, coreEngine.genericCallBack);
+
+                                $(this).dialog('close');
+                            }
+                        },
+                        'Cancel': function(){
+                            $(this).dialog('close');
+                        }
+                    }
+                });
+
+                $('#reviewEmail').autocomplete({
+                    minLength: 2,
+                    source: function(request, response) {
+                        coreEngine.getJSON("who/search/qkey/display_name/q" + "/" +
+                            window.base64.encode(request.term), "", response);
+                    },
+                    select: function(event, ui){
+                        var $li = $('<li>'),
+                            $ul = $("#reviewPageDiag").find("ul"),
+                            $shareEmail = $('#reviewEmail');
+
+                        if (ui.item.email){
+                            if ($('li[value="'+ ui.item.id +'"]', $ul).length === 0){
+                                $li
+                                    .data('email', ui.item.email)
+                                    .val(ui.item.id)
+                                    .text(ui.item.value)
+                                    .click(function(){
+                                        $(this).remove();
+                                    });
+                                $ul.append($li);
+                                $shareEmail.val('');
+                            }else{
+                                $shareEmail.val('Name already selected').get(0).select();
+                            }
+                        }
+
+                        return false;
+                    }
+                });
+                /* eof page review options */
             },
             //retrieve all permissions in an object ----------------------------------------------------------------
             getPerms: function($tr){
@@ -361,6 +437,47 @@
                     return false;
 
                 });
+
+                /* review article section */
+                $("#approve-article")
+                    .bind( "keydown", function( event ) {
+                        if ( event.keyCode === $.ui.keyCode.TAB && $( this ).data( "autocomplete" ).menu.active ) {
+                            event.preventDefault();
+                        }
+                    })
+                    .autocomplete({
+                        minLength: 1,
+                        source: function(request, response) {
+                            coreEngine.getJSON("who/groups/q/" + request.term, "", response);
+                        },
+                        focus: function() {
+                            // prevent value inserted on focus
+                            return false;
+                        },
+                        select: function( event, ui ) {
+                            var permissions = [], postData,$deleteButton;
+
+                            $(this).parent().append(ui.item.value).attr("id", "gid-" + ui.item.id);
+
+                            permissions.push(page_properties.getPerms($(this).parent().parent()));
+
+                            postData = "pid=" + coreEngine.pageID.match(/\d+/)[0];
+                            postData += "&data=" + JSON.stringify(permissions);
+
+                            coreEngine.ajax("server/permadd/" + (new Date()).getTime(),
+                                postData, coreEngine.genericCallBack, 'json');
+
+                            $deleteButton = $("<a>")
+                                .addClass("perm-btn-delete delete-a")
+                                .css("cursor", "pointer")
+                                .click(deleteClick);
+                            $(this).parent().parent()
+                                .find("td:last-child")
+                                .append($deleteButton);
+                            $(this).remove();
+                        }
+                    });
+
             },
             //Revisions-----------------------------------------------------------------------------------------------------
             revisions: function(){
@@ -396,6 +513,7 @@
                     return false;
                 });
             },
+
             deleteCallback: function(result){
                 if(result.isError){
                     $.message(result.errorStr, 'error');

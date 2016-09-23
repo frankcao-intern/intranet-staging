@@ -1273,7 +1273,22 @@ var coreEngine = coreEngine || {};
 			//			'please provide them via the "Feedback" form, located at the bottom of the page.','info');}
 		
 		},
-
+        /*
+        pageReviewNotification: function(){
+            if ((coreEngine.pageID === '1') || (coreEngine.pageID === '4')){
+                coreEngine.getJSON('article/checkPagerview', '', function(result){
+                    if (result.isError === true){
+                        $.message(
+                            'It looks like you haven\'t filled out your Who\'s Who profile. What are you waiting ' +
+                            'for? It only takes 2 minutes. <a href="' + coreEngine.siteRoot + 'edit/my/profile">' +
+                            'Update it now<\/a>.',
+                            'info'
+                        );
+                    }
+                });
+            }
+        },
+        */
 
 	};
 

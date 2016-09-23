@@ -357,6 +357,78 @@ class Article extends MY_Controller {
 	}
 
 	/**
+	 * Send an email to the specified people with a link back to an article
+	 */
+	function review(){
+	    $this->load->model('pages');
+	    $this->load->model('users');
+        $this->load->model('mail_queue');
+
+
+		$email_addresses = json_decode($this->input->post('emails'));
+		$msg = $this->input->post('msg');
+		$page_id = $this->input->post('pid');
+		$firstname = $this->session->userdata('first_name');
+        $article_url = $this->config->item('site_url')."properties/$page_id";
+
+        pr($page_id);
+        pr($firstname);
+        pr($email_addresses);
+        pr($msg);
+
+        $message = "Hello,\r\n\r\n";
+        $message .= "You are being requested to review and approve this article. \r\n\r\n";
+        $message .= "Article link: ".$article_url ."\r\n\r\n";
+        $message .= "Notes to reviewer: \r\n\r\n";
+        $message .= $msg."\r\n\r\n";
+        $message .= "Thank you,\r\n\r\n";
+        $message .= $firstname;
+        //pr($message);
+
+        $emails = array();
+        foreach ($email_addresses as $address){
+            $sender_id = $this->session->userdata('user_id');
+            $reviewer = $this->users->query('email', $address);
+            $reviewer_id = $reviewer[0]['user_id'];
+            $reviewData = array (
+                'page_id' => $page_id,
+                'sender_id' => $sender_id,
+                'reviewer_id' => $reviewer_id,
+                'status' => 0
+            );
+
+            //pr($reviewData);
+            if($this->pages->addPagesReview($reviewData)){
+
+                $emails[] = array(
+                    'subject' => "$firstname has shared an article with you for review",
+                    'from' => "$firstname <{$this->session->userdata('email')}>",
+                    'to' => $address,
+                    'message' => $message
+                );
+
+                if ($this->mail_queue->add($emails)){
+                    $this->result->data = "Emails were queued successfully and will be sent shortly. Look you article's page properties for approval updates.";
+                }else{
+                    $this->result->isError = true;
+                    $this->result->errorStr = "There was an error queuing up the emails, please try again later.";
+                }
+            } else {
+                $this->result->isError = true;
+                $this->result->errorStr = "There was an error queuing up the emails, please try again later.";
+            }
+        }
+
+        pr($emails);
+        exit;
+
+
+        $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($this->result));
+	}
+
+	/**
 	 * Loads all pages that are tagged with the specified tagname
 	 * @return void
 	 */
@@ -591,5 +663,21 @@ class Article extends MY_Controller {
             ->set_content_type('application/json')
             ->set_output(json_encode($this->result));
 
+    }
+
+    /**
+     * This function checks if page awaiting page review/approval of the users
+     */
+    function checkPageReview($page_id, $reviewer_id){
+        $this->load->model('pages');
+        $review = $this->pages->checkPagesReview($page_id, $this->session->userdata('user_id'));
+        //print_r($user);
+        if ($review and (($review[0]['status'] == 0))){
+            $this->result->isError = true;
+        }
+
+        $this->output
+            ->set_content_type('application/json')
+            ->set_output(json_encode($this->result));
     }
 };

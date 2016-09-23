@@ -607,7 +607,6 @@ class Pages extends CI_Model {
 	function batchupdatePublishPage($page_id, $data) {
 
         if (is_numeric($page_id) and is_array($data)) {
-            pr($data);
             // update the sort order fields
             return $this->db->update('pages_pages', $data, array('page_id', 'section_id'));
         }else {
@@ -780,4 +779,45 @@ class Pages extends CI_Model {
         }
     }
 
+    /**
+     * this function gets a list of page_id and title for the Who's Who profile page "My Drafts"
+     *
+     * @param $data - the field of array data
+     * @return array
+     */
+    function addPagesReview($data) {
+        $this->db->insert('pages_review', $data);
+        if ($this->db->affected_rows() > 0) {
+            return $this->db->insert_id();
+        } else {
+            return false;
+        }
+
+    }
+
+
+    /**
+     * this function gets a list of page_id and title for the Who's Who profile page "My Drafts"
+     *
+     * @param $data - the field of array data
+     * @return array
+     */
+    function checkPagesReview($page_id, $sender_id, $field = false) {
+        $query = $this->db
+            ->select(($field)? $field: '*')
+            ->where("page_id", $page_id)
+            ->where("sender_id", $sender_id)
+            ->from('pages_review')
+            ->get();
+
+        $this->output->enable_profiler(TRUE);
+        if ($query->num_rows() > 0) {
+            $result = $query->row_array();
+            //pr($result);
+            return ($field)? $result[$field]: $result;
+        } else {
+            return false;
+        }
+
+    }
 }
