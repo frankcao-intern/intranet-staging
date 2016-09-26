@@ -29,7 +29,7 @@ class Properties extends MY_Controller {
 	 * @param int $page_id the page id to load the properties for.
 	 * @return void it loads the view.
 	 */
-    function load($page_id){
+    function load($page_id, $backtrack = false){
         $this->load->helper('form');
 
         $this->pageRecord['properties'] = true;
@@ -70,6 +70,13 @@ class Properties extends MY_Controller {
             //load the page
             $this->pageRecord['template_name'] = 'properties';
             //pr($this->pageRecord);
+
+
+            /* backtracking for page review */
+            if($backtrack){
+                $this->session->set_userdata('review_backtrack', 'pending');
+            }
+            pr($this->session->userdata);
             $this->load->view('layouts/default', $this->pageRecord);
         } else {
             show_error("There was an error retrieving this page. Try reloading/refreshing the page, if it still doesn't
@@ -181,6 +188,15 @@ class Properties extends MY_Controller {
                 $this->result->isError = true;
                 $this->result->errorStr = "There was an error publishing this page. Please try again later. If the ";
                 $this->result->errorStr .= "problem persists call the Helpdesk at x4024.";
+            } else {
+                if($this->session->userdata('review_backtrack') == 'pending'){
+                    $this->session->set_userdata('review_backtrack', '');
+                    $reviewer_id = $this->session->userdata('user_id');
+                    $review_data = array(
+                        'status' => 1
+                    );
+                    $this->pm->updatePagesReview($page_id, $reviewer_id, $review_data);
+                }
             }
         }
 

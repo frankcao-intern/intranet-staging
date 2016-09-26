@@ -796,6 +796,25 @@ class Pages extends CI_Model {
     }
 
     /**
+     * Updates the pages_reviews record
+     * @param int $page_id
+     * @param int $review_id
+     * @param array $data
+     * @return bool
+     */
+    function updatePagesReview($page_id, $reviewer_id, $data) {
+
+
+        if (!isset($data)) { return false; }
+        if (count($data) == 0) { return true; }
+
+        return $this->db
+            ->where('page_id', $page_id)
+            ->where('reviewer_id', $reviewer_id)
+            ->update('pages_review', $data);
+    }
+
+    /**
      * @param int $page_id
      * @return bool
      */
