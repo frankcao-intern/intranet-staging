@@ -259,7 +259,19 @@ $pilotgroup = array(
 				    </div>
 			    <?php endif; ?>
 
-			    <?php if(isset($events) and (count($events) != 0)): ?>
+                <?php if(isset($reviews) ): ?>
+                <?php //if(isset($reviews) and(count($reviews) != 0)): ?>
+                    <div class="section-a">
+                        <h2 class="c collapsible collapsible-closed">Reviews</h2>
+                        <ul class="list-c">
+                            <?php foreach($reviews as $page): ?>
+                                <li><?=anchor("/article/".$page['page_id'], $page['title'])?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+
+                <?php if(isset($events) and (count($events) != 0)): ?>
 				    <div class="section-a">
 					    <h2 class="c collapsible collapsible-closed">Event Drafts</h2>
 					    <ul class="list-c">

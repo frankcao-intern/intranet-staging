@@ -362,7 +362,11 @@ class Article extends MY_Controller {
 	function review(){
 	    $this->load->model('pages');
 	    $this->load->model('users');
+        $this->load->model('groups');
+        $this->load->model('permissions');
         $this->load->model('mail_queue');
+
+
 
 
 		$email_addresses = json_decode($this->input->post('emails'));
@@ -370,11 +374,18 @@ class Article extends MY_Controller {
 		$page_id = $this->input->post('pid');
 		$firstname = $this->session->userdata('first_name');
         $article_url = $this->config->item('site_url')."properties/$page_id";
+        $emails = array();
 
+        /*
         pr($page_id);
         pr($firstname);
         pr($email_addresses);
         pr($msg);
+        */
+
+        // revmove all the previous data from fn_pags_review table
+        //$deleted = $this->pages->deletePagesReview($page_id);
+        //exit;
 
         $message = "Hello,\r\n\r\n";
         $message .= "You are being requested to review and approve this article. \r\n\r\n";
@@ -387,9 +398,11 @@ class Article extends MY_Controller {
 
         $emails = array();
         foreach ($email_addresses as $address){
+            // pages_reviews table data
             $sender_id = $this->session->userdata('user_id');
             $reviewer = $this->users->query('email', $address);
             $reviewer_id = $reviewer[0]['user_id'];
+            $reviewer_name = $reviewer[0]['display_name'];
             $reviewData = array (
                 'page_id' => $page_id,
                 'sender_id' => $sender_id,
@@ -398,30 +411,55 @@ class Article extends MY_Controller {
             );
 
             //pr($reviewData);
-            if($this->pages->addPagesReview($reviewData)){
+            // adding required permission to the group
+            //group permission data
 
-                $emails[] = array(
-                    'subject' => "$firstname has shared an article with you for review",
-                    'from' => "$firstname <{$this->session->userdata('email')}>",
-                    'to' => $address,
-                    'message' => $message
-                );
+            $user_group = $this->groups->get($reviewer_name);
+            $user_group[0]['access']= 3;
+            //pr($user_group);
+            $perm_data = (object)$user_group;
 
-                if ($this->mail_queue->add($emails)){
-                    $this->result->data = "Emails were queued successfully and will be sent shortly. Look you article's page properties for approval updates.";
-                }else{
+            //pr($perm_data);
+            //exit;
+            //$user_access = $this->permissions->getUserAccess($reviewer_id, $page_id) ? $this->permissions->add($page_id, $perm_data): $this->permissions->getUserAccess($reviewer_id, $page_id);
+            //
+
+            if(!$this->pages->checkUserPendingReview($reviewer_id)){
+                $user_access = $this->permissions->add($page_id, $perm_data);
+
+                if($this->pages->addPagesReview($reviewData)){
+                    //if(!$this->permissions->add($page_id, $perm_data)){
+                        // notification email draft
+                    $emails[] = array(
+                        'subject' => "$firstname has shared an article with you for review",
+                        'from' => "$firstname <{$this->session->userdata('email')}>",
+                        'to' => $address,
+                        'message' => $message
+                    );
+
+                    if ($this->mail_queue->add($emails)){
+                        $this->result->data = "Emails were queued successfully and will be sent shortly. Look you article's page properties for approval updates.";
+                    }else{
+                        $this->result->isError = true;
+                        $this->result->errorStr = "There was an error queuing up the emails, please try again later.";
+                    }
+
+                    /*}else{
+                        $this->result->isError = true;
+                        $this->result->errorStr = "There was an error for group permission, please try again later.";
+                    }*/
+
+                } else {
                     $this->result->isError = true;
                     $this->result->errorStr = "There was an error queuing up the emails, please try again later.";
                 }
             } else {
                 $this->result->isError = true;
-                $this->result->errorStr = "There was an error queuing up the emails, please try again later.";
+                $this->result->errorStr = "The review request has already been sent to this person. ";
             }
+
+            //pr($reviewData);
         }
-
-        pr($emails);
-        exit;
-
 
         $this->output
             ->set_content_type('application/json')

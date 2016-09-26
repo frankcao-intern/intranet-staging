@@ -40,17 +40,18 @@ $title = character_limiter(val($title, "Untitled $page_type"), 35, '...');
 </section> <!--/ #primary -->
 
 <aside class="secondary">
-    <h2 class="c">Review Status </h2>
     <?php
         $user_id = $this->session->userdata('user_id');
         $review_data = get_page_review_details($page_id, $user_id);
         //pr($review_data);
         if($review_data['reviewer_id'] == $user_id):
     ?>
+    <h2 class="c">Review Status </h2>
+
         <p >
-            <div class="my-notify-info">
-                You are requested to review and pulish this article.
-            </div>
+        <div class="my-notify-info">
+            You are requested to review and pulish this article.
+        </div>
         </p>
     <?php
         endif;

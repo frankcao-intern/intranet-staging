@@ -126,6 +126,8 @@ class Who extends MY_Controller {
                 //$page_data['edit_pages'] = $this->pages->edit_pages($user_id);
 				//load the drafts
 				$page_data['drafts'] = $this->pages->drafts($user_id);
+                //load the reviews
+				$page_data['reviews'] = $this->pages->checkUserPendingReview($user_id);
 				//load the trash can
 				$page_data['trashcan'] = $this->pages->trashcan($user_id);
 				//load the orphaned events
