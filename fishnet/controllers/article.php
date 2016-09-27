@@ -366,35 +366,19 @@ class Article extends MY_Controller {
         $this->load->model('permissions');
         $this->load->model('mail_queue');
 
-
-
-
 		$email_addresses = json_decode($this->input->post('emails'));
 		$msg = $this->input->post('msg');
 		$page_id = $this->input->post('pid');
 		$firstname = $this->session->userdata('first_name');
-        $article_url = $this->config->item('site_url')."properties/$page_id";
-        $emails = array();
 
-        /*
         pr($page_id);
         pr($firstname);
         pr($email_addresses);
         pr($msg);
-        */
 
         // revmove all the previous data from fn_pags_review table
         //$deleted = $this->pages->deletePagesReview($page_id);
         //exit;
-
-        $message = "Hello,\r\n\r\n";
-        $message .= "You are being requested to review and approve this article. \r\n\r\n";
-        $message .= "Article link: ".$article_url ."\r\n\r\n";
-        $message .= "Notes to reviewer: \r\n\r\n";
-        $message .= $msg."\r\n\r\n";
-        $message .= "Thank you,\r\n\r\n";
-        $message .= $firstname;
-        //pr($message);
 
         $emails = array();
         foreach ($email_addresses as $address){
@@ -403,14 +387,26 @@ class Article extends MY_Controller {
             $reviewer = $this->users->query('email', $address);
             $reviewer_id = $reviewer[0]['user_id'];
             $reviewer_name = $reviewer[0]['display_name'];
+            $key = strrev(md5($reviewer.rand()));
             $reviewData = array (
                 'page_id' => $page_id,
                 'sender_id' => $sender_id,
                 'reviewer_id' => $reviewer_id,
+                'key' => $key,
                 'status' => 0
             );
 
-            //pr($reviewData);
+            // email message format for the user
+            $article_url = $this->config->item('site_url')."properties/$page_id/".$key;
+            $message = "Hello,\r\n\r\n";
+            $message .= "You are being requested to review and approve this article. \r\n\r\n";
+            $message .= "Article link: ".$article_url ."\r\n\r\n";
+            $message .= "Notes to reviewer: \r\n\r\n";
+            $message .= $msg."\r\n\r\n";
+            $message .= "Thank you,\r\n\r\n";
+            $message .= $firstname;
+
+            pr($reviewData);
             // adding required permission to the group
             //group permission data
 
@@ -457,9 +453,8 @@ class Article extends MY_Controller {
                 $this->result->isError = true;
                 $this->result->errorStr = "The review request has already been sent to this person. ";
             }
-
-            //pr($reviewData);
         }
+        exit;
 
         $this->output
             ->set_content_type('application/json')

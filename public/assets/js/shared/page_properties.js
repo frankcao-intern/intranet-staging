@@ -61,6 +61,7 @@
                     page_properties.setConfirmUnload(true);
                 });
 
+                // initializing the date picker
                 $("#date_published").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
                 $("#show_until").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
             },
@@ -145,6 +146,7 @@
                     postData = "pid=" + coreEngine.pageID;
                     postData += "&data=" + JSON.stringify(settings);
 
+
                     // submitting data into controller
                     coreEngine.ajax("properties/updateGeneralSettings/" + (new Date()).getTime(), postData,
                         coreEngine.genericCallBack, 'json');
@@ -159,7 +161,7 @@
                     var tags = $("#tags"),
                         settings = {},
                         date_published = {}, show_until = {}, sort_order = {},
-                        postData;
+                        postData, pathname = window.location.pathname.split('/');
 
 
                     //Sections ----------------------------------------
@@ -181,6 +183,9 @@
 
                     postData = "pid=" + coreEngine.pageID;
                     postData += "&data=" + JSON.stringify(settings);
+                    if(pathname[3] != null){
+                        postData += "&review_key=" + pathname[3];
+                    }
 
                     // submitting data into controller
                     coreEngine.ajax("properties/updatePagePublishing/" + (new Date()).getTime(), postData,

@@ -154,6 +154,80 @@ class MY_Controller extends CI_Controller {
 	}
 
 	/**
+	 * This function will load the page_id information into the private variable $pageRecord
+	 * only if the page has been published and if the current session user has access to see it
+	 * @param int $page_id the paged_id to load
+	 * @return void
+	 */
+	function loadPageProperties($page_id, $key = null){
+		$load_page = false;
+		//load the models
+		$this->load->model('pages');
+
+		//get the page
+		$pageRecord = $this->pages->getPage($page_id);
+		//var_dump($pageRecord);
+		if ($pageRecord){
+			//Check if the page has a special URL redirect
+			if (isset($pageRecord['redirect_url']) and (!isset($this->pageRecord['edit'])) and
+			   (!isset($this->pageRecord['properties'])))
+			{
+				$url = str_replace(':id', $page_id, $pageRecord['redirect_url']);
+
+				if (strstr($this->uri->uri_string(), $url) === false){
+					redirect($url);
+				}
+			}
+
+			$pageRecord['allow_comments'] = ($pageRecord['allow_comments'] === "1");
+
+			//parse parameters and pass them on to the page
+			$this->pageRecord['params'] = $this->uri->uri_to_assoc(3);
+
+			//merge the page record from the DB with any existing settings loaded before we got here.
+			$this->pageRecord = array_merge($pageRecord, $this->pageRecord);
+
+			//check permissions
+			if ($this->session->userdata('role') == 'admin'){
+				$perms = array(
+					'canRead' => PERM_READ,
+					'canWrite' => PERM_WRITE,
+					'canDelete' => PERM_DELETE,
+					'canPublish' => PERM_PUBLISH,
+					'canPerm' => PERM_PERM,
+					'canProp' => PERM_PROPERTIES
+				);
+			}else{
+				$this->load->model('permissions');
+				$perms = $this->permissions->getUserAccess($this->session->userdata("user_id"), $page_id);
+			}
+			$this->pageRecord = array_merge($this->pageRecord, $perms);
+
+			//check if the user had read access
+			if ($this->pageRecord['canRead']){
+				//user can read it lets load the page
+				$load_page = true;
+			}else{
+				$this->load->model('users');
+				$creator = $this->users->get($this->pageRecord['created_by']);
+				if ($creator === false){
+					show_error("This page has restricted access.", 200);
+				}else{
+					show_error("This page has restricted access. If you think this is an error please
+						contact ".anchor("/profiles/{$creator[0]['user_id']}", $creator[0]['display_name']), 200);
+				}
+			}
+		}else{
+			show_404();
+		}
+
+		if (!$load_page){
+			show_error("There was an error retrieving this page. Reload the page, if the problem persists please call
+				the Helpdesk at x4024. Thank you.");
+		}
+	}
+
+	/**
 	 * @param int $page_id the page id to load the latest revision
 	 * @param string $d_start a mySQL style date
 	 * @param string $d_end a mySQL style date

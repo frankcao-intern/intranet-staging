@@ -66,6 +66,7 @@ $route['video/(:num)/(:any)'] = "article/index/$1"; //video pages with params
 
 //Properties
 $route['properties/(:num)'] = "properties/load/$1";//page properties
+$route['properties/(:num)/(:any)'] = "properties/load/$1/$2";//page properties
 
 //Monthly digest
 $route['monthly/(:num)/(\d?\d)/(\d\d\d\d)/(comments_count|page_views)'] = "monthly/load/$1/$2/$3/$4";

@@ -265,7 +265,7 @@ $pilotgroup = array(
                         <h2 class="c collapsible collapsible-closed">Reviews</h2>
                         <ul class="list-c">
                             <?php foreach($reviews as $page): ?>
-                                <li><?=anchor("/properties/".$page['page_id']."/true", $page['title'])?></li>
+                                <li><?=anchor("/properties/".$page['page_id']."/".$page['key'], $page['title'])?></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>

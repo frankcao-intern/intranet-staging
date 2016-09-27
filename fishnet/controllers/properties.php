@@ -29,12 +29,10 @@ class Properties extends MY_Controller {
 	 * @param int $page_id the page id to load the properties for.
 	 * @return void it loads the view.
 	 */
-    function load($page_id, $backtrack = false){
-        $this->load->helper('form');
+    function load($page_id, $key = null){
 
         $this->pageRecord['properties'] = true;
         $this->loadPage($page_id);
-        //pr($this->pageRecord);
 
         if ($this->pageRecord !== false){
             $this->pageRecord['pageID'] = $page_id;
@@ -71,12 +69,13 @@ class Properties extends MY_Controller {
             $this->pageRecord['template_name'] = 'properties';
             //pr($this->pageRecord);
 
-
             /* backtracking for page review */
-            if($backtrack){
-                $this->session->set_userdata('review_backtrack', 'pending');
+            if($key){
+                $this->session->unset_userdata('review_key');
+                $this->pageRecord['review_key'] = $key;
+                $this->session->set_userdata('review_key', $key);
             }
-            pr($this->session->userdata);
+
             $this->load->view('layouts/default', $this->pageRecord);
         } else {
             show_error("There was an error retrieving this page. Try reloading/refreshing the page, if it still doesn't
@@ -141,6 +140,8 @@ class Properties extends MY_Controller {
 
         $page_id = $this->input->post('pid');
         $content = json_decode($this->input->post('data'), true);
+        if($this->input->post('review_key'))
+            $review_key = $this->input->post('review_key');
         //pr($content);
         //publish page to sections -------------------------------------------------------------------------------------
         if (isset($content['date_published']) && isset($content['show_until'])){
@@ -169,10 +170,12 @@ class Properties extends MY_Controller {
                                         }
                                     }
                                 }
-                            } else {
+                            }
+                            /*else {
                                 $this->result->isError = true;
                                 $this->result->errorStr = "Section's dates cannot be blank, please correct this and try again.";
                             }
+                            */
 
                         } else {
                             continue;
@@ -188,9 +191,13 @@ class Properties extends MY_Controller {
                 $this->result->isError = true;
                 $this->result->errorStr = "There was an error publishing this page. Please try again later. If the ";
                 $this->result->errorStr .= "problem persists call the Helpdesk at x4024.";
-            } else {
-                if($this->session->userdata('review_backtrack') == 'pending'){
-                    $this->session->set_userdata('review_backtrack', '');
+            }
+
+            if(isset($review_key)){
+
+                if($this->session->userdata('review_key') == $review_key){
+
+                    $this->session->unset_userdata('review_backtrack', '');
                     $reviewer_id = $this->session->userdata('user_id');
                     $review_data = array(
                         'status' => 1
@@ -198,6 +205,7 @@ class Properties extends MY_Controller {
                     $this->pm->updatePagesReview($page_id, $reviewer_id, $review_data);
                 }
             }
+
         }
 
         if (!$this->result->isError){

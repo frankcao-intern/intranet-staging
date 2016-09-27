@@ -44,7 +44,7 @@ $title = character_limiter(val($title, "Untitled $page_type"), 35, '...');
         $user_id = $this->session->userdata('user_id');
         $review_data = get_page_review_details($page_id, $user_id);
         //pr($review_data);
-        if($review_data['reviewer_id'] == $user_id):
+        if($review_data['reviewer_id'] == $user_id && $review_data['status'] == 0):
     ?>
     <h2 class="c">Review Status </h2>
 

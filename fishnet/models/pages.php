@@ -864,7 +864,7 @@ class Pages extends CI_Model {
          */
         $query = $this->db
             ->distinct()
-            ->select('pages.page_id, pages.title')
+            ->select('pages.page_id, pages.title, pr.*')
             ->from('pages')
             ->join('pages_review pr', 'pr.page_id=pages.page_id')
             ->join('permissions p', 'p.page_id=pages.page_id')
