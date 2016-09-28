@@ -49,6 +49,8 @@ $page_id = val($page_id, 0);
 	<link rel="stylesheet" href="<?=STATIC_URL?>css/lib/jquery.jScrollPane.css" />
 	<link rel="stylesheet" href="<?=STATIC_URL?>css/lib/guidely.css" />
 	<link rel="stylesheet" href="<?=STATIC_URL?>css/lib/jquery.qtip.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+
 
 	<script type="text/javascript" src="<?=STATIC_URL?>js/shared/hp_news_withpic.js"></script>
 	<!--script type="text/javascript" src="<?=STATIC_URL?>js/templates/sys_portal.js"></script-->

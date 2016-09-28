@@ -93,7 +93,7 @@
                                 'class' => 'js-gen-settings',
                             );
 
-                            echo form_input($show_until_data, $show_until) ;
+                            echo form_input($show_until_data, date("Y-m-d", strtotime($show_until))) ;
                         ?>
 					</p>
 				</div>
@@ -124,7 +124,7 @@
                                             'class' => 'js-gen-settings',
                                         );
 
-                                        echo form_input($featured_from_data, $featured_from) ;
+                                        echo form_input($featured_from_data, date("Y-m-d", strtotime($featured_from))) ;
                                     ?>
                                 </p>
                             </div>
@@ -141,7 +141,7 @@
                                         'class' => 'js-gen-settings',
                                     );
 
-                                    echo form_input($featured_until_data, $featured_until) ;
+                                    echo form_input($featured_until_data, date("Y-m-d", strtotime($featured_until))) ;
                                 ?>
                             </div>
                         </div>
@@ -207,12 +207,12 @@
 
                                         <?php
                                         $sec_date_published_data = array (
-                                            'id' => 'date_published',
+                                            'id' => 'sec_date_published',
                                             'name' => $sec_page_id,
                                             'class' => 'js-date-published',
                                         );
 
-                                        echo form_input($sec_date_published_data, $pubdate) ;
+                                        echo form_input($sec_date_published_data, ($pubdate != null)? date("Y-m-d", strtotime($pubdate)): null ) ;
                                         ?>
 
                                     </p>
@@ -226,12 +226,12 @@
 
                                         <?php
                                         $sec_show_until_data = array (
-                                            'id' => 'show_until',
+                                            'id' => 'sec_show_until',
                                             'name' => $sec_page_id,
                                             'class' => 'js-show-until',
                                         );
 
-                                        echo form_input($sec_show_until_data, $expdate) ;
+                                        echo form_input($sec_show_until_data, ($expdate != null)? date("Y-m-d", strtotime($expdate)): null ) ;
                                         ?>
                                     </p>
 

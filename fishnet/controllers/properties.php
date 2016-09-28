@@ -202,6 +202,9 @@ class Properties extends MY_Controller {
                     $review_data = array(
                         'status' => 1
                     );
+
+                    // send email to the requester
+
                     $this->pm->updatePagesReview($page_id, $reviewer_id, $review_data);
                 }
             }

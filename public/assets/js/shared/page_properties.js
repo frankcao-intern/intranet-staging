@@ -37,6 +37,8 @@
                     $("#show_until").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
                     $("#featured_from").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
                     $("#featured_until").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
+                    //$(".js-date-published").datepicker({defaultDate:null, dateFormat: "yy-mm-dd",changeMonth: true, changeYear: true}).mask("9999-19-39");
+                    //$(".js-show-until").datepicker({defaultDate:null, dateFormat: "yy-mm-dd",changeMonth: true, changeYear: true}).mask("9999-19-39");
                 }
 
                 if ($.fn.checkbox){
@@ -62,8 +64,7 @@
                 });
 
                 // initializing the date picker
-                $("#date_published").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
-                $("#show_until").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
+
             },
             tags: function(){
                 var extractLast = function( term ) {

@@ -28,6 +28,21 @@ class Permissions extends CI_Model {
 	}
 
 	/**
+	 * Get permissions table for a page
+	 * @param $page_id
+	 * @return array
+	 */
+	function getUserPageAccess($page_id, $group_id){
+		$query = $this->db
+				->join('groups', 'groups.group_id=permissions.group_id')
+				->where("page_id", $page_id)
+				->where("permissions.group_id", $group_id)
+				->get("permissions");
+
+		if ($query->num_rows() > 0){ return $query->result_array(); }else{ return array(); }
+	}
+
+	/**
 	 * Get a the permissions a user has to a page
 	 * @param int $user_id
 	 * @param int $page_id

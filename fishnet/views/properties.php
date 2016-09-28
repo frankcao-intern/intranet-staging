@@ -10,13 +10,6 @@ $page_type = val($page_type, 'page');
 $title = character_limiter(val($title, "Untitled $page_type"), 35, '...');
 ?>
 
-<div id="sharePageDiag" style="barkground-color: #000; display: none;" title="Share this page">
-    <label for="shareEmail">Start typing a name then select from the list:</label>
-    <input id="shareEmail" type="text" />
-    <ul></ul>
-    <label for="shareMsg">Notes for Reviewer:</label>
-    <textarea id="shareMsg" rows="5" cols="28"></textarea>
-</div>
 <div id="reviewPageDiag" style="barkground-color: #000; display: none;" title="Share this page">
     <label for="reviewEmail">Start typing a name then select from the list:</label>
     <input id="reviewEmail" type="text" />
@@ -43,31 +36,29 @@ $title = character_limiter(val($title, "Untitled $page_type"), 35, '...');
     <?php
         $user_id = $this->session->userdata('user_id');
         $review_data = get_page_review_details($page_id, $user_id);
-        //pr($review_data);
+
+    if($review_data != false):
         if($review_data['reviewer_id'] == $user_id && $review_data['status'] == 0):
     ?>
     <h2 class="c">Review Status </h2>
 
         <p >
-        <div class="my-notify-info">
-            You are requested to review and pulish this article.
-        </div>
+            <div class="my-notify-info">
+                Review request status - <b> pending.</b>
+            </div>
+        </p>
+    <?php
+        else:
+    ?>
+        <p >
+            <div class="my-notify-success">
+                Review request status - <b> published.</b>
+            </div>
         </p>
     <?php
         endif;
+    endif;
     ?>
-    <div class="button-a section-a" >
-        <a id="btnReview" style="cursor: hand; text-decoration: none;">Request for review</a>
-    </div>
-
-    <!--<div class="section-a">
-        <p class="settings-a">
-            <label for="tags">Who: </label>
-            <input id="approve-article" type="text" name="approve-article" value="" />
-        </p>
-        <p>
-            <button class="btnArticleReview">Request for review</button>
-        </p>
-    </div>-->
+    <p><button class="button" id="btnReview">Request for review</button></p>
 
 </aside> <!--/ #secondary -->

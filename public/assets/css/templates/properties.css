@@ -28,15 +28,15 @@ input#tags { width: 529px; }
 	background-color: #000000;
 	border: none;
 	color: white;
-	padding: 15px;
+	padding: 10px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
-	font-size: 16px;
-	margin: 4px 2px;
+	font-size: 14px;
+	margin: 0px 2px;
 	cursor: pointer;
 	cursor: pointer;
 	text-align: center;
 	zoom: 1;
-	border-radius: 10px;
+	border-radius: 5px;
 }
