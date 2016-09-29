@@ -394,12 +394,10 @@ class Pages extends CI_Model {
             if(date('Y-m') === date('Y-m', strtotime($d_start))){
                 $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
             } else {
-                //$dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN '$d_start' AND NOW() ))" : '';
                 $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND '$d_end' ) OR (rel.show_until BETWEEN '$d_start' AND '$d_end'))" : '';
 
             }
         } elseif ($section_name == 'journal'){
-            //$dates        = (($d_start != null) or ($d_end != null)) ? "AND (rel.show_until BETWEEN CURDATE() AND '$d_end' )" : '';
             $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) OR (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
         } else {
             $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
@@ -408,16 +406,10 @@ class Pages extends CI_Model {
 		$limit        = (isset($limit)) ? "LIMIT " . (isset($offset) ? $offset : '0') . ",$limit" : '';
 		$random       = (isset($random)) ? "RAND()," : '';
 		$featured     = (isset($featured)) ? "AND fn_pages.featured=$featured AND (fn_pages.featured_from <= NOW() AND fn_pages.featured_until >= NOW())" : '';
-        //AND fn_pages.featured=1 AND (fn_pages.featured_from <= NOW() AND fn_pages.featured_until >= NOW())
-        //AND fn_pages.featured=1 AND fn_pages.featured_until >= NOW()
 
 		//tags
 		$tags     = (isset($tag_id)) ? "AND fn_tag_matches.tag_id=$tag_id" : '';
 		$tag_join = (isset($tag_id)) ? "JOIN fn_tag_matches ON fn_tag_matches.page_id=fn_pages.page_id" : '';
-
-        // new condifiton
-        //$publish_condition = (isset($publish_condition)) ? "AND rel.date_published>=$publish_condition" : '';
-
 
 		$order_by  = (isset($order_by)) ? "$order_by DESC, " : '';
 		$perm_read = PERM_READ;
@@ -453,7 +445,7 @@ class Pages extends CI_Model {
 			GROUP BY fn_pages.page_id
 			ORDER BY $random $order_by rel.sort_order ASC , rel.date_published DESC $limit";
 
-		//pr($query_str);
+
 
         /**
 		 * @var CI_DB_result $query
@@ -624,7 +616,6 @@ class Pages extends CI_Model {
     function updatePublishPage($page_id, $section_id, $data) {
 
         if (is_numeric($page_id) && is_numeric($section_id) && is_array($data)) {
-            //pr($data);
             // update the sort order fields
             $this->db->where('page_id', $page_id);
             $this->db->where('section_id', $section_id);
@@ -772,7 +763,7 @@ class Pages extends CI_Model {
         $this->output->enable_profiler(FALSE);
         if ($query->num_rows() > 0) {
             $result = $query->row_array();
-            //pr($result);
+
             return ($field)? $result[$field]: $result;
         } else {
             return null;
@@ -843,7 +834,7 @@ class Pages extends CI_Model {
         $this->output->enable_profiler(FALSE);
         if ($query->num_rows() > 0) {
             $result = $query->row_array();
-            //pr($result);
+
             return ($field)? $result[$field]: $result;
         } else {
             return false;
@@ -876,8 +867,6 @@ class Pages extends CI_Model {
             ->where("p.access & $perm_write=", $perm_write)
             ->order_by('pages.date_published', 'DESC')
             ->get();
-            /*->where('pages.published', '0') /* need to ask Karen and Nori about this condition*/
-        //pr($this->db->last_query());
 
         if ($query and ($query->num_rows() > 0)) {
             return $query->result_array();
@@ -913,8 +902,6 @@ class Pages extends CI_Model {
             ->where("p.access & $perm_write=", $perm_write)
             ->order_by('pages.date_published', 'DESC')
             ->get();
-            /*->where('pages.published', '0') /* need to ask Karen and Nori about this condition*/
-        //pr($this->db->last_query());
 
         if ($query and ($query->num_rows() > 0)) {
             return $query->result_array();
@@ -949,8 +936,6 @@ class Pages extends CI_Model {
             ->where("p.access & $perm_write=", $perm_write)
             ->order_by('pages.date_published', 'DESC')
             ->get();
-            /*->where('pages.published', '0') /* need to ask Karen and Nori about this condition*/
-        //pr($this->db->last_query());
 
         if ($query and ($query->num_rows() > 0)) {
             return $query->result_array();

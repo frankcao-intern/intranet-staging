@@ -173,10 +173,10 @@ class Who extends MY_Controller {
 	 */
 	function groups(){
 		$query = $this->uri->uri_to_assoc(3);
-		//pr($query['q']);
+
 		$this->load->model('groups');
 		$groups = $this->groups->get($query['q']);
-		//pr($groups);
+
 		$result = array();
 		for ($i = 0; $i < count($groups); $i++)
 		{
@@ -185,7 +185,7 @@ class Who extends MY_Controller {
 				'value' => $groups[$i]['group_name']
 			);
 		}
-		//pr($result);
+
 
         // return back to the JSON file
         $this->output

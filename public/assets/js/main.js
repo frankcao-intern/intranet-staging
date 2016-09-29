@@ -682,7 +682,7 @@ var coreEngine = coreEngine || {};
 								postData = "emails=" + JSON.stringify(emails);
 								postData += "&msg=" + $("#sharePageDiag").find("textarea").val();
 								postData += "&pid=" + coreEngine.pageID;
-								//alert(postData);
+								
 								coreEngine.ajax('article/share', postData, coreEngine.genericCallBack);
 
 								$(this).dialog('close');

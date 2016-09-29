@@ -45,7 +45,6 @@ class Article extends MY_Controller {
 		//get related tags
 		$this->load->model('tags');
 		$this->pageRecord['tags'] = $this->tags->getForPage($page_id);
-        //pr($this->pageRecord);
 
 		//load the page with the requested template around it
 		if (isset($this->pageRecord['params']) and isset($this->pageRecord['params']['layout'])){
@@ -397,15 +396,12 @@ class Article extends MY_Controller {
             $message .= "Thank you,\r\n\r\n";
             $message .= $firstname;
 
-            //pr($reviewData);
             // adding required permission to the group
             //group permission data
             $user_group = $this->groups->get($reviewer_name);
             $user_group[0]['access']= 3;
-            //pr($user_group);
-            $perm_data = (object)$user_group;
 
-            //pr($perm_data);
+            $perm_data = (object)$user_group;
 
             $user_page_access = $this->permissions->getUserPageAccess($page_id, $user_group[0]['group_id']);
             if($user_page_access == null){

@@ -291,7 +291,7 @@
                                 postData = "emails=" + JSON.stringify(emails);
                                 postData += "&msg=" + $("#reviewPageDiag").find("textarea").val();
                                 postData += "&pid=" + coreEngine.pageID;
-                                //alert(postData);
+
                                 coreEngine.ajax('article/review', postData, coreEngine.genericCallBack);
 
                                 $(this).dialog('close');
@@ -525,7 +525,7 @@
 
                         postData = "pid=" + coreEngine.pageID;
                         postData += "&revid=" + revID;
-                        //alert(postData);
+
                         coreEngine.ajax("server/revdelete/" + (new Date()).getTime(), postData, page_properties.deleteCallback, 'json');
                     }
                 });
@@ -537,7 +537,7 @@
 
                         postData = "pid=" + coreEngine.pageID;
                         postData += "&revid=" + revID;
-                        //alert(postData);
+                        
                         coreEngine.ajax("server/revrev/" + (new Date()).getTime(), postData, page_properties.revrevCallback, 'json');
                     }
                 });

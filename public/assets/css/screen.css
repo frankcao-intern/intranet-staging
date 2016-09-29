@@ -1849,46 +1849,6 @@ html .relative { position: relative; }
 .clearfix { zoom: 1; }
 .clearfix:after { content: ""; display: block; overflow: hidden; clear: both; height: 0; }
 
-/*marquee{
-	width: 626px;
-	color: #9a1b1f;
-	font-size: medium;
-	position: absolute;
-	right: 217px;	
-}
-
-marquee a{
-	color: black;
-    text-decoration: underline;
-}
-
-marquee a:hover{
-	color: #1d5bb9;
-	text-decoration: none;
-	
-}
-*/
-/*marquee span {
-	margin-right: 100%;
-}*/
-
-/*
-#another_div
-{
-	
-    white-space:pre-wrap;
-    font-size:1.5em;
-    position:fixed;
-    height:6%;
-    display:block;
-    background:#FFF;
-    width:100%;
-    text-align:center;
-    top:30%;
-    padding-top:1%;
-    white-space:nowrap;
-}*/
-
 .my-notify-info, .my-notify-success, .my-notify-warning, .my-notify-error {
 	padding:10px;
 	margin:10px 0;

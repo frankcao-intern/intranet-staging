@@ -50,7 +50,7 @@ class Properties extends MY_Controller {
             //get sections where user has publish permission
             $this->load->model("pages");
             $this->pageRecord['sections'] = $this->pages->getUserPublish($this->session->userdata('user_id'), $page_id);
-            //pr($this->pageRecord['sections']);
+
 
             //get all revisions without text
             $this->load->model("revisions");
@@ -66,10 +66,10 @@ class Properties extends MY_Controller {
             $this->pageRecord['tags'] = implode(", ", $this->tags->getForPage($page_id));
 
             $this->load->helper('text');
-            //pr($this->pageRecord);
+
             //load the page
             $this->pageRecord['template_name'] = 'properties';
-            //pr($this->pageRecord);
+
 
             /* backtracking for page review */
             if($key){
@@ -144,7 +144,7 @@ class Properties extends MY_Controller {
         $content = json_decode($this->input->post('data'), true);
         if($this->input->post('review_key'))
             $review_key = $this->input->post('review_key');
-        //pr($content);
+
         //publish page to sections -------------------------------------------------------------------------------------
         if (isset($content['date_published']) && isset($content['show_until'])){
             // defining an empty array
