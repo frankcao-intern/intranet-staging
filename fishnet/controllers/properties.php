@@ -172,13 +172,11 @@ class Properties extends MY_Controller {
                                         }
                                     }
                                 }
+                            } else {
+                                //$this->result->isError = true;
+                                //$this->result->errorStr = "Section's dates cannot be blank, please correct this and try again.";
+                                continue;
                             }
-                            /*else {
-                                $this->result->isError = true;
-                                $this->result->errorStr = "Section's dates cannot be blank, please correct this and try again.";
-                            }
-                            */
-
                         } else {
                             continue;
                         }
