@@ -922,4 +922,40 @@ class Pages extends CI_Model {
             return array();
         }
     }
+
+    /**
+     * this function gets a list of page_id and title for the Who's Who profile page "My Reviews"
+     *
+     * @param $data - the field of array data
+     * @return array
+     */
+    function checkArticleSender($page_id, $reviewer_id = null) {
+        $perm_write = PERM_WRITE + PERM_READ;
+        /**
+         * @var CI_DB_result $query
+         */
+        $query = $this->db
+            ->distinct()
+            ->select('pages.page_id, pages.title, pr.*')
+            ->from('pages')
+            ->join('pages_review pr', 'pr.page_id=pages.page_id')
+            ->join('permissions p', 'p.page_id=pages.page_id')
+            ->join('groups_users rel', "rel.group_id=p.group_id")
+            ->where('rel.user_id', $reviewer_id)
+            ->where('pr.page_id', $page_id)
+            ->where('pr.reviewer_id', $reviewer_id)
+            ->where('pr.status', '0')
+            ->where('pages.deleted', '0')
+            ->where("p.access & $perm_write=", $perm_write)
+            ->order_by('pages.date_published', 'DESC')
+            ->get();
+            /*->where('pages.published', '0') /* need to ask Karen and Nori about this condition*/
+        //pr($this->db->last_query());
+
+        if ($query and ($query->num_rows() > 0)) {
+            return $query->result_array();
+        } else {
+            return array();
+        }
+    }
 }

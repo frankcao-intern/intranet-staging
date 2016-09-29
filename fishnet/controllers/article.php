@@ -371,13 +371,6 @@ class Article extends MY_Controller {
 		$page_id = $this->input->post('pid');
 		$firstname = $this->session->userdata('first_name');
 
-        /*
-        pr($page_id);
-        pr($firstname);
-        pr($email_addresses);
-        pr($msg);
-        */
-
         $emails = array();
         foreach ($email_addresses as $address){
             // pages_reviews table data

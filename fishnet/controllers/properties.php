@@ -20,6 +20,8 @@ class Properties extends MY_Controller {
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model('pages', 'pm');
+        $this->load->model('users', 'usr');
+        $this->load->model('mail_queue');
         //$this->load->library('properties');
     }
 
@@ -185,7 +187,6 @@ class Properties extends MY_Controller {
 
                 }
             }
-            //pr($data);
             // passing data array to page model
             if (!$this->pm->publishPage($page_id, $data)){
                 $this->result->isError = true;
@@ -203,8 +204,44 @@ class Properties extends MY_Controller {
                         'status' => 1
                     );
 
-                    // send email to the requester
+                    // sender review information
+                    $article_data = $this->pm->checkArticleSender($page_id, $reviewer_id);
 
+                    // sender personal information
+                    $sender = $this->usr->get($article_data[0]['sender_id']);
+                    $sernder_email = $sender[0]['email'];
+
+                    // reviewer info
+                    $reviewer = $this->usr->get($reviewer_id);
+                    $reviewer_firstname = $this->session->userdata('first_name');
+                    $reviewer_email = $this->session->userdata('email');
+
+                    // send email to the requester
+                    $emails = array();
+
+                    // email body
+                    $article_url = $this->config->item('site_url')."properties/$page_id";
+                    $message = "Hello,\r\n\r\n";
+                    $message .= "Your review request has been processed. \r\n\r\n";
+                    $message .= $reviewer_firstname. " has reviewed Your article and published. \r\n\r\n";
+                    $message .= "Check you article properties page.\r\n\r\n";
+                    $message .= "URL : ".$article_url ."\r\n\r\n";
+                    $message .= "Thank you,\r\n\r\n";
+                    $message .= $reviewer_firstname;
+
+                    // preparing email data
+                    $emails[] = array(
+                        'subject' => $reviewer_firstname." has reviewd an article ",
+                        'from' => $reviewer_firstname." <{$reviewer_email}>",
+                        'to' => $sernder_email,
+                        'message' => $message
+                    );
+
+                    if($emails != null){
+                        // sending email
+                        $this->mail_queue->add($emails);
+                    }
+                    // updating review request data status
                     $this->pm->updatePagesReview($page_id, $reviewer_id, $review_data);
                 }
             }
