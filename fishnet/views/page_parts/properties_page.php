@@ -78,7 +78,7 @@
                               'name' => 'date_published',
                               'class' => 'js-gen-settings',
                             );
-                            echo form_input($date_publish_data, date("Y-m-d", strtotime($date_published)));
+                            echo form_input($date_publish_data, ($date_published) ? date("Y-m-d", strtotime($date_published)) : null );
                         ?>
 					</p>
 					<p class="two">
@@ -93,7 +93,7 @@
                                 'class' => 'js-gen-settings',
                             );
 
-                            echo form_input($show_until_data, date("Y-m-d", strtotime($show_until))) ;
+                            echo form_input($show_until_data, ($show_until) ? date("Y-m-d", strtotime($show_until)) : null );
                         ?>
 					</p>
 				</div>
@@ -124,7 +124,7 @@
                                             'class' => 'js-gen-settings',
                                         );
 
-                                        echo form_input($featured_from_data, date("Y-m-d", strtotime($featured_from))) ;
+                                        echo form_input($featured_from_data, ($featured_from) ? date("Y-m-d", strtotime($featured_from)) : null ) ;
                                     ?>
                                 </p>
                             </div>
@@ -141,7 +141,7 @@
                                         'class' => 'js-gen-settings',
                                     );
 
-                                    echo form_input($featured_until_data, date("Y-m-d", strtotime($featured_until))) ;
+                                    echo form_input($featured_until_data, ($featured_until) ? date("Y-m-d", strtotime($featured_until)) : null ) ;
                                 ?>
                             </div>
                         </div>
@@ -201,21 +201,22 @@
 						        <div class="field" id="pubpageslist<?php /*echo $i; */?>" style="border: 1px solid #efefef; border-top: none; padding: 10px;">
 
                                     <p class="one">
-                                        <label for="publish[<?php echo $sec_page_id; ?>][date_published]" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
+                                        <!--<label for="publish[<?php /*echo $sec_page_id; */?>][date_published]" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>-->
+                                        <label for="date_published" title='"Date published" designates the date on which pages appear in dated lists (e.g. monthly, seasonal). It also determines the order in which pages will appear.'>
                                             Date Published:
                                         </label>
 
                                         <?php
                                         $sec_date_published_data = array (
-                                            'id' => 'sec_date_published',
+                                            'id' => 'sec_date_published_' . $sec_page_id,
                                             'name' => $sec_page_id,
                                             'class' => 'js-date-published',
                                         );
 
-                                        echo form_input($sec_date_published_data, ($pubdate != null)? date("Y-m-d", strtotime($pubdate)): null ) ;
+                                        echo form_input($sec_date_published_data, ($pubdate)? date("Y-m-d", strtotime($pubdate)): null ) ;
                                         ?>
-
                                     </p>
+
 
 
                                     <p class="one">
@@ -226,12 +227,12 @@
 
                                         <?php
                                         $sec_show_until_data = array (
-                                            'id' => 'sec_show_until',
+                                            'id' => 'sec_show_until_' . $sec_page_id,
                                             'name' => $sec_page_id,
                                             'class' => 'js-show-until',
                                         );
 
-                                        echo form_input($sec_show_until_data, ($expdate != null)? date("Y-m-d", strtotime($expdate)): null ) ;
+                                        echo form_input($sec_show_until_data, ($expdate)? date("Y-m-d", strtotime($expdate)): null ) ;
                                         ?>
                                     </p>
 

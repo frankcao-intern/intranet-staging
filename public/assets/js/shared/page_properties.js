@@ -32,13 +32,43 @@
                     $.mask.definitions['1'] = '[01]';
                     $.mask.definitions['3'] = '[0-3]';
 
-                    //$("#expiration_date").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
-                    $("#date_published").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
-                    $("#show_until").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
-                    $("#featured_from").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
-                    $("#featured_until").datepicker({dateFormat: "yy-mm-dd"}).mask("9999-19-39");
-                    //$(".js-date-published").datepicker({defaultDate:null, dateFormat: "yy-mm-dd",changeMonth: true, changeYear: true}).mask("9999-19-39");
-                    //$(".js-show-until").datepicker({defaultDate:null, dateFormat: "yy-mm-dd",changeMonth: true, changeYear: true}).mask("9999-19-39");
+                    // general section date
+                    $("#date_published").datepicker({
+                            dateFormat: "yy-mm-dd",
+                            changeMonth: true,
+                            changeYear: true})
+                            .mask("9999-19-39");
+                    $("#show_until").datepicker({
+                            dateFormat: "yy-mm-dd",
+                            changeMonth: true,
+                            changeYear: true})
+                            .mask("9999-19-39");
+                    $("#featured_until").datepicker({
+                            dateFormat: "yy-mm-dd",
+                            changeMonth: true,
+                            changeYear: true})
+                            .mask("9999-19-39");
+                    $("#featured_from").datepicker({
+                            dateFormat: "yy-mm-dd",
+                            changeMonth: true,
+                            changeYear: true})
+                            .mask("9999-19-39");
+
+                    // publishing section date
+                    $(".js-date-published").each(function() {
+                        $(this).datepicker({
+                            dateFormat: "yy-mm-dd",
+                            changeMonth: true,
+                            changeYear: true})
+                            .mask("9999-19-39");
+                    });
+                    $(".js-show-until").each(function() {
+                        $(this).datepicker({
+                            dateFormat: "yy-mm-dd",
+                            changeMonth: true,
+                            changeYear: true})
+                            .mask("9999-19-39");
+                    });
                 }
 
                 if ($.fn.checkbox){

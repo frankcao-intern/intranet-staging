@@ -769,7 +769,7 @@ class Pages extends CI_Model {
             ->from('pages_pages')
             ->get();
 
-        $this->output->enable_profiler(TRUE);
+        $this->output->enable_profiler(FALSE);
         if ($query->num_rows() > 0) {
             $result = $query->row_array();
             //pr($result);
@@ -840,7 +840,7 @@ class Pages extends CI_Model {
             ->from('pages_review')
             ->get();
 
-        $this->output->enable_profiler(TRUE);
+        $this->output->enable_profiler(FALSE);
         if ($query->num_rows() > 0) {
             $result = $query->row_array();
             //pr($result);
