@@ -18,9 +18,9 @@ $prev = val($prev, array());
 
 	<ol class="digest-list">
 		<!-- test -->
-		<?php if($order_by == null && $show_next == null): ?>
+	<?php if($order_by == null && $show_next == null): ?>
 		<div id="sortOrder">
-			<?php endif; ?>
+	<?php endif; ?>
 			<?php foreach(val($articles, array()) as $article): ?>
 				<?php
 
@@ -62,9 +62,9 @@ $prev = val($prev, array());
 					<p class="more-a"><?=anchor($articleAnchor, "Read More&nbsp;&nbsp;&#x25ba;")?></p>
 				</div>
 			<?php endforeach; ?>
-			<?php if($order_by == null): ?>
+	<?php if($order_by == null && $show_next == null): ?>
 		</div>
-		<?php endif; ?>
+	<?php endif; ?>
 		<!-- eof test -->
 	</ol>
 

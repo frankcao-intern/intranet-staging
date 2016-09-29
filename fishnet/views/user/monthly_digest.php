@@ -63,7 +63,7 @@ $prev = val($prev, array());
 				<p class="more-a"><?=anchor($articleAnchor, "Read More&nbsp;&nbsp;&#x25ba;")?></p>
 			</div>
 		<?php endforeach; ?>
-		<?php if($order_by == null): ?>
+	<?php if($order_by == null && $show_next == null): ?>
 	</div>
 	<?php endif; ?>
 	<!-- eof test -->
