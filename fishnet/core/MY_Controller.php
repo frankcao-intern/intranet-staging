@@ -151,6 +151,7 @@ class MY_Controller extends CI_Controller {
 			show_error("There was an error retrieving this page. Reload the page, if the problem persists please call
 				the Helpdesk at x4024. Thank you.");
 		}
+
 	}
 
 	/**
@@ -294,14 +295,17 @@ class MY_Controller extends CI_Controller {
 			if (isset($this->pageRecord['revision']['revision_text']['buckets'])){
 				$this->load->model('pages');
 				$this->load->model('tags');
+
 				foreach($this->pageRecord['revision']['revision_text']['buckets'] as $bucket){
 					$name = $bucket['name'];
 					$tag_id = (isset($bucket['tags'])) ? $this->tags->getID($bucket['tags']) : null;
 					$section_id = str_replace(':id', $page_id, $bucket['section_id']);
-					$tmp = $this->pages->getForSection($section_id, $d_start, $d_end, $bucket['featured'], $bucket['limit'], null, $bucket['random'], $tag_id, $order_by);
+
+                    $tmp = $this->pages->getForSection($section_id, $d_start, $d_end, $bucket['featured'], $bucket['limit'], null, $bucket['random'], $tag_id, $order_by, null);
 					array_walk($tmp, 'truncateArticle', array('count' => $bucket['wordcount'], 'key' => 'article'));
 					$this->pageRecord[$name] = $tmp;
 				}
+				//pr($this->pageRecord);
 			}
 
 			//Load announcements

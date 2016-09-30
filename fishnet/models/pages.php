@@ -38,10 +38,13 @@ class Pages extends CI_Model {
 		if ($query and ($query->num_rows() > 0)) {
 			$page = $query->row_array();
 			$query = $this->db
-					->select('pages.title as section_title, pages_pages.section_id')
+					->select('pages.title as section_title, pages_pages.*')
 					->join('pages', 'pages.page_id=pages_pages.section_id')
 					->where('pages_pages.page_id', $page['page_id'])
-					->get('pages_pages');
+                    ->order_by('pages_pages.sort_order', 'asc')
+                    ->order_by('pages_pages.date_published', 'desc')
+                    ->get('pages_pages');
+
 			$page['sections'] = $query->result_array();
 
 			//see if the page provides an override to the default routing
@@ -386,35 +389,35 @@ class Pages extends CI_Model {
                            $tag_id = null,
                            $order_by = null,
                            $section_name = null) {
+	    // only for company news section in homepage
+        if($section_id == '2' && $d_start == null && $d_end == null){
+            $order_by = 'fn_pages.date_published ';
+        }
 
-		$section      = (isset($section_id)) ? "AND rel.section_id=$section_id" : '';
-		$section_join = (isset($section_id)) ? "JOIN fn_pages sections ON sections.page_id=$section_id" : '';
-		$section_id   = (isset($section_id)) ? ", sections.title AS section_title, $section_id AS section_id" : '';
+        $section      = (isset($section_id)) ? "AND rel.section_id=$section_id" : '';
+        $section_join = (isset($section_id)) ? "JOIN fn_pages sections ON sections.page_id=$section_id" : '';
+        $section_id   = (isset($section_id)) ? ", sections.title AS section_title, $section_id AS section_id" : '';
         if($section_name == 'monthly'){
             if(date('Y-m') === date('Y-m', strtotime($d_start))){
                 $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
             } else {
                 $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND '$d_end' ) OR (rel.show_until BETWEEN '$d_start' AND '$d_end'))" : '';
-
             }
         } elseif ($section_name == 'journal'){
             $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) OR (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
         } else {
             $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
         }
-		//$dates        = (($d_start != null) or ($d_end != null)) ? "AND fn_pages.date_published<='$d_end' AND (fn_pages.show_until IS NULL OR fn_pages.show_until>='$d_start')" : '';
-		$limit        = (isset($limit)) ? "LIMIT " . (isset($offset) ? $offset : '0') . ",$limit" : '';
-		$random       = (isset($random)) ? "RAND()," : '';
-		$featured     = (isset($featured)) ? "AND fn_pages.featured=$featured AND (fn_pages.featured_from <= NOW() AND fn_pages.featured_until >= NOW())" : '';
-
-		//tags
-		$tags     = (isset($tag_id)) ? "AND fn_tag_matches.tag_id=$tag_id" : '';
-		$tag_join = (isset($tag_id)) ? "JOIN fn_tag_matches ON fn_tag_matches.page_id=fn_pages.page_id" : '';
-
-		$order_by  = (isset($order_by)) ? "$order_by DESC, " : '';
-		$perm_read = PERM_READ;
-		$user_id   = $this->session->userdata('user_id');
-
+        //$dates        = (($d_start != null) or ($d_end != null)) ? "AND fn_pages.date_published<='$d_end' AND (fn_pages.show_until IS NULL OR fn_pages.show_until>='$d_start')" : '';
+        $limit        = (isset($limit)) ? "LIMIT " . (isset($offset) ? $offset : '0') . ",$limit" : '';
+        $random       = (isset($random)) ? "RAND()," : '';
+        $featured     = (isset($featured)) ? "AND fn_pages.featured=$featured AND (fn_pages.featured_from <= NOW() AND fn_pages.featured_until >= NOW())" : '';
+        //tags
+        $tags     = (isset($tag_id)) ? "AND fn_tag_matches.tag_id=$tag_id" : '';
+        $tag_join = (isset($tag_id)) ? "JOIN fn_tag_matches ON fn_tag_matches.page_id=fn_pages.page_id" : '';
+        $order_by  = (isset($order_by)) ? "$order_by DESC, " : '';
+        $perm_read = PERM_READ;
+        $user_id   = $this->session->userdata('user_id');
         $query_str = "SELECT fn_pages.*, rel.*, fn_templates.template_name, rev.revision_text $section_id, comm.comments_count
 			FROM fn_pages
 			$section_join
