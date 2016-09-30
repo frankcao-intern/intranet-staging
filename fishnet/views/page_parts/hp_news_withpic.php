@@ -6,6 +6,19 @@
  */
 
 $articles = val($articles, array());
+
+$arr = array();
+foreach($articles as $k => $va){
+    if($va['sort_order'] == null )
+        $va['sort_order'] = $k;
+
+    $arr[] = $va;
+}
+
+// sorting the whole array based on sort_order
+usort($arr, 'cmp');
+
+
 ?>
 <script type="text/javascript" src="http://freestyleacademy.rocks/Scripts/videoDisplay.js"></script>
 <link rel="stylesheet" type="text/css" href="http://www.freestyleacademy.rocks/styles/videoDisplay853x480.css">
@@ -33,17 +46,17 @@ $articles = val($articles, array());
 		<!--div class="columns double-b"-->
 		<ul>
 			<!--div class="columns double-b"-->
-			<?php for($i = 0; $i < count($articles); $i += 1): ?>
+			<?php for($i = 0; $i < count($arr); $i += 1): ?>
 				
 				<li>
 					<?php for($j = $i; $j < ($i + 5); $j++): ?>
 					
-						<?php if (!isset($articles[$j])){ break; } ?>
-						<?php $main_image = val($articles[$j]['revision_text']->main_image, array()); ?>
+						<?php if (!isset($arr[$j])){ break; } ?>
+						<?php $main_image = val($arr[$j]['revision_text']->main_image, array()); ?>
 						
 						<div class="item">
 							<p class="thumb">
-								<a href="<?=site_url("article/".$articles[$j]['page_id'])?>">
+								<a href="<?=site_url("article/".$arr[$j]['page_id'])?>">
 									<?php
 									$src = val($main_image[0]->src, 'error');
 									$flip = val($main_image[0]->flip, false);
@@ -52,8 +65,8 @@ $articles = val($articles, array());
 									$img = get_image_html($src, 491, 275, $flip, $angle);
 									$thumb = get_image_html($src, 82, 44, $flip, $angle);
 									$alt = ucfirst(val($main_image[0]->alt));
-									$teaser = val($articles[$j]['revision_text']->teaser);
-									$article = val($articles[$j]['revision_text']->article);
+									$teaser = val($arr[$j]['revision_text']->teaser);
+									$article = val($arr[$j]['revision_text']->article);
 									?>
 									<!--div class="overlay">
 									<span class="play"-->
@@ -66,11 +79,11 @@ $articles = val($articles, array());
 								<p class="image"><img <?=$img?> alt="<?=$alt?>" /></p>
 								<div class="caption">
 									<h3 class="b">
-										<?=anchor("article/".$articles[$j]['page_id'],
+										<?=anchor("article/".$arr[$j]['page_id'],
 											/*htmlentities($articles[$j]['revision_text']->article, ENT_COMPAT, 'UTF-8', false))*/
-											htmlentities($articles[$j]['title'], ENT_COMPAT, 'UTF-8', false))?>
+											htmlentities($arr[$j]['title'], ENT_COMPAT, 'UTF-8', false))?>
 										<!--p class="more-b">
-											<?=anchor('article/'.$articles[$j]['page_id'],
+											<?=anchor('article/'.$arr[$j]['page_id'],
 												"READ ARTICLE")?>
 										</p-->
 									</h3>

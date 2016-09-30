@@ -301,3 +301,11 @@ if ( ! function_exists('get_page_review_details')){
     }
 }
 
+if ( ! function_exists('cmp')){
+    function cmp($item1, $item2) {
+        if ($item1['sort_order'] == $item2['sort_order']) return 0;
+        return $item1['sort_order'] < $item2['sort_order'] ? -1 : 1;
+    }
+
+}
+

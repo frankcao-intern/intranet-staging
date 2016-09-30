@@ -305,7 +305,7 @@ class MY_Controller extends CI_Controller {
 					array_walk($tmp, 'truncateArticle', array('count' => $bucket['wordcount'], 'key' => 'article'));
 					$this->pageRecord[$name] = $tmp;
 				}
-				//pr($this->pageRecord);
+
 			}
 
 			//Load announcements

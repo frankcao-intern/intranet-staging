@@ -260,7 +260,6 @@ $pilotgroup = array(
 			    <?php endif; ?>
 
                 <?php if(isset($reviews) and(count($reviews) != 0)): ?>
-                <?php //if(isset($reviews) and(count($reviews) != 0)): ?>
                     <div class="section-a">
                         <h2 class="c collapsible collapsible-closed">Reviews</h2>
                         <ul class="list-c">

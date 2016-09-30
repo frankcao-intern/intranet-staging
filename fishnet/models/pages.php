@@ -399,7 +399,8 @@ class Pages extends CI_Model {
         $section_id   = (isset($section_id)) ? ", sections.title AS section_title, $section_id AS section_id" : '';
         if($section_name == 'monthly'){
             if(date('Y-m') === date('Y-m', strtotime($d_start))){
-                $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
+                //$dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
+                $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published <= NOW() ) AND (rel.show_until >= '$d_end' ))" : '';
             } else {
                 $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND '$d_end' ) OR (rel.show_until BETWEEN '$d_start' AND '$d_end'))" : '';
             }
@@ -407,6 +408,7 @@ class Pages extends CI_Model {
             $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) OR (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
         } else {
             $dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published BETWEEN '$d_start' AND NOW() ) AND (rel.show_until BETWEEN CURDATE() AND '$d_end' ))" : '';
+            //$dates        = (($d_start != null) or ($d_end != null)) ? "AND ((rel.date_published <= NOW() ) AND (rel.show_until >= CURDATE() ))" : '';
         }
         //$dates        = (($d_start != null) or ($d_end != null)) ? "AND fn_pages.date_published<='$d_end' AND (fn_pages.show_until IS NULL OR fn_pages.show_until>='$d_start')" : '';
         $limit        = (isset($limit)) ? "LIMIT " . (isset($offset) ? $offset : '0') . ",$limit" : '';
@@ -447,7 +449,7 @@ class Pages extends CI_Model {
 				$tags				
 			GROUP BY fn_pages.page_id
 			ORDER BY $random $order_by rel.sort_order ASC , rel.date_published DESC $limit";
-
+            //pr($query_str);
 
 
         /**
